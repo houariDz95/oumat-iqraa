@@ -1,7 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react';
 import { EditorState, convertToRaw, ContentState } from 'draft-js';
-import { Editor } from 'react-draft-wysiwyg';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import { auth, db } from '@/firebase';
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
@@ -9,13 +8,20 @@ import { atCategories } from '@/constants';
 import { useRouter } from 'next/navigation';
 import Loader from '@/components/Loader';
 
+const isClient = typeof window !== 'undefined';
+
+
 
 const WritePage = () => {
     const router = useRouter()
     const [editorState, setEditorState] = useState(() =>
       EditorState.createEmpty()
     );
-
+    let Editor;
+    if (isClient) {
+      Editor = require('react-draft-wysiwyg').Editor;
+    }
+    
     const [currentUser, setCurrentUser] = useState(null)
     const [title, setTitle] = useState("");
     const [isLoading, setIsLoading] = useState(false);
@@ -72,7 +78,7 @@ const WritePage = () => {
     </div>
     
     return (
-        <div className="max-w-4xl mx-auto py-8 text-right">
+        <div className="max-w-4xl mx-auto py-8 px-4 text-right">
         <h1 className="text-2xl mb-4 font-bold">أكتب مقالك</h1>
         <div className="mb-4">
           <label htmlFor="titleInput" className="block mb-2 text-primary">
@@ -109,7 +115,7 @@ const WritePage = () => {
           <Editor
             editorState={editorState}
             onEditorStateChange={handleEditorStateChange}
-            wrapperClassName="border border-gray-300 rounded text-black"
+            wrapperClassName="border border-gray-300 rounded text-black pb-10"
           />
         </div>
         <button
