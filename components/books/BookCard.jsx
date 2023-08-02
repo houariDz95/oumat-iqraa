@@ -4,7 +4,6 @@ import {motion} from "framer-motion"
 import Link from "next/link";
 
 const BookCard = ({book}) => {
-  console.log(book.title)
   return (
     <Link href={book.id} className="group cursor-pointer ">
       <motion.div 
