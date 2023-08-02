@@ -58,8 +58,10 @@ const Sidebar = () => {
       <div className='bg-gray-200 p-4 rounded-md mt-4'>
         <h1 className='text-lg font-semibold mb-2'>الروابط</h1>
         <div className='flex flex-col gap-2'>
-        {navLinks.map(link => (
-          <Link href={link.path} className='text-blue-500 text-sm cursor-pointer hover:underline'>
+        {navLinks.map((link, i)=> (
+          <Link 
+          key={i}
+          href={link.path} className='text-blue-500 text-sm cursor-pointer hover:underline'>
             {link.label}
           </Link>
         ))}
@@ -70,7 +72,9 @@ const Sidebar = () => {
           <h1 className='text-lg font-semibold mb-2'>آخر المقالات  </h1>
           <div className='flex flex-col gap-4'>
           {data.map(post => (
-            <Link href={`/articles/${post.id}`} className='flex flex-col gap-6 text-blue-500 text-sm cursor-pointer hover:underline'>
+            <Link 
+            key={post.id}
+            href={`/articles/${post.id}`} className='flex flex-col gap-6 text-blue-500 text-sm cursor-pointer hover:underline'>
               {post.title}
             </Link>
           ))} 
@@ -81,7 +85,9 @@ const Sidebar = () => {
         <h1 className='text-lg font-semibold mb-2'>آخر من انضم الينا </h1>
         <div className='flex flex-col gap-4'>
           {users.map((user) => (
-            <div className='flex items-center gap-2 mt-2'>
+            <div 
+            key={user.id}
+            className='flex items-center gap-2 mt-2'>
               <Link key={user.id} href={`/profile/${user.id}`} passHref>
                 <Avatar
                   src={user?.photoURL}

@@ -77,7 +77,7 @@ const BookDetails = ({data}) => {
                 flex-row-reverse
                 hover:text-secondary
                 ">
-                  <img src={item.downloadImg} alt="download" className="h-10 w-10" />
+                  <Image width={10} height={10} src={item.downloadImg} alt="download" className="h-10 w-10" />
                   <span>{item.downloadTitle}</span>
                 </a>
               ))}
