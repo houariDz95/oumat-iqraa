@@ -33,9 +33,9 @@ const SearchBarAt = ({cat}) => {
                     label="فئات"
                     onChange={handleCategoryChange}
                 >
-                    {atCategories.map(category => (
+                    {atCategories.map((category, i) => (
                     <MenuItem 
-                    key={category.path}
+                    key={i}
                     value={category.path ? category.path : "all"}  
                     onClick={selectCategory}
                     >

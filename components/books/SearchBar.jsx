@@ -43,9 +43,9 @@ const SearchBar = ({cat, page, isPending}) => {
             label="فئات"
             onChange={handleCategoryChange}
           >
-            {categories.map(category => (
+            {categories.map((category, i) => (
             <MenuItem 
-            key={category.path}
+            key={i}
             value={category.path ? category.path : "new"}  
            // action={selectCategory}
             onClick={() =>  selectCategory()}

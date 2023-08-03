@@ -4,6 +4,7 @@ import { collection, onSnapshot, query, where, } from 'firebase/firestore';
 import  {db} from '@/firebase';
 import { IoMdArrowDropleft } from 'react-icons/io';
 import Link from 'next/link';
+import Loader from '../Loader';
 
 const SearchForArticles = ({keyword}) => {
     const [posts, setPosts] = useState([]);
