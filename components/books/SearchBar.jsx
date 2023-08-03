@@ -1,15 +1,14 @@
 'use client'
 import { categories } from "@/constants"
-import { useEffect, useState, useTransition } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import SearchButton from "../SearchButton";
 import Loader from "../Loader";
 
-const SearchBar = ({cat, page}) => {
+const SearchBar = ({cat, page, isPending}) => {
   const [selectedCategory, setSelectedCategory] = useState(cat ? cat : "new");
   const router = useRouter()
-  let [isPending, startTransition] = useTransition()
   const handleCategoryChange = (event) => {
     setSelectedCategory(event.target.value);
   };
@@ -49,7 +48,7 @@ const SearchBar = ({cat, page}) => {
             key={category.path}
             value={category.path ? category.path : "new"}  
            // action={selectCategory}
-            onClick={() => startTransition(() => selectCategory())}
+            onClick={() =>  selectCategory()}
             >
               {category.name}
             </MenuItem>

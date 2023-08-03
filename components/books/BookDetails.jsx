@@ -2,13 +2,39 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from "next/navigation";
-import {IoMdArrowDropleft} from 'react-icons/io'
-const BookDetails = ({data}) => {
-    const router = useRouter();
-    const handelClick = (cat) => {
-      router.push(`/books?cat=${cat}&page=1`)
-    }
-    const isObjectEmpty = Object.keys(data).length === 0;
+import {IoMdArrowDropleft} from 'react-icons/io';
+import { useEffect, useState } from 'react';
+import { fetchFromAPI } from '@/utils/fetchFromApi';
+import Loader from '../Loader';
+
+const BookDetails = ({id}) => {
+  const [data, setData] = useState([])
+  const [isLoading, setIsLoading] = useState(false)
+  const isObjectEmpty = Object.keys(data).length === 0;
+  const router = useRouter();
+  
+  useEffect(() => {
+      const fetchData = async () => {
+          setIsLoading(true)
+          try {
+              const res  = await fetchFromAPI(`books/${id}`);
+              setData(res)
+          } catch (error) {
+              alert(error)
+          }finally{
+              setIsLoading(false)
+          }
+      }
+      fetchData()
+  }, [id])
+
+  const handelClick = (cat) => {
+    router.push(`/books?cat=${cat}&page=1`)
+  }
+
+  if(isLoading) return  <div className="w-full h-48 flex-center">
+      <Loader />    
+  </div>
     if (isObjectEmpty) {
       return (
         <div className='min-h-[50vh] max-w-4xl text-lg mx-auto text-center my-10 p-4'>
@@ -27,11 +53,11 @@ const BookDetails = ({data}) => {
           <div className='w-full h-full flex flex-col items-center md:items-start md:flex-row gap-[30px] md:gap-10'>
             <div className='flex-[0.4]'>
               <Image 
-              width={300}
-              height={400}
+              width={350}
+              height={350}
               src={data?.img} 
               alt={data?.title} 
-              className='max-h-[350px] object-cover border-[1px] border-secondary'/>
+              className='max-h-[400px] w-full object-cover border border-secondary'/>
             </div>
             <div className='flex-[0.6] text-right '>
               <h1 className='text-xl text-[#707805] font-medium mb-3'>{data?.title}</h1>

@@ -5,8 +5,9 @@ import  {db} from '@/firebase';
 import { IoMdArrowDropleft } from 'react-icons/io';
 import Link from 'next/link';
 
-const SearchForArticles = ({keyword, booksData}) => {
+const SearchForArticles = ({keyword}) => {
     const [posts, setPosts] = useState([]);
+    const [isLoading, setIsLoading] = useState(false)
     const decodedKeyword = keyword ? decodeURIComponent(keyword) : '';
 
       const regex = new RegExp(decodedKeyword, "i"); 
@@ -32,30 +33,39 @@ const SearchForArticles = ({keyword, booksData}) => {
     }
     useEffect(() => {
         const getData = async () => {
-          const collectionRef = collection(db, 'articles');
-          const unsubscribe = onSnapshot(collectionRef, (snapshot) => {
-            setPosts(snapshot.docs.map(doc => ({ ...doc.data(), id: doc.id })));
-          })
-          return unsubscribe
+          setIsLoading(true)
+          try {
+            const collectionRef = collection(db, 'articles');
+            const unsubscribe = onSnapshot(collectionRef, (snapshot) => {
+              setPosts(snapshot.docs.map(doc => ({ ...doc.data(), id: doc.id })));
+            })
+            return unsubscribe
+          } catch (error) {
+            alert(error)
+          }finally{
+            setIsLoading(false)
+          }
         }
         getData()
       }, [])
-      if(!booksData.length && !filteredPosts.length) return  <div className="flex flex-col items-center justify-center py-10 h-[250px]">
-      <h2 className="text-2xl font-bold text-black">😢لا توجد نتائج للبحث</h2>
-    </div>
+
+
     return (
     <>
-      {filteredPosts.length ?
         <div className="mt-6 text-right">
           <h2 className="text-xl p-2 mb-2 ">المقالات </h2>
-          {filteredPosts.map((post) => (
+          {isLoading && <div className='w-full h-14 flex-center'>
+            <Loader />
+          </div>
+          }
+          {filteredPosts.length ? filteredPosts.map((post) => (
             <div key={post.id} className="flex items-center gap-2 p-2 text-md">
                 <IoMdArrowDropleft className='text-gray-300'/>
                 <Link className="text-md text-[#707805] cursor-pointer hover:underline" href={`/articles/${post.id}`}>{post?.title} </Link> · بقلم
                 <Link className="text-md text-[#707805] cursor-pointer hover:underline" href={`/profile/${post.uid}`}> {post?.createdBy}</Link>
             </div>
-          ))}
-        </div> : null}
+          )) : <h2 className="text-lg font-base text-black">لا توجد نتائج بحث للمقالات</h2>}
+        </div>
     </>
   )
 }

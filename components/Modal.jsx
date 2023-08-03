@@ -1,9 +1,8 @@
-import {  useEffect, useState } from 'react';
+import {  useState } from 'react';
 import { updateProfile } from "firebase/auth";
 import {auth, db, storage} from '@/firebase';
 import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
 import { doc, getDoc, updateDoc } from 'firebase/firestore';
-import Loader from './Loader';
 
 const Modal = ({ isOpen, onClose }) => {
   const user = auth.currentUser;

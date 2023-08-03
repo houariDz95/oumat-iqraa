@@ -10,6 +10,7 @@ import { v4 as uuidv4 } from 'uuid';
 import Loader from '@/components/Loader';
 import PageTitle from '@/components/PageTitle';
 import PopupMessage from '@/components/PopupMessage';
+
 const CreatePost = () => {
   const router = useRouter();
   const id = uuidv4()
@@ -53,7 +54,7 @@ const CreatePost = () => {
         const snapshot = await uploadString(imageRef, dalleImageData, 'data_url');
         const downloadURL = await getDownloadURL(snapshot.ref);
         
-        setForm({ ...form, photo: downloadURL})
+        setForm({ ...form, photo: dalleImageData})
       } catch (error) {
         alert(error);
       } finally {

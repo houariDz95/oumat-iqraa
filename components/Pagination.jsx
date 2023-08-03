@@ -9,7 +9,6 @@ const Paginations = ({page, cat, totalPage }) => {
     const paginate = (e, value) => {
         router.push(`/books?cat=${cat}&page=${value}`)
       }
-      console.log(page)
   return (
     <div className="flex-center my-10">
         <Pagination
