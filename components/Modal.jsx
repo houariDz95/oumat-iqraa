@@ -2,7 +2,7 @@ import {  useState } from 'react';
 import { updateProfile } from "firebase/auth";
 import {auth, db, storage} from '@/firebase';
 import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
-import { doc, getDoc, updateDoc } from 'firebase/firestore';
+import { collection, doc, getDoc, getDocs, updateDoc } from 'firebase/firestore';
 
 const Modal = ({ isOpen, onClose }) => {
   const user = auth.currentUser;
@@ -27,6 +27,17 @@ const Modal = ({ isOpen, onClose }) => {
         photoURL: avatar ? await getDownloadURL(storageRef) : user.photoURL,
         bio: bio ? bio : data.data().bio,
       })
+    // Update the user's photoURL in their articles
+    const articlesSnapshot = await getDocs(collection(db, "articles"));
+    articlesSnapshot.forEach(async (item) => {
+      if (item.data().uid === user.uid) {
+        const articleRef = doc(db, "articles", item.id);
+        await updateDoc(articleRef, {
+          userImage: avatar ? await getDownloadURL(storageRef) : user.photoURL,
+          createdBy: username,
+        });
+      }
+    });
 
       await updateProfile(user, {
         displayName: username,

@@ -4,7 +4,7 @@ import Pagination from '@mui/material/Pagination';
 import { PaginationItem } from '@mui/material';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
-const Paginations = ({page, cat, totalPage }) => {
+const Paginations = ({page, cat, totalPage, setCurrentPage }) => {
     const router = useRouter()
     const paginate = (e, value) => {
         router.push(`/books?cat=${cat}&page=${value}`)

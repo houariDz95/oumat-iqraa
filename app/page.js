@@ -14,14 +14,14 @@ export default function Home() {
           <h1 className='text-3xl font-bold text-black italic'>أهم الميزات</h1>
           <div className='absolute bottom-0 right-5 h-1 w-14 bg-primary'/>
         </div>
-        <Features  
-          title="توليد الصور بواسطة الذكاء الاصطناعي"
-          desc="قدمنا لكم أداة توليد الصور القوية التي تعتمد على الذكاء الاصطناعي. قم بإنشاء صور مذهلة ببضع نقرات فقط. احصل على الإلهام ودع الذكاء الاصطناعي يساعدك في إنشاء صور فريدة وجذابة."
-          img="/assets/ai-generator.jpg"
-          buttonText="جرب الآن"
+        <Features
+          title="كتابة المقالات"
+          desc="قم بتمكين كتابتك باستخدام أداة كتابة المقالات المعتمدة على الذكاء الاصطناعي. احصل على مساعدة في صياغة مقالات شيقة ومنظمة بشكل جيد. قم بزيادة إنتاجيتك واطلق العنان لإبداعك من خلال تجربة الكتابة البديهية لدينا."
+          img="/assets/write-article.jpg"
+          buttonText="ابدأ الكتابة"
           styles="w-full mx-auto flex lg:flex-row flex-col gap-8"
           direction="right"
-          url="/ai-image-generator"
+          url="/articles"
         />
         
         <Features
@@ -33,14 +33,15 @@ export default function Home() {
           direction="left"
           url="/books"
         />
-        <Features
-          title="كتابة المقالات"
-          desc="قم بتمكين كتابتك باستخدام أداة كتابة المقالات المعتمدة على الذكاء الاصطناعي. احصل على مساعدة في صياغة مقالات شيقة ومنظمة بشكل جيد. قم بزيادة إنتاجيتك واطلق العنان لإبداعك من خلال تجربة الكتابة البديهية لدينا."
-          img="/assets/write-article.jpg"
-          buttonText="ابدأ الكتابة"
+
+        <Features  
+          title="عبارات ملهمة"
+          desc="استمتع بتصفح مجموعتنا من العبارات الملهمة التي تضيء الطريق وتشجعك على التفاؤل والإيجابية في الحياة"
+          img="/assets/ai-generator.jpg"
+          buttonText="استكشاف المزيد"
           styles="w-full mx-auto flex lg:flex-row flex-col gap-8"
           direction="right"
-          url="/articles"
+          url="/quotes?cat=الجمال"
         />
         <div className='relative p-4 mt-8'>
           <h1 className='text-3xl font-bold text-black italic'>آخر المقالات المضافة</h1>

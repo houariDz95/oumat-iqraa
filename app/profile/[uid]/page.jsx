@@ -1,16 +1,14 @@
 'use client'
 import Loader from '@/components/Loader';
 import Modal from '@/components/Modal';
-import ArticleCard from '@/components/articles/ArticleCard';
+import ProfileDesplay from '@/components/ProfileDesplay';
 import { auth, db } from '@/firebase';
-import { Avatar } from '@mui/material';
-import { deleteUser, signInAnonymously } from 'firebase/auth';
+import { deleteUser } from 'firebase/auth';
 import { collection, deleteDoc, doc, getDoc, getDocs, onSnapshot, query, where } from 'firebase/firestore';
 import Error from 'next/error';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState} from 'react';
-import {BiTrash} from "react-icons/bi";
-import {FiEdit} from 'react-icons/fi';
+
 
 const Profile =  ({params: {uid}}) => {
     
@@ -18,8 +16,9 @@ const Profile =  ({params: {uid}}) => {
     const [posts, setPosts] = useState([])
     const [isOpen, setIsOpen] = useState(false)
     const [isDeleting, setIsDeleting] = useState(false)
-    const isAdmin = user.id === auth?.currentUser?.uid
+    const isAdmin = uid === auth?.currentUser?.uid
     const router = useRouter()
+
     useEffect(() => {
         const getUserData = async() => {
             const user = await getDoc(doc(collection(db, "users"), uid))
@@ -68,67 +67,42 @@ const Profile =  ({params: {uid}}) => {
         }
       }
     
+      const deletePost = async (post) => {
+        const hasConfirmed = confirm(
+          "هل أنت متأكد أنك تريد حذف هذا المنشور؟"
+        );
+    
+        if (hasConfirmed) {
+          try {
+            await deleteDoc(doc(db, 'articles', post.id))
+            alert('تم حذف المنشور بنجاح ')
+
+          } catch (error) {
+            console.log(error);
+            alert(error)
+          }
+        }
+      };
+
   if(isDeleting) return <div className='absolute top-0 left-0 bg-black/30 w-screen h-screen flex-center '>
     <div className='w-8/12 h-2/5 bg-white shadow-xl flex-center rounded-lg'>
       <Loader />
     </div>
   </div>
   return (
-    <div>
-        <div className='max-w-4xl mx-auto mt-10 min-h-[60vh] p-4'>
-            <div className="flex-between border-b-[1px] border-gray-400 pb-4">
-                <div className="flex items-center mb-4">
-                    <Avatar 
-                    src={user.photoURL} 
-                    alt={user.username} 
-                    sx={{
-                        width: { md:100, xs:60},
-                        height: { md:100, xs:60},
-                    }}
-                    />
-                    <div className='flex-col-start mr-2 gap-2 p-2'>
-                        <h2 className="text-lg font-bold">{user.username}</h2>
-                        <p className="text-gray-500 hidden md:block">{user.email}</p>
-                    </div>
-                </div>
-                <div className='flex-center gap-4'>
-                    {isAdmin && 
-                    <>
-                      <button 
-                      className='group relative'
-                      onClick={handleDelete}
-                      >
-                          <BiTrash size={28} color="#e84118"  />
-                          <span 
-                          className='absolute bg-white border-[1px] border-gray-300 shadow-md top-8 -left-50 w-[170px] p-2 font-semibold text-gray-700 hidden group-hover:block'>
-                              حذف الملف الشخصي
-                          </span>
-                      </button>
-                      <button 
-                      className='group relative'
-                      onClick={() => setIsOpen(true)}
-                      >
-                          <FiEdit  size={28} color="#6449ff" />
-                          <span 
-                          className='absolute bg-white border-[1px] border-gray-300 shadow-md top-8 -left-50 w-[170px] p-2 font-semibold text-gray-700 hidden group-hover:block'
-                          >
-                              تعديل الملف الشخصي
-                          </span>
-                      </button>
-                    </>}
-                </div>
-            </div>
-            <div className='max-w-2xl mt-8'>
-               <h3 className="text-xl font-bold">Bio</h3>
-               <p className='text-gray-700 p-2'>{user.bio || 'لا يوجد سيرة ذاتية متاحة.'}</p>
-            </div>
-            <div className='relative lg:flex-[0.8] flex-1 grid md:grid-cols-2 grid-cols-1 gap-5 p-2 mt-10'>
-              {posts.map(post => (
-                <ArticleCard key={post.id} data={post} />
-              ))}
-            </div>
-        </div>
-        {isOpen && <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} />}
+    <div className='max-w-6xl mx-auto mt-6 p-6'>
+      <ProfileDesplay
+        name={isAdmin? "الملف الشخصي" : `الملف الشخصي الخاص ب ${user?.username} `} 
+        desc={isAdmin ?  "اكتشف الفرص والاهتمامات الفريدة التي تميزك واجعل ملفك الشخصي مرآة لشخصيتك." :
+        `ترحيبًا بك في صفحة الملف الشخصي المخصصة لـ ${user.username}. استكشف التحفيزات الاستثنائية لـ ${user.username} واستلهم قوة خيالهم.`}
+        data={posts}
+        setIsOpen={setIsOpen}
+        handleDelete={handleDelete}
+        deletePost={deletePost}
+        isAdmin={isAdmin}
+        user={user}
+      />
+      {isOpen && <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} />}
     </div>
   )
 }

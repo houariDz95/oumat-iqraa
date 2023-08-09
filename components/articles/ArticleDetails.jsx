@@ -48,7 +48,7 @@ const ArticleDetails = ({id}) => {
           </p>
         </div>
       </div>
-      <h2 className="text-2xl font-semibold mb-4">{post.title}</h2>
+      <h2 className="text-3xl font-semibold mb-4 blue_gradient font-plex">{post.title}</h2>
       <div className="md:p-4">
         {editorState && <Editor 
         editorState={editorState} 

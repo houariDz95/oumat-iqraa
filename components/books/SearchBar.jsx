@@ -19,7 +19,7 @@ const SearchBar = ({cat, page, isPending}) => {
 
   const selectCategory = () => {
     // Perform search operation with the selected category and search term
-    router.push(selectedCategory !== "new" ? `/books?cat=${selectedCategory}&page=${page ? page : 1}` : "/books")
+    router.push(selectedCategory !== "new" ? `/books?cat=${selectedCategory}&page=1` : "/books")
   };
 
   if(isPending) return (
@@ -33,7 +33,7 @@ const SearchBar = ({cat, page, isPending}) => {
 
   return (
     <div className="flex items-center justify-between flex-col md:flex-row gap-4 w-full p-2">
-      <div className="xs:w-[350px] w-[260px]">
+      <div className="sm:w-[350px] w-[260px]">
         <FormControl fullWidth>
           <InputLabel id="demo-simple-select-label">فئات</InputLabel>
           <Select

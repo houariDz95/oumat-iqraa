@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Reem+Kufi:wght@400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,6 +7,7 @@ html,
 body,
 :root{
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 @media screen and (min-width: 480px) {
@@ -90,6 +92,53 @@ body,
 .editor-container {
   direction: rtl;
 }
+
+
+/* Tailwind Styles */
+.head_text {
+  @apply mt-5 text-5xl font-extrabold leading-[1.15] sm:text-6xl font-plex;
+}
+
+.logo_text {
+  @apply max-sm:hidden font-plex font-semibold text-lg text-white tracking-wide;
+}
+
+.orange_gradient {
+  @apply bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent;
+}
+
+.green_gradient {
+  @apply bg-gradient-to-r from-green-400 to-green-500 bg-clip-text text-transparent;
+}
+
+.blue_gradient {
+  @apply bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent;
+}
+
+.desc {
+  @apply mt-5 text-lg text-gray-600 sm:text-xl max-w-2xl;
+}
+
+
+.copy_btn {
+  @apply w-7 h-7 rounded-full bg-white/10 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur flex justify-center items-center cursor-pointer;
+}
+
+.glassmorphism {
+  @apply rounded-xl border border-gray-200 bg-white/20 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur p-5;
+}
+
+
+.prompt_layout {
+  @apply space-y-4 py-8 md:columns-3 sm:gap-6 xl:columns-3;
+}
+
+
+/* PromptCard Component */
+.prompt_card {
+  @apply flex-1 break-inside-avoid rounded-lg border border-gray-300 bg-white/20 bg-clip-padding p-5 pb-4 backdrop-blur-lg backdrop-filter w-full min-h-[180px];
+}
+
 
 .link {
     @apply text-gray-300 hover:text-white text-[16px] rounded-md transition-colors duration-200

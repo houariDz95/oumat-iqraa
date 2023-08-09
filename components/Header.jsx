@@ -18,7 +18,7 @@ const Header = () => {
           <motion.h2
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeInOut" } }}
-            className="text-[36px] font-bold leading-snug text-white mt-10 text-center"
+            className="text-[36px] font-bold leading-snug text-white mt-10 text-center font-plex"
           >
             مرحبًا بكم في موقع أمة اقرأ 
           </motion.h2>

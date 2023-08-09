@@ -23,7 +23,7 @@ const SearchBarAt = ({cat}) => {
   
   return (
     <div className="flex items-center justify-between flex-col md:flex-row gap-4 w-full p-2">
-        <div className="w-[350px]">
+        <div className="w-[260px] sm:w-[350px]">
             <FormControl fullWidth>
                 <InputLabel id="demo-simple-select-label">فئات</InputLabel>
                 <Select
