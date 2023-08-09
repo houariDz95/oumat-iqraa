@@ -45,7 +45,7 @@ const AuthorDetails = ({id}) => {
     }
     return (
     <div className="max-w-4xl mx-auto mt-10">
-        <div className="flex justify-center gap-4 flex-col-reverse md:flex-row md:items-start items-center">
+        <div className="flex justify-center gap-4 flex-col md:flex-row md:items-start items-center">
             <div className="">
                 <Image src={data.img} alt={data.name} width={300} height={400} className="object-cover" />
             </div>

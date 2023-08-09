@@ -58,11 +58,12 @@ const BookDetails = ({id}) => {
             <div className='w-full h-full flex flex-col items-center md:items-start md:flex-row gap-[30px] md:gap-10'>
               <div className='flex-[0.4]'>
                 <Image 
-                width={350}
-                height={350}
+                width={300} 
+                height={400} 
+                className="object-cover"
                 src={data?.img} 
                 alt={data?.title} 
-                className='max-h-[400px] w-full object-cover border border-secondary'/>
+                />
               </div>
               <div className='flex-[0.6] text-right '>
                 <h1 className='text-xl text-[#707805] font-medium mb-3'>{data?.title}</h1>

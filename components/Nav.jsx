@@ -56,7 +56,7 @@ const Navbar = ({primary}) => {
     };
   }, []);
   return (
-    <nav className={`${primary ? "bg-gray-900 md:bg-primary" : "bg-gray-900"} py-4`}>
+    <nav className={`${primary ? "bg-gray-900 md:bg-primary" : "bg-gray-900"} py-4 px-2`}>
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
