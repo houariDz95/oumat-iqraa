@@ -28,7 +28,7 @@ const NavSearchBar = () => {
         <div className='grid grid-cols-3 gap-2'>
             <Link href="/books" className='px-6 py-2 rounded-md border-[1px] text-sm border-white text-white bg-transparent'>أحدث الكتب</Link>
             <Link href="/articles" className='px-6 py-2 rounded-md border-[1px] text-sm border-white text-white bg-transparent'> أحدث المقالات</Link>
-            <Link href="/ai-image-generator" className='px-6 py-2 rounded-md border-[1px] text-sm border-white text-white bg-transparent'>أحدث الصور</Link>
+            <Link href="/ai-image-/quotes?cat=الجمال" className='px-6 py-2 rounded-md border-[1px] text-sm border-white text-white bg-transparent'>أحدث الإقتباسات </Link>
         </div>
     </div>
   )
