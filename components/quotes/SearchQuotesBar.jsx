@@ -13,7 +13,7 @@ const SearchQuotesBar = ({quotesCat}) => {
   return (
     <div className="flex flex-col h-fit md:w-[260px] w-full border border-gray-300 ">
       <div className="w-full bg-white border-b border-gray-300 p-4 text-black text-xl font-medium">
-        <h2 className="orange-gradiante font-semibold">مقتطفات متنوعة</h2>
+        <h2 className="font-semibold">مقتطفات متنوعة</h2>
       </div>
        {quotesCategories.map((item, i) => (
         <div key={`${item}-${i}`} 

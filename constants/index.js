@@ -93,7 +93,6 @@ export const categories = [
 
 export const quotesCategories = [
   'الجمال',
-  'القهوة',
   'الصداقة',
   'العادات',
   'السعادة',

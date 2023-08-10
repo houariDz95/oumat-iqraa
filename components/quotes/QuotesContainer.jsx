@@ -22,17 +22,15 @@ const QuotesContainer = ({quotesCat}) => {
     <>
       <div className='md:hidden flex-between p-4 mt-5'>
         <div>
-          {mobileMenu ? 
-          <AiOutlineClose size={25} onClick={() => setMobileMenu(false)} className='text-secondary'/> :
-          <AiOutlineMenu size={25} onClick={() => setMobileMenu(true)} className='text-secondary'/>}
+          <AiOutlineMenu size={25} onClick={() => setMobileMenu(true)} className='text-secondary'/>
         </div>
         <div>
-          <h4 className='text-sm'>{`إقتبسات عن ${quotesCat} `}</h4>
+          <h4 className='text-md font-semibold font-plex'>إقتبسات عن <span className='orange_gradient'>#{quotesCat}</span> </h4>
         </div>
       </div>
-      <div className='max-w-6xl mx-auto  mt-8 min-h-[calc(100vh-73px)] flex p-4 gap-6 relative '>
+      <div className='max-w-6xl mx-auto  md:mt-8 min-h-[calc(100vh-73px)] flex p-4 gap-6 cursor-pointer'>
         {/* search bar desktop */}
-        <div className="hidden md:block">
+        <div className="hidden md:block mt-8">
           <SearchQuotesBar quotesCat={quotesCat} />
         </div>
 
@@ -40,8 +38,21 @@ const QuotesContainer = ({quotesCat}) => {
         {mobileMenu && <motion.div 
         initial={{opacity: 0, x: 100}}
         whileInView={{opacity: 1, x: 0, transition: {duration: 0.5, delay: 0.2}}}
-        className='block md:hidden w-[80vw] absolute top-0 right-0 z-50 bg-white'>
-          <SearchQuotesBar quotesCat={quotesCat} />
+        className='block md:hidden fixed top-0 left-0 w-screen h-screen bg-black/40 z-50'>
+          <motion.span
+            initial={{opacity: 0, x: -100}}
+            whileInView={{opacity: 1, x: 0, transition: {duration: 0.5, delay: 0.3}}}
+            className='absolute top-10 left-10 bg-white shadow-md p-1 rounded-full'
+          >
+            <AiOutlineClose size={16} onClick={() => setMobileMenu(false)} className='text-secondary'/> 
+          </motion.span>
+          <motion.div
+          initial={{opacity: 0, x: 100}}
+          whileInView={{opacity: 1, x: 0, transition: {duration: 0.5, delay: 0.3}}}
+          className='w-3/4 h-screen  bg-white'
+          >
+            <SearchQuotesBar quotesCat={quotesCat} />
+          </motion.div>
         </motion.div>}
         
         {/* quotes */}
