@@ -1,15 +1,13 @@
-import PageTitle from '@/components/PageTitle'
 import BookDetails from '@/components/books/BookDetails'
-import { fetchFromAPI } from '@/utils/fetchFromApi';
 
-
-export async function generateMetadata({params: {id}}){
-  const book  = await fetchFromAPI(`books/${id}`);
+export async function generateMetadata(paramKey){
+  const title = paramKey.searchParams.title;
+  const genericDescription = "استمتع بقراءة هذا الكتاب واستكشف عوالم مختلفة وأفق جديد. القراءة تمنحك الفرصة للسفر بعيدًا والتعلم من تجارب شخصيات مثيرة. اكتشف المزيد في كتابنا: ";
   return {
-    title: book.title,
-    description: book.text,
+    title: `${title} - أمة اقرأ`,
+    description: genericDescription + title,
     }
-  }
+}
 
 const Book = async ({params: {id}}) => {
   return <BookDetails id={id} />

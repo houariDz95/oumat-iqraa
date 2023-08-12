@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const BookCard = ({book}) => {
   return (
-    <Link href={book.id} className="group cursor-pointer ">
+    <Link href={`${book.id.replace(/\/$/, "")}?title=${book.title}`} className="group cursor-pointer ">
       <motion.div 
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}

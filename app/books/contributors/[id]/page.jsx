@@ -1,14 +1,13 @@
 import PageTitle from '@/components/PageTitle'
 import AuthorDetails from '@/components/books/AuthorDetails'
-import { fetchFromAPI } from '@/utils/fetchFromApi';
 
-export async function generateMetadata({params: {id}}){
-  const author  = await fetchFromAPI(`contributors/${id}`);
-  return {
-    title: `${author.name} - أمة اقرأ`,
-    description: author.description,
+export async function generateMetadata(paramKey){
+  const name = paramKey.searchParams.name;
+  const genericAuthorDescription = "استمتع بقراءة كتب هذا المؤلف واكتشف عالمه الأدبي. تعرّف على رؤية الكاتب وأسلوبه من خلال أعماله المميزة. استكشف المزيد حول المؤلف في أمة اقرأ: ";  return {
+    title: `${name} - أمة اقرأ`,
+    description: genericAuthorDescription + name,
     }
-  }
+}
 
 const Contributors = async ({params: {id}}) => {
   return (
