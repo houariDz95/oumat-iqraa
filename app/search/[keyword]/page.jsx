@@ -2,7 +2,19 @@ import Navbar from '@/components/Nav'
 import NavSearchBar from '@/components/search/NavSearchBar'
 import SearchForArticles from '@/components/search/SearchForArticles'
 import SearchResults from '@/components/search/SearchResults'
-import { notFound } from 'next/navigation'
+
+export async function generateMetadata({ params: { keyword } }) {
+  const genericSearchDescription = "ابحث عن مجموعة متنوعة من الكتب و المقالات في أمة اقرأ. استكشف العناوين والمؤلفين واكتشف محتوى جديد وشيق.";
+  const decodedKeyword = keyword ? decodeURIComponent(keyword) : '';
+  const description = keyword
+    ? `نتائج البحث عن: ${decodedKeyword}`
+    : genericSearchDescription;
+
+  return {
+    title: `بحث - ${decodedKeyword || 'أمة اقرأ'}`,
+    description: description,
+  };
+}
 
 
 

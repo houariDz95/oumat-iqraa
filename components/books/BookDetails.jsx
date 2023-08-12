@@ -50,6 +50,7 @@ const BookDetails = ({id}) => {
         </div>
       );
     }
+    console.log(data.authorId.replace(/\/$/, ""))
     return (
         <>
           <PageTitle title="الكتب"  desc={data?.title} />
@@ -68,7 +69,7 @@ const BookDetails = ({id}) => {
               <div className='flex-[0.6] text-right '>
                 <h1 className='text-xl text-[#707805] font-medium mb-3'>{data?.title}</h1>
                 <h1 className='text-xl font-medium orange_gradient mb-4 hover:underline'>
-                  <Link href={`/books/${data?.authorId.replace(/\/$/, "")}}?name=${data?.title}`} >{data?.author}</Link>
+                  <Link href={`/books/${data.authorId.replace(/\/$/, "")}?name=${data?.author}`} >{data?.author}</Link>
                 </h1>
                 <div className='w-full flex items-center justify-start gap-2 p-2 text-md'>
                   <span 

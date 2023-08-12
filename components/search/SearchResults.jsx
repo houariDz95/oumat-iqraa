@@ -38,7 +38,7 @@ const SearchResults = ({keyword}) => {
               <div key={item.bookId} className="flex items-center gap-2 p-2 text-md">
                 <IoMdArrowDropleft className='text-gray-300'/>
                 <Link className=" text-[#707805] cursor-pointer hover:underline" href={`${item?.bookId}`}>{item?.bookTitle} </Link> · بقلم
-                <Link className=" text-[#707805] cursor-pointer hover:underline" href={`/books/${item?.authorId}`}> {item?.authorTitle}</Link>
+                <Link className=" text-[#707805] cursor-pointer hover:underline" href={`/books/${item.authorId.replace(/\/$/, "")}?name=${item?.authorTitle}`}> {item?.authorTitle}</Link>
             </div>
             )) : <h2 className="text-lg font-base text-black">لا توجد نتائج بحث للكتب</h2>}
         </div>
