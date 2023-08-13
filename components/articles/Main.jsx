@@ -12,7 +12,7 @@ const Main = ({cat}) => {
         const fetchPosts = async () => {
           try {
             const docsRef = collection(db, 'articles')
-            const q = cat ? query(docsRef, where('category', "==", cat),  orderBy("timestamp", 'desc')) : query(docsRef, orderBy("timestamp", 'desc'));
+            const q = cat ? query(docsRef, where('category', "==", cat)) : query(docsRef, orderBy("timestamp", 'desc'));
             const unsubscribe = onSnapshot(q, (snapshot) => {
                 setData(snapshot.docs.map(doc => ({ ...doc.data(), id: doc.id })));
               })
