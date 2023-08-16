@@ -2,11 +2,14 @@ import Navbar from "@/components/Nav"
 import PageTitle from "@/components/PageTitle";
 import QuotesContainer from "@/components/quotes/QuotesContainer"
 
-export const metadata = {
-  title: 'اقتباسات ملهمة وملفتة للنظر - أمة اقرأ',
-  description: 'اكتشف قوة الحكم والعبارات الملهمة على موقع أمة اقرأ! انغمس في عالم الحكم والاقتباسات الجميلة والذكية واستمد منها الإلهام والتفاؤل. اكتشف أفضل الكلمات التي تجذب الأنظار وتعكس حكمة العقول وروعة الإبداع.',
-};
 
+export async function generateMetadata(paramKey){
+  const cat = paramKey.searchParams.cat;
+  return {
+    title: `أقوال عن ${cat}`,
+    description : `استمتع بقراءة وتصفح أقوال ملهمة حول موضوع ${cat} على موقع أمة اقرأ.`,
+  }
+}
 
 const QuotesPage = (paramKey) => {
   const cat = paramKey.searchParams.cat;

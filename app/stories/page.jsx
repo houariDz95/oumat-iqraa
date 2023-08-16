@@ -1,14 +1,16 @@
 import MainSt from "@/components/stories/MainSt";
 import SearchBarSt from "@/components/stories/SearchBarSt";
+import { stCategories } from "@/constants";
 
-// export async function generateMetadata(paramKey){
-//   const cat = paramKey.searchParams.cat;
-//   const title = atCategories.filter(category => category.path === cat)[0].name;
-//   return {
-//     title: ` ${cat ? title : " كل المقالات"} - أمة اقرأ`,
-//     description: 'استمتع بقراءة واستكشاف مجموعة المقالات الشيقة في موقع أمة اقرأ.',
-//   }
-// }
+export async function generateMetadata(paramKey){
+  const cat = paramKey.searchParams.cat;
+  const title = stCategories.filter(category => category.path === cat)[0].name;
+   return {
+     title: ` ${cat ? title : " كل القصص "} - أمة اقرأ`,
+     description: 'استمتع بقراءة واستكشاف مجموعة القصص  الشيقة في موقع أمة اقرأ.',
+   }
+ }
+
 
 const Articles = (paramKey) => {
   const cat = paramKey.searchParams.cat;

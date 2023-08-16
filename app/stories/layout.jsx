@@ -9,7 +9,7 @@ export default function Layout({ children }) {
   return (
     <div> 
         <Navbar />
-        <PageTitle title="القصص" stories/>
+        <PageTitle title="القصص" articles />
         {children}
     </div>
   )

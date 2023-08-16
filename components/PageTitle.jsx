@@ -7,7 +7,7 @@ const PageTitle = ({title, desc, articles}) => {
         <p className="text-md text-center">{desc}</p>
         {articles && <p className="text-center text-md text-white">
           ابدأ الكتابة للمقالات  
-         {" "} <Link href="/articles/write" className="text-secondary hover:underline">
+         {" "} <Link href="/articles/write" className="orange_gradient font-bold hover:underline">
             من هنا
           </Link>
           </p>}

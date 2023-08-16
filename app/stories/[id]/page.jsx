@@ -4,15 +4,15 @@ import { db } from '@/firebase';
 import { collection, doc, getDoc } from 'firebase/firestore';
 import React from 'react'
 
-// export async function generateMetadata({params: {id}}){
-//   const collectionRef = collection(db, 'articles')
-//   const docRef = doc(collectionRef, id);
-//   const data = await getDoc(docRef)
-//   return {
-//     title: data.data().title,
-//     description: data.data().content,
-//     }
-// }
+export async function generateMetadata({params: {id}}){
+  const collectionRef = collection(db, 'stories')
+  const docRef = doc(collectionRef, id);
+  const data = await getDoc(docRef)
+  return {
+    title: data.data().title,
+    description: data.data().storyText,
+    }
+}
 
 const page = ({params: {id}}) => {
   return (
