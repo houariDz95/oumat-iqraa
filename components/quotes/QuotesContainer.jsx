@@ -5,15 +5,30 @@ import QuotesCard from './QuotesCard';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import SearchQuotesBar from './SearchQuotesBar';
 import {motion} from 'framer-motion'
+import { db } from '@/firebase';
+import {collection, onSnapshot, query, where} from "firebase/firestore";
 
 const QuotesContainer = ({quotesCat}) => { 
     const [data, setData] = useState([]) 
+    const [quotes, setQuotes] = useState([])
     const [mobileMenu, setMobileMenu] = useState(false);
-    
     useEffect(() => {
       const selectQuotes = (cat) => {
         setData(quotesData[cat])
       }
+      const fetchQuotes = async () => {
+        try {
+          const docsRef = collection(db, 'quotes')
+          const q = query(docsRef, where('category', "array-contains", quotesCat));
+          const unsubscribe = onSnapshot(q, (snapshot) => {
+            setQuotes(snapshot.docs.map(doc => ({ ...doc.data(), id: doc.id })));
+            })
+          return unsubscribe
+        } catch (error) {
+          alert(error)
+        } 
+      }
+      fetchQuotes();       
       selectQuotes(quotesCat)
       setMobileMenu(false)
     }, [quotesCat])
@@ -31,7 +46,7 @@ const QuotesContainer = ({quotesCat}) => {
       <div className='max-w-6xl mx-auto  md:mt-8 min-h-[calc(100vh-73px)] flex p-4 gap-6 cursor-pointer'>
         {/* search bar desktop */}
         <div className="hidden md:block mt-8">
-          <SearchQuotesBar quotesCat={quotesCat} />
+          <SearchQuotesBar quotesCat={quotesCat} quotes={quotes} />
         </div>
 
         {/*search bar mobile */}
@@ -55,8 +70,11 @@ const QuotesContainer = ({quotesCat}) => {
           </motion.div>
         </motion.div>}
         
-        {/* quotes */}
+
         <motion.div className=' space-y-6 py-8 sm:columns-2 sm:gap-6  flex-1'>
+          {quotes.map((item, i) => (
+              <QuotesCard key={i} data={item} />
+          ))}
           {data.map((item, i) => (
             <QuotesCard key={i} data={item} />
           ))}

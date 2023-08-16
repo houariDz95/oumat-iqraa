@@ -1,20 +1,20 @@
 export const navLinks = [
   { label: 'الصفحة الرئيسية', path: '/' },
   { label: 'عن الموقع', path: '/about' },
-  { label: 'الكتب', path: '/books' },
+  { label: 'قصص متنوعة', path: '/stories' },
   { label: 'المقالات', path: '/articles' },
   { label: 'إقتباسات', path: '/quotes?cat=الجمال' }
 ];
 
 export const footerLinks = [
   {
-    title: 'المكتبة',
+    title: 'قصص متنوعة',
     links: [
-      { title: 'الكتب', url: '/books' },
-      { title: 'روايات', url: '/books?cat=novels&page=1' },
-      { title: 'قصص الأطفال', url: '/books?cat=children.stories&page=1' },
-      { title: 'مسرحيات', url: '/books?cat=plays&page=1' },
-      { title: 'سياسة', url: '/books?cat=politics&page=1' },
+      { title: 'كل القصص', url: '/stories' },
+      { title: 'خيال', url: '/stories?cat=fantasy' },
+      { title: 'قصص الأطفال', url: '/stories?cat=children' },
+      { title: 'غموض', url: '/stories?cat=mystery' },
+      { title: 'رومانسية', url: '/stories?cat=romance' },
     ],
   },
   {
@@ -38,34 +38,16 @@ export const footerLinks = [
   }
 ];
 
-export const categories = [
-    { name: 'كتب جديدة' },
-    { name: 'إدارة أعمال', path: 'business' },
-    { name: 'أدب', path: 'literature' },
-    { name: 'أدب رحلات', path: 'travel.literature'},
-    { name: 'أديان', path: 'religions' },
-    { name: 'اقتصاد', path: "economics"},
-    { name: 'تاريخ', path: "history"},
-    { name: 'تكنولوجيا', path: "technology" },
-    { name: 'جغرافيا', path: "geography" },
-    { name: 'خيال علمي', path: "science.fiction"},
-    { name: 'روايات', path: "novels" },
-    { name: 'سياسة', path: "politics" },
-    { name: 'سير الأعلام', path: "biographies" },
-    { name: 'شعر', path: "poetry" },
-    { name: 'صحة', path: "health"},
-    { name: 'علم نفس', path: "psychology"},
-    { name: 'علوم', path: "science" },
-    { name: 'علوم اجتماعية', path: "social.sciences" },
-    { name: 'علوم البيئة', path: "environmental.sciences"},
-    { name: 'علوم اللغة', path: "linguistics"},
-    { name: 'فلسفة', path: "philosophy"},
-    { name: 'فنون', path: "arts" },
-    { name: 'قصص الأطفال', path: "children.stories" },
-    { name: 'قصص بوليسية', path: "detective.fiction"},
-    { name: 'مسرحيات', path: "plays"},
-    { name: 'نقد أدبي', path: "literary.criticism"},
-  ];
+export const stCategories = [
+  { name: "كل القصص"},
+  { path: 'children', name: 'قصص الأطفال' },
+  { path: 'adventure', name: 'مغامرات' },
+  { path: 'fantasy', name: 'خيال' },
+  { path: 'mystery', name: 'غموض' },
+  { path: 'sci-fi', name: 'خيال علمي' },
+  { path: 'romance', name: 'رومانسية' },
+  { path: 'horror', name: 'رعب' },
+];
  
  export const atCategories = [
   { name: "كل المقالات"},

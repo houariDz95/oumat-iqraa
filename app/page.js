@@ -2,7 +2,9 @@ import Contact from '@/components/Contact'
 import Features from '@/components/Features'
 import Header from '@/components/Header'
 import Navbar from '@/components/Nav'
+import OthersArticles from '@/components/OthersArticles'
 import RecentPosts from '@/components/RecentPosts'
+import RecentStories from '@/components/RecentStories'
 
 export default function Home() {
   return(
@@ -25,13 +27,13 @@ export default function Home() {
         />
         
         <Features
-          title="تحميل الكتب"
-          desc="استفد من مجموعتنا الواسعة من الكتب في مختلف الأنواع. من الكلاسيكيات إلى أحدث الكتب الأكثر مبيعًا، يمكنك العثور على الكتب المفضلة لديك وتحميلها بكل سهولة. قم بتوسيع معرفتك وتعلم من القصص الشيقة."
+          title="قراءة القصص"
+          desc="تمتع بوقتك بقراءة قصص مشوقة ومثيرة. اختر من مجموعتنا الرائعة من القصص في مختلف الأنواع. دع ذهنك يتجول في عوالم الخيال والإثارة من خلال قصصنا الممتعة."
           img="/assets/library.jpg"
-          buttonText="استكشاف الكتب"
+          buttonText="استكشاف القصص"
           styles="w-full mx-auto flex lg:flex-row-reverse flex-col gap-8"
           direction="left"
-          url="/books"
+          url="/stories"
         />
 
         <Features  
@@ -48,6 +50,16 @@ export default function Home() {
           <div className='absolute bottom-0 right-5 h-1 w-14 bg-primary'/>
         </div>
         <RecentPosts />
+        <div className='relative p-4 mt-8'>
+          <h1 className='text-3xl font-bold text-black italic'>آخر القصص المضافة</h1>
+          <div className='absolute bottom-0 right-5 h-1 w-14 bg-primary'/>
+        </div>
+        <RecentStories />
+        <div className='relative p-4 mt-8'>
+          <h1 className='text-3xl font-bold text-black italic'> مقالات أخرى</h1>
+          <div className='absolute bottom-0 right-5 h-1 w-14 bg-primary'/>
+        </div>
+        <OthersArticles />
         <div className='relative p-4 mt-8'>
           <h1 className='text-3xl font-bold text-black italic'> اتصل بنا</h1>
           <div className='absolute bottom-0 right-5 h-1 w-14 bg-primary'/>

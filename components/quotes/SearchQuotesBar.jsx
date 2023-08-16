@@ -3,7 +3,7 @@ import { quotesCategories } from "@/constants";
 import { useRouter } from "next/navigation";
 import quotesData from "@/constants/quotes.json"
 
-const SearchQuotesBar = ({quotesCat}) => {
+const SearchQuotesBar = ({quotesCat, quotes}) => {
   const router = useRouter()
 
   const handleClick = (cat) => {
@@ -19,7 +19,7 @@ const SearchQuotesBar = ({quotesCat}) => {
         <div key={`${item}-${i}`} 
         onClick={() => handleClick(item)}
         className={`cursor-pointer ${item === quotesCat ?  'text-secondary' : 'text-gray-500'} flex-between px-4 text-lg py-2 gap-2 p-2 rounded-md`}>
-          {item} <span className={`border rounded-full w-12 flex-center py-1 text-sm ${item === quotesCat ?  'border-secondary' : 'border-gray-500'}`}>{quotesData[item].length}</span>
+          {item} <span className={`border rounded-full w-12 flex-center py-1 text-sm ${item === quotesCat ?  'border-secondary' : 'border-gray-500'}`}>{quotesData[item].length + quotes.length}</span>
         </div>
        ))}
     </div>

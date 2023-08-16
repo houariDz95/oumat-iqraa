@@ -4,11 +4,34 @@ import { EditorState, convertToRaw, ContentState } from 'draft-js';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import { auth, db } from '@/firebase';
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
-import { atCategories } from '@/constants';
 import { useRouter } from 'next/navigation';
 import Loader from '@/components/Loader';
+import Select from 'react-select';
 
 const isClient = typeof window !== 'undefined';
+
+const categories = [
+  { label: "أخبار", value: "news" },
+  { label: "تكنولوجيا", value: "technology" },
+  { label: "صحة", value: "health" },
+  { label: "رياضة", value: "sports" },
+  { label: "فنون", value: "arts" },
+  { label: "علوم", value: "science" },
+  { label: "سفر", value: "travel" },
+  { label: "طعام", value: "food" },
+  { label: "تاريخ", value: "history" },
+  { label: "تعليم", value: "education" },
+  { label: "ثقافة", value: "culture" },
+  { label: "أعمال", value: "business" },
+  { label: "سيارات", value: "cars" },
+  { label: "موسيقى", value: "music" },
+  { label: "أفلام", value: "movies" },
+  { label: "أدب", value: "literature" },
+  { label: "تصميم", value: "design" },
+  { label: "موضة", value: "fashion" },
+  { label: "جمال", value: "beauty" },
+  { label: "ألعاب", value: "games" },
+];
 
 
 
@@ -25,10 +48,12 @@ const WritePage = () => {
     const [currentUser, setCurrentUser] = useState(null)
     const [title, setTitle] = useState("");
     const [isLoading, setIsLoading] = useState(false);
-    const [selectedCategory, setSelectedCategory] = useState('');
+    const [selectedCategories, setSelectedCategories] = useState([]);
 
-    const filtredCat = atCategories.filter(category => category.name !== "كل المقالات"); 
-    
+    const handleCategoryChange = (selectedOptions) => {
+      setSelectedCategories(selectedOptions);
+    };
+      
     const handleEditorStateChange = (newEditorState) => {
       setEditorState(newEditorState);
     };
@@ -46,7 +71,7 @@ const WritePage = () => {
           title: title,
           content: rawContentState,
           timestamp: serverTimestamp(),
-          category: selectedCategory,
+          category: selectedCategories.map(cat => cat.value),
         })
       } catch (error) {
         console.log(error)
@@ -96,26 +121,23 @@ const WritePage = () => {
           <label htmlFor="categorySelect" className="block mb-2 text-primary">
             التصنيف:
           </label>
-          <select
-            id="categorySelect"
-            className="border border-gray-300 px-4 py-2 w-full"
-            value={selectedCategory}
-            onChange={(e) => setSelectedCategory(e.target.value)}
-          >
-            <option value="">اختر التصنيف</option>
-            {filtredCat.map((category) => (
-              <option key={category.path} value={category.path}>
-                {category.name}
-              </option>
-            ))}
-          </select>
+          <Select
+            id="categories"
+            inputId="categories-select"
+            isMulti
+            options={categories}
+            value={selectedCategories}
+            onChange={handleCategoryChange}
+            className="w-full absolute z-20"
+            classNamePrefix="select"
+          />
         </div>
         <div className="mb-4" style={{direction: "rtl", textAlign: "right"}}>
           <label className="block mb-2 text-primary"> محتوى المقال :</label>
           <Editor
             editorState={editorState}
             onEditorStateChange={handleEditorStateChange}
-            wrapperClassName="border border-gray-300 rounded text-black pb-10"
+            wrapperClassName="border border-gray-300 rounded text-black pb-10 "
           />
         </div>
         <button

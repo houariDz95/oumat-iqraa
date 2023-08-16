@@ -37,7 +37,7 @@ const ArticleCard = ({ data, hide, handleDelete }) => {
       transition={{ duration: 0.3 }}
     >
       <Link href={`/articles/${data.id}`}>
-        <h2 className={`text-${hide ? "lg" : "2xl"} font-semibold mb-2 text-black hover:text-primary font-plex duration-300 transition-all cursor-pointer`}>{data.title.length > 30 ? data.title.slice(0, 30) + '...' : data.title}</h2>
+        <h2 className={`text-${hide ? "lg" : "2xl"} font-semibold mb-2 text-black hover:text-primary font-plex duration-300 transition-all cursor-pointer`}>{data.title.length > 30 ? data.title.slice(0, 25) + '...' : data.title}</h2>
       </Link>
 
       {!hide && <Link href={`/profile/${data.uid}`} className="flex items-center gap-2 mb-2 cursor-pointer">

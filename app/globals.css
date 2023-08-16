@@ -96,7 +96,7 @@ body,
 
 /* Tailwind Styles */
 .head_text {
-  @apply mt-5 text-5xl font-extrabold leading-[1.15] sm:text-6xl font-plex;
+  @apply mt-5 text-3xl font-extrabold leading-[1.15] font-plex;
 }
 
 .logo_text {

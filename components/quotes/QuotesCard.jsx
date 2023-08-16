@@ -2,6 +2,8 @@
 import Image from 'next/image';
 import { useState } from 'react'
 import { motion } from 'framer-motion';
+import Link from 'next/link';
+
 const QuotesCard = ({data}) => {
   const [copied, setCopied] = useState("");
 
@@ -32,11 +34,13 @@ const QuotesCard = ({data}) => {
           </div>
       </div>
       <p className='my-4 text-sm md:text-md text-gray-700'>{data.text}</p>
-      <p
-        className='text-sm blue_gradient cursor-pointer'
-      >
-        #{data.author}
-      </p>
+      <Link href={`/quotes/${data.author}`}>
+        <p
+          className='text-sm blue_gradient cursor-pointer'
+        >
+          #{data.author}
+        </p>
+      </Link>
     </motion.div>
   )
 }

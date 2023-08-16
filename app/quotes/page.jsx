@@ -1,7 +1,6 @@
 import Navbar from "@/components/Nav"
 import PageTitle from "@/components/PageTitle";
 import QuotesContainer from "@/components/quotes/QuotesContainer"
-import SearchQuotesBar from "@/components/quotes/SearchQuotesBar"
 
 export const metadata = {
   title: 'اقتباسات ملهمة وملفتة للنظر - أمة اقرأ',

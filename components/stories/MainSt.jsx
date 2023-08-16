@@ -2,17 +2,17 @@
 import {useState, useEffect} from 'react';
 import { db } from '@/firebase';
 import { onSnapshot, collection, where, query, orderBy} from 'firebase/firestore';
-import ArticleCard from './ArticleCard';
 import Sidebar from '../Sidebar';
 import Link from 'next/link';
+import StoryCard from './StoryCard';
 
-const Main = ({cat}) => {
+const MainSt = ({cat}) => {
     const [data, setData] = useState([])
     useEffect(() => {
         const fetchPosts = async () => {
           try {
-            const docsRef = collection(db, 'articles')
-            const q = cat ? query(docsRef, where('category', "array-contains", cat)) : query(docsRef, orderBy("timestamp", 'desc'));
+            const docsRef = collection(db, 'stories')
+            const q = cat ? query(docsRef, where('category', 'array-contains', cat )) : query(docsRef, orderBy("timestamp", 'desc'));
             const unsubscribe = onSnapshot(q, (snapshot) => {
                 setData(snapshot.docs.map(doc => ({ ...doc.data(), id: doc.id })));
               })
@@ -25,10 +25,10 @@ const Main = ({cat}) => {
     }, [cat]);
 
   return (
-    <main className='flex relative mb-10'>
-      <div className='lg:flex-[0.75] px-4 space-y-6 py-8 columns-1 mt-3'>
-        {data.length !== 0 ? data.map(post => (
-          <ArticleCard key={post.id} data={post} />
+    <main className='flex relative '>
+      <div className='lg:flex-[0.75] px-4 grid grid-cols-1 md:grid-cols-2 gap-4 mt-10'>
+        {data.length !== 0 ? data.map(story => (
+          <StoryCard  key={story.id} data={story} />
         )): 
         <div className="flex flex-col mt-10">
           <p className="text-black text-lg mb-4">
@@ -47,4 +47,4 @@ const Main = ({cat}) => {
   )
 }
 
-export default Main
+export default MainSt
