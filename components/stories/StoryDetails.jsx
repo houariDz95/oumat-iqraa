@@ -9,13 +9,14 @@ import moment from "moment";
 import 'moment/locale/ar';
 import Image from "next/image";
 import Loader from "../Loader";
+import { updateText, updateTextAndSlice } from "@/utils/updateText";
 
 const StoryDetails = ({id}) => {
     const [story, setStory] = useState([]);
     const [stories, setStories] = useState([]);
     const [loading, setLoading] = useState(false);
     const randomCat = story?.category?.[Math.floor(Math.random() * story.category.length)];
-    
+
     const filltredStories = stories.filter(item => item.id !== id) 
     useEffect(() => {
         const getPost = async () => { 
@@ -76,7 +77,7 @@ const StoryDetails = ({id}) => {
     </div>
     <h2 className="text-3xl font-semibold mb-4 blue_gradient font-plex">{story.title}</h2>
     <Image src={story.imageUrl} alt={story.title} className="mb-4 w-full max-h-[350px] object-cover rounded-lg shadow-md mt-5" width={400} height={400}/>
-    <p className="mt-6 text-gray-800 leading-relaxed text-justify" style={{whiteSpace: "break-spaces"}}>{story.storyText}</p>
+    {updateText(story.storyText, story.isFromEditor)}
     <div className="flex flex-center gap-6 text-lg font-bold text-gray-900 my-10">
       <span>*</span>
       <span>*</span>
@@ -86,17 +87,17 @@ const StoryDetails = ({id}) => {
     <h1 className="text-xl font-semibold mb-4">استكشف أيضًا</h1>
     <div className="grid gap-4 grid-cols-1">
       {filltredStories.map(item => (
-        <div className="bg-white shadow-md p-4 flex" key={item.id}>
+        <div className="bg-white shadow-md p-1 xs:p-4 flex flex-row-reverse md:flex-row" key={item.id}>
           <Image
             width={200}
             height={200}
             src={item.imageUrl}  
             alt={story.tilte}
-            className="object-cover h-36 "
+            className="object-cover h-36 w-32 hidden xs:block"
           />
           <div className="mr-4 flex items-start justify-center gap-5 flex-col">
-            <h2 className="text-xl font-semibold">{item.title}</h2>  
-            <p className="text-gray-500">{item.storyText.slice(0, 120)}...
+            <h2 className="text-xl font-semibold">{item.title.length > 25 ? item.title.slice(0, 25) + "..." : item.title}</h2>  
+            <p className="text-gray-600 leading-snug text-sm md:text-md">{updateTextAndSlice(item.storyText, item.isFromEditor)}
             <Link href={`/stories/${item.id}`} className='blue_gradient cursor-pointer'>بدء القراءة</Link>
             </p> 
           </div>

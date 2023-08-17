@@ -147,8 +147,8 @@ const SearchFor = ({keyword}) => {
           {filteredStories.length ?
           <div className='p-5'>
             <h1 className='text-lg  font-bold'>القصص</h1>
-            <div className="relative space-y-6 py-8 sm:columns-2 sm:gap-6 xl:columns-3 ">
-              {filteredPosts.map(story => (
+            <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
+              {filteredStories.map(story => (
                 <StoryCard key={story.id} data={story} />
               ))}
             </div>

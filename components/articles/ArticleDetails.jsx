@@ -12,6 +12,7 @@ import moment from "moment";
 import 'moment/locale/ar';
 import Image from "next/image";
 import Loader from "../Loader";
+import { updateTextAndSlice } from "@/utils/updateText";
 
 const ArticleDetails = ({id}) => {
     const [post, setPost] = useState([]);
@@ -104,19 +105,20 @@ const ArticleDetails = ({id}) => {
       <h1 className="text-xl font-semibold mb-4">استكشف أيضًا</h1>
       <div className="grid gap-4 grid-cols-1">
         {posts.map(item => (
-          <div className="bg-white shadow-md p-4 flex" key={item.id}>
+          <div className="bg-white shadow-md p-1 xs:p-4 flex " key={item.id}>
             <Image
               width={200}
               height={200}
               src={item.imageUrl}  
               alt={item.tilte}
-              className="object-cover h-36 "
+              className="object-cover h-36 w-32 hidden xs:block"
             />
-            <div className="mr-4 flex items-start justify-center gap-5 flex-col">
+            <div className="mr-4 flex items-start justify-center gap-3 flex-col">
             <Link href={`/articles/others/${item?.id}`}>
-              <h2 className="text-xl font-semibold hover:text-primary">{item?.title}</h2>  
+              <h2 className="text-lg md:text-xl font-semibold hover:text-primary">{item?.title.length > 25 ? item.title.slice(0, 25) + "..." : item.title}</h2>  
             </Link>
-              <p className="text-gray-500">{item?.articleText.slice(0, 120)}...
+              <p className="text-gray-500 text-sm md:text-md">
+                {updateTextAndSlice(item.articleText, item.isFromEditor)}
                 <Link href={`/articles/others/${item.id}`} className='blue_gradient cursor-pointer'>بدء القراءة</Link>
               </p> 
             </div>

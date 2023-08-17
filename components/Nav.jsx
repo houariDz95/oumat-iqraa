@@ -56,13 +56,13 @@ const Navbar = ({primary}) => {
     };
   }, []);
   return (
-    <nav className={`${primary ? "bg-gray-900 md:bg-primary" : "bg-gray-900"} py-4 px-2`}>
+    <nav className={`${primary ? "bg-gray-900 md:bg-primary" : "bg-gray-900"} py-4`}>
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="flex items-center gap-2"
+          className="flex items-center gap-2 pr-4 md:pr-0"
         >
           <Image src={`/assets/${primary && !isMobile ? 'logo_01' : 'logo_02'}.png`} alt="Logo" width={30} height={30} className="object-contain" />
           <span className="logo_text">أمة اقرأ</span>

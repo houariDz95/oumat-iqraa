@@ -47,6 +47,13 @@ export const stCategories = [
   { path: 'sci-fi', name: 'خيال علمي' },
   { path: 'romance', name: 'رومانسية' },
   { path: 'horror', name: 'رعب' },
+  { path: 'literature', name: 'أدب' },
+  { path: 'thriller', name: 'إثارة' },
+  { path: 'dystopian', name: 'ديستوبيا' },
+  { path: 'comedy', name: 'كوميديا' },
+  { path: 'self-help', name: 'تطوير الذات' },
+  { path: 'biography', name: 'سيرة ذاتية' },
+  { path: 'philosophy', name: 'فلسفة' },
 ];
  
  export const atCategories = [
@@ -63,14 +70,12 @@ export const stCategories = [
   { name: "تعليم", path: "education" },
   { name: "ثقافة", path: "culture" },
   { name: "أعمال", path: "business" },
-  { name: "سيارات", path: "cars" },
-  { name: "موسيقى", path: "music" },
-  { name: "أفلام", path: "movies" },
   { name: "أدب", path: "literature" },
   { name: "تصميم", path: "design" },
   { name: "موضة", path: "fashion" },
   { name: "جمال", path: "beauty" },
   { name: "ألعاب", path: "games" },
+  { name: "علم النفس", path: "psychology" },
 ];
 
 export const quotesCategories = [

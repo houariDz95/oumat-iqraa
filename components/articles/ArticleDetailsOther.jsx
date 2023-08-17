@@ -9,6 +9,7 @@ import 'moment/locale/ar';
 import Image from "next/image";
 import Loader from "../Loader";
 import ArticleCard from "./ArticleCard";
+import { updateText } from "@/utils/updateText";
 
 const ArticleDetailsOther = ({id}) => {
     const [post, setPost] = useState([]);
@@ -86,7 +87,7 @@ const ArticleDetailsOther = ({id}) => {
             width={400} 
             height={400}
         />
-        <p className="mt-6 text-gray-800 leading-relaxed text-justify" style={{whiteSpace: "break-spaces"}}>{post.articleText}</p>
+        {updateText(post.articleText, post.isFromEditor)}
         <div className="flex flex-center gap-6 text-lg font-bold text-gray-900 my-10">
             <span>*</span>
             <span>*</span>

@@ -1,6 +1,8 @@
+'use client'
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import { updateTextAndSlice } from '@/utils/updateText';
+
 
 const StoryCard = ({data}) => {
   return (
@@ -14,8 +16,11 @@ const StoryCard = ({data}) => {
             className="object-cover w-full h-40 rounded-lg mb-4"
           />
       </Link>
+
       <h3 className="text-xl font-semibold mb-2">{data.title.length < 25 ? data.title : data.title.slice(0, 25)}</h3>
-      <p className="text-gray-600">{data.storyText.slice(0, 120) + "..."} <br />
+
+      <p className="text-gray-600 ">
+        {updateTextAndSlice(data.storyText, data.isFromEditor)}
         <Link href={`/stories/${data.id}`} className='blue_gradient cursor-pointer'>إقرأ المزيد</Link>
       </p>
   </div>
