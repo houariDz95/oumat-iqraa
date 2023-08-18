@@ -55,7 +55,7 @@ const Main = ({cat}) => {
         </div>
         }
         <h1 className='text-2xl font-semibold blue_gradient'>اقرأ أيضا</h1>
-        <div className='lg:flex-[0.75] px-4 space-y-6 py-8 columns-2 mt-3'>
+        <div className='lg:flex-[0.75] px-4 space-y-6 py-8 columns-1 md:columns-2 mt-3'>
           {othersArticles.map(article => (
             <OthersArticleCard key={article.id} {...article} />
           ))}

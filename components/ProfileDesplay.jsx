@@ -45,6 +45,7 @@ const ProfileDesplay = ({ name, desc, data,  handleDelete, deletePost, setIsOpen
         {data.map((post) => (
           <ArticleCard
             key={post.id}
+            hide
             data={post}
             isAdmin={isAdmin}
             handleDelete={() => deletePost && deletePost(post)}

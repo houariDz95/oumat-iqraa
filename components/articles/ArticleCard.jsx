@@ -28,7 +28,7 @@ const ArticleCard = ({ data, hide, handleDelete }) => {
     .toArray()
     .slice(0, 150);
 
-  const truncatedDescription = truncateText(slicedBlocks.map(block => block.getText()).join(''), 150);
+  const truncatedDescription = truncateText(slicedBlocks.map(block => block.getText()).join(''), 130);
   return (
    <motion.div
       className={`relative flex-1 break-inside-avoid rounded-lg border border-gray-300 bg-white/20 bg-clip-padding p-6 pb-4 backdrop-blur-lg backdrop-filter  w-full  ${hide ? "p-3 h-[180px]" : "p-6 h-fit"} group `}
@@ -36,28 +36,30 @@ const ArticleCard = ({ data, hide, handleDelete }) => {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.3 }}
     >
-      <Link href={`/articles/${data.id}`}>
-        <h2 className={`text-${hide ? "lg" : "2xl"} font-semibold mb-2 text-black hover:text-primary font-plex duration-300 transition-all cursor-pointer`}>{data.title.length > 25 ? data.title.slice(0, 25) + '...' : data.title}</h2>
+      <Link href={`/articles/${data.id}`} className='hidden xs:block'>
+        <h2 className={`text-${hide ? "lg" : "xl"} font-semibold mb-2 text-black hover:text-primary font-plex duration-300 transition-all cursor-pointer`}>{data.title.length > 35 ? data.title.slice(0, 35) + '...' : data.title}</h2>
       </Link>
-
+      <Link href={`/articles/${data.id}`} className='xs:hidden'>
+        <h2 className={`text-lg font-semibold mb-2 text-black hover:text-primary font-plex duration-300 transition-all cursor-pointer`}>{data.title}</h2>
+      </Link>
       {!hide && <Link href={`/profile/${data.uid}`} className="flex items-center gap-2 mb-2 cursor-pointer">
         <Avatar alt={data.createdBy} src={data.userImage} sx={{ width: 28, height: 28 }}/>
         <span className="text-gray-500 text-sm">{data.createdBy}</span>
       </Link>}
 
-      <p className={`text-gray-700 mb-4 ${hide && "text-sm"} mt-4`}>{truncatedDescription}</p>
+      <p className={`text-gray-700 mb-4 ${hide && "text-sm"} mt-4 hidden xs:block`}>{truncatedDescription}</p>
 
       {!hide && <p className="text-black flex items-center gap-2 text-sm">
         <AiOutlineCalendar size={18} color='#6449ff' />
         {moment(data.timestamp?.toDate(), 'ar').format('DD MMMM YYYY')}
       </p>}
       {auth?.currentUser?.uid === data?.uid && pathName === `/profile/${auth?.currentUser?.uid }` &&(
-        <div className='mt-5 flex-center gap-4 border-t border-gray-100 pt-3'>
+        <div className='flex-center gap-4 border-t border-gray-100  pt-0 md:pt-3'>
           <p
             className='font-inter text-sm orange_gradient cursor-pointer'
             onClick={handleDelete}
           >
-            Delete
+            حذف 
           </p>
         </div>
       )}

@@ -15,7 +15,7 @@ const OthersArticleCard = ({ imageUrl, title, articleText, id, isFromEditor }) =
         />
       </div>
       <div className="p-4">
-        <h2 className="text-xl font-semibold mb-2">{title.length > 25 ? title.slice(0, 25) + "..." : title}</h2>
+        <h2 className="text-xl font-semibold mb-2 h-14">{title}</h2>
         <p className="text-gray-600">
           {updateTextAndSlice(articleText, isFromEditor)}
           <Link href={`/articles/others/${id}`}>

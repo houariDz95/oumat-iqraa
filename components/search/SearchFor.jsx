@@ -137,7 +137,7 @@ const SearchFor = ({keyword}) => {
           {filteredPosts.length ? 
           <div className='p-5'>
             <h1 className='text-lg  font-bold'>المقالات</h1>
-            <div className="relative space-y-6 py-8 sm:columns-2 sm:gap-6 xl:columns-3 ">
+            <div className="relative space-y-6 py-8 columuns-1 md:columns-2 sm:gap-6 ">
               {filteredPosts.map(post => (
                 <ArticleCard key={post.id} data={post} />
               ))}
