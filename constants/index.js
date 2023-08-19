@@ -44,15 +44,12 @@ export const stCategories = [
   { path: 'adventure', name: 'مغامرات' },
   { path: 'fantasy', name: 'خيال' },
   { path: 'mystery', name: 'غموض' },
-  { path: 'sci-fi', name: 'خيال علمي' },
   { path: 'romance', name: 'رومانسية' },
   { path: 'horror', name: 'رعب' },
   { path: 'literature', name: 'أدب' },
   { path: 'thriller', name: 'إثارة' },
   { path: 'dystopian', name: 'ديستوبيا' },
   { path: 'comedy', name: 'كوميديا' },
-  { path: 'self-help', name: 'تطوير الذات' },
-  { path: 'biography', name: 'سيرة ذاتية' },
   { path: 'philosophy', name: 'فلسفة' },
 ];
  
