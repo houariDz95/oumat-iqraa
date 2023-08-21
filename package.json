@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.13.6",
     "@mui/styled-engine-sc": "^5.12.0",
+    "@vercel/analytics": "^1.0.2",
     "autoprefixer": "10.4.14",
     "axios": "^1.4.0",
     "draft-js": "^0.11.7",
