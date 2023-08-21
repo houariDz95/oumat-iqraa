@@ -1,7 +1,7 @@
 import Footer from '@/components/Footer'
 import './globals.css'
 import { Cairo } from 'next/font/google'
-
+import { Analytics } from '@vercel/analytics/react';
 const cairo = Cairo({
   subsets: ['latin'],
   weight: ["400", "700"],
@@ -20,6 +20,7 @@ export default function RootLayout({ children }) {
         <div className='w-full bg-gray-100 min-h-[calc(100vh-73px)] overflow-x-hidden' style={{direction: "rtl"}}>
           {children}          
           <Footer />
+          <Analytics />
         </div>
       </body>
     </html>
