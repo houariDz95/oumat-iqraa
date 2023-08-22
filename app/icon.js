@@ -22,7 +22,7 @@ export default function icon() {
           color: 'white',
         }}
       >
-        OI
+        O
       </div>
     ),
     size,

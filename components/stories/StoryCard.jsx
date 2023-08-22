@@ -17,9 +17,9 @@ const StoryCard = ({data}) => {
           />
       </Link>
 
-      <h3 className="text-xl font-semibold mb-2">{data.title.length < 25 ? data.title : data.title.slice(0, 25)}</h3>
+      <h3 className="text-xl font-semibold mb-4">{data.title}</h3>
 
-      <p className="text-gray-600 " >
+      <p className="text-gray-600 h-28" >
         {updateTextAndSlice(data.storyText, data.isFromEditor)}
         <Link href={`/stories/${data.id}`} className='blue_gradient cursor-pointer'>إقرأ المزيد</Link>
       </p>

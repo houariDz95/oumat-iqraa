@@ -9,11 +9,11 @@ const Header = () => {
 
   return (
     <>
-      <section className="relative lg:h-[calc(100vh-72px)] h-[70vh] bg-primary">
+      <section className="relative lg:h-[calc(100vh-72px)] h-[85vh] bg-primary">
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 1 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
         className="max-w-6xl mx-auto flex-col-center h-[70%] gap-4 p-4">
           <motion.h2
             initial={{ opacity: 0, y: -20 }}
@@ -25,8 +25,8 @@ const Header = () => {
           <motion.p
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 1 }}
-            className="text-[20px] font-medium text-white text-center leading-relaxed"
+            transition={{ delay: 0.3, duration: 0.4 }}
+            className="text-[20px] font-medium text-white text-center leading-relaxed mb-10"
           >
             اكتشف قدرات جديدة ورائعة مع موقعنا! نحن نقدم لك فرصة استخدام أحدث التقنيات في عالم التعلم
             العميق لاكتشاف، قراءة ، كتابة، وإنشاء الصور بطرق مدهشة. مع قدراتنا الفريدة
@@ -39,7 +39,7 @@ const Header = () => {
             }}
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 2, duration: 1 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
             className="mt-4 flex items-center w-full bg-white p-3"
           >
             <input

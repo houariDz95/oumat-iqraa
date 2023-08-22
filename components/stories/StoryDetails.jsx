@@ -87,7 +87,7 @@ const StoryDetails = ({id}) => {
     <h1 className="text-xl font-semibold mb-4">استكشف أيضًا</h1>
     <div className="grid gap-4 grid-cols-1">
       {filltredStories.map(item => (
-        <div className="bg-white shadow-md p-1 xs:p-4 flex flex-row-reverse md:flex-row" key={item.id}>
+        <div className="bg-white shadow-md p-1 xs:p-2 flex flex-row-reverse md:flex-row gap-2" key={item.id}>
           <Image
             width={200}
             height={200}
@@ -95,9 +95,9 @@ const StoryDetails = ({id}) => {
             alt={story.tilte}
             className="object-cover h-36 w-32 hidden xs:block"
           />
-          <div className="mr-4 flex items-start justify-center gap-5 flex-col">
-            <h2 className="text-xl font-semibold">{item.title.length > 25 ? item.title.slice(0, 25) + "..." : item.title}</h2>  
-            <p className="text-gray-600 leading-snug text-sm md:text-md">{updateTextAndSlice(item.storyText, item.isFromEditor)}
+          <div className="mr-4 flex items-start justify-center gap-3 flex-col">
+            <h2 className="text-md md:text-xl font-semibold">{item.title.length > 25 ? item.title.slice(0, 25) + "..." : item.title}</h2>  
+            <p className="text-gray-600 leading-snug text-[12px] md:text-lg">{updateTextAndSlice(item.storyText, item.isFromEditor)}
             <Link href={`/stories/${item.id}`} className='blue_gradient cursor-pointer'>بدء القراءة</Link>
             </p> 
           </div>
