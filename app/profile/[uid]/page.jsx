@@ -94,7 +94,7 @@ const Profile =  ({params: {uid}}) => {
       <ProfileDesplay
         name={isAdmin? "الملف الشخصي" : `الملف الشخصي الخاص ب ${user?.username} `} 
         desc={isAdmin ?  "اكتشف الفرص والاهتمامات الفريدة التي تميزك واجعل ملفك الشخصي مرآة لشخصيتك." :
-        `ترحيبًا بك في صفحة الملف الشخصي المخصصة لـ ${user.username}. استكشف التحفيزات الاستثنائية لـ ${user.username} واستلهم قوة خيالهم.`}
+        `ترحيبًا بك في صفحة الملف الشخصي المخصصة لـ ${user.username}. استكشف التحفيزات الاستثنائية لـ ${user.username}.`}
         data={posts}
         setIsOpen={setIsOpen}
         handleDelete={handleDelete}
