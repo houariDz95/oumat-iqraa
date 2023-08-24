@@ -3,6 +3,7 @@ import {BiTrash} from "react-icons/bi";
 import {FiEdit} from 'react-icons/fi';
 
 const ProfileDesplay = ({ name, desc, data,  handleDelete, deletePost, setIsOpen, isAdmin, user }) => {
+  
   return (
     <section className='w-full min-h-[calc(100vh-106px)]'>
       <h1 className='head_text text-rigth'>

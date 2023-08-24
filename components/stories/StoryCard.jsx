@@ -14,6 +14,7 @@ const StoryCard = ({data}) => {
             width={300}
             height={200}
             className="object-cover w-full h-40 rounded-lg mb-4"
+            loading="eager"
           />
       </Link>
 

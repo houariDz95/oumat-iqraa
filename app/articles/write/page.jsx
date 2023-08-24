@@ -1,6 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react';
-import { EditorState, convertToRaw, ContentState } from 'draft-js';
+import { EditorState, convertToRaw } from 'draft-js';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import { auth, db } from '@/firebase';
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore';

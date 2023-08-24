@@ -2,10 +2,13 @@
 import {useState, useEffect} from 'react';
 import { db } from '@/firebase';
 import { onSnapshot, collection, where, query, orderBy} from 'firebase/firestore';
-import ArticleCard from './ArticleCard';
+//import ArticleCard from './ArticleCard';
 import Sidebar from '../Sidebar';
 import Link from 'next/link';
 import OthersArticleCard from './OthersArticleCard';
+
+import dynamic from 'next/dynamic'
+const ArticleCard = dynamic(() => import('./ArticleCard'))
 
 const Main = ({cat}) => {
     const [data, setData] = useState([])

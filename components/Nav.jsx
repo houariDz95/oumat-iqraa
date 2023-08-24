@@ -106,7 +106,7 @@ const Navbar = ({primary}) => {
                 alt={currentUser?.displayName}
                 sx={{ width: 50, height: 50, cursor: 'pointer'}}
                 onClick={toggleProfileMenu}
-                
+              
               />
               {isProfileMenuOpen && (
                  <ProfileMenu isProfileMenuOpen={isProfileMenuOpen} toggleProfileMenu={toggleProfileMenu} handleSignOut={handleSignOut}/>
@@ -136,6 +136,7 @@ const Navbar = ({primary}) => {
               <motion.li
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
+                onClick={() => setIsMenuOpen(false)}
                 key={link.path}
               >
                 <Link href={link.path} className="text-white hover:text-gray-200">

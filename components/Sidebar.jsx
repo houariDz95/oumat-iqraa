@@ -6,9 +6,11 @@ import { useEffect, useState } from 'react';
 import { collection, limit, onSnapshot, orderBy, query } from 'firebase/firestore';
 import { db } from '@/firebase';
 import { Avatar } from '@mui/material';
+
 const Sidebar = () => {
   const [data, setData] = useState([])
   const [users, setUsers] = useState([])
+
   useEffect(() => {
     const fetchPosts = async () => {
       try {
@@ -22,6 +24,7 @@ const Sidebar = () => {
         alert(error)
       } 
     }
+    
     const fetchUsers = async () => {
       try {
         const docsRef = collection(db, 'users')

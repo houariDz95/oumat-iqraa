@@ -4,7 +4,10 @@ import { db } from '@/firebase';
 import { onSnapshot, collection, where, query, orderBy} from 'firebase/firestore';
 import Sidebar from '../Sidebar';
 import Link from 'next/link';
-import StoryCard from './StoryCard';
+
+//import StoryCard from './StoryCard';
+import dynamic from 'next/dynamic'
+const StoryCard = dynamic(() => import('./StoryCard'))
 
 const MainSt = ({cat}) => {
     const [data, setData] = useState([])

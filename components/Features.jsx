@@ -20,6 +20,7 @@ const Features = ({ title, desc, img, buttonText, styles, direction, url }) => {
             height={400}
             alt="get-started"
             className=" object-contain w-full h-full"
+            loading="eager"
           />
         </motion.div>
         <motion.div

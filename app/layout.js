@@ -2,6 +2,7 @@ import Footer from '@/components/Footer'
 import './globals.css'
 import { Cairo } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react';
+
 const cairo = Cairo({
   subsets: ['latin'],
   weight: ["400", "700"],

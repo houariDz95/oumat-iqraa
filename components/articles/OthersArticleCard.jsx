@@ -12,6 +12,7 @@ const OthersArticleCard = ({ imageUrl, title, articleText, id, isFromEditor }) =
           layout="fill"
           objectFit="cover"
           className="object-cover"
+          loading="eager"
         />
       </div>
       <div className="p-4">

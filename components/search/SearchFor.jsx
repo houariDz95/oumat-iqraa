@@ -1,9 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react';
-import { collection, onSnapshot, query, where, } from 'firebase/firestore';
+import { collection, onSnapshot } from 'firebase/firestore';
 import  {db} from '@/firebase';
-import { IoMdArrowDropleft } from 'react-icons/io';
-import Link from 'next/link';
 import Loader from '../Loader';
 import ArticleCard from '../articles/ArticleCard';
 import StoryCard from '../stories/StoryCard';
@@ -128,9 +126,9 @@ const SearchFor = ({keyword}) => {
     if(isLoading) return <div className='h-36 flex-center'>
       <Loader />
     </div>
-    if(!filteredPosts.length && !filteredStories.length && !filteredQuotes.length && !filteredOtherArticles.length) return 
+    if(!filteredPosts.length && !filteredStories.length && !filteredQuotes.length && !filteredOtherArticles.length) return (
     <h2 className='text-lg font-semibold text-black'>لا توجد نتائج البحث</h2>
-
+    )
     return (
     <>
         <div className="mt-6 text-right">
