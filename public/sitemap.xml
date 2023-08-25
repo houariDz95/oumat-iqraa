@@ -13,19 +13,56 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://www.oumat-iqraa.com/articles/others/X2LhDBxAUilrGD5PkZM0</loc>
+        <lastmod>2023-08-25</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+        <url>
+        <loc>https://www.oumat-iqraa.com/articles/others/u0Kj61doxIX0IWl68wqs</loc>
+        <lastmod>2023-08-25</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+        <url>
+        <loc>https://www.oumat-iqraa.com/articles/others/9P8tH6E5ZJCcyc2pUPeO</loc>
+        <lastmod>2023-08-25</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    </url>
+        <url>
+        <loc>https://www.oumat-iqraa.com/articles/others/EeNtvgOloOnqRTPDnvzb</loc>
+        <lastmod>2023-08-25</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://www.oumat-iqraa.com/stories</loc>
         <lastmod>2023-08-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.oumat-iqraa.com/quotes</loc>
+        <loc>https://www.oumat-iqraa.com/quotes?cat=الحب</loc>
         <lastmod>2023-08-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <url>
-        <loc>https://www.oumat-iqraa.com/search</loc>
+        <url>
+        <loc>https://www.oumat-iqraa.com/quotes?cat=الحياة</loc>
+        <lastmod>2023-08-25</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+        <url>
+        <loc>https://www.oumat-iqraa.com/quotes/فيودور%20دوستويفسكي</loc>
+        <lastmod>2023-08-25</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+        <url>
+        <loc>https://www.oumat-iqraa.com/quotes/مصطفى%20صادق%20الرافعي</loc>
         <lastmod>2023-08-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
