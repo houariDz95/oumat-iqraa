@@ -4,11 +4,13 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { navLinks } from '@/constants';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
-import { FaUser, FaSignOutAlt } from 'react-icons/fa';
 import Image from 'next/image';
 import { auth } from '@/firebase';
 import { Avatar } from '@mui/material';
 import ProfileMenu from './ProfileMenu';
+
+import dynamic from 'next/dynamic';
+const MobileManu = dynamic(() => import('./MobileManu'))
 
 const Navbar = ({primary}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -125,48 +127,7 @@ const Navbar = ({primary}) => {
           </motion.button>
         </motion.div>
       </div>
-      {isMenuOpen && (
-        <motion.div 
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className={`${primary ? "bg-gray-900 md:bg-primary" : "bg-gray-900"} bg-gray-900 md:hidden p-4`}>
-          <ul className="flex flex-col gap-4 py-2">
-            {navLinks.map((link) => (
-              <motion.li
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                onClick={() => setIsMenuOpen(false)}
-                key={link.path}
-              >
-                <Link href={link.path} className="text-white hover:text-gray-200">
-                  {link.label}
-                </Link>
-              </motion.li>
-            ))}
-            {auth.currentUser && (
-              <div className='flex items-center justify-start mt-4 border-t border-gray-200/20 pt-4 gap-6'>
-                {/* Profile Button */}
-                  <Link
-                    href={`/profile/${auth?.currentUser?.uid}`}
-                    className="text-white hover:text-gray-100/50 flex-center gap-4"
-                  >
-                    <FaUser className="inline-block mr-2" />
-                    الملف الشخصي
-                  </Link>
-                {/* Sign Out Button */}
-                  <button
-                    className="text-white hover:text-gray-100/50 flex-center gap-4"
-                    onClick={handleSignOut}
-                  >
-                    <FaSignOutAlt className="inline-block mr-2" />
-                    تسجيل الخروج
-                  </button>
-              </div>
-            )}
-          </ul>
-        </motion.div>
-      )}
+      {isMenuOpen && <MobileManu  primary={primary} handleSignOut={handleSignOut} isOpen={isMenuOpen} />}
     </nav>
   );
 };

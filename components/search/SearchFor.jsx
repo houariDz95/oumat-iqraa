@@ -3,10 +3,13 @@ import { useEffect, useState } from 'react';
 import { collection, onSnapshot } from 'firebase/firestore';
 import  {db} from '@/firebase';
 import Loader from '../Loader';
-import ArticleCard from '../articles/ArticleCard';
-import StoryCard from '../stories/StoryCard';
-import QuotesCard from '../quotes/QuotesCard';
-import OthersArticleCard from '../articles/OthersArticleCard';
+import dynamic from 'next/dynamic';
+
+
+const ArticleCard = dynamic(() => import('../articles/ArticleCard'));
+const StoryCard = dynamic(() => import('../stories/StoryCard'));
+const QuotesCard =  dynamic(() => import('../quotes/QuotesCard'));
+const OthersArticleCard = dynamic(() => import('../articles/OthersArticleCard'));
 
 const SearchFor = ({keyword}) => {
     const [posts, setPosts] = useState([]);

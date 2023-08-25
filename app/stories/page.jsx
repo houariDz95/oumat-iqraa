@@ -2,7 +2,6 @@ import MainSt from "@/components/stories/MainSt";
 import SearchBarSt from "@/components/stories/SearchBarSt";
 import { stCategories } from "@/constants";
 
-
 export async function generateMetadata(paramKey){
   const cat = paramKey.searchParams.cat;
   const title = stCategories.filter(category => category.path === cat)[0].name;

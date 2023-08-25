@@ -84,7 +84,7 @@ const StoryDetails = ({id}) => {
       <span>*</span>
     </div>
     <div className="">
-    <h1 className="text-xl font-semibold mb-4">استكشف أيضًا</h1>
+    <h1 className="text-xl font-semibold my-4">استكشف أيضًا</h1>
     <div className="grid gap-4 grid-cols-1">
       {filltredStories.map(item => (
         <div className="bg-white shadow-md p-1 xs:p-2 flex flex-row-reverse md:flex-row gap-2" key={item.id}>
@@ -105,7 +105,6 @@ const StoryDetails = ({id}) => {
       ))}
     </div> 
   </div>
-
   </motion.div>
   )
 }
