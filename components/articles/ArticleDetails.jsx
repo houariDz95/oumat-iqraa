@@ -13,7 +13,8 @@ import 'moment/locale/ar';
 import Image from "next/image";
 import Loader from "../Loader";
 import { updateTextAndSlice } from "@/utils/updateText";
-const isMobile = useMediaQuery('(max-width: 768px)');
+import { useMediaQuery } from "@react-hook/media-query";
+
 
 const ArticleDetails = ({id}) => {
     const [post, setPost] = useState([]);
