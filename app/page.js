@@ -1,10 +1,7 @@
 import Contact from '@/components/Contact'
-//import Features from '@/components/Features'
 import Header from '@/components/Header'
 import Navbar from '@/components/Nav'
-//import OthersArticles from '@/components/OthersArticles'
-//import RecentPosts from '@/components/RecentPosts'
-//import RecentStories from '@/components/RecentStories'
+
 
 import dynamic from 'next/dynamic'
 const Features = dynamic(() => import('@/components/Features'))

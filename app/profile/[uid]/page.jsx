@@ -1,15 +1,16 @@
 'use client'
 import Loader from '@/components/Loader';
-import Modal from '@/components/Modal';
-import ProfileDesplay from '@/components/ProfileDesplay';
+
 import { auth, db } from '@/firebase';
 import { deleteUser } from 'firebase/auth';
 import { collection, deleteDoc, doc, getDoc, getDocs, onSnapshot, query, where } from 'firebase/firestore';
 import Error from 'next/error';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState} from 'react';
+import dynamic from 'next/dynamic';
 
-
+const Modal = dynamic(() => import('@/components/Modal'));
+const ProfileDesplay = dynamic(() => import('@/components/ProfileDesplay'));
 const Profile =  ({params: {uid}}) => {
     
     const [user, setUser] = useState([]);

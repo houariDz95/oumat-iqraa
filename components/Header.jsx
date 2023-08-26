@@ -1,59 +1,69 @@
 "use client"
-import { motion } from "framer-motion"
+import { LazyMotion, domAnimation, m } from "framer-motion"
+import { useMediaQuery } from '@react-hook/media-query';
 import { useRouter } from "next/navigation"
 import SearchButton from "./SearchButton"
 
 
 const Header = () => {
   const router = useRouter()
+  const isMobile = useMediaQuery('(max-width: 768px)');
 
   return (
     <>
       <section className="relative lg:h-[calc(100vh-72px)] h-[85vh] bg-primary">
-        <motion.div 
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="max-w-6xl mx-auto flex-col-center h-[70%] gap-4 p-4">
-          <motion.h2
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 1 }}
-            whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeInOut" } }}
-            className="text-[36px] font-bold leading-snug text-white mt-10 text-center font-plex"
-          >
-            مرحبًا بكم في موقع أمة اقرأ 
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 1 }}
-            className="text-[20px] font-medium text-white text-center leading-relaxed mb-10"
-          >
-            اكتشف قدرات جديدة ورائعة مع موقعنا! نحن نقدم لك فرصة استخدام أحدث التقنيات في عالم التعلم
-            العميق لاكتشاف، قراءة ، كتابة، وإنشاء الصور بطرق مدهشة. مع قدراتنا الفريدة
-          </motion.p>
-          <motion.form
-            action={(formData) => {
-              const searchTerm = formData.get("search")
-              if(!formData.get("search")) return 
-              router.push(`/search/${searchTerm}`)
-            }}
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 2, duration: 1 }}
-            className="mt-4 flex items-center w-full bg-white p-3"
-          >
-            <input
-              type="text"
-              name="search"
-              placeholder="ابحث هنا..."
-              dir='rtl'
-              className="flex-1 px-4 py-2 text-right outline-none text-primary font-bold placeholder:text-gray-500"
-            />
-           <SearchButton styles="py-2 px-4 bg-main-bg font-bold text-white"/>
-          </motion.form>
-        </motion.div>
+        <LazyMotion features={domAnimation}>
+          <m.div 
+          initial={!isMobile ? { opacity: 0, y: -50 } : {}}
+          animate={!isMobile ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 1 }}
+          className="max-w-6xl mx-auto flex-col-center h-[70%] gap-4 p-4">
+            <LazyMotion features={domAnimation}>
+              <m.h2
+                initial={!isMobile ? { opacity: 0, y: -20 } : {}}
+                animate={!isMobile ? { opacity: 1, y: 0 }: {}}
+                transition={!isMobile  ? { delay: 0.5, duration: 1 } : {}}
+                whileInView={!isMobile ? { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeInOut" } } : {}}
+                className="text-[36px] font-bold leading-snug text-white mt-10 text-center font-plex"
+              >
+                مرحبًا بكم في موقع أمة اقرأ 
+              </m.h2>
+            </LazyMotion>
+            <LazyMotion features={domAnimation}>
+              <m.p
+                initial={!isMobile ? { opacity: 0, y: -20 } : {}}
+                animate={!isMobile ? { opacity: 1, y: 0 } : {}}
+                transition={!isMobile ? { delay: 1, duration: 1 } : {}}
+                className="text-[20px] font-medium text-white text-center leading-relaxed mb-10"
+              >
+                اكتشف قدرات جديدة ورائعة مع موقعنا! نحن نقدم لك فرصة استخدام أحدث التقنيات في عالم التعلم
+                العميق لاكتشاف، قراءة ، كتابة، وإنشاء الصور بطرق مدهشة. مع قدراتنا الفريدة
+              </m.p>
+            </LazyMotion>
+            <LazyMotion features={domAnimation}>
+              <m.form 
+                action={(formData) => {
+                  const searchTerm = formData.get("search")
+                  if(!formData.get("search")) return 
+                  router.push(`/search/${searchTerm}`)
+                }}
+                initial={!isMobile ? { opacity: 0, y: -20 } : {}}
+                animate={!isMobile ? { opacity: 1, y: 0 } : {}}
+                transition={!isMobile ? { delay: 2, duration: 1 } : {}}
+                className="mt-4 flex items-center w-full bg-white p-3"
+              >
+                <input
+                  type="text"
+                  name="search"
+                  placeholder="ابحث هنا..."
+                  dir='rtl'
+                  className="flex-1 px-4 py-2 text-right outline-none text-primary font-bold placeholder:text-gray-500"
+                />
+              <SearchButton styles="py-2 px-4 bg-main-bg font-bold text-white"/>
+              </m.form>
+            </LazyMotion>
+          </m.div>
+        </LazyMotion>
         <div className="absolute inset-x-0 lg:bottom-32 sm:bottom-14 bottom-0">
           <div className="h-16 bg-primary">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">

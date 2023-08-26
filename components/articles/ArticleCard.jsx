@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link';
 import { EditorState, convertFromRaw } from 'draft-js';
-import {motion} from 'framer-motion'
+import {LazyMotion, Lazym, domAnimation, m} from 'framer-motion'
 import { Avatar } from '@mui/material';
 import {AiOutlineCalendar} from "react-icons/ai";
 import moment from 'moment';
@@ -30,7 +30,8 @@ const ArticleCard = ({ data, hide, handleDelete }) => {
 
   const truncatedDescription = truncateText(slicedBlocks.map(block => block.getText()).join(''), 130);
   return (
-   <motion.div
+  <LazyMotion features={domAnimation}>
+   <m.div
       className={`relative flex-1 break-inside-avoid rounded-lg border border-gray-300 bg-white/20 bg-clip-padding p-1 xs:p-4 md:p-6 pb-4 backdrop-blur-lg backdrop-filter  w-full  ${hide ? "p-3" : "p-6"} group h-fit`}
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
@@ -62,7 +63,8 @@ const ArticleCard = ({ data, hide, handleDelete }) => {
         </div>
       )}
       <div className='absolute right-0 top-[35%] w-1 h-16 bg-primary group-hover:h-full group-hover:top-0 duration-300 transition-all ease-linear'/>
-    </motion.div>
+    </m.div>
+    </LazyMotion>
   );
 };
 
