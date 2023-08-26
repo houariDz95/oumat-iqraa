@@ -61,7 +61,7 @@ const Navbar = ({primary}) => {
     <nav className={`${primary ? "bg-gray-900 md:bg-primary" : "bg-gray-900"} py-4`}>
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         <motion.div
-          initial={!isMobile ? { opacity: 0, x: -20 } : {opacity: 1}}
+          initial={!isMobile ? { opacity: 0, x: -20 } : {opacity: 1,  x: 0}}
           animate={!isMobile ? { opacity: 1, x: 0 }: {}}
           transition={!isMobile ? { duration: 0.5 } : {}}
         >
@@ -72,7 +72,7 @@ const Navbar = ({primary}) => {
           </Link>
         </motion.div>
         <motion.div
-          initial={!isMobile ? { opacity: 0, x: 20 } : {opacity: 1}}
+          initial={!isMobile ? { opacity: 0, x: 20 } : {opacity: 1,  x: 0 }}
           animate={!isMobile ? { opacity: 1, x: 0 }: {}}
           transition={{ duration: 0.5 }}
           className="flex items-center"

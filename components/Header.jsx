@@ -14,13 +14,13 @@ const Header = () => {
       <section className="relative lg:h-[calc(100vh-72px)] h-[85vh] bg-primary">
         <LazyMotion features={domAnimation}>
           <m.div 
-          initial={!isMobile ? { opacity: 0, y: -50 } : {opacity: 1}}
+          initial={!isMobile ? { opacity: 0, y: -50 } : {opacity: 1, y: 0}}
           animate={!isMobile ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1 }}
           className="max-w-6xl mx-auto flex-col-center h-[70%] gap-4 p-4">
             <LazyMotion features={domAnimation}>
               <m.h2
-                initial={!isMobile ? { opacity: 0, y: -20 } : {opacity: 1}}
+                initial={!isMobile ? { opacity: 0, y: -20 } : {opacity: 1, y: 0}}
                 animate={!isMobile ? { opacity: 1, y: 0 }: {}}
                 transition={!isMobile  ? { delay: 0.5, duration: 1 } : {}}
                 whileInView={!isMobile ? { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeInOut" } } : {}}
@@ -31,7 +31,7 @@ const Header = () => {
             </LazyMotion>
             <LazyMotion features={domAnimation}>
               <m.p
-                initial={!isMobile ? { opacity: 0, y: -20 } : {opacity: 1}}
+                initial={!isMobile ? { opacity: 0, y: -20 } : {opacity: 1, y: 0}}
                 animate={!isMobile ? { opacity: 1, y: 0 } : {}}
                 transition={!isMobile ? { delay: 1, duration: 1 } : {}}
                 className="text-[20px] font-medium text-white text-center leading-relaxed mb-10"
