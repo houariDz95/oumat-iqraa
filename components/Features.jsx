@@ -13,9 +13,9 @@ const Features = ({ title, desc, img, buttonText, styles, direction, url }) => {
       <div className={styles}>
         <LazyMotion features={domAnimation}>
           <m.div
-          initial={!isMobile ? {opacity: 0, x: direction === "right" ? 100 : -100} : {}}
+          initial={!isMobile ? {opacity: 0, x: direction === "right" ? 100 : -100} : {opacity: 1}}
           animate={!isMobile ? {opacity: 1, x: 0} : {} }
-          transition={!isMobile ? { delay: 2, duration: 1 }: {}}
+          transition={!isMobile ? { delay: 2, duration: 1 }: {opacity: 1}}
             className="relative h-[400px] flex-1"
           >
             <Image
@@ -28,7 +28,7 @@ const Features = ({ title, desc, img, buttonText, styles, direction, url }) => {
             />
           </m.div>
           <m.div
-            initial={!isMobile ? {opacity: 0, x: direction === "left" ? 100 : -100}: {}}
+            initial={!isMobile ? {opacity: 0, x: direction === "left" ? 100 : -100}: {opacity: 1}}
             animate={!isMobile ? { opacity: 1, x: 0 }: {}}
             transition={!isMobile ? { delay: 2, duration: 1 } : {}}
             className="flex-1 flex justify-center flex-col gap-4"
