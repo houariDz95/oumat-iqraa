@@ -11,6 +11,7 @@ import Loader from "../Loader";
 import ArticleCard from "./ArticleCard";
 import { updateText } from "@/utils/updateText";
 import { useMediaQuery } from "@react-hook/media-query";
+import { useInView } from 'react-intersection-observer';
 
 const ArticleDetailsOther = ({id}) => {
     const [post, setPost] = useState([]);
@@ -18,6 +19,10 @@ const ArticleDetailsOther = ({id}) => {
     const [loading, setLoading] = useState(false)
     const randomCat = post?.category?.[Math.floor(Math.random() * post.category.length)];
     const isMobile = useMediaQuery('(max-width: 768px)');
+    const [ref, inView] = useInView({
+      triggerOnce: true, // Only trigger once when the element enters the viewport
+    });
+    
     useEffect(() => {
         const getPost = async () => {
             try {
@@ -71,9 +76,9 @@ const ArticleDetailsOther = ({id}) => {
     <LazyMotion features={domAnimation}>
       <m.div
         className="max-w-2xl flex-1 p-4 md:p-0 mx-auto mt-10"
-        initial={isMobile ? { opacity: 0, y: 20 } : {}}
-        animate={isMobile ? { opacity: 1, y: 0 }: {}}
-        transition={isMobile ? { duration: 0.3 } : {}}
+        initial={!isMobile ? { opacity: 0, y: 20 } : {opacity: 1, y: 0}}
+        animate={!isMobile ? { opacity: 1, y: 0 }: {}}
+        transition={!isMobile ? { duration: 0.3 } : {}}
       >
           <div className="flex items-center gap-2 mb-4">
               <p className="text-gray-500 flex items-center gap-2 text-sm">
@@ -89,7 +94,9 @@ const ArticleDetailsOther = ({id}) => {
               width={400} 
               height={400}
           />
-          {updateText(post.articleText, post.isFromEditor)}
+          <div ref={ref}>
+            {inView ? updateText(post.articleText, post.isFromEditor) : <p>Loading...</p>}
+          </div>
           <div className="flex flex-center gap-6 text-lg font-bold text-gray-900 my-10">
               <span>*</span>
               <span>*</span>

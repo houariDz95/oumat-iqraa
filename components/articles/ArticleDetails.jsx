@@ -15,14 +15,12 @@ import Loader from "../Loader";
 import { updateTextAndSlice } from "@/utils/updateText";
 import { useMediaQuery } from "@react-hook/media-query";
 
-
 const ArticleDetails = ({id}) => {
     const [post, setPost] = useState([]);
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(false)
     const isMobile = useMediaQuery('(max-width: 768px)');
     const randomCat = post?.category?.[Math.floor(Math.random() * post.category.length)];
-    
 
     let editorState;
     if (post.content) {
@@ -77,9 +75,9 @@ const ArticleDetails = ({id}) => {
     <LazyMotion features={domAnimation}>
       <m.div
         className="max-w-2xl flex-1 p-4 md:p-0 mx-auto"
-        initial={isMobile ? { opacity: 0, y: 20 } : {}}
-        animate={isMobile ? { opacity: 1, y: 0 } : {}}
-        transition={isMobile ? { duration: 0.3 } : {}}
+        initial={!isMobile ? { opacity: 0, y: 20 } : {opacity: 1, y: 0}}
+        animate={!isMobile ? { opacity: 1, y: 0 } : {}}
+        transition={!isMobile ? { duration: 0.3 } : {}}
       >
         <div className="flex items-center gap-2 mb-4">
           <Link href={`/profile/${post.uid}`}>
