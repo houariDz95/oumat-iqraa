@@ -6,7 +6,6 @@ import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import { auth, db } from '@/firebase';
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
 import { useRouter } from 'next/navigation';
-import Loader from '@/components/Loader';
 import Select from 'react-select';
 
 const isClient = typeof window !== 'undefined';
@@ -51,9 +50,6 @@ const WritePage = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [selectedCategories, setSelectedCategories] = useState([]);
     
-    if(!currentUser){
-      redirect('/auth?to=write')
-    }
     const handleCategoryChange = (selectedOptions) => {
       setSelectedCategories(selectedOptions);
     };
@@ -88,21 +84,11 @@ const WritePage = () => {
       }
     };
 
-    useEffect(() => {
-      const unsubscribe = auth.onAuthStateChanged((user) => {
-        setCurrentUser(user); // Update the currentUser state when the authentication state changes
-      });
-  
-      return () => {
-        unsubscribe(); // Unsubscribe the listener when the component is unmounted
-      };
-    }, []);
-  
-   
-    if(!currentUser) return <div className='w-screeb h-screen flex-center'>
-      <Loader />
-    </div>
+    if(!auth.currentUser){
+      redirect('/auth?to=write')
+    }
     
+
     return (
         <div className="max-w-4xl mx-auto py-8 px-4 text-right">
         <h1 className="text-2xl mb-4 font-bold">أكتب مقالك</h1>
