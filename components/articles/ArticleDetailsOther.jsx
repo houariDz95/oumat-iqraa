@@ -2,16 +2,17 @@
 import { useEffect, useState } from "react";
 import {LazyMotion, domAnimation, m} from 'framer-motion';
 import { db } from "@/firebase";
-import {doc, collection, getDoc, onSnapshot, query, where} from 'firebase/firestore';
+import {doc, collection, getDoc, onSnapshot, query, where, limit} from 'firebase/firestore';
 import { AiOutlineCalendar } from "react-icons/ai";
 import moment from "moment";
 import 'moment/locale/ar';
 import Image from "next/image";
 import Loader from "../Loader";
-import ArticleCard from "./ArticleCard";
 import { updateText } from "@/utils/updateText";
 import { useMediaQuery } from "@react-hook/media-query";
 import { useInView } from 'react-intersection-observer';
+import dynamic from "next/dynamic";
+const ArticleCard = dynamic(() => import("./ArticleCard"));
 
 const ArticleDetailsOther = ({id}) => {
     const [post, setPost] = useState([]);
@@ -43,14 +44,14 @@ const ArticleDetailsOther = ({id}) => {
         }
             getPost()
     }, [])
-        console.log(post)
+
     useEffect(() => {
       const fetchPosts = async () => { 
         try {
           const docsRef = collection(db, 'articles')
           let q = docsRef;
           if (randomCat) {
-            q = query(docsRef, where('category', 'array-contains', randomCat));
+            q = query(docsRef, where('category', 'array-contains', randomCat), limit(5));
           }
 
           const unsubscribe = onSnapshot(q, (snapshot) => {
@@ -102,14 +103,14 @@ const ArticleDetailsOther = ({id}) => {
               <span>*</span>
               <span>*</span>
           </div>
-          <div className="">
+        {posts && <div className="">
           <h1 className="text-xl font-semibold mb-4">استكشف أيضًا</h1>
           <div className="grid gap-4 grid-cols-1">
               {posts.map(item => (
                   <ArticleCard key={item.id} data={item} hide />
               ))}
           </div> 
-      </div>
+        </div>}
       </m.div>
     </LazyMotion>
   )

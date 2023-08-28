@@ -1,17 +1,19 @@
 'use client';
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import {LazyMotion, domAnimation, m } from 'framer-motion';
 import { db } from "@/firebase";
-import {doc, collection, getDoc, query, onSnapshot, where} from 'firebase/firestore';
+import {doc, collection, getDoc, query, onSnapshot, where, limit} from 'firebase/firestore';
 import { AiOutlineCalendar } from "react-icons/ai";
 import moment from "moment";
 import 'moment/locale/ar';
 import Image from "next/image";
 import Loader from "../Loader";
-import { updateText, updateTextAndSlice } from "@/utils/updateText";
+import { updateText } from "@/utils/updateText";
 import { useMediaQuery } from "@react-hook/media-query";
 import { useInView } from 'react-intersection-observer';
+
+import dynamic from "next/dynamic";
+const ReadMoreSt = dynamic(() => import("./ReadMoreSt"));
 
 const StoryDetails = ({id}) => {
     const [story, setStory] = useState([]);
@@ -19,10 +21,13 @@ const StoryDetails = ({id}) => {
     const [loading, setLoading] = useState(false);
     const randomCat = story?.category?.[Math.floor(Math.random() * story.category.length)];
     const isMobile = useMediaQuery('(max-width: 768px)');
+
     const [ref, inView] = useInView({
       triggerOnce: true, // Only trigger once when the element enters the viewport
     });
-    const filltredStories = stories.filter(item => item.id !== id) 
+
+    const filltredStories = stories.filter(item => item.id !== id)
+
     useEffect(() => {
         const getPost = async () => { 
             try {
@@ -46,7 +51,7 @@ const StoryDetails = ({id}) => {
           const docsRef = collection(db, 'stories')
           let q = docsRef;
           if (randomCat) {
-            q = query(docsRef, where('category', 'array-contains', randomCat));
+            q = query(docsRef, where('category', 'array-contains', randomCat), limit(5));
           }
 
           const unsubscribe = onSnapshot(q, (snapshot) => {
@@ -91,28 +96,7 @@ const StoryDetails = ({id}) => {
         <span>*</span>
         <span>*</span>
       </div>
-      <div className="">
-      <h1 className="text-xl font-semibold my-4">استكشف أيضًا</h1>
-      <div className="grid gap-4 grid-cols-1">
-        {filltredStories.map(item => (
-          <div className="bg-white shadow-md p-1 xs:p-2 flex flex-row-reverse md:flex-row gap-2" key={item.id}>
-            <Image
-              width={200}
-              height={200}
-              src={item.imageUrl}  
-              alt={story.tilte}
-              className="object-cover h-36 w-32 hidden xs:block"
-            />
-            <div className="mr-4 flex items-start justify-center gap-3 flex-col">
-              <h2 className="text-md md:text-xl font-semibold">{item.title.length > 25 ? item.title.slice(0, 25) + "..." : item.title}</h2>  
-              <p className="text-gray-600 leading-snug text-[12px] md:text-lg">{updateTextAndSlice(item.storyText, item.isFromEditor)}
-              <Link href={`/stories/${item.id}`} className='blue_gradient cursor-pointer'>بدء القراءة</Link>
-              </p> 
-            </div>
-          </div>
-        ))}
-      </div> 
-    </div>
+      {filltredStories && <ReadMoreSt filltredStories={filltredStories}/>}
     </m.div>
   </LazyMotion>
   )

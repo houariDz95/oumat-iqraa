@@ -3,17 +3,18 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import {LazyMotion, domAnimation, m} from 'framer-motion';
 import { db } from "@/firebase";
-import {doc, collection, getDoc, onSnapshot, query, where} from 'firebase/firestore';
+import {doc, collection, getDoc, onSnapshot, query, where, limit} from 'firebase/firestore';
 import { Editor, EditorState, convertFromRaw } from 'draft-js';
 import 'draft-js/dist/Draft.css';
 import { Avatar } from "@mui/material";
 import { AiOutlineCalendar } from "react-icons/ai";
 import moment from "moment";
 import 'moment/locale/ar';
-import Image from "next/image";
 import Loader from "../Loader";
-import { updateTextAndSlice } from "@/utils/updateText";
 import { useMediaQuery } from "@react-hook/media-query";
+import { useInView } from 'react-intersection-observer';
+import dynamic from "next/dynamic";
+const ReadMore = dynamic(() => import("./ReadMore"));
 
 const ArticleDetails = ({id}) => {
     const [post, setPost] = useState([]);
@@ -27,7 +28,10 @@ const ArticleDetails = ({id}) => {
         const contentState = convertFromRaw(post.content);
         editorState = EditorState.createWithContent(contentState);
     }
-
+    const [ref, inView] = useInView({
+      triggerOnce: true, // Only trigger once when the element enters the viewport
+    });
+    
     useEffect(() => {
         const getPost = async () => {
             try {
@@ -51,7 +55,7 @@ const ArticleDetails = ({id}) => {
           const docsRef = collection(db, 'otherArticles')
           let q = docsRef;
           if (randomCat) {
-            q = query(docsRef, where('category', 'array-contains', randomCat));
+            q = query(docsRef, where('category', 'array-contains', randomCat), limit(3));
           }
 
           const unsubscribe = onSnapshot(q, (snapshot) => {
@@ -92,42 +96,18 @@ const ArticleDetails = ({id}) => {
           </div>
         </div>
         <h2 className="text-3xl font-semibold mb-4 blue_gradient font-plex">{post.title}</h2>
-        <div className="md:p-4">
-          {editorState && <Editor 
+        <div className="md:p-4" ref={ref}>
+          {inView ? <Editor 
           editorState={editorState} 
           readOnly={true} 
-          />}
+          /> : <p>Loading...</p>}
         </div>
       <div className="flex flex-center gap-6 text-lg font-bold text-gray-900 my-10">
         <span>*</span>
         <span>*</span>
         <span>*</span>
       </div>
-      <div className="">
-        <h1 className="text-xl font-semibold mb-4">استكشف أيضًا</h1>
-        <div className="grid gap-4 grid-cols-1">
-          {posts.map(item => (
-            <div className="bg-white shadow-md p-1 xs:p-4 flex " key={item.id}>
-              <Image
-                width={200}
-                height={200}
-                src={item.imageUrl}  
-                alt={item.tilte}
-                className="object-cover h-36 w-32 hidden xs:block"
-              />
-              <div className="mr-4 flex items-start justify-center gap-3 flex-col">
-              <Link href={`/articles/others/${item?.id}`}>
-                <h2 className="text-lg md:text-xl font-semibold hover:text-primary">{item?.title.length > 20 ? item.title.slice(0, 20) + "..." : item.title}</h2>  
-              </Link>
-                <p className="text-gray-500 text-[12px] md:text-md">
-                  {updateTextAndSlice(item.articleText, item.isFromEditor)}
-                  <Link href={`/articles/others/${item.id}`} className='blue_gradient cursor-pointer'>بدء القراءة</Link>
-                </p> 
-              </div>
-            </div>
-          ))}
-        </div> 
-      </div>
+      {posts && <ReadMore posts={posts} />}
     </m.div>
     </LazyMotion>
   )
