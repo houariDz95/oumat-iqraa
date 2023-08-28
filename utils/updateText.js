@@ -41,7 +41,7 @@ export const updateText = (text, isContentFromEditor) => {
   return (
     <div className="ebook-container">
       {isContentFromEditor ? (
-        <Editor editorState={editorState} readOnly={true} className="text-base leading-relaxed" />
+        <Editor editorState={editorState} readOnly={true} />
       ) : (
         <p className=" text-base text-justify mb-4" style={{whiteSpace: "break-spaces"}}>{text}</p>
       )}

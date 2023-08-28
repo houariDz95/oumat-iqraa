@@ -27,9 +27,9 @@ const ArticleCard = ({ data, hide, handleDelete }) => {
     .getCurrentContent()
     .getBlockMap()
     .toArray()
-    .slice(0, 150);
+    .slice(0, 180);
 
-  const truncatedDescription = truncateText(slicedBlocks.map(block => block.getText()).join(''), 130);
+  const truncatedDescription = truncateText(slicedBlocks.map(block => block.getText()).join(''), 180);
 
   return (
   <LazyMotion features={domAnimation}>
