@@ -45,7 +45,6 @@ const WritePage = () => {
       Editor = require('react-draft-wysiwyg').Editor;
     }
     
-    const [currentUser, setCurrentUser] = useState(null)
     const [title, setTitle] = useState("");
     const [isLoading, setIsLoading] = useState(false);
     const [selectedCategories, setSelectedCategories] = useState([]);
@@ -65,9 +64,9 @@ const WritePage = () => {
         setIsLoading(true)
         const articlesRef = collection(db, "articles");
         await addDoc(articlesRef, {
-          uid: currentUser.uid, 
-          userImage: currentUser?.photoURL,
-          createdBy: currentUser.displayName, 
+          uid: auth.currentUser.uid, 
+          userImage: auth.currentUser?.photoURL,
+          createdBy: auth.currentUser.displayName, 
           title: title,
           content: rawContentState,
           timestamp: serverTimestamp(),
