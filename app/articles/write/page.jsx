@@ -1,5 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react';
+import { redirect } from 'next/navigation';
 import { EditorState, convertToRaw } from 'draft-js';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import { auth, db } from '@/firebase';
@@ -49,7 +50,10 @@ const WritePage = () => {
     const [title, setTitle] = useState("");
     const [isLoading, setIsLoading] = useState(false);
     const [selectedCategories, setSelectedCategories] = useState([]);
-
+    
+    if(!currentUser){
+      redirect('/auth?to=write')
+    }
     const handleCategoryChange = (selectedOptions) => {
       setSelectedCategories(selectedOptions);
     };
@@ -87,9 +91,6 @@ const WritePage = () => {
     useEffect(() => {
       const unsubscribe = auth.onAuthStateChanged((user) => {
         setCurrentUser(user); // Update the currentUser state when the authentication state changes
-        if(!user) {
-          router.push('/auth?to=write')
-        }
       });
   
       return () => {

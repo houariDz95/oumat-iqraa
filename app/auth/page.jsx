@@ -4,7 +4,7 @@ import Navbar from '@/components/Nav';
 import { auth, db, provider } from '@/firebase';
 import { browserSessionPersistence, setPersistence, signInWithPopup } from 'firebase/auth';
 import {  doc, getDoc, serverTimestamp, setDoc } from 'firebase/firestore';
-import { useRouter } from 'next/navigation';
+import { redirect, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import {AiOutlineGoogle} from 'react-icons/ai'
 
@@ -13,7 +13,9 @@ const SignUpPage = (paramKey) => {
   const [currentUser, setCurrentUser] = useState(null)
   const to = paramKey.searchParams.to;
   const router = useRouter()
-
+  if(currentUser) {
+    redirect('/')
+  }
     const handleGoogleLogin = async  () => {
         try {
           const userCredential = await signInWithPopup(auth, provider);
@@ -48,9 +50,6 @@ const SignUpPage = (paramKey) => {
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       setCurrentUser(user); // Update the currentUser state when the authentication state changes
-      if(user) {
-        router.push('/')
-      }
     });
 
     return () => {
