@@ -128,7 +128,6 @@ function findStyleRanges(style) {
 const SizeSpan = props => {
   const { contentState, entityKey, children } = props;
   const sizeStyle = contentState.getEntity(entityKey).getData().style;
-
   const style = {
     fontSize: sizeStyle === 'SMALL' ? '12px' : sizeStyle === 'LARGE' ? '20px' : '16px',
   };

@@ -2,7 +2,7 @@ import Footer from '@/components/Footer'
 import './globals.css'
 import { Cairo } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react';
-
+import Script from 'next/script';
 const cairo = Cairo({
   subsets: ['latin'],
   weight: ["400", "700"],
@@ -22,6 +22,8 @@ export default function RootLayout({ children }) {
           {children}          
           <Footer />
           <Analytics />
+          <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4378697867992790"
+          crossorigin="anonymous" />
         </div>
       </body>
     </html>
