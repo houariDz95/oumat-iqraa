@@ -17,8 +17,8 @@ const OthersArticleCard = ({ imageUrl, title, articleText, id, isFromEditor }) =
       </div>
       <div className="p-4">
         <h2 className="text-xl font-semibold mb-2 h-14">{title}</h2>
-        <p className="text-gray-600">
-          {updateTextAndSlice(articleText, isFromEditor)}
+        <p className="text-gray-600 text-md h-24">
+          {updateTextAndSlice(articleText, isFromEditor)} 
           <Link href={`/articles/others/${id}`}>
             <span className="text-blue-500 hover:underline">إقــرأ الـمــزيـد</span>
           </Link>

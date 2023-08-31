@@ -1,23 +1,20 @@
+import { Avatar } from "@mui/material";
 import ArticleCard from "./articles/ArticleCard";
 import {BiTrash} from "react-icons/bi";
 import {FiEdit} from 'react-icons/fi';
 
-const ProfileDesplay = ({ name, desc, data,  handleDelete, deletePost, setIsOpen, isAdmin, user }) => {
+const ProfileDesplay = ({ name, desc, handleDelete, setIsOpen, user}) => {
   
   return (
     <section className='w-full min-h-[calc(100vh-106px)]'>
+      <Avatar src={user.photouRL} alt={user.username} sx={{width:76, height: 76}}/>
       <h1 className='head_text text-rigth'>
         <span className='blue_gradient'>{name}</span>
       </h1>
       <p className='desc text-right'>{desc}</p>
       
-      {user?.bio && <div className='max-w-2xl mt-8 flex-start'>
-        <h3 className="text-xl font-bold"> سيرة ذاتية</h3>
-        <p className='desc'>{user?.bio || 'لا يوجد سيرة ذاتية متاحة.'}</p>
-      </div>}
       
       <div className='flex items-center justify-end gap-4'>
-        {isAdmin && 
         <>
           <button 
           className='group relative'
@@ -40,19 +37,21 @@ const ProfileDesplay = ({ name, desc, data,  handleDelete, deletePost, setIsOpen
                   تعديل الملف الشخصي
               </span>
           </button>
-        </>}
+        </>
       </div>
-      <div className='mt-10 grid grid-cols-1 lg:grid-cols-2 gap-6'>
-        {data.map((post) => (
-          <ArticleCard
-            key={post.id}
-            hide
-            data={post}
-            isAdmin={isAdmin}
-            handleDelete={() => deletePost && deletePost(post)}
-          />
-        ))}
-      </div>
+      <div className="font-sans text-right p-5">
+      <p className="text-xl font-bold">
+        ملفك الشخصي
+      </p>
+      <p className="mt-4 text-lg leading-relaxed">
+        أهلاً بك في ملفك الشخصي! هذا المكان مخصص لك لتعبر فيه عن نفسك بطريقتك الخاصة.
+        قم بإضافة معلوماتك وصورتك الشخصية لجعل ملفك مميزًا.
+        يمكنك أيضًا عرض الأنشطة والمحتوى الذي قد تكون قمت بمشاركته أو تقديمه.
+        اجعل هذا المكان مرآة لشخصيتك واهتماماتك ونجاحاتك.
+        لا تتردد في تحديث ملفك الشخصي بانتظام لتظل المعلومات دقيقة وحديثة.
+        نتمنى لك تجربة ممتعة ومثمرة في استخدام ملفك الشخصي.
+      </p>
+    </div>
     </section>
   );
 };

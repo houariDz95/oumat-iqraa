@@ -9,7 +9,7 @@ export default function Layout({ children }) {
   return (
     <div> 
         <Navbar />
-        <PageTitle title="مقالات" articles/>
+        <PageTitle title="مقالات" desc="مقالات رائعة في موضوعات متنوعة" />
         {children}
     </div>
   )

@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <>
-      <section className="relative lg:h-[calc(100vh-72px)] h-[85vh] bg-primary">
+      <section className="relative lg:h-[calc(100vh-72px)] h-[90vh] bg-primary">
         <LazyMotion features={domAnimation}>
           <m.div 
           initial={!isMobile ? { opacity: 0, y: -50 } : {opacity: 1, y: 0}}

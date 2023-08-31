@@ -6,7 +6,7 @@ import { updateTextAndSlice } from '@/utils/updateText';
 
 const StoryCard = ({data}) => {
   return (
-    <div className="bg-white p-4 rounded-lg shadow-md h-fit">
+    <div className="bg-white p-3 rounded-lg shadow-md h-fit">
       <Link href={`/stories/${data.id}`}>
           <Image
             src={data.imageUrl}
@@ -18,7 +18,7 @@ const StoryCard = ({data}) => {
           />
       </Link>
 
-      <h3 className="text-xl font-semibold mb-4">{data.title}</h3>
+      <h3 className="text-xl font-semibold mb-4 h-12">{data.title}</h3>
 
       <p className="text-gray-600 h-28" >
         {updateTextAndSlice(data.storyText, data.isFromEditor)}

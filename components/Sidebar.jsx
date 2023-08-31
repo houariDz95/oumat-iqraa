@@ -14,7 +14,7 @@ const Sidebar = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const docsRef = collection(db, 'articles')
+        const docsRef = collection(db, 'otherArticles')
         const q = query(docsRef, orderBy("timestamp", 'desc'), limit(4))
         const unsubscribe = onSnapshot(q, (snapshot) => {
             setData(snapshot.docs.map(doc => ({ ...doc.data(), id: doc.id })));
@@ -44,17 +44,17 @@ const Sidebar = () => {
   return (
     <>
       <div className="bg-gray-200 p-4 rounded-md">
-        <Link href="/articles/write">
+        <Link href="/auth">
           <motion.button
-            className="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-md font-medium"
+            className="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-md font-medium mb-2"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            ابدأ رحلتك في الكتابة
+            إنشاء حساب
           </motion.button>
         </Link>
         <p className="mt-2 text-gray-600 text-sm">
-          كن فريدًا واكتب ما يميزك. لا تخف من المشاركة. ابدأ اليوم!
+        بادر بالانضمام الينا الآن!
         </p>
       </div>
 

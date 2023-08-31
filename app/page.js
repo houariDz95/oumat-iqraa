@@ -5,9 +5,9 @@ import Navbar from '@/components/Nav'
 
 import dynamic from 'next/dynamic'
 const Features = dynamic(() => import('@/components/Features'))
-const OthersArticles = dynamic(() => import('@/components/OthersArticles'))
-const RecentPosts = dynamic(() => import('@/components/RecentPosts'))
-const RecentStories = dynamic(() => import('@/components/RecentStories'))
+const OthersArticles = dynamic(() => import('@/components/OthersArticles'), {ssr: false})
+const RecentPosts = dynamic(() => import('@/components/RecentPosts'), {ssr: false})
+const RecentStories = dynamic(() => import('@/components/RecentStories'), {ssr: false})
 
 export default function Home() {
   return(
@@ -52,7 +52,7 @@ export default function Home() {
           <h1 className='text-3xl font-bold text-black italic'>آخر المقالات المضافة</h1>
           <div className='absolute bottom-0 right-5 h-1 w-14 bg-primary'/>
         </div>
-        <RecentPosts />
+        <OthersArticles />
         <div className='relative p-4 mt-8'>
           <h1 className='text-3xl font-bold text-black italic'>آخر القصص المضافة</h1>
           <div className='absolute bottom-0 right-5 h-1 w-14 bg-primary'/>
@@ -62,7 +62,7 @@ export default function Home() {
           <h1 className='text-3xl font-bold text-black italic'> مقالات أخرى</h1>
           <div className='absolute bottom-0 right-5 h-1 w-14 bg-primary'/>
         </div>
-        <OthersArticles />
+        <RecentPosts />
         <div className='relative p-4 mt-8'>
           <h1 className='text-3xl font-bold text-black italic'> اتصل بنا</h1>
           <div className='absolute bottom-0 right-5 h-1 w-14 bg-primary'/>

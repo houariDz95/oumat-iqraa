@@ -8,7 +8,6 @@ const Modal = ({ isOpen, onClose }) => {
   const user = auth.currentUser;
   
   const [username, setUsername] = useState(user?.displayName);
-  const [bio, setBio] = useState('');
   const [avatar, setAvatar] = useState('');
   const [isLoading, setIsLoading] = useState(false)
   const storageRef = ref(storage, `users/${user.uid}/avatar`);
@@ -25,7 +24,6 @@ const Modal = ({ isOpen, onClose }) => {
       await updateDoc(userRef, {
         username: username,
         photoURL: avatar ? await getDownloadURL(storageRef) : user.photoURL,
-        bio: bio ? bio : data.data().bio,
       })
     // Update the user's photoURL in their articles
     const articlesSnapshot = await getDocs(collection(db, "articles"));
@@ -71,19 +69,7 @@ const Modal = ({ isOpen, onClose }) => {
                   className="border border-gray-400 p-2 rounded w-full"
                 />
               </div>
-              <div className="mb-4">
-                <label htmlFor="bio" className="block text-gray-700 font-medium mb-2">
-                  Bio
-                </label>
-                <textarea
-                  id="bio"
-                  name="bio"
-                  value={bio}
-                  dir='rtl'
-                  onChange={(e) => setBio(e.target.value)}
-                  className="border border-gray-400 p-2 rounded w-full"
-                />
-              </div>
+
               <div className="mb-4">
                 <label htmlFor="avatar" className="block text-gray-700 font-medium mb-2">
                 رفع صورة جديدة

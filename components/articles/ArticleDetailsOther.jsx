@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import {LazyMotion, domAnimation, m} from 'framer-motion';
 import { db } from "@/firebase";
-import {doc, collection, getDoc, onSnapshot, query, where, limit} from 'firebase/firestore';
+import {doc, collection, getDoc, query, where, limit, getDocs} from 'firebase/firestore';
 import { AiOutlineCalendar } from "react-icons/ai";
 import moment from "moment";
 import 'moment/locale/ar';
@@ -12,7 +12,8 @@ import { updateText } from "@/utils/updateText";
 import { useMediaQuery } from "@react-hook/media-query";
 import { useInView } from 'react-intersection-observer';
 import dynamic from "next/dynamic";
-const ArticleCard = dynamic(() => import("./ArticleCard"));
+const ReadMore = dynamic(() => import("./ReadMore"), {ssr: false});
+
 
 const ArticleDetailsOther = ({id}) => {
     const [post, setPost] = useState([]);
@@ -32,7 +33,7 @@ const ArticleDetailsOther = ({id}) => {
                 const collectionRef = collection(db, 'otherArticles')
                 const docRef = doc(collectionRef, id);
                 const data = await getDoc(docRef)
-                setPost(data.data())
+                setPost({...data.data(), id: data.id})
               }
 
             } catch (error) {
@@ -48,24 +49,25 @@ const ArticleDetailsOther = ({id}) => {
     useEffect(() => {
       const fetchPosts = async () => { 
         try {
-          const docsRef = collection(db, 'articles')
+          const docsRef = collection(db, 'otherArticles');
           let q = docsRef;
+          
           if (randomCat) {
             q = query(docsRef, where('category', 'array-contains', randomCat), limit(5));
           }
-
-          const unsubscribe = onSnapshot(q, (snapshot) => {
-              setPosts(snapshot.docs.map(doc => ({ ...doc.data(), id: doc.id })));
-            })
-          return unsubscribe
+    
+          const querySnapshot = await getDocs(q);
+          const postData = querySnapshot.docs.map(doc => ({ ...doc.data(), id: doc.id }));
+          setPosts(postData);
         } catch (error) {
-         alert(error)
-         console.log(error)
+          alert(error);
+          console.log(error);
         } 
-
       }
+    
       fetchPosts(); 
-    }, [randomCat])
+    }, [randomCat]);
+    
 
 
     if(loading) {
@@ -103,14 +105,7 @@ const ArticleDetailsOther = ({id}) => {
               <span>*</span>
               <span>*</span>
           </div>
-        {posts && <div className="">
-          <h1 className="text-xl font-semibold mb-4">استكشف أيضًا</h1>
-          <div className="grid gap-4 grid-cols-1">
-              {posts.map(item => (
-                  <ArticleCard key={item.id} data={item} hide />
-              ))}
-          </div> 
-        </div>}
+        {posts && <ReadMore posts={posts} />}
       </m.div>
     </LazyMotion>
   )
