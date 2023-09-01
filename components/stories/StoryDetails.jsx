@@ -12,7 +12,7 @@ import { updateText } from "@/utils/updateText";
 import { useMediaQuery } from "@react-hook/media-query";
 import { useInView } from 'react-intersection-observer';
 
-const cardo = Cardo({ subsets: ['latin'],   weight: '500' })
+const cardo = Cardo({ subsets: ['latin'],   weight: '400' })
 
 import dynamic from "next/dynamic";
 import { Cardo } from "next/font/google";

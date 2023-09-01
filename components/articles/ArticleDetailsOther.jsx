@@ -15,7 +15,7 @@ import dynamic from "next/dynamic";
 import { Cardo } from "next/font/google";
 const ReadMore = dynamic(() => import("./ReadMore"), {ssr: false});
 
-const cardo = Cardo({ subsets: ['latin'],   weight: '500' })
+const cardo = Cardo({ subsets: ['latin'],   weight: '400' })
 
 const ArticleDetailsOther = ({id}) => {
     const [post, setPost] = useState([]);
