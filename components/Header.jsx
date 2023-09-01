@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <>
-      <section className="relative lg:h-[calc(100vh-72px)] h-[90vh] bg-primary">
+      <section className="relative lg:h-[calc(100vh-72px)] xs:h-[92vh] h-[100vh] bg-primary">
         <LazyMotion features={domAnimation}>
           <m.div 
           initial={!isMobile ? { opacity: 0, y: -50 } : {opacity: 1, y: 0}}
@@ -36,8 +36,8 @@ const Header = () => {
                 transition={!isMobile ? { delay: 1, duration: 1 } : {}}
                 className="text-[20px] font-medium text-white text-center leading-relaxed mb-10"
               >
-                اكتشف قدرات جديدة ورائعة مع موقعنا! نحن نقدم لك فرصة استخدام أحدث التقنيات في عالم التعلم
-                العميق لاكتشاف، قراءة ، كتابة، وإنشاء الصور بطرق مدهشة. مع قدراتنا الفريدة
+              نحن نقدم لك مجموعة متنوعة من القصص والمقالات والاقتباسات التي تلهم وتثري معرفتك.
+               انضم إلينا اليوم واستمتع بمحتوى فريد يلبي اهتماماتك ويوسع آفاقك الثقافية.
               </m.p>
             </LazyMotion>
             <LazyMotion features={domAnimation}>

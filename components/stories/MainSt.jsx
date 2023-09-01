@@ -47,24 +47,29 @@ const MainSt = ({cat}) => {
   return (
     <main className='flex relative mb-10'>
       <div className='lg:flex-[0.75]'>
-        <div className='px-4 grid grid-cols-1 md:grid-cols-2 gap-4 mt-10'>
+        <>
           {loading ? 
-            <div className="h-36 flex-center w-full">
+            <div className="h-24 flex-center w-full">
               <Loader />
             </div> :
-            displayedStories.map(story => (
-            <StoryCard  key={story.id} data={story} />
-          ))}
-        </div>
-        <Pagination
-            variant='outlined'
-            count={Math.ceil(allstories.length / itemsPerPage)}
-            page={currentPage}
-            onChange={handlePageChange}
-            dir='ltr'
-            color="secondary"
-            className="mt-6"
-          />
+            <>
+              <div className='px-4 grid grid-cols-1 md:grid-cols-2 gap-4 mt-10'>
+                {displayedStories.map(story => (
+                <StoryCard  key={story.id} data={story} />
+                ))}
+              </div>
+              <Pagination
+                variant='outlined'
+                count={Math.ceil(allstories.length / itemsPerPage)}
+                page={currentPage}
+                onChange={handlePageChange}
+                dir='ltr'
+                color="secondary"
+                className="mt-6"
+              />
+            </>
+          }
+        </>
       </div>
       <div className='flex-[0.25] mt-10 h-fit  hidden lg:block rounded-xl border border-gray-200 bg-white/20 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur p-5'>
         <Sidebar />

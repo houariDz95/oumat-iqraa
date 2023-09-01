@@ -58,17 +58,19 @@ const Main = ({ cat }) => {
     return (
         <main className='flex relative mb-10'>
             <div className='lg:flex-[0.75]'>
-                <div className=' px-4 space-y-6 py-8 columns-1 md:columns-2 mt-12'>
+                <>
                     {loading ? (
-                        <div className='flex-center h-full w-full'>
+                        <div className='flex-center h-24 w-full'>
                            <Loader />
                         </div>
                     ) : (
-                        othersArticles.map(article => (
-                            <OthersArticleCard key={article.id} {...article} />
-                        ))
+                        <div  className=' px-4 space-y-6 py-8 columns-1 md:columns-2 mt-12'>
+                            {othersArticles.map(article => (
+                                <OthersArticleCard key={article.id} {...article} />
+                            ))}
+                        </div>
                     )}
-                </div>
+                </>
                 <Pagination
                     variant='outlined'
                     count={Math.ceil(allArticles.length / itemsPerPage)}

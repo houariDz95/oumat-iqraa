@@ -14,7 +14,10 @@ import Loader from "../Loader";
 import { useMediaQuery } from "@react-hook/media-query";
 import { useInView } from 'react-intersection-observer';
 import dynamic from "next/dynamic";
+import { Cardo } from "next/font/google";
 const ReadMore = dynamic(() => import("./ReadMore"));
+
+const cardo = Cardo({ subsets: ['latin'],   weight: '400' })
 
 const ArticleDetails = ({id}) => {
     const [post, setPost] = useState([]);
@@ -96,7 +99,7 @@ const ArticleDetails = ({id}) => {
           </div>
         </div>
         <h2 className="text-3xl font-semibold mb-4 blue_gradient font-plex">{post.title}</h2>
-        <div className="md:p-4" ref={ref}>
+        <div  className={`${cardo.className} md:p-4 text-lg lg:text-xl text-gray-900`} ref={ref}>
           {inView ? <Editor 
           editorState={editorState} 
           readOnly={true} 

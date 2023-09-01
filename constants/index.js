@@ -55,24 +55,17 @@ export const stCategories = [
  
  export const atCategories = [
   { name: "كل المقالات"},
-  { name: "أخبار", path: "news" },
-  { name: "تكنولوجيا", path: "technology" },
   { name: "صحة", path: "health" },
   { name: "رياضة", path: "sports" },
   { name: "فنون", path: "arts" },
-  { name: "علوم", path: "science" },
   { name: "سفر", path: "travel" },
-  { name: "طعام", path: "food" },
-  { name: "تاريخ", path: "history" },
   { name: "تعليم", path: "education" },
   { name: "ثقافة", path: "culture" },
   { name: "أعمال", path: "business" },
   { name: "أدب", path: "literature" },
-  { name: "تصميم", path: "design" },
-  { name: "موضة", path: "fashion" },
   { name: "جمال", path: "beauty" },
-  { name: "ألعاب", path: "games" },
   { name: "علم النفس", path: "psychology" },
+  { name: "تطوير الذات", path: "self-improve" },
 ];
 
 export const quotesCategories = [

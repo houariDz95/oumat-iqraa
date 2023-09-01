@@ -20,10 +20,10 @@ export default function Home() {
           <div className='absolute bottom-0 right-5 h-1 w-14 bg-primary'/>
         </div>
         <Features
-          title="كتابة المقالات"
-          desc="ميزة موقعنا الجديدة تتيح للمستخدمين كتابة مقالات عن طريق إنشاء حساب باستخدام Google، مما يسهل ويسرع عملية المشاركة والإبداع دون تعقيدات تسجيل الدخول."
+          title="قراءة المقالات"
+          desc="ميزة موقعنا الجديدة تتيح للمستخدمين قراءة المقالات والاستفادة من محتوى ذو جودة عالية بدون الحاجة إلى تسجيل الدخول. تصفح وتعلم واستمتع بمقالاتنا المميزة."
           img="/assets/write-article.jpg"
-          buttonText="ابدأ الكتابة"
+          buttonText="ابدأ القراءة الآن"
           styles="w-full mx-auto flex lg:flex-row flex-col gap-8"
           direction="right"
           url="/articles"
