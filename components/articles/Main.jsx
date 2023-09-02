@@ -57,10 +57,10 @@ const Main = ({ cat }) => {
 
     return (
         <main className='flex relative mb-10'>
-            <div className='lg:flex-[0.75]'>
+            <div className='lg:flex-[0.75] flex-1'>
                 <>
                     {loading ? (
-                        <div className='flex-center h-24 w-full'>
+                        <div className='flex-center h-36 w-full'>
                            <Loader />
                         </div>
                     ) : (
