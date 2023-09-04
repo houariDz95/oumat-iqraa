@@ -1,10 +1,10 @@
 'use client';
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import {LazyMotion, domAnimation, m} from 'framer-motion';
+import {LazyMotion,  domAnimation, m} from 'framer-motion';
 import { db } from "@/firebase";
 import {doc, collection, getDoc, onSnapshot, query, where, limit} from 'firebase/firestore';
-import { Editor, EditorState, convertFromRaw } from 'draft-js';
+import { Editor, EditorState, convertFromRaw, CompositeDecorator } from 'draft-js';
 import 'draft-js/dist/Draft.css';
 import { Avatar } from "@mui/material";
 import { AiOutlineCalendar } from "react-icons/ai";
@@ -14,10 +14,10 @@ import Loader from "../Loader";
 import { useMediaQuery } from "@react-hook/media-query";
 import { useInView } from 'react-intersection-observer';
 import dynamic from "next/dynamic";
-import { Cardo } from "next/font/google";
+import {  findEntityLiksRanges } from "@/utils/ranges";
+import { LinkSpan } from "@/utils/spans";
 const ReadMore = dynamic(() => import("./ReadMore"));
 
-const cardo = Cardo({ subsets: ['latin'],   weight: '400' })
 
 const ArticleDetails = ({id}) => {
     const [post, setPost] = useState([]);
@@ -25,12 +25,37 @@ const ArticleDetails = ({id}) => {
     const [loading, setLoading] = useState(false)
     const isMobile = useMediaQuery('(max-width: 768px)');
     const randomCat = post?.category?.[Math.floor(Math.random() * post.category.length)];
-
+    console.log(post.content)
+    const decorator = new CompositeDecorator([
+      {
+        strategy: findEntityLiksRanges('LINK'),
+        component: LinkSpan,
+      },
+    ]);
+    console.log(post.content)
     let editorState;
     if (post.content) {
         const contentState = convertFromRaw(post.content);
-        editorState = EditorState.createWithContent(contentState);
+        editorState = EditorState.createWithContent(contentState, decorator);
     }
+
+    const styleMap = {
+      'color-rgb(0,0,0)': {
+        color: '#333',
+      },
+      'fontsize-24': {
+        fontSize: '28px',
+      },
+      'fontsize-18': {
+       fontSize: '18px',
+      },
+      'bgcolor-rgb(247,247,248)': {
+        fontSize: "24px",
+        color: "#6449ff"
+      }
+    };
+    
+
     const [ref, inView] = useInView({
       triggerOnce: true, // Only trigger once when the element enters the viewport
     });
@@ -51,7 +76,6 @@ const ArticleDetails = ({id}) => {
         }
         getPost()
     }, [])
-
     useEffect(() => {
       const fetchPosts = async () => { 
         try {
@@ -72,7 +96,6 @@ const ArticleDetails = ({id}) => {
       fetchPosts(); 
     }, [randomCat])
 
-
     if(loading) {
       return <div className="h-36 flex-center flex-1">
         <Loader />
@@ -87,22 +110,19 @@ const ArticleDetails = ({id}) => {
         transition={!isMobile ? { duration: 0.3 } : {}}
       >
         <div className="flex items-center gap-2 mb-4">
-          <Link href={`/profile/${post.uid}`}>
-            <Avatar src={post.userImage} alt={post.createdBy} sx={{width:36, height: 36}}/>
-          </Link>
           <div>
-            <p className="font-semibold text-lg">{post.createdBy}</p>
             <p className="text-gray-500 flex items-center gap-2 text-sm">
               <AiOutlineCalendar size={18} color='#6449ff' />
               {moment(post.timestamp?.toDate(), 'ar').format('DD MMMM YYYY')}
             </p>
           </div>
         </div>
-        <h2 className="text-3xl font-semibold mb-4 blue_gradient font-plex">{post.title}</h2>
-        <div  className={`${cardo.className} md:p-4 text-lg lg:text-xl text-gray-900`} ref={ref}>
+        <h2 className="text-3xl font-semibold mb-4 blue_gradient text-center">{post.title}</h2>
+        <div   ref={ref}>
           {inView ? <Editor 
           editorState={editorState} 
-          readOnly={true} 
+          readOnly={true}
+          customStyleMap={styleMap}
           /> : <p>Loading...</p>}
         </div>
       <div className="flex flex-center gap-6 text-lg font-bold text-gray-900 my-10">

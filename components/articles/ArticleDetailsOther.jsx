@@ -26,7 +26,7 @@ const ArticleDetailsOther = ({id}) => {
     const [ref, inView] = useInView({
       triggerOnce: true, // Only trigger once when the element enters the viewport
     });
-    
+
     useEffect(() => {
         const getPost = async () => {
             try {

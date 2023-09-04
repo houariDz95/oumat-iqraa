@@ -1,9 +1,24 @@
 import { EditorState, ContentState, convertFromRaw, Editor, CompositeDecorator } from 'draft-js';
+import { findEntityLiksRanges } from './ranges';
+import { LinkSpan } from './spans';
 
+const styleMap = {
+  'color-rgb(0,0,0)': {
+    color: '#333',
+  },
+  'fontsize-24': {
+    fontSize: '28px',
+  },
+  'fontsize-18': {
+   fontSize: '18px',
+  },
+  'bgcolor-rgb(247,247,248)': {
+    color: "#6449ff"
+  }
+};
 
 
 export const updateTextAndSlice = (text, isContentFromEditor) => {
-
     const contentState = isContentFromEditor
       ? convertFromRaw(text)
       : ContentState.createFromText(text);
@@ -44,16 +59,8 @@ export const updateText = (text, isContentFromEditor) => {
       const decorator = new CompositeDecorator([
         // ... Other decorators ...
         {
-          strategy: findEntityRanges('LINK'),
+          strategy: findEntityLiksRanges('LINK'),
           component: LinkSpan,
-        },
-        {
-          strategy: findStyleRanges('LARGE'),
-          component: SizeSpan,
-        },
-        {
-          strategy: findStyleRanges('RED'),
-          component: ColorSpan,
         },
       ]);
 
@@ -65,6 +72,7 @@ export const updateText = (text, isContentFromEditor) => {
         {isContentFromEditor ? (
           <Editor
             editorState={editorState}
+            customStyleMap={styleMap}
             readOnly={true}
           />
         ) : (
@@ -79,69 +87,4 @@ export const updateText = (text, isContentFromEditor) => {
   return null;
 };
 
-function findEntityRanges(entityType) {
-  return (contentBlock, callback, contentState) => {
-    contentBlock.findEntityRanges(
-      character => {
-        const entityKey = character.getEntity();
-        return (
-          entityKey !== null && contentState.getEntity(entityKey).getType() === entityType
-        );
-      },
-      (start, end) => {
-        callback(start, end);
-      }
-    );
-  };
-}
 
-
-const LinkSpan = props => {
-  const { contentState, entityKey } = props;
-  const entity = contentState.getEntity(entityKey);
-  const { url } = entity.getData();
-  const style = {
-    color: "#6449ff",
-    fontWeight: 'bold',
-  };
-
-  return (
-    <a href={url} target="_blank" rel="noopener noreferrer" style={style}>
-      {props.children}
-    </a>
-  );
-};
-
-
-function findStyleRanges(style) {
-  return (contentBlock, callback, contentState) => {
-    contentBlock.findStyleRanges(
-      character => character.hasStyle(style),
-      (start, end) => {
-        callback(start, end);
-      }
-    );
-  };
-}
-
-
-const SizeSpan = props => {
-  const { contentState, entityKey, children } = props;
-  const sizeStyle = contentState.getEntity(entityKey).getData().style;
-  const style = {
-    fontSize: sizeStyle === 'SMALL' ? '12px' : sizeStyle === 'LARGE' ? '20px' : '16px',
-  };
-
-  return <span style={style}>{children}</span>;
-};
-
-const ColorSpan = props => {
-  const { contentState, entityKey, children } = props;
-  const colorStyle = contentState.getEntity(entityKey).getData().style;
-
-  const style = {
-    color: colorStyle === 'RED' ? '#6449ff' : colorStyle === 'BLUE' ? 'blue' : 'black',
-  };
-
-  return <span style={style}>{children}</span>;
-};

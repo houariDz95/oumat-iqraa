@@ -7,9 +7,17 @@ export async function generateMetadata({params: {id}}){
   const collectionRef = collection(db, 'otherArticles')
   const docRef = doc(collectionRef, id);
   const data = await getDoc(docRef)
+  const text = data.data().articleText
+  let allText = '';
+
+  if (text.blocks && text.blocks.length > 0) {
+    text.blocks.forEach(block => {
+      allText += block.text;
+    });
+  }
   return {
     title: data.data().title,
-    description: data.data().articleText,
+    description: allText,
     }
 }
 
