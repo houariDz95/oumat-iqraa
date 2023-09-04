@@ -49,10 +49,11 @@ const ArticleDetails = ({id}) => {
       'fontsize-18': {
        fontSize: '18px',
       },
-      'bgcolor-rgb(247,247,248)': {
+      'color-rgb(61,142,185)': {
         fontSize: "24px",
         color: "#6449ff"
-      }
+      },
+
     };
     
 
@@ -101,6 +102,7 @@ const ArticleDetails = ({id}) => {
         <Loader />
       </div>
     }
+    console.log(post.content)
   return (
     <LazyMotion features={domAnimation}>
       <m.div
