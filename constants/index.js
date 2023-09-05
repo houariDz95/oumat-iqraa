@@ -3,7 +3,7 @@ export const navLinks = [
   { label: 'عن الموقع', path: '/about' },
   { label: 'قصص متنوعة', path: '/stories' },
   { label: 'المقالات', path: '/articles' },
-  { label: 'إقتباسات', path: '/quotes?cat=الجمال' }
+  { label: 'إقتباسات', path: '/quotes?cat=الحياة' }
 ];
 
 export const footerLinks = [
