@@ -6,7 +6,6 @@ import { db } from "@/firebase";
 import {doc, collection, getDoc, onSnapshot, query, where, limit} from 'firebase/firestore';
 import { Editor, EditorState, convertFromRaw, CompositeDecorator } from 'draft-js';
 import 'draft-js/dist/Draft.css';
-import { Avatar } from "@mui/material";
 import { AiOutlineCalendar } from "react-icons/ai";
 import moment from "moment";
 import 'moment/locale/ar';
@@ -25,7 +24,7 @@ const ArticleDetails = ({id}) => {
     const [loading, setLoading] = useState(false)
     const isMobile = useMediaQuery('(max-width: 768px)');
     const randomCat = post?.category?.[Math.floor(Math.random() * post.category.length)];
-    console.log(post.content)
+
     const decorator = new CompositeDecorator([
       {
         strategy: findEntityLiksRanges('LINK'),
@@ -49,7 +48,7 @@ const ArticleDetails = ({id}) => {
       'fontsize-18': {
        fontSize: '18px',
       },
-      'color-rgb(61,142,185)': {
+      'color-rgb(44,130,201)': {
         fontSize: "24px",
         color: "#6449ff"
       },

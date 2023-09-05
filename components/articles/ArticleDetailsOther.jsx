@@ -12,10 +12,8 @@ import { updateText } from "@/utils/updateText";
 import { useMediaQuery } from "@react-hook/media-query";
 import { useInView } from 'react-intersection-observer';
 import dynamic from "next/dynamic";
-import { Cardo } from "next/font/google";
 const ReadMore = dynamic(() => import("./ReadMore"), {ssr: false});
 
-const cardo = Cardo({ subsets: ['latin'],   weight: '400' })
 
 const ArticleDetailsOther = ({id}) => {
     const [post, setPost] = useState([]);
@@ -99,7 +97,7 @@ const ArticleDetailsOther = ({id}) => {
               width={400} 
               height={400}
           />
-          <div ref={ref} className={`${cardo.className} text-lg lg:text-xl text-gray-900`}>
+          <div ref={ref}>
             {inView ? updateText(post.articleText, post.isFromEditor) : <p>Loading...</p>}
           </div>
           <div className="flex flex-center gap-6 text-lg font-bold text-gray-900 my-10">

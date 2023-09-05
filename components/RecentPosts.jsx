@@ -12,7 +12,7 @@ const RecentPosts = () => {
         const fetchPosts = async () => {
             try {
                 const docsRef = collection(db, 'articles');
-                const q = query(docsRef, orderBy("timestamp", 'desc'), limit(3));
+                const q = query(docsRef, orderBy("timestamp", 'desc'), limit(6));
                 const querySnapshot = await getDocs(q);
                 const allArticles = querySnapshot.docs.map(doc => ({ ...doc.data(), id: doc.id }));
                 setData(allArticles)

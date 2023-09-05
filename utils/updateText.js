@@ -14,6 +14,9 @@ const styleMap = {
   },
   'bgcolor-rgb(247,247,248)': {
     color: "#6449ff"
+  }, 
+  "color-rgb(41,105,176)": {
+    color: "#6449ff"
   }
 };
 
