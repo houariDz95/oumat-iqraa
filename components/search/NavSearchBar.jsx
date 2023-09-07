@@ -30,9 +30,6 @@ const NavSearchBar = () => {
             <Link href="/articles" className='px-6 py-2 rounded-md border-[1px] text-sm border-white text-white bg-transparent'> أحدث المقالات</Link>
             <Link href="/quotes?cat=الجمال" className='px-6 py-2 rounded-md border-[1px] text-sm border-white text-white bg-transparent'>أحدث الإقتباسات </Link>
         </div>
-        <button className='w-fit p-2 px-4 bg-secondary hover:bg-secondary/80 text-white rounded-lg mt-4 flex-center'>
-          <Link href={'/articles/write'}>يمكنك البدء في كتابة المقالات الآن</Link>
-        </button>
     </div>
   )
 }

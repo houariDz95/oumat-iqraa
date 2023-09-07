@@ -28,12 +28,12 @@ const QuotesCard = ({data}) => {
                   : "/assets/icons/copy.svg"
               }
               alt={copied === data.text ? "tick_icon" : "copy_icon"}
-              width={12}
-              height={12}
+              width={14}
+              height={14}
             />
           </div>
       </div>
-      <p className='my-4 text-sm md:text-md text-gray-700'>{data.text}</p>
+      <p className='my-4 text-sm md:text-md font-semibold text-gray-700'>{data.text}</p>
       <Link href={`/quotes/${data.author}`}>
         <p
           className='text-sm blue_gradient cursor-pointer'
