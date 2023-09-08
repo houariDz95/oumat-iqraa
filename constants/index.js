@@ -62,7 +62,6 @@ export const stCategories = [
  export const atCategories = [
   { name: "كل المقالات"},
   { name: "صحة", path: "health" },
-  { name: "رياضة", path: "sports" },
   { name: "فنون", path: "arts" },
   { name: "سفر", path: "travel" },
   { name: "تعليم", path: "education" },
