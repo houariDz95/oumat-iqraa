@@ -82,19 +82,6 @@ const Sidebar = ({forArticles, forStories}) => {
         </p>
       </div>
 
-      <div className='bg-gray-200 p-4 rounded-md mt-4'>
-        <h1 className='text-lg font-semibold mb-2'>الروابط</h1>
-        <div className='flex flex-col gap-2'>
-        {navLinks.map((link, i)=> (
-          <Link 
-          key={i}
-          href={link.path} className='text-blue-500 text-sm cursor-pointer hover:underline'>
-            {link.label}
-          </Link>
-        ))}
-        </div>
-      </div>
-
       {forArticles && <div className='bg-gray-200 p-4 rounded-md mt-4'>
           <h1 className='text-lg font-semibold mb-2'>آخر المقالات  </h1>
           <div className='flex flex-col gap-4'>
