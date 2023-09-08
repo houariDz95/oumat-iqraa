@@ -6,24 +6,26 @@ import { updateTextAndSlice } from '@/utils/updateText';
 
 const StoryCard = ({data}) => {
   return (
-    <div className="bg-white p-3 rounded-lg shadow-md h-fit">
+    <div className="bg-white shadow-md p-4 rounded-md overflow-hidden">
       <Link href={`/stories/${data.id}`}>
-          <Image
-            src={data.imageUrl}
-            alt={data.title}
-            width={300}
-            height={200}
-            className="object-cover w-full h-40 rounded-lg mb-4"
-            loading="eager"
-          />
+        <div  className='relative h-48'>
+            <Image
+              src={data.imageUrl}
+              alt={data.title}
+              layout="fill"
+              className="object-cover"
+              loading="eager"
+            />
+        </div>
       </Link>
+      <h3 className="text-xl font-semibold mb-2 h-14">{data.title}</h3>
 
-      <h3 className="text-xl font-semibold mb-4 h-12">{data.title}</h3>
-
-      <p className="text-gray-600 h-28" >
+      <p className="text-gray-600 text-md h-24" >
         {updateTextAndSlice(data.storyText, data.isFromEditor)}
-        <Link href={`/stories/${data.id}`} className='blue_gradient cursor-pointer'>إقرأ المزيد</Link>
       </p>
+      <Link href={`/stories/${data.id}`} className='flex justify-end'>
+            <span className="border-b-2 border-[#ff7887] text-black font-semibold"> إقــرأ الـمــزيـد » </span>
+        </Link>
   </div>
   )
 }

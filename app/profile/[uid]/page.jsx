@@ -2,7 +2,7 @@
 
 import { auth, db } from '@/firebase';
 import { deleteUser } from 'firebase/auth';
-import { collection, deleteDoc, doc, getDoc, getDocs, onSnapshot, query, where } from 'firebase/firestore';
+import { collection, deleteDoc, doc, getDoc, getDocs,  query, where } from 'firebase/firestore';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState} from 'react';
 import dynamic from 'next/dynamic';
@@ -19,12 +19,13 @@ const Profile =  ({params: {uid}}) => {
 
     useEffect(() => {
         const getUserData = async() => {
-            const user = await getDoc(doc(collection(db, "users"), auth?.currentUser?.uid))
+            const user = await getDoc(doc(collection(db, "users"), uid))
             setUser(user.data())
         }
         getUserData()
     }, [uid])
 
+    console.log(user)
     const handleDelete = async () => {
         if (window.confirm("هل أنت متأكد أنك تريد حذف حسابك؟")) {
           try {

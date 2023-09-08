@@ -92,8 +92,8 @@ const Main = ({ cat }) => {
                     </div>
                 </div>
             </div>
-            <div className='flex-[0.25] mt-20 h-fit hidden lg:block rounded-xl border border-gray-200 bg-white/20 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur p-5'>
-                <Sidebar />
+            <div className='flex-[0.25] mt-20 h-fit hidden lg:block '>
+                <Sidebar forStories/>
             </div>
         </main>
     );

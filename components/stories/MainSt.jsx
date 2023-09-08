@@ -51,7 +51,7 @@ const MainSt = ({cat}) => {
                  <Loader />
               </div>
           ) : (
-              <div  className=' px-4 space-y-6 py-8 columns-1 md:columns-2 mt-12'>
+              <div  className='px-4 space-y-6 py-8 columns-1 md:columns-2 mt-12'>
                   {displayedStories.map(story => (
                       <StoryCard key={story.id} data={story} />
                   ))}
@@ -69,7 +69,7 @@ const MainSt = ({cat}) => {
         />
       </div>
       <div className='flex-[0.25] mt-10 h-fit  hidden lg:block rounded-xl border border-gray-200 bg-white/20 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur p-5'>
-        <Sidebar />
+        <Sidebar forArticles/>
       </div>
     </main>
   )

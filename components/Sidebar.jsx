@@ -3,44 +3,68 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { navLinks } from '@/constants';
 import { useEffect, useState } from 'react';
-import { collection, limit, onSnapshot, orderBy, query } from 'firebase/firestore';
+import { collection, getDocs, limit, onSnapshot, orderBy, query } from 'firebase/firestore';
 import { db } from '@/firebase';
 import { Avatar } from '@mui/material';
+import ManuPosts from './ManuPosts';
 
-const Sidebar = () => {
+const Sidebar = ({forArticles, forStories}) => {
   const [data, setData] = useState([])
+  const [stories, setStories] = useState([])
   const [users, setUsers] = useState([])
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
-    const fetchPosts = async () => {
+    const fetchOtherPosts = async () => {
       try {
-        const docsRef = collection(db, 'otherArticles')
-        const q = query(docsRef, orderBy("timestamp", 'desc'), limit(4))
-        const unsubscribe = onSnapshot(q, (snapshot) => {
-            setData(snapshot.docs.map(doc => ({ ...doc.data(), id: doc.id })));
-          })
-        return unsubscribe
+          const docsRef = collection(db, 'otherArticles');
+          const q = query(docsRef, orderBy("timestamp", 'desc'), limit(5));
+  
+          const querySnapshot = await getDocs(q);
+          const allArticles = querySnapshot.docs.map(doc => ({ ...doc.data(), id: doc.id }));
+          setData(allArticles)
+          setLoading(false);
+  
       } catch (error) {
-        alert(error)
-      } 
-    }
+          alert(error);
+      }
+    };
     
+    const fetchStories = async () => {
+      try {
+          const docsRef = collection(db, 'stories');
+          const q = query(docsRef, orderBy("timestamp", 'desc'), limit(5));
+  
+          const querySnapshot = await getDocs(q);
+          const allStories = querySnapshot.docs.map(doc => ({ ...doc.data(), id: doc.id }));
+          setStories(allStories)
+          setLoading(false);
+  
+      } catch (error) {
+          alert(error);
+      }
+    };
+
     const fetchUsers = async () => {
       try {
         const docsRef = collection(db, 'users')
-        const q = query(docsRef, orderBy("createdAt", 'desc'), limit(4))
-        const unsubscribe = onSnapshot(q, (snapshot) => {
-          setUsers(snapshot.docs.map(doc => ({ ...doc.data(), id: doc.id })));
-          })
-        return unsubscribe
+        const q = query(docsRef, orderBy("createdAt", 'desc'), limit(5))
+        const querySnapshot = await getDocs(q);
+        const users = querySnapshot.docs.map(doc => ({ ...doc.data(), id: doc.id }));
+        setUsers(users)
       } catch (error) {
         alert(error)
       }       
     }
-
-    fetchPosts(); 
+    if(forStories){
+      fetchStories()
+    }
+    if(forArticles){
+      fetchOtherPosts(); 
+    }
     fetchUsers();
 }, []);
+
   return (
     <>
       <div className="bg-gray-200 p-4 rounded-md">
@@ -71,18 +95,23 @@ const Sidebar = () => {
         </div>
       </div>
 
-        <div className='bg-gray-200 p-4 rounded-md mt-4'>
+      {forArticles && <div className='bg-gray-200 p-4 rounded-md mt-4'>
           <h1 className='text-lg font-semibold mb-2'>آخر المقالات  </h1>
           <div className='flex flex-col gap-4'>
-          {data.map(post => (
-            <Link 
-            key={post.id}
-            href={`/articles/${post.id}`} className='flex flex-col gap-6 text-blue-500 text-sm cursor-pointer hover:underline'>
-              {post.title}
-            </Link>
+            {data.map((post, i) => (
+              <ManuPosts key={post.id} id={post.id} title={post.title} img={post.imageUrl} cat={post.category[0]} date={post.timestamp} index={i} />
+            ))} 
+        </div>
+      </div>}
+
+      {forStories && <div className='bg-gray-200 p-2 mt-4'>
+          <h1 className='text-lg font-semibold mb-2'>آخر  القصص المضافة</h1>
+          <div className='flex flex-col gap-4'>
+          {stories.map((story, i) => (
+            <ManuPosts key={story.id} id={story.id} title={story.title} img={story.imageUrl} cat={story.category[0]} date={story.timestamp} index={i} />
           ))} 
         </div>
-      </div>
+      </div>}
 
       <div className='bg-gray-200 p-4 rounded-md mt-4'>
         <h1 className='text-lg font-semibold mb-2'>آخر من انضم الينا </h1>

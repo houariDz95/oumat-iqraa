@@ -8,7 +8,7 @@ const Footer = () => {
           <nav className="flex flex-wrap justify-between">
             {footerLinks.map((section, index) => (
               <div key={index} className="mr-4 mb-4">
-                <p className="text-gray-600 font-medium mb-2">{section.title}</p>
+                <p className="text-gray-700 font-bold mb-2">{section.title}</p>
                 <ul className="space-y-2">
                   {section.links.map((link, index) => (
                     <li key={index}>
@@ -25,7 +25,7 @@ const Footer = () => {
             ))}
           </nav>
           <div className="flex justify-between flex-col-reverse md:flex-row gap-4 w-full p-4 mt-8 items-center">
-            <div className="flex items-center gap-4">
+            <div className="flex items-center flex-col gap-4">
                 <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/profile.php?id=100052895390979" ><AiFillFacebook size={22} color="blue" /></a>
                 <a target="_blank" rel="noopener noreferrer" href="https://www.tiktok.com/@oumat.iqraa"><FaTiktok size={22} color="black"/></a>
             </div>

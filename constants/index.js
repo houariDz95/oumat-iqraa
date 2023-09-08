@@ -33,8 +33,12 @@ export const footerLinks = [
     ],
   },
   {
-    title: 'سجّل الآن',
-    links: [{ title: 'انضم إلينا', url: '/signup' }],
+    title: ' من نحن',
+    links: [
+      { title: 'عن الموقع', url: '/about' },
+      { title: 'اتصل بنا ', url: '/contact' },
+      { title: 'سياسة الخصوصية', url: '/privasy' }
+    ],
   }
 ];
 
@@ -51,6 +55,8 @@ export const stCategories = [
   { path: 'dystopian', name: 'ديستوبيا' },
   { path: 'comedy', name: 'كوميديا' },
   { path: 'philosophy', name: 'فلسفة' },
+  { path: 'biography', name: 'سيرة ذاتية' },
+  { path: 'assahaba', name: 'قصص الصحابة' },
 ];
  
  export const atCategories = [

@@ -1,20 +1,19 @@
 import { Avatar } from "@mui/material";
-import ArticleCard from "./articles/ArticleCard";
 import {BiTrash} from "react-icons/bi";
 import {FiEdit} from 'react-icons/fi';
 
-const ProfileDesplay = ({ name, desc, handleDelete, setIsOpen, user}) => {
+const ProfileDesplay = ({ name, desc, handleDelete, setIsOpen, user, isAdmin}) => {
   
   return (
     <section className='w-full min-h-[calc(100vh-106px)]'>
-      <Avatar src={user.photouRL} alt={user.username} sx={{width:76, height: 76}}/>
+      <Avatar src={user.photoURL} alt={user.username} sx={{width:76, height: 76}}/>
       <h1 className='head_text text-rigth'>
         <span className='blue_gradient'>{name}</span>
       </h1>
       <p className='desc text-right'>{desc}</p>
       
       
-      <div className='flex items-center justify-end gap-4'>
+      {isAdmin && <div className='flex items-center justify-end gap-4'>
         <>
           <button 
           className='group relative'
@@ -38,7 +37,7 @@ const ProfileDesplay = ({ name, desc, handleDelete, setIsOpen, user}) => {
               </span>
           </button>
         </>
-      </div>
+      </div>}
       <div className="font-sans text-right p-5">
       <p className="text-xl font-bold">
         ملفك الشخصي
