@@ -3,7 +3,7 @@ import 'moment/locale/ar';
 import Image from "next/image";
 import Link from "next/link";
 
-const ManuPosts = ({ title, img, cat, date,index, id }) => {
+const ManuPosts = ({ title, img, cat, date,index, id, isArticle }) => {
   let backgroundColor = "";
 
   switch (index) {
@@ -29,15 +29,15 @@ const ManuPosts = ({ title, img, cat, date,index, id }) => {
 
   return (
     <div className="flex items-center gap-5 cursor-pointer">
-      <Link href={`/articles/${id}`} className="aspect-square relative flex-1">
+      <Link href={isArticle ? `/articles/${id}` :  `/stories/${id}`} className="aspect-square relative flex-1">
           <Image src={img} alt={title} fill className="rounded-full  object-cover border-[3px] border-gray-300" />
       </Link>
       <div className="ml-4 flex-[4] flex flex-col gap-1">
-        <Link href={`/articles/${id}`}>
+        <Link href={isArticle ? `/articles/${id}` :  `/stories/${id}`} >
           <h3 className="text-[16px] font-semibold hover:text-primary}">{title}</h3>
         </Link>
         <div className="flex items-center gap-2">
-          <Link href={`/articles?cat=${cat}`}>
+          <Link href={isArticle ? `/articles?cat=${cat}` : `/stories?cat=${cat}`}>
             <p className="px-2 py-1 rounded-[10px] text-[12px] text-white w-max cat"
             style={{backgroundColor }}
             >{cat}</p>

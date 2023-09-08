@@ -86,7 +86,7 @@ const Sidebar = ({forArticles, forStories}) => {
           <h1 className='text-lg font-semibold mb-2'>آخر المقالات  </h1>
           <div className='flex flex-col gap-4'>
             {data.map((post, i) => (
-              <ManuPosts key={post.id} id={post.id} title={post.title} img={post.imageUrl} cat={post.category[0]} date={post.timestamp} index={i} />
+              <ManuPosts isArticle key={post.id} id={post.id} title={post.title} img={post.imageUrl} cat={post.category[0]} date={post.timestamp} index={i} />
             ))} 
         </div>
       </div>}
