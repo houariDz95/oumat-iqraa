@@ -37,7 +37,7 @@ export const footerLinks = [
     links: [
       { title: 'عن الموقع', url: '/about' },
       { title: 'اتصل بنا ', url: '/contact' },
-      { title: 'سياسة الخصوصية', url: '/privasy' }
+      { title: 'سياسة الخصوصية', url: '/privacy' }
     ],
   }
 ];
