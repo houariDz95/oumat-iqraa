@@ -17,7 +17,7 @@ const ReadMoreSt = ({filltredStories}) => {
               className="object-cover h-36 w-32 hidden xs:block"
             />
             <div className="mr-4 flex items-start justify-center gap-3 flex-col">
-              <h2 className="text-md md:text-xl font-semibold">{item.title.length > 25 ? item.title.slice(0, 25) + "..." : item.title}</h2>  
+              <h2 className="text-md md:text-xl font-semibold">{item.title}</h2>  
               <p className="text-gray-600 leading-snug text-[12px] md:text-lg ">{updateTextAndSlice(item.storyText, item.isFromEditor)}
               <Link href={`/stories/${item.id}`} className='blue_gradient cursor-pointer font-semibold'>بدء القراءة</Link>
               </p> 

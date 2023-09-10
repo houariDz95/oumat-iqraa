@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import {LazyMotion, domAnimation, m } from 'framer-motion';
 import { db } from "@/firebase";
-import {doc, collection, getDoc, query, onSnapshot, where, limit} from 'firebase/firestore';
+import {doc, collection, getDoc, query, where, limit, getDocs} from 'firebase/firestore';
 import { AiOutlineCalendar } from "react-icons/ai";
 import moment from "moment";
 import 'moment/locale/ar';
@@ -56,11 +56,10 @@ const StoryDetails = ({id}) => {
           if (randomCat) {
             q = query(docsRef, where('category', 'array-contains', randomCat), limit(5));
           }
-
-          const unsubscribe = onSnapshot(q, (snapshot) => {
-              setStories(snapshot.docs.map(doc => ({ ...doc.data(), id: doc.id })));
-            })
-          return unsubscribe
+          const querySnapshot = await getDocs(q);
+          const postData = querySnapshot.docs.map(doc => ({ ...doc.data(), id: doc.id }));
+          const filtredStories = postData.filter((item) => item.id !== id)
+          setStories(filtredStories);
         } catch (error) {
           alert(error)
         } 

@@ -29,11 +29,11 @@ const ManuPosts = ({ title, img, cat, date,index, id, isArticle }) => {
 
   return (
     <div className="flex items-center gap-5 cursor-pointer">
-      <Link href={isArticle ? `/articles/${id}` :  `/stories/${id}`} className="aspect-square relative flex-1">
+      <Link href={isArticle ? `/articles/others/${id}` :  `/stories/${id}`} className="aspect-square relative flex-1">
           <Image src={img} alt={title} fill className="rounded-full  object-cover border-[3px] border-gray-300" />
       </Link>
       <div className="ml-4 flex-[4] flex flex-col gap-1">
-        <Link href={isArticle ? `/articles/${id}` :  `/stories/${id}`} >
+        <Link href={isArticle ? `/articles/others/${id}` :  `/stories/${id}`} >
           <h3 className="text-[16px] font-semibold hover:text-primary}">{title}</h3>
         </Link>
         <div className="flex items-center gap-2">

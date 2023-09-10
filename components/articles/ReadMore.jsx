@@ -18,7 +18,7 @@ const ReadMore = ({posts}) => {
               />
               <div className="mr-4 flex items-start justify-center gap-3 flex-col">
               <Link href={`/articles/others/${item?.id}`}>
-                <h2 className="text-lg md:text-xl font-semibold hover:text-primary">{item?.title.length > 20 ? item.title.slice(0, 20) + "..." : item.title}</h2>  
+                <h2 className="text-lg md:text-xl font-semibold hover:text-primary">{item?.title}</h2>  
               </Link>
                 <p className="text-gray-500 text-[12px] md:text-lg">
                   {updateTextAndSlice(item.articleText, item.isFromEditor)}

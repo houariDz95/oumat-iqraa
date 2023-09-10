@@ -53,12 +53,13 @@ const ArticleDetailsOther = ({id}) => {
           let q = docsRef;
           
           if (randomCat) {
-            q = query(docsRef, where('category', 'array-contains', randomCat), limit(5));
+            q = query(docsRef, where('category', 'array-contains', randomCat), limit(6));
           }
     
           const querySnapshot = await getDocs(q);
           const postData = querySnapshot.docs.map(doc => ({ ...doc.data(), id: doc.id }));
-          setPosts(postData);
+          const filtredPost = postData.filter((item) => item.id !== id)
+          setPosts(filtredPost);
         } catch (error) {
           alert(error);
           console.log(error);
