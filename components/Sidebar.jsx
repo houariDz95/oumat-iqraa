@@ -11,8 +11,8 @@ const Sidebar = () => {
         فئات
       </h2>
       <div className="w-full flex flex-wrap gap-2">
-        {atCategories.map(cat =>
-          <button className="text-lg border w-fit p-2 hover:text-primary">
+        {atCategories.map((cat, i) =>
+          <button className="text-lg border w-fit p-2 hover:text-primary" key={i}>
             <Link href={cat.path ? `/articles?cat=${cat.path}` : '/articles'}>
               {cat.name}
             </Link>
