@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ar">
       <body className={cairo.varible}>
-        <div className='w-full bg-gray-100 min-h-[calc(100vh-73px)] overflow-x-hidden' style={{direction: "rtl"}}>
+        <div className='w-full bg-gray-100 overflow-clip' style={{direction: "rtl"}}>
           {children}          
           <Footer />
           <Analytics />

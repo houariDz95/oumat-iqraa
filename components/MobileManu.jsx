@@ -1,10 +1,9 @@
-import { auth } from "@/firebase"
 import Link from "next/link"
 import {LazyMotion, domAnimation, m} from 'framer-motion';
 import { FaUser, FaSignOutAlt } from 'react-icons/fa';
 import { navLinks } from '@/constants';
 
-const MobileManu = ({primary, handleSignOut, isOpen}) => {
+const MobileManu = ({primary, isOpen}) => {
   return (
     <LazyMotion features={domAnimation}>
       <m.div 
@@ -25,26 +24,6 @@ const MobileManu = ({primary, handleSignOut, isOpen}) => {
               </Link>
             </li>
           ))}
-          {auth.currentUser && (
-            <div className='flex items-center justify-start mt-4 border-t border-gray-200/20 pt-4 gap-6'>
-              {/* Profile Button */}
-                <Link
-                  href={`/profile/${auth?.currentUser?.uid}`}
-                  className="text-white hover:text-gray-100/50 flex-center gap-4"
-                >
-                  <FaUser className="inline-block mr-2" />
-                  الملف الشخصي
-                </Link>
-              {/* Sign Out Button */}
-                <button
-                  className="text-white hover:text-gray-100/50 flex-center gap-4"
-                  onClick={handleSignOut}
-                >
-                  <FaSignOutAlt className="inline-block mr-2" />
-                  تسجيل الخروج
-                </button>
-            </div>
-          )}
         </ul>
       </m.div>
     </LazyMotion>

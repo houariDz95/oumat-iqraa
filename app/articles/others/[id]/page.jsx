@@ -1,3 +1,5 @@
+import Navbar from '@/components/Nav';
+import PageTitle from '@/components/PageTitle';
 import Sidebar from '@/components/Sidebar'
 import ArticleDetailsOther from '@/components/articles/ArticleDetailsOther';
 import { db } from '@/firebase';
@@ -21,16 +23,48 @@ export async function generateMetadata({params: {id}}){
     }
 }
 
-const page = ({params: {id}}) => {
+const page = async ({params: {id}}) => {
+  let isLoading = true;
+
+  const getPost = async () => {
+    try {
+      if(id){
+        const collectionRef = collection(db, 'otherArticles')
+        const docRef = doc(collectionRef, id);
+        const data = await getDoc(docRef)
+        const post = {...data.data(), id: data.id}
+        isLoading = false
+        return post
+      }
+
+    } catch (error) {
+      console(error)
+      isLoading=false
+    }
+  }
+  const post = await getPost()
   return (
-    <div className='relative'>
-        <div className='flex max-w-6xl mx-auto  min-h-[calc(100vh-73px)] mt-10 mb-10'>
-            <ArticleDetailsOther id={id} />
-            <div className='flex-[0.25] mt-10 h-fit  hidden lg:block rounded-xl border border-gray-200 bg-white/20 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur p-5'>
-              <Sidebar forStories />
-            </div>
+    <>
+      <Navbar />
+      <PageTitle title={post.title} desc="استمتع بقراءة مقالة شيقة ومثيرة تغطي موضوعًا مهمًا" />
+      <div className="max-w-6xl mx-auto  min-h-[calc(100vh-73px)] flex mt-10">
+        <div className="flex-1 lg:flex-[0.75]">
+          <ArticleDetailsOther 
+          id={id} 
+          isLoading={isLoading} 
+          date={post.timestamp?.toDate()} 
+          imageUrl={post.imageUrl}
+           title={post.title} 
+           category={post.category}
+           articleText={post.articleText} 
+           isFromEditor={post.isFromEditor}
+          />
         </div>
-    </div>
+        <div className="flex-[0.25] hidden lg:block sticky top-0 h-full ">
+          <Sidebar />
+        </div>
+      </div>
+    </>
   )
 }
 

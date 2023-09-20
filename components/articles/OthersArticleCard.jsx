@@ -31,3 +31,4 @@ const OthersArticleCard = ({ imageUrl, title, articleText, id, isFromEditor }) =
 };
 
 export default OthersArticleCard;
+

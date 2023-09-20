@@ -1,70 +1,26 @@
+import {MdOutlineSelfImprovement, 
+  MdPsychology, 
+  MdHealthAndSafety,
+  MdBusiness,
+  MdOutlineTravelExplore,
+  MdCastForEducation
+} from 'react-icons/md'
+
 export const navLinks = [
   { label: 'الصفحة الرئيسية', path: '/' },
-  { label: 'عن الموقع', path: '/about' },
-  { label: 'قصص متنوعة', path: '/stories' },
   { label: 'المقالات', path: '/articles' },
-  { label: 'إقتباسات', path: '/quotes?cat=الحياة' }
+  { label: 'عن الموقع', path: '/about' },
+  { label: 'سياسة الخصوصية', path: '/privacy' },
+  { label: 'اتصل بنا', path: '/contact' },
 ];
 
-export const footerLinks = [
-  {
-    title: 'قصص متنوعة',
-    links: [
-      { title: 'كل القصص', url: '/stories' },
-      { title: 'خيال', url: '/stories?cat=fantasy' },
-      { title: 'قصص الأطفال', url: '/stories?cat=children' },
-      { title: 'غموض', url: '/stories?cat=mystery' },
-      { title: 'رومانسية', url: '/stories?cat=romance' },
-    ],
-  },
-  {
-    title: 'المقالات',
-    links: [
-      { title: 'قراءة المقالات', url: '/articles' },
-      { title: 'كتابة المقالات', url: '/articles/write' },
-      { title: 'آخر المقالات', url: '#recenet' },
-    ],
-  },
-  {
-    title: 'إقتباسات ',
-    links: [
-      { title: 'السعادة', url: '/quotes?cat=السعادة' },
-      { title: 'الحياة', url: '//quotes?cat=الحياة' },
-    ],
-  },
-  {
-    title: ' من نحن',
-    links: [
-      { title: 'عن الموقع', url: '/about' },
-      { title: 'اتصل بنا ', url: '/contact' },
-      { title: 'سياسة الخصوصية', url: '/privacy' }
-    ],
-  }
-];
-
-export const stCategories = [
-  { name: "كل القصص"},
-  { path: 'children', name: 'قصص الأطفال' },
-  { path: 'adventure', name: 'مغامرات' },
-  { path: 'fantasy', name: 'خيال' },
-  { path: 'mystery', name: 'غموض' },
-  { path: 'romance', name: 'رومانسية' },
-  { path: 'horror', name: 'رعب' },
-  { path: 'literature', name: 'أدب' },
-  { path: 'thriller', name: 'إثارة' },
-  { path: 'dystopian', name: 'ديستوبيا' },
-  { path: 'comedy', name: 'كوميديا' },
-  { path: 'philosophy', name: 'فلسفة' },
-  { path: 'biography', name: 'سيرة ذاتية' },
-  { path: 'assahaba', name: 'قصص الصحابة' },
-];
  
  export const atCategories = [
   { name: "كل المقالات"},
   { name: "صحة", path: "health" },
   { name: "فنون", path: "arts" },
   { name: "سفر", path: "travel" },
-  { name: "تعليم", path: "education" },
+  { name: "تعليم", path: "education"},
   { name: "ثقافة", path: "culture" },
   { name: "أعمال", path: "business" },
   { name: "أدب", path: "literature" },
@@ -73,17 +29,42 @@ export const stCategories = [
   { name: "تطوير الذات", path: "self-improve" },
 ];
 
-export const quotesCategories = [
-  'الجمال',
-  'الصداقة',
-  'العادات',
-  'السعادة',
-  'الحياة',
-  'الوحدة',
-  'الحب',
-  'الليل',
-  'المخاطرة',
-  'الحزن',
-  'النجاح',
-  'السفر',
+export const popularCategories = [
+  { 
+    name: "تطوير الذات",
+    path: "self-improve",
+    color: "#57c4ff31",
+    icon: <MdOutlineSelfImprovement />,
+  },
+  { 
+    name: "علم النفس",
+    path: "psychology",
+    color: "#da85c731",
+    icon: <MdPsychology />,
+  },
+  { 
+    name: "صحة", 
+    path: "health",
+    color: "#7fb88133",
+    icon: <MdHealthAndSafety />,
+  },
+  { 
+    name: "أعمال", 
+    path: "business",
+    color: "#ffb04f45",
+    icon: <MdBusiness />,
+  },
+  { 
+   name: "سفر",
+   path: "travel",
+   color: "#ff795736",
+   icon: <MdOutlineTravelExplore />,
+  },
+  { 
+    name: "تعليم", 
+    path: "education" ,
+    color: "#5e4fff31",
+    icon: <MdCastForEducation />,
+  }
 ]
+
