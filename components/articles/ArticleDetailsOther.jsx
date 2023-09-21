@@ -41,7 +41,7 @@ const ArticleDetailsOther = ({imageUrl, title, isLoading, date, articleText, isF
               {moment(date, 'ar').format('DD MMMM YYYY')}
               </p>
           </div>
-          <h2 className="text-3xl font-semibold mb-4 blue_gradient font-plex">{title}</h2>
+          <h2 className="text-3xl font-semibold mb-4 blue_gradient">{title}</h2>
           <Image 
               src={imageUrl} 
               alt={title} 

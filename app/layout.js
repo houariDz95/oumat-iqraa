@@ -12,6 +12,15 @@ const cairo = Cairo({
 export const metadata = {
   title: 'أمة اقرأ',
   description: 'موقع أمة اقرأ للكتب والمقالات والكتابة وتوليد الصور بالذكاء الاصطناعي.',
+  other: {
+    'theme-color': '#0d1117',
+    "color-scheme": "light only",
+    "twitter:image": '/assets/library.png',
+    "twitter:card": "summary_large_image",
+    "og:url": "oumat-iqraa.com",
+    "og:image": '/assets/library.png',
+    "og:type": "website",
+  }
 };
 
 export default function RootLayout({ children }) {

@@ -24,7 +24,7 @@ const Header = () => {
                 animate={!isMobile ? { opacity: 1, y: 0 }: {}}
                 transition={!isMobile  ? { delay: 0.5, duration: 1 } : {}}
                 whileInView={!isMobile ? { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeInOut" } } : {}}
-                className="text-[36px] font-bold leading-snug text-white mt-10 text-center font-plex"
+                className="text-[36px] font-bold leading-snug text-white mt-10 text-center"
               >
                 مرحبًا بكم في موقع أمة اقرأ 
               </m.h2>

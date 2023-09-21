@@ -1,10 +1,10 @@
 
 const Footer = () => {
     return (
-    <footer className="bg-gray-900 text-white py-4 w-screen">
-      <div className="flex justify-between max-w-6xl mx-auto">
+    <footer className="bg-gray-900 text-white py-4 w-screen px-2">
+      <div className="flex justify-between max-w-6xl mx-auto flex-col md:flex-row items-center gap-1">
         <div className="text-sm">
-        &copy; 2023 oumat-iqraa. All rights reserved
+        Copyright &copy; 2023 oumat iqraa | All Rights Reserved
         </div>
         <div className="text-sm">
           <a href="/privacy" className="text-gray-400 hover:text-white">Privacy Policy</a>

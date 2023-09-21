@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Reem+Kufi:wght@400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -96,11 +95,11 @@ body,
 
 /* Tailwind Styles */
 .head_text {
-  @apply mt-5 text-3xl font-extrabold leading-[1.15] font-plex;
+  @apply mt-5 text-3xl font-extrabold leading-[1.15];
 }
 
 .logo_text {
-  @apply max-sm:hidden font-plex font-semibold text-lg text-white tracking-wide;
+  @apply max-sm:hidden font-semibold text-lg text-white tracking-wide;
 }
 
 .orange_gradient {

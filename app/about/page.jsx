@@ -8,7 +8,7 @@ export const metadata = {
 
 const AboutPage = () => {
     return (
-      <div className="h-screen">
+      <div className="min-h-screen">
         <Navbar />
         <div class="p-8 bg-gray-100 max-w-6xl mx-auto">
             <h2 class="text-2xl font-bold mb-4">من نحن</h2>

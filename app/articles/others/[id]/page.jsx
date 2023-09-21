@@ -20,6 +20,15 @@ export async function generateMetadata({params: {id}}){
   return {
     title: data.data().title,
     description: allText,
+    other: {
+      'theme-color': '#0d1117',
+      "color-scheme": "light only",
+      "twitter:image": data.data().imageUrl,
+      "twitter:card": "summary_large_image",
+      "og:url": "oumat-iqraa.com",
+      "og:image": data.data().imageUrl,
+      "og:type": "website",
+    }
     }
 }
 

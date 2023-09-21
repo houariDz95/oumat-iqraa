@@ -1,20 +1,19 @@
-'use client'
+
+import Link from "next/link";
 import { popularCategories } from "@/constants";
-import { useRouter } from "next/navigation";
 
 const Categories = () => {
-  const router = useRouter()
   return (
     <div className="flex gap-2 flex-wrap mt-8">
       {popularCategories.map((category) =>(
-        <button 
-        onClick={() => router.push(`/articles?cat=${category.path}`)}
+        <Link 
+        href={`/articles?cat=${category}`}
         className="flex items-center justify-center gap-3 md:w-1/5 lg:w-1/4 xl:w-[16%] sm:w-2/5 w-full  h-[80px]  text-black font-semibold"
         key={category.path} 
         style={{background: category.color}}>
           <h1 className="text-xl">{category.icon}</h1>
           <h4>{category.name}</h4>
-        </button>
+        </Link>
       ))}
     </div>
   )
