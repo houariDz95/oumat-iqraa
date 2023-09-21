@@ -1,12 +1,9 @@
 import Categories from '@/components/Categories'
 import Header from '@/components/Header'
 import Navbar from '@/components/Nav'
-
-
-import dynamic from 'next/dynamic'
-const OthersArticles = dynamic(() => import('@/components/OthersArticles'), {ssr: false})
-const Popular = dynamic(() => import('@/components/Popular'), {ssr: false})
-const Contact = dynamic(() =>  import('@/components/Contact'), {ssr: false});
+import OthersArticles from '@/components/OthersArticles';
+import Popular from '@/components/Popular';
+import Contact from '@/components/Contact';
 
 export default function Home() {
   return(
