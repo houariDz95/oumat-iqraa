@@ -1,8 +1,7 @@
 import { query, where, collection, getDocs } from "firebase/firestore";  
 import { db } from "@/firebase";
+import PopularCard from "./PopularCard";
 
-import dynamic from "next/dynamic";
-const PopularCard = dynamic(() => import('./PopularCard'), {ssr: false})
 
 const titles = [
     "كايزن: السعي المستمر نحو التحسين والتطوير",
