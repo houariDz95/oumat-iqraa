@@ -1,41 +1,25 @@
 "use client"
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { navLinks } from '@/constants';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import { useMediaQuery } from "@react-hook/media-query";
 
 import dynamic from 'next/dynamic';
 const MobileManu = dynamic(() => import('./MobileManu'))
 
 const Navbar = ({primary}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const isMobile = useMediaQuery('(max-width: 768px)');
   const pathname = usePathname()
-  console.log(pathname)
   
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  useEffect(() => {
-    function handleResize() {
-      setIsMobile(window.innerWidth <= 768); // Adjust the breakpoint as needed
-    }
-
-    // Initial check on component mount
-    handleResize();
-
-    // Listen for window resize events
-    window.addEventListener('resize', handleResize);
-
-    // Clean up the event listener when the component unmounts
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
 
   return (
     <nav className={`${primary ? "bg-gray-900 md:bg-primary" : "bg-gray-900"} py-4 `}>

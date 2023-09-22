@@ -4,29 +4,16 @@ import { AiOutlineCalendar } from "react-icons/ai";
 import moment from "moment";
 import 'moment/locale/ar';
 import Image from "next/image";
-import Loader from "../Loader";
 import { updateText } from "@/utils/updateText";
 import { useMediaQuery } from "@react-hook/media-query";
-import { useInView } from 'react-intersection-observer';
 import dynamic from "next/dynamic";
 const ReadMore = dynamic(() => import("./ReadMore"), {ssr: false});
 
 
-const ArticleDetailsOther = ({imageUrl, title, isLoading, date, articleText, isFromEditor, category, id}) => {
+const ArticleDetailsOther = ({imageUrl, title, date, articleText, isFromEditor, category, id}) => {
   const randomCat = category?.[Math.floor(Math.random() * category.length)];
+  const isMobile = useMediaQuery('(max-width: 768px)');
 
-    const isMobile = useMediaQuery('(max-width: 768px)');
-    const [ref, inView] = useInView({
-      triggerOnce: true, // Only trigger once when the element enters the viewport
-    });
-
-    console.log(isLoading)
-
-    if(isLoading) {
-      return <div className="h-36 flex-center flex-1">
-        <Loader />
-      </div>
-    }
   return (
     <LazyMotion features={domAnimation}>
       <m.div
@@ -49,8 +36,8 @@ const ArticleDetailsOther = ({imageUrl, title, isLoading, date, articleText, isF
               width={400} 
               height={400}
           />
-          <div ref={ref}>
-            {inView ? updateText(articleText, isFromEditor) : <p>Loading...</p>}
+          <div>
+            {updateText(articleText, isFromEditor)}
           </div>
           <div className="flex flex-center gap-6 text-lg font-bold text-gray-900 my-10">
               <span>*</span>

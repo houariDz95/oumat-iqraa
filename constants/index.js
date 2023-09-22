@@ -19,7 +19,6 @@ export const navLinks = [
   { name: "كل المقالات"},
   { name: "صحة", path: "health" },
   { name: "فنون", path: "arts" },
-  { name: "سفر", path: "travel" },
   { name: "تعليم", path: "education"},
   { name: "ثقافة", path: "culture" },
   { name: "أعمال", path: "business" },
