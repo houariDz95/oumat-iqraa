@@ -2,14 +2,12 @@ import Navbar from '@/components/Nav';
 import PageTitle from '@/components/PageTitle';
 import Sidebar from '@/components/Sidebar'
 import ArticleDetailsOther from '@/components/articles/ArticleDetailsOther';
-import { db } from '@/firebase';
-import { collection, doc, getDoc } from 'firebase/firestore';
+import { getPost, readMore } from '@/actions';
 
 export async function generateMetadata({params: {id}}){
-  const collectionRef = collection(db, 'otherArticles')
-  const docRef = doc(collectionRef, id);
-  const data = await getDoc(docRef)
-  const text = data.data().articleText
+
+  const post = await getPost(id)
+  const text = post.articleText
   let allText = '';
 
   if (text.blocks && text.blocks.length > 0) {
@@ -18,40 +16,25 @@ export async function generateMetadata({params: {id}}){
     });
   }
   return {
-    title: data.data().title,
+    title: post.title,
     description: allText,
     other: {
       'theme-color': '#0d1117',
       "color-scheme": "light only",
-      "twitter:image": data.data().imageUrl,
+      "twitter:image": post.imageUrl,
       "twitter:card": "summary_large_image",
       "og:url": "oumat-iqraa.com",
-      "og:image": data.data().imageUrl,
+      "og:image": post.imageUrl,
       "og:type": "website",
     }
     }
 }
 
 const page = async ({params: {id}}) => {
-  let isLoading = true;
 
-  const getPost = async () => {
-    try {
-      if(id){
-        const collectionRef = collection(db, 'otherArticles')
-        const docRef = doc(collectionRef, id);
-        const data = await getDoc(docRef)
-        const post = {...data.data(), id: data.id}
-        isLoading = false
-        return post
-      }
-
-    } catch (error) {
-      console(error)
-      isLoading=false
-    }
-  }
-  const post = await getPost()
+  const post = await getPost(id)
+  const randomCat = post.category?.[Math.floor(Math.random() * post.category.length)];
+  const readMorePost = await readMore(randomCat, post.id)
   return (
     <>
       <Navbar />
@@ -60,13 +43,13 @@ const page = async ({params: {id}}) => {
         <div className="flex-1 lg:flex-[0.75]">
           <ArticleDetailsOther 
           id={id} 
-          isLoading={isLoading} 
           date={post.timestamp?.toDate()} 
           imageUrl={post.imageUrl}
            title={post.title} 
            category={post.category}
            articleText={post.articleText} 
            isFromEditor={post.isFromEditor}
+           readMore={readMorePost}
           />
         </div>
         <div className="flex-[0.25] hidden lg:block sticky top-0 h-full ">

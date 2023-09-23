@@ -1,22 +1,16 @@
 'use client'
-import { useEffect, useState } from 'react';
-import { collection, onSnapshot } from 'firebase/firestore';
-import  {db} from '@/firebase';
-import Loader from '../Loader';
 import dynamic from 'next/dynamic';
 
 const OthersArticleCard = dynamic(() => import('../articles/OthersArticleCard'));
 
-const SearchFor = ({keyword}) => {
-    const [otherArticles, setOtherArticles] = useState([]);
+const SearchFor = ({keyword, otherArticles}) => {
 
-    const [isLoading, setIsLoading] = useState(false)
-    const decodedKeyword = keyword ? decodeURIComponent(keyword) : '';
+  const decodedKeyword = keyword ? decodeURIComponent(keyword) : '';
 
       const regex = new RegExp(decodedKeyword, "i"); 
       
       
-      const filteredOtherArticles = otherArticles.filter(
+      const filteredOtherArticles = otherArticles?.filter(
         (item) =>
           regex.test(item.title) ||
           regex.test(getContentText(item.articleText)) ||
@@ -35,27 +29,7 @@ const SearchFor = ({keyword}) => {
       return text;
     }
 
-    useEffect(() => {
-        const getOtherArticles = async () => {
-          setIsLoading(true)
-          try {
-            const collectionRef = collection(db, 'otherArticles');
-            const unsubscribe = onSnapshot(collectionRef, (snapshot) => {
-              setOtherArticles(snapshot.docs.map(doc => ({ ...doc.data(), id: doc.id })));
-            })
-            return unsubscribe
-          } catch (error) {
-            alert(error)
-          }finally{
-            setIsLoading(false)
-          }
-        }
-        getOtherArticles()
-    }, [keyword])
 
-    if(isLoading) return <div className='h-36 flex-center'>
-      <Loader />
-    </div>
 
     if(!filteredOtherArticles.length) return (
     <h2 className='text-lg font-semibold text-black'>لا توجد نتائج البحث</h2>

@@ -3,8 +3,7 @@ import PageTitle from "@/components/PageTitle";
 import Sidebar from "@/components/Sidebar";
 import Main from "@/components/articles/Main";
 import { atCategories } from "@/constants";
-import { db } from '@/firebase';
-import {  getDocs, collection, where, query, orderBy } from 'firebase/firestore';
+import { getArticles } from "@/actions";
 
 export async function generateMetadata(paramKey){
   const cat = paramKey.searchParams.cat;
@@ -17,20 +16,8 @@ export async function generateMetadata(paramKey){
 
 const Articles = async (paramKey) => {
     const cat = paramKey.searchParams.cat;
-    const getArticles = async (paramKey) => {
-      try {
-      
-        const docsRef = collection(db, 'otherArticles');
-        const q = cat ? query(docsRef, where('category', 'array-contains', cat)) : query(docsRef, orderBy('timestamp', 'desc'));
-        const querySnapshot = await getDocs(q);
-        const allArticles = querySnapshot.docs.map(doc => ({ ...doc.data(), id: doc.id }));
-        return allArticles
-      } catch (error) {
-        console.log(error);
-      }
-    }
-
-    const allArticles = await getArticles()
+    const allArticles = await getArticles(cat);
+    
   return (
     <>
       <Navbar />

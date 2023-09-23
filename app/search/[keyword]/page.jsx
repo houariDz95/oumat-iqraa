@@ -1,3 +1,4 @@
+import { getAllArticles } from '@/actions';
 import Navbar from '@/components/Nav'
 import Sidebar from '@/components/Sidebar';
 import NavSearchBar from '@/components/search/NavSearchBar'
@@ -19,6 +20,8 @@ export async function generateMetadata({ params: { keyword } }) {
 
 
 const Search = async ({ params: {keyword}}) => {
+  const postData = await getAllArticles()
+  console.log(postData)
   return (
     <>  
         <Navbar />
@@ -27,7 +30,7 @@ const Search = async ({ params: {keyword}}) => {
           <div className=" max-w-6xl mx-auto mt-10 flex items-start">
             <div className="text-right flex-[0.75] ">
               <h2 className="head_text blue_gradient text-center" id="content">نتائج البحث</h2>
-              <SearchFor keyword={keyword} />
+              <SearchFor keyword={keyword} otherArticles={postData} />
             </div>
             <div className='flex-[0.25] sticky top-0 hidden lg:block'>
               <Sidebar />

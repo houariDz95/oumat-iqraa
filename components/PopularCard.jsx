@@ -19,7 +19,7 @@ const PopularCard = ({imageUrl, title, articleText, id, isFromEditor, date, cate
         </Link>
         <Link href={`/articles/others/${id}`}>
           <div className='flex items-center gap-2'>
-              <Image src={imageUrl} alt={title} width={200} height={200} className='w-[110px] h-[75px]'/>
+              <Image src={imageUrl} alt={title} width={110} height={75} className='w-[110px] h-[75px]'/>
               <p className="text-gray-600 text-sm h-24 hover:text-gray-500">
                 {updateTextAndSlice(articleText, isFromEditor)} 
               </p>
