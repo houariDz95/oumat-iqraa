@@ -14,7 +14,6 @@ const Navbar = ({primary}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isMobile = useMediaQuery('(max-width: 768px)');
   const pathname = usePathname()
-  
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -42,7 +41,7 @@ const Navbar = ({primary}) => {
                 whileTap={{ scale: 0.9 }}
                 key={link.path}
               >
-                <Link href={link.path} className={`${pathname === link.path ? "text-white  border-b" : "text-white hover:text-opacity-50"}`}>
+                <Link href={link.path} className={`${pathname === link.path || pathname.startsWith(link.path) ? "text-white  border-b" : "text-white hover:text-opacity-50"}`}>
                   {link.label}
                 </Link>
               </li>
