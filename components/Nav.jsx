@@ -41,7 +41,7 @@ const Navbar = ({primary}) => {
                 whileTap={{ scale: 0.9 }}
                 key={link.path}
               >
-                <Link href={link.path} className={`${pathname === link.path || pathname.startsWith(link.path) ? "text-white  border-b" : "text-white hover:text-opacity-50"}`}>
+                <Link href={link.path} className={`${pathname === link.path || pathname.startsWith(link.path.length > 1 && link.path) ? "text-white  border-b" : "text-white hover:text-opacity-50"}`}>
                   {link.label}
                 </Link>
               </li>
