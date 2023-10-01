@@ -22,7 +22,6 @@ export const navLinks = [
   { name: "تعليم", path: "education"},
   { name: "ثقافة", path: "culture" },
   { name: "أعمال", path: "business" },
-  { name: "أدب", path: "literature" },
   { name: "جمال", path: "beauty" },
   { name: "علم النفس", path: "psychology" },
   { name: "تطوير الذات", path: "self-improve" },
