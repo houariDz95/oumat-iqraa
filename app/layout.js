@@ -40,6 +40,21 @@ export default function RootLayout({ children }) {
             type='text/javascript' 
             src='//pl20816003.highcpmrevenuegate.com/bf/9e/b6/bf9eb6e7b5ddd3ce92701feb9b883409.js' 
           />
+          <Script
+            type="text/javascript"
+            dangerouslySetInnerHTML={{
+              __html: `
+                atOptions = {
+                  'key': 'ad330eb21b043aecab76c636577f1289',
+                  'format': 'iframe',
+                  'height': 90,
+                  'width': 728,
+                  'params': {}
+                };
+                document.write('<scr' + 'ipt type="text/javascript" src="//www.profitablecreativeformat.com/ad330eb21b043aecab76c636577f1289/invoke.js"></scr' + 'ipt>');
+              `,
+            }}
+          />
         </div>
       </body>
     </html>

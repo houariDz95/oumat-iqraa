@@ -4,7 +4,6 @@ import Sidebar from "@/components/Sidebar";
 import Main from "@/components/articles/Main";
 import { atCategories } from "@/constants";
 import { getArticles } from "@/actions";
-
 export async function generateMetadata(paramKey){
   const cat = paramKey.searchParams.cat;
   const title = atCategories.filter(category => category.path === cat)[0].name;
