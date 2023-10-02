@@ -32,9 +32,13 @@ export default function RootLayout({ children }) {
           <Footer />
           <Analytics />
           <Script 
-          async  
-          src="//pl20812775.highcpmrevenuegate.com/6b3890282dbcd2ff77e5aedcafd49c1a/invoke.js"
-          data-cfasync="false"
+            async  
+            src="//pl20812775.highcpmrevenuegate.com/6b3890282dbcd2ff77e5aedcafd49c1a/invoke.js"
+            data-cfasync="false"
+          />
+          <Script 
+            type='text/javascript' 
+            src='//pl20816003.highcpmrevenuegate.com/bf/9e/b6/bf9eb6e7b5ddd3ce92701feb9b883409.js' 
           />
         </div>
       </body>
