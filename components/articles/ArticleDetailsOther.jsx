@@ -14,6 +14,7 @@ const ArticleDetailsOther = ({imageUrl, title, date, articleText, isFromEditor, 
     <div
       className="max-w-2xl flex-1 p-4 md:p-0 mx-auto"
     >
+      <div id="container-6b3890282dbcd2ff77e5aedcafd49c1a"></div>
       <div className="flex items-center gap-2 mb-4">
         <p className="text-gray-500 flex items-center gap-2 text-sm">
         <AiOutlineCalendar size={18} color='#6449ff' />
