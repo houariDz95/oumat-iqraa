@@ -28,13 +28,19 @@ export default function RootLayout({ children }) {
     <html lang="ar">
       <body className={cairo.varible}>
         <div className='w-full bg-gray-100 overflow-clip' style={{direction: "rtl"}}>
-          {children}          
+          <div id="container-6b3890282dbcd2ff77e5aedcafd49c1a">
+            {children}  
+          </div>        
           <Footer />
           <Analytics />
-          <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4378697867992790"
-          crossorigin="anonymous" />
+          <Script 
+          async  
+          src="//pl20812775.highcpmrevenuegate.com/6b3890282dbcd2ff77e5aedcafd49c1a/invoke.js"
+          data-cfasync="false"
+          />
         </div>
       </body>
     </html>
   )
 }
+
