@@ -6,7 +6,7 @@ import { updateTextAndSlice } from '@/utils/updateText';
 const StoryCard = ({ imageUrl, title, storyText, id, isFromEditor }) => {
   return (
     <div className="bg-white shadow-md rounded-md overflow-hidden">
-      <Link href={`/articles/others/${id}`}>
+      <Link href={`/stories/${id}`}>
         <div className="relative h-48">
           <Image
             src={imageUrl}
@@ -23,7 +23,7 @@ const StoryCard = ({ imageUrl, title, storyText, id, isFromEditor }) => {
         <p className="text-gray-600 text-md h-24">
           {updateTextAndSlice(storyText, isFromEditor)} 
         </p>
-        <Link href={`/articles/others/${id}`} className='flex justify-end'>
+        <Link href={`/stories/${id}`} className='flex justify-end'>
             <span className="border-b-2 border-[#ff7887] text-black font-semibold"> إقــرأ الـمــزيـد » </span>
         </Link>
       </div>
