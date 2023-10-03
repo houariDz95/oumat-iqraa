@@ -23,6 +23,18 @@ export const getRecent = async () => {
     }
   }
 
+export const getRecentSt = async () => {
+  try {
+    const docsRef = collection(db, 'stories');
+    const q = query(docsRef, orderBy("timestamp", 'desc'), limit(6));
+    const querySnapshot = await getDocs(q)
+    const data = querySnapshot.docs.map(doc => ({ ...doc.data(), id: doc.id }));
+    return data
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 export const getPoular = async () => {
     try {
       const docsRef = collection(db, 'otherArticles');
@@ -50,6 +62,19 @@ export const getPoular = async () => {
     }
   }
 
+  export  const getStories = async (cat) => {
+    try {
+    
+      const docsRef = collection(db, 'stories');
+      const q = cat ? query(docsRef, where('category', 'array-contains', cat)) : query(docsRef, orderBy('timestamp', 'desc'));
+      const querySnapshot = await getDocs(q);
+      const allStories = querySnapshot.docs.map(doc => ({ ...doc.data(), id: doc.id }));
+      return allStories
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
 export const getPost = async (id) => {
   try {
     if(id){
@@ -68,6 +93,35 @@ export const getPost = async (id) => {
 export const readMore = async (randomCat, id) => {
   try {
     const docsRef = collection(db, 'otherArticles');
+    let q = query(docsRef, where('category', 'array-contains', randomCat), limit(6));
+    const querySnapshot = await getDocs(q);
+    const postData = querySnapshot.docs.map(doc => ({ ...doc.data(), id: doc.id }));
+    const filtredPost = postData.filter((item) => item.id !== id)
+    const readMore = filtredPost  
+    return readMore
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+export const getPostSt = async (id) => {
+  try {
+    if(id){
+      const collectionRef = collection(db, 'stories')
+      const docRef = doc(collectionRef, id);
+      const data = await getDoc(docRef)
+      const post = {...data.data(), id: data.id}
+      return post
+    }
+
+  } catch (error) {
+    console(error)
+  }
+}
+
+export const readMoreSt = async (randomCat, id) => {
+  try {
+    const docsRef = collection(db, 'stories');
     let q = query(docsRef, where('category', 'array-contains', randomCat), limit(6));
     const querySnapshot = await getDocs(q);
     const postData = querySnapshot.docs.map(doc => ({ ...doc.data(), id: doc.id }));

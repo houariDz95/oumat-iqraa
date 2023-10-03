@@ -36,10 +36,6 @@ export default function RootLayout({ children }) {
             src="//pl20812775.highcpmrevenuegate.com/6b3890282dbcd2ff77e5aedcafd49c1a/invoke.js"
             data-cfasync="false"
           />
-          <Script 
-            type='text/javascript' 
-            src='//pl20816003.highcpmrevenuegate.com/bf/9e/b6/bf9eb6e7b5ddd3ce92701feb9b883409.js' 
-          />
           <Script
             type="text/javascript"
             dangerouslySetInnerHTML={{
@@ -54,6 +50,10 @@ export default function RootLayout({ children }) {
                 document.write('<scr' + 'ipt type="text/javascript" src="//www.profitablecreativeformat.com/ad330eb21b043aecab76c636577f1289/invoke.js"></scr' + 'ipt>');
               `,
             }}
+          />
+          <Script 
+            type='text/javascript' 
+            src='//pl20816003.highcpmrevenuegate.com/bf/9e/b6/bf9eb6e7b5ddd3ce92701feb9b883409.js' 
           />
         </div>
       </body>

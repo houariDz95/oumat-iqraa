@@ -1,21 +1,21 @@
 import Navbar from "@/components/Nav";
 import PageTitle from "@/components/PageTitle";
 import Sidebar from "@/components/Sidebar";
-import Main from "@/components/articles/Main";
-import { atCategories } from "@/constants";
-import { getArticles } from "@/actions";
+import { stCategories } from '@/constants';
+import { getStories } from "@/actions";
+import MainSt from "@/components/stories/MainSt";
 export async function generateMetadata(paramKey){
   const cat = paramKey.searchParams.cat;
-  const title = atCategories.filter(category => category.path === cat)[0].name;
+  const title = stCategories.filter(category => category.path === cat)[0].name;
   return {
-    title: ` ${cat ? title : " كل المقالات"} - أمة اقرأ`,
-    description: 'استمتع بقراءة واستكشاف مجموعة المقالات الشيقة في موقع أمة اقرأ.',
+    title: ` ${cat ? title : " كل القصص"} - أمة اقرأ`,
+    description: 'استمتع بقراءة واستكشاف مجموعة القصص الشيقة في موقع أمة اقرأ.',
   }
 }
 
-const Articles = async (paramKey) => {
+const Stories = async (paramKey) => {
     const cat = paramKey.searchParams.cat;
-    const allArticles = await getArticles(cat);
+    const allStories = await getStories(cat);
     
   return (
     <>
@@ -23,13 +23,13 @@ const Articles = async (paramKey) => {
       <PageTitle title="مقالات" desc="مقالات رائعة في موضوعات متنوعة" />
       <div className="max-w-6xl mx-auto mt-10 min-h-[calc(100vh-73px)] items-start flex overflow-clip">
         <div className="flex-1 lg:flex-[0.75]">
-          <Main 
+          <MainSt 
             cat={cat} 
-            allArticles={allArticles}
+            allStories={allStories}
           />
         </div>
         <div className="flex-[0.25] hidden lg:block  sticky top-0">
-          <Sidebar categories={atCategories} articles />
+          <Sidebar categories={stCategories} />
         </div>
       </div>
       <div id="container-6b3890282dbcd2ff77e5aedcafd49c1a"></div>
@@ -37,4 +37,4 @@ const Articles = async (paramKey) => {
   )
 }
 
-export default Articles
+export default Stories

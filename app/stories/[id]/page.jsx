@@ -1,14 +1,14 @@
 import Navbar from '@/components/Nav';
 import PageTitle from '@/components/PageTitle';
 import Sidebar from '@/components/Sidebar'
-import ArticleDetailsOther from '@/components/articles/ArticleDetailsOther';
-import { getPost, readMore } from '@/actions';
-import { atCategories } from '@/constants';
+import { getPostSt, readMoreSt } from '@/actions';
+import { stCategories } from '@/constants';
+import StoryDetails from '@/components/stories/StoryDetails';
 
 export async function generateMetadata({params: {id}}){
 
-  const post = await getPost(id)
-  const text = post.articleText
+  const post = await getPostSt(id)
+  const text = post.storyText
   let allText = '';
 
   if (text.blocks && text.blocks.length > 0) {
@@ -31,34 +31,34 @@ export async function generateMetadata({params: {id}}){
     }
 }
 
-const page = async ({params: {id}}) => {
+const Story = async ({params: {id}}) => {
 
-  const post = await getPost(id)
+  const post = await getPostSt(id)
   const randomCat = post.category?.[Math.floor(Math.random() * post.category.length)];
-  const readMorePost = await readMore(randomCat, post.id)
+  const readMorePost = await readMoreSt(randomCat, post.id)
   return (
     <>
       <Navbar />
-      <PageTitle title={post.title} desc="استمتع بقراءة مقالة شيقة ومثيرة تغطي موضوعًا مهمًا" />
+      <PageTitle title={post.title} desc="استمتع بقراءة قصة شيقة ومثيرة تغطي موضوعًا مهمًا" />
       <div className="max-w-6xl mx-auto  min-h-[calc(100vh-73px)] flex mt-10">
         <div className="flex-1 lg:flex-[0.75]">
-          <ArticleDetailsOther 
+          <StoryDetails 
           id={id} 
           date={post.timestamp?.toDate()} 
           imageUrl={post.imageUrl}
            title={post.title} 
            category={post.category}
-           articleText={post.articleText} 
+           storyText={post.storyText} 
            isFromEditor={post.isFromEditor}
            readMore={readMorePost}
           />
         </div>
         <div className="flex-[0.25] hidden lg:block sticky top-0 h-full ">
-          <Sidebar categories={atCategories} articles/>
+          <Sidebar categories={stCategories}/>
         </div>
       </div>
     </>
   )
 }
 
-export default page
+export default Story

@@ -30,7 +30,7 @@ const Header = () => {
               name="search"
               placeholder="ابحث هنا..."
               dir='rtl'
-              className="flex-1 px-4 py-2 text-right outline-none text-primary font-bold placeholder:text-gray-500"
+              className="flex-1 py-2 text-right outline-none text-primary font-bold placeholder:text-gray-500"
             />
             <SearchButton styles="py-2 px-4 bg-main-bg font-bold text-white"/>
           </form>

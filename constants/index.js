@@ -9,9 +9,9 @@ import {MdOutlineSelfImprovement,
 export const navLinks = [
   { label: 'الصفحة الرئيسية', path: '/' },
   { label: 'المقالات', path: '/articles' },
-  { label: 'عن الموقع', path: '/about' },
-  { label: 'سياسة الخصوصية', path: '/privacy' },
+  { label: 'القصص', path: '/stories' },
   { label: 'اتصل بنا', path: '/contact' },
+  { label: 'عن الموقع', path: '/about' },
 ];
 
  
@@ -25,6 +25,27 @@ export const navLinks = [
   { name: "جمال", path: "beauty" },
   { name: "علم النفس", path: "psychology" },
   { name: "تطوير الذات", path: "self-improve" },
+];
+
+export const stCategories = [
+  { name: "كل القصص"},
+  { path: 'children', name: 'قصص الأطفال' },
+  { path: 'adventure', name: 'مغامرات' },
+  { path: 'fantasy', name: 'خيال' },
+  { path: 'mystery', name: 'غموض' },
+  { path: 'sci-fi', name: 'خيال علمي' },
+  { path: 'romance', name: 'رومانسية' },
+  { path: 'horror', name: 'رعب' },
+  { path: 'literature', name: 'أدب' },
+  { path: 'historical', name: 'تاريخي' },
+  { path: 'thriller', name: 'إثارة' },
+  { path: 'dystopian', name: 'ديستوبيا' },
+  { path: 'comedy', name: 'كوميديا' },
+  { path: 'self-help', name: 'تطوير الذات' },
+  { path: 'biography', name: 'سيرة ذاتية' },
+  { path: 'philosophy', name: 'فلسفة' },
+  { path: 'classics', name: 'كلاسيكيات' },
+  { path: 'assahaba', name: 'قصص الصحابة' },
 ];
 
 export const popularCategories = [
