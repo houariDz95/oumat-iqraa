@@ -48,7 +48,7 @@ const StoryDetails = ({imageUrl, title, date, storyText, isFromEditor, readMore}
                     height={128}
                     src={item.imageUrl}  
                     alt={item.tilte}
-                    className="object-cover lg:h-36 lg:w-32 hidden xs:block"
+                    className="object-cover h-36 w-32 hidden xs:block"
                 />
                 <div className="mr-4 flex items-start justify-center gap-3 flex-col">
                 <Link href={`/stories/${item.id}`} >
