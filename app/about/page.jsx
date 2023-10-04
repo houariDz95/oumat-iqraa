@@ -1,3 +1,4 @@
+import BannerSm from "@/banners/BannerSm";
 import Navbar from "@/components/Nav";
 
 export const metadata = {
@@ -27,6 +28,9 @@ const AboutPage = () => {
             <p class="text-lg mb-6">
             نحن ندعوكم للانضمام إلى رحلتنا في &quot;أمة اقرأ&quot;. انخرطوا في تجربة فريدة من نوعها من الاستفادة من محتوى غني بالمعرفة والإلهام. دعونا نساعدكم على توسيع آفاقكم وزيادة معرفتكم. انضموا إلى مجتمعنا المتنوع وساهموا في بناء عالم يحتفي بالثقافة والتعلم. أهلاً بكم في &quot;أمة اقرأ&quot;
             </p>
+            <div className="W-full flex items-center  justify-center mt-10"> 
+              <BannerSm />
+            </div>
         </div>
       </div>
     );

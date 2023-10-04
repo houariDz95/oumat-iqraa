@@ -20,7 +20,6 @@ const Sidebar = ({categories, articles}) => {
         )}
       </div>
       <div id="container-6b3890282dbcd2ff77e5aedcafd49c1a"></div>
-      <BannerSm />
     </div>
   )
 }
