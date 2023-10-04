@@ -1,4 +1,3 @@
-import BannerSm from "@/banners/BannerSm";
 import Link from "next/link";
 import { AiFillTags } from "react-icons/ai";
 
