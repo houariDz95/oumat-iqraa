@@ -1,4 +1,4 @@
-import Banner from "@/banners/BannerLg";
+import BannerSm from "@/banners/BannerSm";
 import Navbar from "@/components/Nav";
 
 export const metadata = {
@@ -15,7 +15,7 @@ const AboutPage = () => {
         <div class="p-8 bg-gray-100 max-w-6xl mx-auto">
             
           <div className="max-w-6xl flex items-center justify-center  mx-auto">
-            <Banner />
+            <BannerSm />
           </div>
 
           <h2 class="text-2xl font-bold mb-4">من نحن</h2>

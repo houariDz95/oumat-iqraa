@@ -5,7 +5,7 @@ import { stCategories } from '@/constants';
 import { getStories } from "@/actions";
 import MainSt from "@/components/stories/MainSt";
 import Banner from "@/banners/BannerLg";
-import BannerSm from "@/banners/BannerSm";
+
 export async function generateMetadata(paramKey){
   const cat = paramKey.searchParams.cat;
   const title = stCategories.filter(category => category.path === cat)[0].name;
