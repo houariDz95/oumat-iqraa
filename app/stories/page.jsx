@@ -5,6 +5,7 @@ import { stCategories } from '@/constants';
 import { getStories } from "@/actions";
 import MainSt from "@/components/stories/MainSt";
 import Banner from "@/banners/BannerLg";
+import BannerSm from "@/banners/BannerSm";
 export async function generateMetadata(paramKey){
   const cat = paramKey.searchParams.cat;
   const title = stCategories.filter(category => category.path === cat)[0].name;
@@ -22,8 +23,11 @@ const Stories = async (paramKey) => {
     <>
       <Navbar />
       <PageTitle title="مقالات" desc="مقالات رائعة في موضوعات متنوعة" />
-      <div className="max-w-6xl flex items-center justify-center  mx-auto">
+      <div className="max-w-6xl hidden md:flex items-center justify-center  mx-auto">
         <Banner />
+      </div>
+      <div className="max-w-6xl flex items-center justify-center  mx-auto md:hidden">
+        <BannerSm />
       </div>
       <div className="max-w-6xl mx-auto mt-10 min-h-[calc(100vh-73px)] items-start flex overflow-clip">
         <div className="flex-1 lg:flex-[0.75]">

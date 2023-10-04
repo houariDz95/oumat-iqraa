@@ -4,6 +4,7 @@ import Navbar from '@/components/Nav'
 import Sidebar from '@/components/Sidebar';
 import NavSearchBar from '@/components/search/NavSearchBar'
 import SearchFor from '@/components/search/SearchFor'
+import { stCategories } from '@/constants';
 
 export async function generateMetadata({ params: { keyword } }) {
   const genericSearchDescription = "ابحث عن مجموعة متنوعة من الكتب و المقالات في أمة اقرأ. استكشف العناوين والمؤلفين واكتشف محتوى جديد وشيق.";
@@ -37,7 +38,7 @@ const Search = async ({ params: {keyword}}) => {
               <SearchFor keyword={keyword} otherArticles={postData} />
             </div>
             <div className='flex-[0.25] sticky top-0 hidden lg:block'>
-              <Sidebar />
+              <Sidebar categories={stCategories}/>
             </div>
           </div>
         </div>
