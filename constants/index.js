@@ -74,8 +74,8 @@ export const popularCategories = [
     icon: <MdBusiness />,
   },
   { 
-   name: "سفر",
-   path: "travel",
+   name: "ثقافة ",
+   path: "culture",
    color: "#ff795736",
    icon: <MdOutlineTravelExplore />,
   },

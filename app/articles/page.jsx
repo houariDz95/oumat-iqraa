@@ -4,6 +4,8 @@ import Sidebar from "@/components/Sidebar";
 import Main from "@/components/articles/Main";
 import { atCategories } from "@/constants";
 import { getArticles } from "@/actions";
+import Banner from "@/banners/BannerLg";
+
 export async function generateMetadata(paramKey){
   const cat = paramKey.searchParams.cat;
   const title = atCategories.filter(category => category.path === cat)[0].name;
@@ -32,7 +34,6 @@ const Articles = async (paramKey) => {
           <Sidebar categories={atCategories} articles />
         </div>
       </div>
-      <div id="container-6b3890282dbcd2ff77e5aedcafd49c1a"></div>
     </>
   )
 }
