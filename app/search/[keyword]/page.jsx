@@ -1,4 +1,5 @@
 import { getAllArticles } from '@/actions';
+import Banner from '@/banners/BannerLg';
 import Navbar from '@/components/Nav'
 import Sidebar from '@/components/Sidebar';
 import NavSearchBar from '@/components/search/NavSearchBar'
