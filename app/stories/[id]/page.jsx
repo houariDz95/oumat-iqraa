@@ -42,11 +42,8 @@ const Story = async ({params: {id}}) => {
     <>
       <Navbar />
       <PageTitle title={post.title} desc="استمتع بقراءة قصة شيقة ومثيرة تغطي موضوعًا مهمًا" />
-      <div className="max-w-6xl hidden md:flex items-center justify-center  mx-auto">
+      <div className="max-w-6xl flex items-center justify-center  mx-auto">
         <Banner />
-      </div>
-      <div className="max-w-6xl flex items-center justify-center  mx-auto md:hidden">
-        <BannerSm />
       </div>
       <div className="max-w-6xl mx-auto  min-h-[calc(100vh-73px)] flex mt-10">
         <div className="flex-1 lg:flex-[0.75]">
