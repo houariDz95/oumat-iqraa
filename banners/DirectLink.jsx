@@ -48,7 +48,8 @@ const DirectLink = () => {
               </a>
               <button
                 onClick={closePopup}
-                className="bg-red-500 px-4 py-1 text-white rounded-lg hover:bg-red-700"
+                style={{backgroundColor: 'red'}}
+                className="px-4 py-1 text-white rounded-lg hover:bg-red-700"
               >
                 إلغاء
               </button>
