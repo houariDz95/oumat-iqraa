@@ -5,7 +5,7 @@ import Main from "@/components/articles/Main";
 import { atCategories } from "@/constants";
 import { getArticles } from "@/actions";
 import Banner from "@/banners/BannerLg";
-
+ 
 export async function generateMetadata(paramKey){
   const cat = paramKey.searchParams.cat;
   const title = atCategories.filter(category => category.path === cat)[0].name;

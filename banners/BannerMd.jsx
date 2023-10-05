@@ -1,14 +1,14 @@
 'use client'
 import { useEffect, useRef } from 'react'
 
-export default function Banner() {
+export default function BannerMd() {
     const banner = useRef()
 
     const atOptions = {
-		'key' : 'ad330eb21b043aecab76c636577f1289',
+		'key' : 'ba2d399079648571382e7378616f320c',
 		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
+		'height' : 250,
+		'width' : 300,
 		'params' : {}
     }
     useEffect(() => {

@@ -1,3 +1,4 @@
+import BannerMd from "@/banners/BannerMd";
 
 const Contact = () => {
     return (

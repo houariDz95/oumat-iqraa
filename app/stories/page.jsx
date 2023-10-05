@@ -1,7 +1,7 @@
 import Navbar from "@/components/Nav";
 import PageTitle from "@/components/PageTitle";
 import Sidebar from "@/components/Sidebar";
-import { stCategories } from '@/constants';
+import { stCategories } from '@/constants'; 
 import { getStories } from "@/actions";
 import MainSt from "@/components/stories/MainSt";
 import Banner from "@/banners/BannerLg";

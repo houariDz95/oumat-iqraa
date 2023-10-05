@@ -9,7 +9,7 @@ import Banner from '@/banners/BannerLg';
 export async function generateMetadata({params: {id}}){
 
   const post = await getPost(id)
-  const text = post.articleText
+  const text = post.articleText 
   let allText = '';
 
   if (text.blocks && text.blocks.length > 0) {

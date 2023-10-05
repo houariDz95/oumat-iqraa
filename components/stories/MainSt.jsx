@@ -50,11 +50,11 @@ const MainSt = ({ cat, allStories}) => {
         const displayedArticles = allStories.slice(startIndex, startIndex + itemsPerPage);
         setOthersArticles(displayedArticles);
     }, [cat, currentPage]);
-    console.log(allStories)
+
     return (
         <main className='flex relative flex-col mb-10'>
             <div  className=' px-4 space-y-6  columns-1 md:columns-2 '>
-                {allStories.map(story => (
+                {othersArticles.map(story => (
                     <StoryCard 
                         key={story.id} 
                         imageUrl={story.imageUrl} 

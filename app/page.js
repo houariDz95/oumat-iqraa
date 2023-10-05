@@ -6,6 +6,7 @@ import OthersArticleCard from '@/components/articles/OthersArticleCard';
 import Contact from '@/components/Contact';
 import { getPoular, getRecent, getRecentSt } from '@/actions';
 import StoryCard from '@/components/stories/StoryCard';
+import Banner from '@/banners/BannerLg';
 
 export default async  function Home() {
 
@@ -17,6 +18,7 @@ export default async  function Home() {
       <Navbar primary/>
       <Header />
       <div className='max-w-7xl mx-auto mt-10 mb-12 p-4'>
+        <Banner />
         <div className='relative p-4'>
           <h1 className='text-3xl font-bold text-black italic'>الأقسام الرائجة</h1>
           <div className='absolute bottom-0 right-5 h-1 w-14 bg-primary'/>

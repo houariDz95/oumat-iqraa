@@ -5,7 +5,7 @@ export const metadata = {
   title: 'معلومات عنا - أمة اقرأ',
   description: 'تعرف على مزيد من التفاصيل حول أمة اقرأ. نبذة عن مهمتنا ورؤيتنا وكيف نساهم في تقديم المحتوى الملهم والمثير. اكتشف من نحن وكيف يمكنك الانضمام إلى مجتمعنا.',
 };
-
+ 
 
 
 const AboutPage = () => {
@@ -15,8 +15,8 @@ const AboutPage = () => {
         <div class="p-8 bg-gray-100 max-w-6xl mx-auto">
             
           <div className="max-w-6xl flex items-center justify-center  mx-auto">
-            <BannerSm />
-          </div>
+           <BannerSm />
+          </div> 
 
           <h2 class="text-2xl font-bold mb-4">من نحن</h2>
           <p class="text-lg mb-6">
@@ -34,6 +34,9 @@ const AboutPage = () => {
           <p class="text-lg mb-6">
           نحن ندعوكم للانضمام إلى رحلتنا في &quot;أمة اقرأ&quot;. انخرطوا في تجربة فريدة من نوعها من الاستفادة من محتوى غني بالمعرفة والإلهام. دعونا نساعدكم على توسيع آفاقكم وزيادة معرفتكم. انضموا إلى مجتمعنا المتنوع وساهموا في بناء عالم يحتفي بالثقافة والتعلم. أهلاً بكم في &quot;أمة اقرأ&quot;
           </p>
+        </div>
+        <div className='max-w-xl mx-auto w-full flex items-center justify-center '>
+          <div id="container-6b3890282dbcd2ff77e5aedcafd49c1a"></div>
         </div>
       </div>
     );

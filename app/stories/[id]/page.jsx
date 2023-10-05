@@ -35,7 +35,7 @@ export async function generateMetadata({params: {id}}){
 
 const Story = async ({params: {id}}) => {
 
-  const post = await getPostSt(id)
+  const post = await getPostSt(id) 
   const randomCat = post.category?.[Math.floor(Math.random() * post.category.length)];
   const readMorePost = await readMoreSt(randomCat, post.id)
   return (
