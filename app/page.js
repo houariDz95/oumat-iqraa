@@ -6,7 +6,10 @@ import OthersArticleCard from '@/components/articles/OthersArticleCard';
 import Contact from '@/components/Contact';
 import { getPoular, getRecent, getRecentSt } from '@/actions';
 import StoryCard from '@/components/stories/StoryCard';
-import Banner from '@/banners/BannerLg';
+import BannerMd from '@/banners/BannerMd';
+import BannerSm from '@/banners/BannerSm';
+import BannerSq from '@/banners/BannerSq';
+import DirectLink from '@/banners/DirectLink';
 
 export default async  function Home() {
 
@@ -14,11 +17,13 @@ export default async  function Home() {
   const popular = await getPoular()
   const stories = await getRecentSt()
   return(
-    <div>
+    <div className='relative'>
       <Navbar primary/>
       <Header />
-      <div className='max-w-7xl mx-auto mt-10 mb-12 p-4'>
-        <Banner />
+      <div className='flex items-center justify-center  max-w-7xl mx-auto'>
+        <BannerMd />
+      </div>
+      <div className='max-w-7xl mx-auto mb-12 p-4'>
         <div className='relative p-4'>
           <h1 className='text-3xl font-bold text-black italic'>الأقسام الرائجة</h1>
           <div className='absolute bottom-0 right-5 h-1 w-14 bg-primary'/>
@@ -41,7 +46,9 @@ export default async  function Home() {
             />
           ))}
         </div>
-
+        <div className='flex items-center justify-center  max-w-7xl mx-auto'>
+          <BannerSm />
+        </div>
         <div className='relative p-4 mt-10'>
           <h1 className='text-3xl font-bold text-black italic'>الأكثر قراءة</h1>
           <div className='absolute bottom-0 right-5 h-1 w-14 bg-primary'/>
@@ -77,13 +84,16 @@ export default async  function Home() {
             />
           ))}
         </div>
-
+        <div className='flex items-center justify-center  max-w-7xl mx-auto'>
+          <BannerSq  />
+        </div>
         <div className='relative p-4 mt-10'>
           <h1 className='text-3xl font-bold text-black italic'>اتصل بنا</h1>
           <div className='absolute bottom-0 right-5 h-1 w-14 bg-primary'/>
         </div>
         <Contact />
       </div>
+      <DirectLink />
     </div>
   )
 }

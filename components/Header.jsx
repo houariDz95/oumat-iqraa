@@ -35,7 +35,7 @@ const Header = () => {
             <SearchButton styles="py-2 px-4 bg-main-bg font-bold text-white"/>
           </form>
         </div>
-        <div className="absolute inset-x-0 lg:bottom-32 sm:bottom-14 bottom-0">
+        <div className="absolute inset-x-0 lg:bottom-32 bottom-0">
           <div className="h-16 bg-primary">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
               <path

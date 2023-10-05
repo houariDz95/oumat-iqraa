@@ -1,4 +1,5 @@
 import BannerSm from "@/banners/BannerSm";
+import BannerSq from "@/banners/BannerSq";
 import Navbar from "@/components/Nav";
 
 export const metadata = {
@@ -36,7 +37,7 @@ const AboutPage = () => {
           </p>
         </div>
         <div className='max-w-xl mx-auto w-full flex items-center justify-center '>
-          <div id="container-6b3890282dbcd2ff77e5aedcafd49c1a"></div>
+          <BannerSq />
         </div>
       </div>
     );

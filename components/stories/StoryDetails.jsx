@@ -36,7 +36,9 @@ const StoryDetails = ({imageUrl, title, date, storyText, isFromEditor, readMore}
             <span>*</span>
         </div>
 
-        <div id="container-6b3890282dbcd2ff77e5aedcafd49c1a"></div>
+        <div className="w-full flex items-center justify-center">
+            <BannerSq />
+        </div>
 
         <div className="mb-24">
             <h1 className="text-xl font-semibold">استكشف أيضًا</h1>
