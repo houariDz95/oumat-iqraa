@@ -37,6 +37,7 @@ export default function RootLayout({ children }) {
               type='text/javascript' 
               src='//pl20816003.highcpmrevenuegate.com/bf/9e/b6/bf9eb6e7b5ddd3ce92701feb9b883409.js' 
             />
+            <Script type='text/javascript' src='//pl20843361.highcpmrevenuegate.com/6c/da/e8/6cdae8d47f9935aba066a9d2db08e9db.js' />
             {children}  
             <Footer />
             <Analytics />
