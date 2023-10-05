@@ -5,6 +5,7 @@ import 'moment/locale/ar';
 import Image from "next/image";
 import { updateText, updateTextAndSlice } from "@/utils/updateText";
 import Link from "next/link";
+import BannerSq from "@/banners/BannerSq";
 
 
 const StoryDetails = ({imageUrl, title, date, storyText, isFromEditor, readMore}) => {
