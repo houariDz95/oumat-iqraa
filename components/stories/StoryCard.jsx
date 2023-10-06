@@ -6,8 +6,7 @@ import { updateTextAndSlice } from '@/utils/updateText';
 const StoryCard = ({ imageUrl, title, storyText, id, isFromEditor }) => {
   return (
     <div className="bg-white shadow-md rounded-md overflow-hidden">
-      <Link href={`/stories
-      /${id}`}>
+      <Link href={`/stories/${id}`}>
         <div className="relative h-48">
           <Image
             src={imageUrl}
