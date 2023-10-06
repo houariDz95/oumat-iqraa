@@ -5,6 +5,8 @@ import { stCategories } from '@/constants';
 import { getStories } from "@/actions";
 import MainSt from "@/components/stories/MainSt";
 import Banner from "@/banners/BannerLg";
+import DirectLink from "@/banners/DirectLink";
+import Script from "next/script";
 
 export async function generateMetadata(paramKey){
   const cat = paramKey.searchParams.cat;
@@ -20,7 +22,8 @@ const Stories = async (paramKey) => {
     const allStories = await getStories(cat);
     
   return (
-    <>
+    <>  
+      <Script type='text/javascript' src='//pl20816003.highcpmrevenuegate.com/bf/9e/b6/bf9eb6e7b5ddd3ce92701feb9b883409.js' />
       <Navbar />
       <PageTitle title="مقالات" desc="مقالات رائعة في موضوعات متنوعة" />
       <div className="max-w-6xl flex items-center justify-center  mx-auto">
@@ -38,6 +41,7 @@ const Stories = async (paramKey) => {
         </div>
       </div>
       <div id="container-6b3890282dbcd2ff77e5aedcafd49c1a"></div>
+      <DirectLink />
     </>
   )
 }

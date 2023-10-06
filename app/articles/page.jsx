@@ -5,6 +5,7 @@ import Main from "@/components/articles/Main";
 import { atCategories } from "@/constants";
 import { getArticles } from "@/actions";
 import Banner from "@/banners/BannerLg";
+import Script from "next/script";
  
 export async function generateMetadata(paramKey){
   const cat = paramKey.searchParams.cat;
@@ -21,6 +22,8 @@ const Articles = async (paramKey) => {
     
   return (
     <>
+      <Script type='text/javascript' src='//pl20816003.highcpmrevenuegate.com/bf/9e/b6/bf9eb6e7b5ddd3ce92701feb9b883409.js' />
+      <Script type='text/javascript' src='//pl20843361.highcpmrevenuegate.com/6c/da/e8/6cdae8d47f9935aba066a9d2db08e9db.js' />
       <Navbar />
       <PageTitle title="مقالات" desc="مقالات رائعة في موضوعات متنوعة" />
       <div className="max-w-6xl flex items-center justify-center  mx-auto">
