@@ -6,10 +6,8 @@ import OthersArticleCard from '@/components/articles/OthersArticleCard';
 import Contact from '@/components/Contact';
 import { getPoular, getRecent, getRecentSt } from '@/actions';
 import StoryCard from '@/components/stories/StoryCard';
-import BannerMd from '@/banners/BannerMd';
 import BannerSm from '@/banners/BannerSm';
 import BannerSq from '@/banners/BannerSq';
-import DirectLink from '@/banners/DirectLink';
 
 export default async  function Home() {
 
@@ -21,7 +19,7 @@ export default async  function Home() {
       <Navbar primary/>
       <Header />
       <div className='flex items-center justify-center  max-w-7xl mx-auto'>
-        <BannerMd />
+        <BannerSq />
       </div>
       <div className='max-w-7xl mx-auto mb-12 p-4'>
         <div className='relative p-4'>
@@ -47,13 +45,13 @@ export default async  function Home() {
           ))}
         </div>
         <div className='flex items-center justify-center  max-w-7xl mx-auto'>
-          <BannerSm />
+          <div id="container-6b3890282dbcd2ff77e5aedcafd49c1a"></div>
         </div>
         <div className='relative p-4 mt-10'>
           <h1 className='text-3xl font-bold text-black italic'>الأكثر قراءة</h1>
           <div className='absolute bottom-0 right-5 h-1 w-14 bg-primary'/>
         </div>
-        <div className="flex flex-wrap gap-6 mt-10">
+        <div className="flex flex-wrap gap-6">
           {popular.map(article => (
             <PopularCard 
               key={article.id}
@@ -85,7 +83,7 @@ export default async  function Home() {
           ))}
         </div>
         <div className='flex items-center justify-center  max-w-7xl mx-auto'>
-          <BannerSq  />
+          <BannerSm />
         </div>
         <div className='relative p-4 mt-10'>
           <h1 className='text-3xl font-bold text-black italic'>اتصل بنا</h1>
@@ -93,7 +91,6 @@ export default async  function Home() {
         </div>
         <Contact />
       </div>
-      <DirectLink />
     </div>
   )
 }

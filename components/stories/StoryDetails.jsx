@@ -5,7 +5,6 @@ import 'moment/locale/ar';
 import Image from "next/image";
 import { updateText, updateTextAndSlice } from "@/utils/updateText";
 import Link from "next/link";
-import BannerSq from "@/banners/BannerSq";
 
 
 const StoryDetails = ({imageUrl, title, date, storyText, isFromEditor, readMore}) => {
@@ -38,7 +37,7 @@ const StoryDetails = ({imageUrl, title, date, storyText, isFromEditor, readMore}
         </div>
 
         <div className="w-full flex items-center justify-center">
-            <BannerSq />
+            <div id="container-6b3890282dbcd2ff77e5aedcafd49c1a"></div>
         </div>
 
         <div className="mb-24">

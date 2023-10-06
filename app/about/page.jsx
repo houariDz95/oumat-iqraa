@@ -16,7 +16,7 @@ const AboutPage = () => {
         <div class="p-8 bg-gray-100 max-w-6xl mx-auto">
             
           <div className="max-w-6xl flex items-center justify-center  mx-auto">
-           <BannerSm />
+            <div id="container-6b3890282dbcd2ff77e5aedcafd49c1a"></div>
           </div> 
 
           <h2 class="text-2xl font-bold mb-4">من نحن</h2>

@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react'
 
 export default function Banner() {
     const banner = useRef()
-
+ 
     const atOptions = {
 		'key' : 'ad330eb21b043aecab76c636577f1289',
 		'format' : 'iframe',
