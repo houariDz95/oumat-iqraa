@@ -9,7 +9,7 @@ import BannerSq from '@/banners/BannerSq';
 const StoryCard = ({ imageUrl, title, articleText, id, isFromEditor }) => {
   return (
     <div className="bg-white shadow-md rounded-md overflow-hidden">
-      <Link href={`/articles/others/${id}`}>
+      <Link href={`/stories/${id}`}>
         <div className="relative h-48">
           <Image
             src={imageUrl}
