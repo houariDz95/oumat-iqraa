@@ -8,6 +8,7 @@ import { getPoular, getRecent, getRecentSt } from '@/actions';
 import StoryCard from '@/components/stories/StoryCard';
 import Script from 'next/script';
 import BannerSq from '@/banners/BannerSq';
+import Banner from '@/banners/BannerLg';
 export default async  function Home() {
 
   const data = await getRecent()
@@ -16,11 +17,6 @@ export default async  function Home() {
   return(
     <>
       <Script 
-        async  
-        src="//pl20812775.highcpmrevenuegate.com/6b3890282dbcd2ff77e5aedcafd49c1a/invoke.js"
-        data-cfasync="false"
-      />
-      <Script 
         type='text/javascript' 
         src='//pl20816003.highcpmrevenuegate.com/bf/9e/b6/bf9eb6e7b5ddd3ce92701feb9b883409.js' 
       />
@@ -28,7 +24,7 @@ export default async  function Home() {
         <Navbar primary/>
         <Header />
         <div className='flex items-center justify-center  max-w-7xl mx-auto'>
-            <div id="container-6b3890282dbcd2ff77e5aedcafd49c1a"></div>
+            <Banner />
         </div>
         <div className='max-w-7xl mx-auto mb-12 p-4'>
           <div className='relative p-4'>
