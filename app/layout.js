@@ -29,8 +29,9 @@ export default function RootLayout({ children }) {
         <div className='w-full bg-gray-100 overflow-clip' style={{direction: "rtl"}}>            
             {children}  
             <Footer />
-            <Script id="google-analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-09CG0KK3TY" />
+            <Script  async src="https://www.googletagmanager.com/gtag/js?id=G-09CG0KK3TY" ></Script>
             <Script
+            id="google-analytics"
               dangerouslySetInnerHTML={{
                 __html: `
                 window.dataLayer = window.dataLayer || [];
