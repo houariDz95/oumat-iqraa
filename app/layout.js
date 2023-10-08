@@ -1,6 +1,7 @@
 import Footer from '@/components/Footer'
 import './globals.css'
 import { Cairo } from 'next/font/google'
+import Script from 'next/script';
 const cairo = Cairo({
   subsets: ['latin'],
   weight: ["400", "700"],
@@ -28,6 +29,18 @@ export default function RootLayout({ children }) {
         <div className='w-full bg-gray-100 overflow-clip' style={{direction: "rtl"}}>            
             {children}  
             <Footer />
+            <Script async src="https://www.googletagmanager.com/gtag/js?id=G-09CG0KK3TY"></Script>
+            <Script
+              dangerouslySetInnerHTML={{
+                __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'G-09CG0KK3TY');
+              `,
+              }}
+          />
         </div>
       </body>
     </html>
