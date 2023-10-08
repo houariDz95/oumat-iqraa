@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
         <div className='w-full bg-gray-100 overflow-clip' style={{direction: "rtl"}}>            
             {children}  
             <Footer />
-            <Script async src="https://www.googletagmanager.com/gtag/js?id=G-09CG0KK3TY"></Script>
+            <Script async src="https://www.googletagmanager.com/gtag/js?id=G-09CG0KK3TY" />
             <Script
               dangerouslySetInnerHTML={{
                 __html: `

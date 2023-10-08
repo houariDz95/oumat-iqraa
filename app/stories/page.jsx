@@ -40,7 +40,6 @@ const Stories = async (paramKey) => {
           <Sidebar categories={stCategories} />
         </div>
       </div>
-      <div id="container-6b3890282dbcd2ff77e5aedcafd49c1a"></div>
       <DirectLink />
     </>
   )
