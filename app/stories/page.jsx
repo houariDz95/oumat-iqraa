@@ -40,7 +40,6 @@ const Stories = async (paramKey) => {
           <Sidebar categories={stCategories} />
         </div>
       </div>
-      <DirectLink />
     </>
   )
 }

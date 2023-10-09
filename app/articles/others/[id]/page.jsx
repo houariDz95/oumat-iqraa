@@ -4,7 +4,6 @@ import Sidebar from '@/components/Sidebar'
 import ArticleDetailsOther from '@/components/articles/ArticleDetailsOther';
 import { getPost, readMore } from '@/actions';
 import { atCategories } from '@/constants';
-import Banner from '@/banners/BannerLg';
 
 export async function generateMetadata({params: {id}}){
 
@@ -41,9 +40,6 @@ const page = async ({params: {id}}) => {
     <>
       <Navbar />
       <PageTitle title={post.title} desc="استمتع بقراءة مقالة شيقة ومثيرة تغطي موضوعًا مهمًا" />
-      <div className="max-w-6xl flex items-center justify-center  mx-auto">
-        <Banner />
-      </div>
       <div className="max-w-6xl mx-auto  min-h-[calc(100vh-73px)] flex mt-10">
         <div className="flex-1 lg:flex-[0.75]">
           <ArticleDetailsOther 

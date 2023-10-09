@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import { Pagination } from '@mui/material';
+import BannerSq from '@/banners/BannerSq';
 
 const OthersArticleCard = dynamic(() => import('./OthersArticleCard'), {ssr: false});
  
@@ -44,8 +45,8 @@ const Main = ({ cat, allArticles}) => {
                 color="secondary"
                 className="mt-4"
             />
-            <div className="w-full flex items-center justify-center">
-                <div id="container-6b3890282dbcd2ff77e5aedcafd49c1a"></div>
+            <div className="max-w-6xl flex items-center justify-center  mx-auto">
+                <BannerSq />
             </div>
         </main>
     );

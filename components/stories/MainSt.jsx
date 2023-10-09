@@ -75,9 +75,9 @@ const MainSt = ({ cat, allStories}) => {
                 color="secondary"
                 className="mt-4"
             />
-            <div className="w-full flex items-center justify-center">
-              <div id="container-6b3890282dbcd2ff77e5aedcafd49c1a"></div>
-            </div>
+        <div className="max-w-6xl flex items-center justify-center  mx-auto">
+          <BannerSq />
+        </div>
         </main>
     );
 };
