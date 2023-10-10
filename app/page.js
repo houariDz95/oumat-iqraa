@@ -6,7 +6,6 @@ import OthersArticleCard from '@/components/articles/OthersArticleCard';
 import Contact from '@/components/Contact';
 import { getPoular, getRecent, getRecentSt } from '@/actions';
 import StoryCard from '@/components/stories/StoryCard';
-import Script from 'next/script';
 import BannerSq from '@/banners/BannerSq';
 import Banner from '@/banners/BannerLg';
 export default async  function Home() {
@@ -16,10 +15,6 @@ export default async  function Home() {
   const stories = await getRecentSt()
   return(
     <>
-      <Script 
-        type='text/javascript' 
-        src='//pl20816003.highcpmrevenuegate.com/bf/9e/b6/bf9eb6e7b5ddd3ce92701feb9b883409.js' 
-      />
       <div className='relative'>
         <Navbar primary/>
         <Header />
