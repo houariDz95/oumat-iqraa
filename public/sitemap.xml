@@ -222,4 +222,16 @@
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>https://www.oumat-iqraa.com/articles/others/FfP71zlf6fv9e5l15bIq</loc>
+        <lastmod>2023-10-08</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.oumat-iqraa.com/articles/others/YwASJB4NpQ8e34bIYfHA</loc>
+        <lastmod>2023-10-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>
