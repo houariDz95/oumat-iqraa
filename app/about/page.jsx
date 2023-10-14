@@ -1,4 +1,4 @@
-import BannerSq from "@/banners/BannerSq";
+import BannerSm from "@/banners/BannerSm";
 import Navbar from "@/components/Nav";
 import Script from "next/script";
 
@@ -37,7 +37,7 @@ const AboutPage = () => {
             </p>
           </div>
           <div className='max-w-xl mx-auto w-full flex items-center justify-center '>
-            <BannerSq />
+            <BannerSm />
           </div>
         </div>
       </>
