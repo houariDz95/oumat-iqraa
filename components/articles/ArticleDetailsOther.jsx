@@ -5,7 +5,7 @@ import 'moment/locale/ar';
 import Image from "next/image";
 import { updateText } from "@/utils/updateText";
 import dynamic from "next/dynamic";
-import BannerSm from "@/banners/BannerSm";
+import BannerLong from "@/banners/BannerLong";
 
 const ReadMore = dynamic(() => import("./ReadMore"), {ssr: false});
 
@@ -37,8 +37,8 @@ const ArticleDetailsOther = ({imageUrl, title, date, articleText, isFromEditor, 
           <span>*</span>
           <span>*</span>
       </div>
-      <div className="max-w-6xl mx-auto flex items-center justify-center">
-        <BannerSm />
+      <div className="max-w-6xl mx-auto flex items-center my-8 justify-center">
+        <BannerLong />
       </div>
       <div className="w-full flex items-center justify-center">
         <div id="container-6b3890282dbcd2ff77e5aedcafd49c1a"></div>

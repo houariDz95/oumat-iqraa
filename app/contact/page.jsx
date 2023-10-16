@@ -7,7 +7,7 @@ const page = () => {
   return (
     <div className='min-h-screen'>
         <Navbar />
-        <div className='max-w-xl mx-auto w-full flex items-center justify-center '>
+        <div className='max-w-xl mx-auto w-full flex items-center justify-center my-5'>
           <BannerSm />
         </div>
           <Contact /> 
