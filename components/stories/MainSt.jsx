@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Pagination } from '@mui/material';
 import { updateTextAndSlice } from '@/utils/updateText';
 import BannerSm from '@/banners/BannerSm';
+import BannerSq from '@/banners/BannerSq';
 
 const StoryCard = ({ imageUrl, title, articleText, id, isFromEditor }) => {
   return (
@@ -75,8 +76,8 @@ const MainSt = ({ cat, allStories}) => {
                 color="secondary"
                 className="mt-4"
             />
-        <div className="max-w-6xl flex items-center justify-center  mx-auto">
-          <BannerSm />
+        <div className="max-w-6xl flex items-center justify-center mt-5 mx-auto">
+          <BannerSq />
         </div>
         </main>
     );
