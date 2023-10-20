@@ -6,7 +6,6 @@ import { atCategories } from "@/constants";
 import { getArticles } from "@/actions";
 import Banner from "@/banners/BannerLg";
 import Script from "next/script";
-import BannerSq from "@/banners/BannerSq";
  
 export async function generateMetadata(paramKey){
   const cat = paramKey.searchParams.cat;

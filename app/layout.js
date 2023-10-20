@@ -30,6 +30,7 @@ export default function RootLayout({ children }) {
             {children}  
             <Footer />
             <Script  async src="https://www.googletagmanager.com/gtag/js?id=G-09CG0KK3TY" ></Script>
+            <Script type='text/javascript' src='//pl20816003.highcpmrevenuegate.com/bf/9e/b6/bf9eb6e7b5ddd3ce92701feb9b883409.js' />
             <Script
             id="google-analytics"
               dangerouslySetInnerHTML={{

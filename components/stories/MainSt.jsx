@@ -4,8 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Pagination } from '@mui/material';
 import { updateTextAndSlice } from '@/utils/updateText';
-import BannerSm from '@/banners/BannerSm';
-import BannerSq from '@/banners/BannerSq';
+import Banner from '@/banners/BannerLg';
 
 const StoryCard = ({ imageUrl, title, articleText, id, isFromEditor }) => {
   return (
@@ -77,7 +76,7 @@ const MainSt = ({ cat, allStories}) => {
                 className="mt-4"
             />
         <div className="max-w-6xl flex items-center justify-center mt-5 mx-auto">
-          <BannerSq />
+          <Banner />
         </div>
         </main>
     );
