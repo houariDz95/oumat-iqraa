@@ -6,6 +6,7 @@ import Image from "next/image";
 import { updateText, updateTextAndSlice } from "@/utils/updateText";
 import Link from "next/link";
 import BannerSq from "@/banners/BannerSq";
+import DirectLink from "@/banners/DirectLink";
 
 
 const StoryDetails = ({imageUrl, title, date, storyText, isFromEditor, readMore}) => {
@@ -66,6 +67,7 @@ const StoryDetails = ({imageUrl, title, date, storyText, isFromEditor, readMore}
             ))}
             </div> 
         </div>
+        <DirectLink />
     </div>
   )
 }
