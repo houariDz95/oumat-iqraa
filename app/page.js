@@ -12,6 +12,7 @@ export default async  function Home() {
   const data = await getRecent()
   const popular = await getPoular()
   const stories = await getRecentSt()
+  console.log(data)
   return(
     <>
       <div className='relative'>
@@ -29,7 +30,7 @@ export default async  function Home() {
             <div className='absolute bottom-0 right-5 h-1 w-14 bg-primary'/>
           </div>
           <div className='relative space-y-6 py-8 sm:columns-2 sm:gap-6 xl:columns-3 '>
-            {data.map(article => (
+            {data?.map(article => (
               <OthersArticleCard 
                 key={article.id} 
                 imageUrl={article.imageUrl}
@@ -48,7 +49,7 @@ export default async  function Home() {
             <div className='absolute bottom-0 right-5 h-1 w-14 bg-primary'/>
           </div>
           <div className="flex flex-wrap gap-6">
-            {popular.map(article => (
+            {popular?.map(article => (
               <PopularCard 
                 key={article.id}
                 imageUrl={article.imageUrl}
@@ -69,7 +70,7 @@ export default async  function Home() {
             <div className='absolute bottom-0 right-5 h-1 w-14 bg-primary'/>
           </div>
           <div className='relative space-y-6 py-8 sm:columns-2 sm:gap-6 xl:columns-3 '>
-            {stories.map(story => (
+            {stories?.map(story => (
               <StoryCard
                 key={story.id} 
                 imageUrl={story.imageUrl}
