@@ -6,7 +6,7 @@ import OthersArticleCard from '@/components/articles/OthersArticleCard';
 import Contact from '@/components/Contact';
 import { getPoular, getRecent, getRecentSt } from '@/actions';
 import StoryCard from '@/components/stories/StoryCard';
-import Banner from '@/banners/BannerLg';
+import BannerSq from '@/banners/BannerSq';
 export default async  function Home() {
 
   const data = await getRecent()
@@ -63,7 +63,7 @@ export default async  function Home() {
             ))}
           </div>
           <div className='flex items-center justify-center  max-w-7xl mx-auto mt-8'>
-              <Banner />
+              <BannerSq />
           </div>
           <div className='relative p-4 mt-10'>
             <h1 className='text-3xl font-bold text-black italic'>آخر القصص المضافة</h1>
