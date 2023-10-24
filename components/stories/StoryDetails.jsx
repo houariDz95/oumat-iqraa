@@ -6,7 +6,6 @@ import Image from "next/image";
 import { updateText, updateTextAndSlice } from "@/utils/updateText";
 import Link from "next/link";
 import BannerSq from "@/banners/BannerSq";
-import DirectLink from "@/banners/DirectLink";
 
 
 const StoryDetails = ({imageUrl, title, date, storyText, isFromEditor, readMore}) => {
@@ -38,7 +37,6 @@ const StoryDetails = ({imageUrl, title, date, storyText, isFromEditor, readMore}
             <span>*</span>
         </div>
         <div className="w-full flex items-center justify-center">
-            <div id="container-6b3890282dbcd2ff77e5aedcafd49c1a"></div>
             <BannerSq />
         </div>
 
@@ -67,7 +65,6 @@ const StoryDetails = ({imageUrl, title, date, storyText, isFromEditor, readMore}
             ))}
             </div> 
         </div>
-        <DirectLink />
     </div>
   )
 }

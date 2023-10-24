@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Pagination } from '@mui/material';
 import { updateTextAndSlice } from '@/utils/updateText';
 import Banner from '@/banners/BannerLg';
+import BannerLong from '@/banners/BannerLong';
 
 const StoryCard = ({ imageUrl, title, articleText, id, isFromEditor }) => {
   return (
@@ -76,7 +77,7 @@ const MainSt = ({ cat, allStories}) => {
                 className="mt-4"
             />
         <div className="max-w-6xl flex items-center justify-center mt-5 mx-auto">
-          <Banner />
+          <BannerLong />
         </div>
         </main>
     );
