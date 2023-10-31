@@ -1,4 +1,4 @@
-import BannerLong from "@/banners/BannerLong";
+import Banner from "@/banners/BannerLg";
 import Navbar from "@/components/Nav";
 import Script from "next/script";
 
@@ -37,7 +37,7 @@ const AboutPage = () => {
             </p>
           </div>
           <div className='max-w-xl mx-auto w-full flex items-center justify-center '>
-            <BannerLong />
+            <Banner />
           </div>
         </div>
       </>
