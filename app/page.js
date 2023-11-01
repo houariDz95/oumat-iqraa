@@ -12,7 +12,7 @@ export default async  function Home() {
   const data = await getRecent()
   const popular = await getPoular()
   const stories = await getRecentSt()
-  console.log(data)
+
   return(
     <>
       <div className='relative'>
