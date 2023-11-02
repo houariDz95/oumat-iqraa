@@ -29,7 +29,7 @@ const page = () => {
         <Script async="async" data-cfasync="false" src="//pl20812775.toprevenuegate.com/6b3890282dbcd2ff77e5aedcafd49c1a/invoke.js" />
         <Link 
         href="https://www.toprevenuegate.com/e767z6fz?key=f1dc2a62bf2183080fdc32f1321ce96e"
-        className="bg-green-500 w-[250px] flex items-center justify-center p-4 rounded-xl text-white font-semobold"
+        className="bg-green-500 px-10 py-4 rounded-xl text-white font-semobold"
         target="_blank"
         >
           Download
