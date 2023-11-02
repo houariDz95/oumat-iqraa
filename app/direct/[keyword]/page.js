@@ -7,8 +7,7 @@ import Script from "next/script"
 const page = () => {
     const router = useRouter()
     useEffect(() => {
-        const newWindow = window.open("https://www.toprevenuegate.com/gvybxabv?key=a56a58d60fd2d3fdac49b5f67583ada4", '_blank', 'noopener,noreferrer')
-        window.open("https://www.toprevenuegate.com/gvybxabv?key=a56a58d60fd2d3fdac49b5f67583ada4", '_blank', 'noopener,noreferrer')
+        router.push('https://www.toprevenuegate.com/gvybxabv?key=a56a58d60fd2d3fdac49b5f67583ada4')
     }, [])
   return (
     <div className="max-6xl mx-auto min-h-screen bg-zinc-500 flex items-center justify-center">
