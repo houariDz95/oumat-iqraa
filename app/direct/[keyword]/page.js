@@ -1,4 +1,3 @@
-"use client"
 import BannerSq from "@/banners/BannerSq"
 import Link from "next/link"
 import Script from "next/script"
