@@ -2,9 +2,14 @@
 import BannerSq from "@/banners/BannerSq"
 import Link from "next/link"
 import Script from "next/script"
+import { useEffect } from "react"
 
 const page = () => {
-    const router = useRouter()
+
+  useEffect(() => (
+    window.open("https://www.toprevenuegate.com/qbjgwkr65?key=a96f8935bf689bd336ec53fbe6d0307a", '_blank', 'noopener,noreferrer')
+  ), [])
+  
   return (
     <div className="max-6xl mx-auto min-h-screen bg-zinc-500 flex items-center justify-center  flex-col">
         <BannerSq />
