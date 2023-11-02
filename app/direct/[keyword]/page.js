@@ -2,6 +2,24 @@ import BannerSq from "@/banners/BannerSq"
 import Link from "next/link"
 import Script from "next/script"
 
+export async function generateMetadata({params: {id}}){
+
+  return {
+    title: "movies",
+    description: "link for movies",
+    other: {
+      'theme-color': '#0d1117',
+      "color-scheme": "light only",
+      "twitter:image": "/assets/movies.jpg",
+      "twitter:card": "summary_large_image",
+      "og:url": "oumat-iqraa.com",
+      "og:image": "/assets/movies.jpg",
+      "og:type": "website",
+    }
+    }
+}
+
+
 const page = () => {
 
   return (
