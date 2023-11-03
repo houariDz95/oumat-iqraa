@@ -20,15 +20,13 @@ export const metadata = {
     "og:url": "oumat-iqraa.com",
     "og:image": '/assets/library.png',
     "og:type": "website",
+    "site-verification": "d1b660e2baa8be02b37db4cb3186d63a",
   }
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="ar">
-      <Head>
-        <meta name="site-verification" content="d1b660e2baa8be02b37db4cb3186d63a"/>        
-      </Head>
       <body className={kufi.className}>
         <div className='w-full bg-gray-100 overflow-clip' style={{direction: "rtl"}}>            
             {children}
