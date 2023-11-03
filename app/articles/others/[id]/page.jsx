@@ -5,6 +5,7 @@ import ArticleDetailsOther from '@/components/articles/ArticleDetailsOther';
 import { getPost, readMore } from '@/actions';
 import { atCategories } from '@/constants';
 import Script from 'next/script';
+import Banner from '@/banners/BannerLg';
 
 export async function generateMetadata({params: {id}}){
 
