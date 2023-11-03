@@ -25,10 +25,10 @@ const page = () => {
   return (
     <div className="max-6xl mx-auto min-h-screen bg-zinc-500 flex items-center justify-center  flex-col">
         <BannerSq />
-        <Script type='text/javascript' src='//pl20816003.toprevenuegate.com/bf/9e/b6/bf9eb6e7b5ddd3ce92701feb9b883409.js' />
-        <Script async="async" data-cfasync="false" src="//pl20812775.toprevenuegate.com/6b3890282dbcd2ff77e5aedcafd49c1a/invoke.js" />
+        <Script type='text/javascript' src='//pl21201816.toprevenuegate.com/9a/09/61/9a0961c3a8eb0e15c0cd5bb0ed6b5c2e.js' />
+        <Script type='text/javascript' src="//pl21201781.toprevenuegate.com/6638e496d98320ae6eda5fbad9755f56/invoke.js"  />
         <Link 
-        href="https://www.toprevenuegate.com/e767z6fz?key=f1dc2a62bf2183080fdc32f1321ce96e"
+        href="https://www.toprevenuegate.com/zx6m4jtj?key=cff8d3938d29f82cb71f68f898db5788"
         className="bg-green-500 px-10 py-4 rounded-xl text-white font-semobold"
         target="_blank"
         >

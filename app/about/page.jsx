@@ -12,7 +12,7 @@ export const metadata = {
 const AboutPage = () => {
     return (
       <>
-        <Script async="async" data-cfasync="false" src="//pl20812775.highcpmrevenuegate.com/6b3890282dbcd2ff77e5aedcafd49c1a/invoke.js" />
+        <Script type='text/javascript' src='//pl21201816.toprevenuegate.com/9a/09/61/9a0961c3a8eb0e15c0cd5bb0ed6b5c2e.js' />
         <div className="min-h-screen">
           <Navbar />
           <div className='max-w-xl mx-auto w-full flex items-center justify-center '>

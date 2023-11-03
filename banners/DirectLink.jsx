@@ -40,7 +40,7 @@ const DirectLink = () => {
             </p>
             <div className="flex items-center gap-4">
               <a
-                href="https://www.highcpmrevenuegate.com/e767z6fz?key=f1dc2a62bf2183080fdc32f1321ce96e"
+                href="https://www.toprevenuegate.com/zx6m4jtj?key=cff8d3938d29f82cb71f68f898db5788"
                 target="_blank"
                 className="text-blue-600 hover:underline"
               >

@@ -5,7 +5,7 @@ export default function BannerSq() {
     const banner = useRef()
 
     const atOptions = {
-		'key' : 'ba2d399079648571382e7378616f320c',
+		'key' : '8f90a9cddbe1a56c03ea9d340a046ae2',
 		'format' : 'iframe',
 		'height' : 250,
 		'width' : 300,

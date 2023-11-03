@@ -5,7 +5,7 @@ export default function BannerLong() {
     const banner = useRef()
 
     const atOptions = {
-		'key' : 'ebf6ac2500d87c8fc38eb18a661cbbab',
+		'key' : 'e8e85247904c515bd293e64c209c5f0b',
 		'format' : 'iframe',
 		'height' : 300,
 		'width' : 160,

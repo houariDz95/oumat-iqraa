@@ -5,10 +5,10 @@ export default function BannerSm() {
     const banner = useRef()
 
     const atOptions = {
-		'key' : '0ad4035ed2e43e20abc910994be6dd00',
+		'key' : '8f90a9cddbe1a56c03ea9d340a046ae2',
 		'format' : 'iframe',
-		'height' : 50,
-		'width' : 320,
+		'height' : 250,
+		'width' : 300,
 		'params' : {}
     }
     useEffect(() => {
