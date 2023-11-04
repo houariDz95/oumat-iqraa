@@ -27,9 +27,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ar">
-      <Head>
+      <head>
         <Script src="https://alwingulla.com/88/tag.min.js" data-zone="19673" async data-cfasync="false" />
-      </Head>
+      </head>
       <body className={kufi.className}>
         <div className='w-full bg-gray-100 overflow-clip' style={{direction: "rtl"}}>            
             {children}
