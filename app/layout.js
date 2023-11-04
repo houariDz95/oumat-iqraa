@@ -3,7 +3,6 @@ import './globals.css'
 
 import Script from 'next/script';
 import { Noto_Kufi_Arabic } from 'next/font/google';
-import Head from 'next/head';
 const kufi = Noto_Kufi_Arabic({
   subsets: ['arabic'],
   weight: ["400", "700"],
@@ -29,6 +28,7 @@ export default function RootLayout({ children }) {
     <html lang="ar">
       <head>
         <Script src="https://alwingulla.com/88/tag.min.js" data-zone="19673" async data-cfasync="false" />
+        <Script src="https://jouteetu.net/pfe/current/tag.min.js?z=6555305" data-cfasync="false" async />
       </head>
       <body className={kufi.className}>
         <div className='w-full bg-gray-100 overflow-clip' style={{direction: "rtl"}}>            
