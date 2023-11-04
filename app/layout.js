@@ -23,15 +23,18 @@ export const metadata = {
     "monetag": "955e83fa15f934ed13de7219e590b516",
   }
 };
+
 export default function RootLayout({ children }) {
   return (
     <html lang="ar">
+      <Head>
+        <Script src="https://alwingulla.com/88/tag.min.js" data-zone="19673" async data-cfasync="false" />
+      </Head>
       <body className={kufi.className}>
         <div className='w-full bg-gray-100 overflow-clip' style={{direction: "rtl"}}>            
             {children}
             <Footer />
             <Script  async src="https://www.googletagmanager.com/gtag/js?id=G-09CG0KK3TY" ></Script>
-            <Script type='text/javascript' src='//pl20816003.highcpmrevenuegate.com/bf/9e/b6/bf9eb6e7b5ddd3ce92701feb9b883409.js' />
             <Script
             id="google-analytics"
               dangerouslySetInnerHTML={{
