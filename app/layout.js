@@ -20,10 +20,9 @@ export const metadata = {
     "og:url": "oumat-iqraa.com",
     "og:image": '/assets/library.png',
     "og:type": "website",
-    "site-verification": "d1b660e2baa8be02b37db4cb3186d63a",
+    "monetag": "955e83fa15f934ed13de7219e590b516",
   }
 };
-
 export default function RootLayout({ children }) {
   return (
     <html lang="ar">
