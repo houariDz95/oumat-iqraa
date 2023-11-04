@@ -1,6 +1,5 @@
 import Banner from "@/banners/BannerLg";
 import Navbar from "@/components/Nav";
-import Script from "next/script";
 
 export const metadata = {
   title: 'معلومات عنا - أمة اقرأ',
@@ -12,7 +11,6 @@ export const metadata = {
 const AboutPage = () => {
     return (
       <>
-        <Script type='text/javascript' src='//pl21201816.toprevenuegate.com/9a/09/61/9a0961c3a8eb0e15c0cd5bb0ed6b5c2e.js' />
         <div className="min-h-screen">
           <Navbar />
           <div className='max-w-xl mx-auto w-full flex items-center justify-center '>

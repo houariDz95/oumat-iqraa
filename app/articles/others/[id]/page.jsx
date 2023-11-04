@@ -63,8 +63,6 @@ const page = async ({params: {id}}) => {
         <Script async="async" data-cfasync="false" src="//pl21201781.toprevenuegate.com/6638e496d98320ae6eda5fbad9755f56/invoke.js" />
         <div id="container-6638e496d98320ae6eda5fbad9755f56"></div>
       </div>
-      <Script type='text/javascript' src='//pl21201816.toprevenuegate.com/9a/09/61/9a0961c3a8eb0e15c0cd5bb0ed6b5c2e.js' />
-      <Script type='text/javascript' src='//pl21201883.toprevenuegate.com/cb/a7/24/cba724b168d4299365eee7b175dfab00.js' />
     </>
   )
 }

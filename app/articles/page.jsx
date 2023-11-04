@@ -4,7 +4,6 @@ import Sidebar from "@/components/Sidebar";
 import Main from "@/components/articles/Main";
 import { atCategories } from "@/constants";
 import { getArticles } from "@/actions";
-import Script from "next/script";
 import BannerSm from "@/banners/BannerSm";
  
 export async function generateMetadata(paramKey){
@@ -22,8 +21,6 @@ const Articles = async (paramKey) => {
     
   return (
     <>
-      <Script type='text/javascript' src='//pl21201883.toprevenuegate.com/cb/a7/24/cba724b168d4299365eee7b175dfab00.js' />
-      <Script type='text/javascript' src='//pl21201816.toprevenuegate.com/9a/09/61/9a0961c3a8eb0e15c0cd5bb0ed6b5c2e.js' />
       <Navbar />
       <PageTitle title="مقالات" desc="مقالات رائعة في موضوعات متنوعة" />
       <div className="max-w-6xl flex items-center justify-center  mx-auto">

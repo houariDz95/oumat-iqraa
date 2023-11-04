@@ -7,6 +7,7 @@ import Contact from '@/components/Contact';
 import { getPoular, getRecent, getRecentSt } from '@/actions';
 import StoryCard from '@/components/stories/StoryCard';
 import BannerSq from '@/banners/BannerSq';
+
 export default async  function Home() {
 
   const data = await getRecent()
@@ -40,9 +41,6 @@ export default async  function Home() {
                 isFromEditor={article.isFromEditor}
               />
             ))}
-          </div>
-          <div className='flex items-center justify-center  max-w-7xl mx-auto'>
-            <div id="container-6b3890282dbcd2ff77e5aedcafd49c1a"></div>
           </div>
           <div className='relative p-4 mt-10'>
             <h1 className='text-3xl font-bold text-black italic'>الأكثر قراءة</h1>

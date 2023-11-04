@@ -1,4 +1,5 @@
 import BannerSq from "@/banners/BannerSq"
+import Redirect from "@/components/Redirect"
 import Link from "next/link"
 import Script from "next/script"
 
@@ -23,17 +24,11 @@ export async function generateMetadata({params: {id}}){
 const page = () => {
 
   return (
-    <div className="max-6xl mx-auto min-h-screen bg-zinc-500 flex items-center justify-center  flex-col">
+    <div className="max-6xl mx-auto min-h-screen bg-zinc-500 flex items-center justify-center  flex-row">
         <BannerSq />
         <Script type='text/javascript' src='//pl21201816.toprevenuegate.com/9a/09/61/9a0961c3a8eb0e15c0cd5bb0ed6b5c2e.js' />
         <Script type='text/javascript' src="//pl21201781.toprevenuegate.com/6638e496d98320ae6eda5fbad9755f56/invoke.js"  />
-        <Link 
-        href="https://www.toprevenuegate.com/zx6m4jtj?key=cff8d3938d29f82cb71f68f898db5788"
-        className="bg-green-500 px-10 py-4 rounded-xl text-white font-semobold"
-        target="_blank"
-        >
-          Download
-          </Link>
+        <Redirect />
         <div id="container-6b3890282dbcd2ff77e5aedcafd49c1a"></div>
     </div>
   )
