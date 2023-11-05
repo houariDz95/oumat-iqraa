@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
     <html lang="ar">
       <head>
         <Script src="https://alwingulla.com/88/tag.min.js" data-zone="19673" async data-cfasync="false" />
-        <Script src="https://jouteetu.net/pfe/current/tag.min.js?z=6555305" data-cfasync="false" async />
+        <Script src="https://boltepse.com/pfe/current/tag.min.js?z=6559517" data-cfasync="false" async />
       </head>
       <body className={kufi.className}>
         <div className='w-full bg-gray-100 overflow-clip' style={{direction: "rtl"}}>            
