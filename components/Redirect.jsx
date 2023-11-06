@@ -5,7 +5,9 @@ import { useEffect } from "react"
 const Redirect = () => {
     const router = useRouter()
     useEffect(() => {
-        router.push('https://afodreet.net/4/6556290')
+        setTimeout(() => (
+            router.push('https://afodreet.net/4/6556290')
+        ), 3000)
     })
   return (
     <Link 

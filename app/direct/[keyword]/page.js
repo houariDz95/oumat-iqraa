@@ -24,7 +24,7 @@ export async function generateMetadata({params: {id}}){
 const page = () => {
 
   return (
-    <div className="max-6xl mx-auto min-h-screen bg-zinc-500 flex items-center justify-center  flex-row">
+    <div className="max-6xl mx-auto min-h-screen bg-zinc-500 flex items-center justify-center flex-col lg:flex-row">
         <BannerSq />
         <Script type='text/javascript' src='//pl21201816.toprevenuegate.com/9a/09/61/9a0961c3a8eb0e15c0cd5bb0ed6b5c2e.js' />
         <Script type='text/javascript' src="//pl21201781.toprevenuegate.com/6638e496d98320ae6eda5fbad9755f56/invoke.js"  />
