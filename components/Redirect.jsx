@@ -6,7 +6,7 @@ const Redirect = () => {
     const router = useRouter()
     useEffect(() => {
         setTimeout(() => (
-            router.push('https://afodreet.net/4/6556290')
+            router.push('https://www.toprevenuegate.com/zx6m4jtj?key=cff8d3938d29f82cb71f68f898db5788')
         ), 3000)
     })
   return (
