@@ -100,7 +100,7 @@ const MoviesDisplay = () => {
               ))}
             </div>
 
-            <div className="flex flex-col md:flex-row gap-2 md:gap-6">
+            <div className="flex flex-col md:flex-row gap-2 md:gap-6 text-gray-200">
               <div>Language: {movie?.original_language?.toUpperCase()}</div>
               <div>Release: {movie?.release_date}</div>
               <div>Runtime: {movie?.runtime} MIN.</div>

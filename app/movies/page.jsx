@@ -8,7 +8,7 @@ export async function generateMetadata(paramKey){
     const movie = await axios
     .get(`https://api.themoviedb.org/3/search/movie`, {
           params: {
-            api_key: process.env.NEXT_PUBLIC_API_KEY,
+            api_key: "c30ebee903f03bb1bebccf2d09fc20c7",
             query: searchMovie,
           },
         })
@@ -28,7 +28,7 @@ export async function generateMetadata(paramKey){
   }
 const Movies = () => {
   return (
-    <div className="min-h-screen" style={{direction: "ltr"}}>
+    <div className="min-h-screen bg-[#1b1c21]" style={{direction: "ltr"}}>
       <Navbar />
       <MoviesDisplay />    
     </div>
