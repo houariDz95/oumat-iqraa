@@ -32,7 +32,7 @@ const nextConfig = {
     
     images: {
       dangerouslyAllowSVG: true,
-      domains: ["firebasestorage.googleapis.com", "downloads.hindawi.org", "s3.amazonaws.com", "www.hindawi.org"],
+      domains: ["firebasestorage.googleapis.com", "downloads.hindawi.org", "s3.amazonaws.com", "image.tmdb.org"],
     }
 }
 
