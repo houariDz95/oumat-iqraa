@@ -109,7 +109,7 @@ const MoviesDisplay = () => {
 
             <div className="pt-14 space-y-2 pr-4">
               <div>OVERVIEW:</div>
-              <div className="lg:line-clamp-4">{movie?.overview}</div>
+              <div className="lg:line-clamp-4 text-gray-200">{movie?.overview}</div>
             </div>
 
             <div

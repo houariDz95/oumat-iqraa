@@ -23,7 +23,7 @@ const Navbar = () => {
         <form onSubmit={searchMovie} className="flex-1">
           <div className="space-x-4 flex items-center ">
             <input
-              className="bg-[#1b1c21] px-4 py-2 outline-none placeholder:text-textColor flex-1"
+              className="bg-gray-700 px-4 py-2 outline-none placeholder:text-textColor flex-1"
               type="text"
               dir="ltr"
               value={input}
@@ -33,7 +33,7 @@ const Navbar = () => {
 
             <button
               type="submit"
-              className="bg-[#1b1c21] text-textColor py-2 px-4 hover:bg-textColor hover:text-white"
+              className="bg-gray-700 text-textColor py-2 px-4 hover:bg-textColor hover:text-white"
             >
               Search
             </button>
