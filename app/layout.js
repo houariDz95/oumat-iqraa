@@ -28,7 +28,34 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ar">
       <head>
-        <Script src="https://alwingulla.com/88/tag.min.js" data-zone="21165" async data-cfasync="false" />
+        <Script src="https://chezoams.com/pfe/current/tag.min.js?z=6622503" data-cfasync="false" async />
+        <Script async="async" data-cfasync="false" src="//thubanoa.com/1?z=6622635" />
+        <Script
+        id="in-push"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(d,z,s){
+                s.src='https://'+d+'/400/'+z;
+                try{
+                  (document.body||document.documentElement).appendChild(s)
+                }catch(e){}
+              })('vooculok.com',6622531,document.createElement('script'));
+            `,
+          }}
+        />
+        <Script
+          id="vignette"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(d,z,s){
+                s.src='https://'+d+'/401/'+z;
+                try{
+                  (document.body||document.documentElement).appendChild(s)
+                }catch(e){}
+              })('ofleafeona.com',6622704,document.createElement('script'));
+            `,
+          }}
+        />
       </head>
       <body className={kufi.className}>
         <div className='w-full bg-gray-100 overflow-clip' style={{direction: "rtl"}}>            
