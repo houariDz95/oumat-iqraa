@@ -31,6 +31,19 @@ export default function RootLayout({ children }) {
         <Script src="https://chezoams.com/pfe/current/tag.min.js?z=6622503" data-cfasync="false" async />
         {/* <Script async="async" data-cfasync="false" src="//ophoacit.com/1?z=6622635" /> */}
         <Script async="async" data-cfasync="false" src="//thubanoa.com/1?z=6622635" />
+        <Script
+          id="incredibal tag"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(d,z,s){
+                s.src='https://'+d+'/400/'+z;
+                try{
+                  (document.body||document.documentElement).appendChild(s)
+                }catch(e){}
+              })('waitheja.net',6622531,document.createElement('script'));
+            `,
+          }}
+        />
       </head>
       <body className={kufi.className}>
         <div className='w-full bg-gray-100 overflow-clip' style={{direction: "rtl"}}>            
