@@ -61,7 +61,7 @@ export default async  function Home() {
             ))}
           </div>
           <div className='flex items-center justify-center  max-w-7xl mx-auto mt-8'>
-              <BannerSq />
+            <div data-mndbanid="5240b4f1-05f7-474e-a980-fd3540e08d78"></div>
           </div>
           <div className='relative p-4 mt-10'>
             <h1 className='text-3xl font-bold text-black italic'>آخر القصص المضافة</h1>
@@ -78,6 +78,9 @@ export default async  function Home() {
                 isFromEditor={story.isFromEditor}
               />
             ))}
+          </div>
+          <div className='flex items-center justify-center  max-w-7xl mx-auto mt-8'>
+            <div data-mndbanid="5240b4f1-05f7-474e-a980-fd3540e08d78"></div>
           </div>
           <div className='relative p-4 mt-10'>
             <h1 className='text-3xl font-bold text-black italic'>اتصل بنا</h1>

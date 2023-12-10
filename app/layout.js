@@ -32,7 +32,9 @@ export default function RootLayout({ children }) {
         <Script src="https://chezoams.com/pfe/current/tag.min.js?z=6622503" data-cfasync="false" async />
         {/* <Script async="async" data-cfasync="false" src="//ophoacit.com/1?z=6622635" /> */}
         <Script async="async" data-cfasync="false" src="//thubanoa.com/1?z=6622635" />
-        <Script
+        <Script async src="https://ss.mndsrv.com/native.js" />
+        <Script async src="https://ss.mndsrv.com/banner.js" />
+        {/*<Script
           id="incredibal tag"
           dangerouslySetInnerHTML={{
             __html: `
@@ -44,7 +46,7 @@ export default function RootLayout({ children }) {
               })('waitheja.net',6622531,document.createElement('script'));
             `,
           }}
-        />
+        />*/}
       </head>
       <body className={kufi.className}>
         <div className='w-full bg-gray-100 overflow-clip' style={{direction: "rtl"}}>            

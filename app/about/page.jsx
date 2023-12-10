@@ -1,4 +1,3 @@
-import Banner from "@/banners/BannerLg";
 import Navbar from "@/components/Nav";
 
 export const metadata = {
@@ -13,8 +12,8 @@ const AboutPage = () => {
       <>
         <div className="min-h-screen">
           <Navbar />
-          <div className='max-w-xl mx-auto w-full flex items-center justify-center '>
-            <div id="container-6b3890282dbcd2ff77e5aedcafd49c1a"></div>
+          <div className='flex items-center justify-center  max-w-7xl mx-auto mt-8'>
+            <div data-mndbanid="5240b4f1-05f7-474e-a980-fd3540e08d78"></div>
           </div>
           <div class="p-8 bg-gray-100 max-w-6xl mx-auto">
             <h2 class="text-2xl font-bold mb-4">من نحن</h2>
@@ -35,7 +34,7 @@ const AboutPage = () => {
             </p>
           </div>
           <div className='max-w-xl mx-auto w-full flex items-center justify-center '>
-            <Banner />
+            <div data-mndbanid="5240b4f1-05f7-474e-a980-fd3540e08d78"></div>
           </div>
         </div>
       </>

@@ -60,8 +60,7 @@ const page = async ({params: {id}}) => {
         </div>
       </div>
       <div className='max-w-6xl mx-auto flex items-center justify-center'>
-        <Script async="async" data-cfasync="false" src="//pl21201781.toprevenuegate.com/6638e496d98320ae6eda5fbad9755f56/invoke.js" />
-        <div id="container-6638e496d98320ae6eda5fbad9755f56"></div>
+        <div data-mndbanid="5240b4f1-05f7-474e-a980-fd3540e08d78"></div>
       </div>
     </>
   )

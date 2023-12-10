@@ -5,7 +5,6 @@ import 'moment/locale/ar';
 import Image from "next/image";
 import { updateText, updateTextAndSlice } from "@/utils/updateText";
 import Link from "next/link";
-import BannerSq from "@/banners/BannerSq";
 
 
 const StoryDetails = ({imageUrl, title, date, storyText, isFromEditor, readMore}) => {
@@ -37,9 +36,8 @@ const StoryDetails = ({imageUrl, title, date, storyText, isFromEditor, readMore}
             <span>*</span>
         </div>
         <div className="w-full flex items-center justify-center">
-            <BannerSq />
+            <div data-mndbanid="5240b4f1-05f7-474e-a980-fd3540e08d78"></div>
         </div>
-
         <div className="mb-24">
             <h1 className="text-xl font-semibold">استكشف أيضًا</h1>
             <div className="grid gap-4 grid-cols-1">
