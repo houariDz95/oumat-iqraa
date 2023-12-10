@@ -20,6 +20,7 @@ export const metadata = {
     "og:image": '/assets/library.png',
     "og:type": "website",
     "monetag": "ef21375ad85d6cea348fb39afc996353",
+    "mnd-ver": "y75gelbp0tjvsuva0qo95w" 
   }
 };
 
@@ -63,6 +64,24 @@ export default function RootLayout({ children }) {
               }}
           />
         </div>
+        <Script
+          id='popcach_ads'
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `
+              var uid = '467853';
+              var wid = '707751';
+              var pop_tag = document.createElement('script');
+              pop_tag.src = '//cdn.popcash.net/show.js';
+              document.body.appendChild(pop_tag);
+              pop_tag.onerror = function() {
+                pop_tag = document.createElement('script');
+                pop_tag.src = '//cdn2.popcash.net/show.js';
+                document.body.appendChild(pop_tag);
+              };
+            `,
+          }}
+        />
       </body>
     </html>
   )
