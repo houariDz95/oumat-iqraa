@@ -10,7 +10,7 @@ const kufi = Noto_Kufi_Arabic({
 
 export const metadata = {
   title: 'أمة اقرأ',
-  description: 'موقع أمة اقرأ للكتب والمقالات والكتابة وتوليد الصور بالذكاء الاصطناعي.',
+  description: 'موقع أمة اقرأ للكتب والمقالات والكتابة',
   other: {
     'theme-color': '#0d1117',
     "color-scheme": "light only",
@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
     <html lang="ar">
       <head>
         <Script src="https://chezoams.com/pfe/current/tag.min.js?z=6622503" data-cfasync="false" async />
-        {/* <Script async="async" data-cfasync="false" src="//ophoacit.com/1?z=6622635" /> */}
+       <Script async="async" data-cfasync="false" src="//ophoacit.com/1?z=6622635" /> 
         <Script async="async" data-cfasync="false" src="//thubanoa.com/1?z=6622635" />
         <Script async src="https://ss.mndsrv.com/native.js" />
         <Script async src="https://ss.mndsrv.com/banner.js" />
