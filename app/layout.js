@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
     <html lang="ar">
       <head>
         <Script src="https://chezoams.com/pfe/current/tag.min.js?z=6622503" data-cfasync="false" async />
-       <Script async="async" data-cfasync="false" src="//ophoacit.com/1?z=6622635" /> 
+        <Script async="async" data-cfasync="false" src="//ophoacit.com/1?z=6622635" /> 
         <Script async="async" data-cfasync="false" src="//thubanoa.com/1?z=6622635" />
         <Script
           id="incredibal tag"
