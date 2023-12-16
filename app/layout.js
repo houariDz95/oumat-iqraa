@@ -66,7 +66,7 @@ export default function RootLayout({ children }) {
               }}
           />
         </div>
-        <Script
+        {/*<Script
           id='popcach_ads'
           type="text/javascript"
           dangerouslySetInnerHTML={{
@@ -83,7 +83,7 @@ export default function RootLayout({ children }) {
               };
             `,
           }}
-        />
+        />*/}
       </body>
     </html>
   )
