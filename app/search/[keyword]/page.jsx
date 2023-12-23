@@ -1,5 +1,5 @@
+import Banner_720 from '@/Banners/Banner_720';
 import { getAllArticles } from '@/actions';
-import BannerTl from '@/banners/BannerTl';
 import Navbar from '@/components/Nav'
 import Sidebar from '@/components/Sidebar';
 import NavSearchBar from '@/components/search/NavSearchBar'
@@ -26,6 +26,9 @@ const Search = async ({ params: {keyword}}) => {
   return (
     <>  
         <Navbar />
+        <div className="max-w-[720px] mx-auto my-2">
+          <Banner_720 />
+        </div>
         <div className='min-h-[calc(100vh-73px)]'>
           <NavSearchBar />
           <div className=" max-w-6xl mx-auto mt-10 flex items-start">

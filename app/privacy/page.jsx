@@ -1,4 +1,4 @@
-import BannerSq from "@/banners/BannerSq";
+import Banner_350 from "@/Banners/Banner_350";
 import Navbar from "@/components/Nav";
 
 
@@ -58,6 +58,7 @@ const PrivacyPolicy = () => {
             لأي استفسار إضافي أو توضيحات حول سياسة الخصوصية الخاصة بنا، يرجى الاتصال بنا على البريد الإلكتروني: <a href="mailto:houedd608@email.com">houedd608@email.com</a>.
         </p>
         </div>
+        <Banner_350 />
     </div>
   </>
   );

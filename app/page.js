@@ -6,7 +6,7 @@ import OthersArticleCard from '@/components/articles/OthersArticleCard';
 import Contact from '@/components/Contact';
 import { getPoular, getRecent, getRecentSt } from '@/actions';
 import StoryCard from '@/components/stories/StoryCard';
-import BannerSq from '@/banners/BannerSq';
+
 
 export default async  function Home() {
 

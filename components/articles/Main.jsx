@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import { Pagination } from '@mui/material';
+import Banner_720 from '@/Banners/Banner_720';
 
 const OthersArticleCard = dynamic(() => import('./OthersArticleCard'), {ssr: false});
  
@@ -24,6 +25,7 @@ const Main = ({ cat, allArticles}) => {
 
     return (
         <main className='flex relative flex-col mb-10'>
+            <Banner_720 />
             <div  className=' px-4 space-y-6  columns-1 md:columns-2 '>
                 {othersArticles.map(article => (
                     <OthersArticleCard 

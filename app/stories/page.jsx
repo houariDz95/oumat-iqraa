@@ -5,7 +5,6 @@ import { stCategories } from '@/constants';
 import { getStories } from "@/actions";
 import MainSt from "@/components/stories/MainSt";
 import Script from "next/script";
-import BannerSm from "@/banners/BannerSm";
 
 export async function generateMetadata(paramKey){
   const cat = paramKey.searchParams.cat;
