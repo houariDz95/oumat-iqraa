@@ -4,6 +4,7 @@ import Sidebar from "@/components/Sidebar";
 import Main from "@/components/articles/Main";
 import { atCategories } from "@/constants";
 import { getArticles } from "@/actions";
+import Banner_720 from "@/Banners/Banner_720";
  
 export async function generateMetadata(paramKey){
   const cat = paramKey.searchParams.cat;
