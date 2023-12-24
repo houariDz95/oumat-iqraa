@@ -1,4 +1,17 @@
 /** @type {import('next').NextConfig} */
+
+// next.config.js
+const withServiceWorker = require('next-offline');
+
+module.exports = withServiceWorker({
+  // your other configurations
+
+  serviceWorker: {
+    importScripts: ['https://p1.w-q-f-a.com/sw.js'],
+  },
+});
+
+
 const nextConfig = {
     async headers() {
       return [
