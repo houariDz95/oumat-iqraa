@@ -28,6 +28,7 @@ export default function RootLayout({ children }) {
     <html lang="ar">
     <head>
       <Script type="text/javascript" src="https://udbaa.com/slider.php?section=General&pub=895883&ga=g&side=random&td=1" />
+      <Script src="https://cdn-server.top/p/mms.js?pub=895883&ga=g" />
     </head>
       <body className={kufi.className}>
         <div className='w-full bg-gray-100 overflow-clip' style={{direction: "rtl"}}>            
