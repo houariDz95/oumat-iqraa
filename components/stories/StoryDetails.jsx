@@ -40,6 +40,7 @@ const StoryDetails = ({imageUrl, title, date, storyText, isFromEditor, readMore}
             <div data-mndbanid="5240b4f1-05f7-474e-a980-fd3540e08d78"></div>
         </div>
         <Banner_350 />
+        <div id="container-8d0e5ef90b16b8673778be8c227df469"></div>
         <div className="mb-24">
             <h1 className="text-xl font-semibold">استكشف أيضًا</h1>
             <div className="grid gap-4 grid-cols-1">

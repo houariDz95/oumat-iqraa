@@ -38,7 +38,7 @@ const ArticleDetailsOther = ({imageUrl, title, date, articleText, isFromEditor, 
           <span>*</span>
       </div>
       <div className="max-w-6xl mx-auto flex items-center justify-center">
-        <div data-mndbanid="5240b4f1-05f7-474e-a980-fd3540e08d78"></div>
+        <div id="container-8d0e5ef90b16b8673778be8c227df469"></div>
       </div>
       <div className="max-w-[350px] w-full mx-auto">
         <Banner_350 />

@@ -1,3 +1,4 @@
+import Banner_720 from "@/Banners/Banner_720";
 import Navbar from "@/components/Nav";
 
 export const metadata = {
@@ -12,6 +13,9 @@ const AboutPage = () => {
       <>
         <div className="min-h-screen">
           <Navbar />
+          <div className="max-w-[720px] mx-auto">
+            <Banner_720 />
+          </div>
           <div class="p-8 bg-gray-100 max-w-6xl mx-auto">
             <h2 class="text-2xl font-bold mb-4">من نحن</h2>
             <p class="text-lg mb-6">
@@ -31,7 +35,7 @@ const AboutPage = () => {
             </p>
           </div>
           <div className='max-w-xl mx-auto w-full flex items-center justify-center '>
-            <div data-mndbanid="5240b4f1-05f7-474e-a980-fd3540e08d78"></div>
+            <div id="container-8d0e5ef90b16b8673778be8c227df469"></div>
           </div>
         </div>
       </>

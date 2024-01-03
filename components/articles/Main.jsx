@@ -51,7 +51,7 @@ const Main = ({ cat, allArticles}) => {
             />
             <div className='flex gap-4 w-full mx-auto'>
                 <Banner_350 />
-                <Banner_350 />
+                <div id="container-8d0e5ef90b16b8673778be8c227df469"></div>
             </div>
         </main>
     );
