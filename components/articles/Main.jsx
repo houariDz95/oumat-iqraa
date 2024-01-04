@@ -49,7 +49,7 @@ const Main = ({ cat, allArticles}) => {
                 color="secondary"
                 className="mt-4"
             />
-            <div className='flex gap-4 w-full mx-auto'>
+            <div className='flex flex-col gap-4 w-full mx-auto'>
                 <Banner_350 />
                 <div id="container-8d0e5ef90b16b8673778be8c227df469"></div>
             </div>
