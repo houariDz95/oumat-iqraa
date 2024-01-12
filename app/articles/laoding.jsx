@@ -1,7 +1,7 @@
 import Loader from "@/components/Loader"
 
 const loading = () => (
-    <div className='w-screen h-screen flex-center'>
+    <div className='w-screen h-screen flex-center  p-'>
         <Loader />
     </div>
 )
@@ -10,8 +10,8 @@ export default loading
 
 // اسهل مشروع مربح27 
 // اطلق خادم الحرمين الملك سلمان مشروع نيوم14 110 
-// افضل مشروع يدخل فلوس11 110 
-//الحكمة من مشروعية صلاة الجمعة 27 110 
+// افضل مشروع يدخل
+//الحكمة من مشروعية صلاة الجمعة فلوس11 110   27 110 
 // المشروع الوطني للتعرف على الموهوبين17 110 
 // تجربتي في مشروع الطبخ11 
 //تجربتي مشروع مكائن البيع الذاتي 11 110 
