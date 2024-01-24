@@ -312,5 +312,11 @@
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-</urlset>
+        <url>
+        <loc>https://www.oumat-iqraa.com/articles/others/xJKrshuYQRa2BcIn13mn</loc>
+        <lastmod>2024-01-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+</urlset> 
  
