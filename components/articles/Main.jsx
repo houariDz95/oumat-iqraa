@@ -49,8 +49,7 @@ const Main = ({ cat, allArticles}) => {
                 color="secondary"
                 className="mt-4"
             />
-            <div className='flex flex-col gap-4 w-full mx-auto'>
-                <Banner_350 />
+            <div className='max-w-7xl mx-auto flex items-center justify-center'>
                 <div id="container-8d0e5ef90b16b8673778be8c227df469"></div>
             </div>
         </main>

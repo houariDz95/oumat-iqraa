@@ -5,7 +5,7 @@ import 'moment/locale/ar';
 import Image from "next/image";
 import { updateText, updateTextAndSlice } from "@/utils/updateText";
 import Link from "next/link";
-import Banner_350 from "@/Banners/Banner_350";
+
 
 
 const StoryDetails = ({imageUrl, title, date, storyText, isFromEditor, readMore}) => {
@@ -37,10 +37,8 @@ const StoryDetails = ({imageUrl, title, date, storyText, isFromEditor, readMore}
             <span>*</span>
         </div>
         <div className="w-full flex items-center justify-center">
-            <div data-mndbanid="5240b4f1-05f7-474e-a980-fd3540e08d78"></div>
+            <div id="container-8d0e5ef90b16b8673778be8c227df469"></div>
         </div>
-        <Banner_350 />
-        <div id="container-8d0e5ef90b16b8673778be8c227df469"></div>
         <div className="mb-24">
             <h1 className="text-xl font-semibold">استكشف أيضًا</h1>
             <div className="grid gap-4 grid-cols-1">
