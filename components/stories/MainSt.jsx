@@ -54,6 +54,9 @@ const MainSt = ({ cat, allStories}) => {
 
     return (
         <main className='flex relative flex-col mb-10'>
+            <div className="max-w-6xl flex items-center justify-center mt-5 mx-auto">
+              <Banner_720 />
+            </div>
             <div  className=' px-4 space-y-6  columns-1 md:columns-2 '>
                 {othersArticles.map(story => (
                     <StoryCard 
@@ -75,9 +78,6 @@ const MainSt = ({ cat, allStories}) => {
                 color="secondary"
                 className="mt-4"
             />
-        <div className="max-w-6xl flex items-center justify-center mt-5 mx-auto">
-          <Banner_720 />
-        </div>
         </main>
     );
 };
