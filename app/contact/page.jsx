@@ -13,8 +13,8 @@ const page = () => {
             <Banner_720 />
           </div>
             <Contact /> 
-          <div className="max-w-6xl flex items-center justify-center  mx-auto">
-              <Banner_350 />
+            <div className="max-w-6xl mx-auto flex items-center justify-center">
+            <div id="container-8d0e5ef90b16b8673778be8c227df469"></div>
           </div>
       </div>
     </>

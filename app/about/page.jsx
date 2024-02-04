@@ -34,7 +34,7 @@ const AboutPage = () => {
             نحن ندعوكم للانضمام إلى رحلتنا في &quot;أمة اقرأ&quot;. انخرطوا في تجربة فريدة من نوعها من الاستفادة من محتوى غني بالمعرفة والإلهام. دعونا نساعدكم على توسيع آفاقكم وزيادة معرفتكم. انضموا إلى مجتمعنا المتنوع وساهموا في بناء عالم يحتفي بالثقافة والتعلم. أهلاً بكم في &quot;أمة اقرأ&quot;
             </p>
           </div>
-          <div className='max-w-xl mx-auto w-full flex items-center justify-center '>
+          <div className="max-w-6xl mx-auto flex items-center justify-center">
             <div id="container-8d0e5ef90b16b8673778be8c227df469"></div>
           </div>
         </div>

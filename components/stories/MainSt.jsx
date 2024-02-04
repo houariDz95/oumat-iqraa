@@ -69,6 +69,9 @@ const MainSt = ({ cat, allStories}) => {
                     />
                 ))}
             </div>
+            <div className="max-w-6xl mx-auto flex items-center justify-center">
+              <div id="container-8d0e5ef90b16b8673778be8c227df469"></div>
+            </div>
             <Pagination
                 variant='outlined'
                 count={Math.ceil(allStories.length / itemsPerPage)}
