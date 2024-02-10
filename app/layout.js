@@ -19,6 +19,7 @@ export const metadata = {
     "og:url": "oumat-iqraa.com",
     "og:image": '/assets/library.png',
     "og:type": "website",
+    "0821cf729c181b00a13a8f77587bd37ad3e22adf" : "0821cf729c181b00a13a8f77587bd37ad3e22adf"
   }
 };
 
