@@ -95,6 +95,19 @@ export default function RootLayout({ children }) {
             l.parentNode.insertBefore(s, l);
           })({});
          ` }} />
+          <Script
+          id="in push page" 
+          dangerouslySetInnerHTML={{ __html: `
+            (function(ria){
+              var d = document,
+                  s = d.createElement('script'),
+                  l = d.scripts[d.scripts.length - 1];
+              s.settings = ria || {};
+              s.src = "//crookedchange.com/a.Ws5hw/YQWsd-lzQJ2/9OkLZ/TU9/6ZbV2a5jlkS/WzQJ9BNrToEx5jMdz/YP1FM/ii0u1EMXT/kDz/NvjtUFzq";
+              s.async = true;
+              l.parentNode.insertBefore(s, l);
+            })({});
+          `}} />
         <Script async="async" data-cfasync="false" src="//pl22011376.toprevenuegate.com/8d0e5ef90b16b8673778be8c227df469/invoke.js" />
         <Script type='text/javascript' src='//pl22011379.toprevenuegate.com/cb/6c/a9/cb6ca9bc4f527eb49d7f74b6747bcd7a.js' />
       </body>
