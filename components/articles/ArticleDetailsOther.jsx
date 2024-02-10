@@ -43,7 +43,20 @@ const ArticleDetailsOther = ({imageUrl, title, date, articleText, isFromEditor, 
       <div className="max-w-6xl mx-auto flex items-center justify-center">
         <div id="container-8d0e5ef90b16b8673778be8c227df469"></div>
       </div>
-      <ReadMore posts={readMore} />
+        <ReadMore posts={readMore} />
+        <Script
+          id="multi tags" 
+          dangerouslySetInnerHTML={{ __html: `
+            (function(aovjbu){
+              var d = document,
+                  s = d.createElement('script'),
+                  l = d.scripts[d.scripts.length - 1];
+              s.settings = aovjbu || {};
+              s.src = "//crookedchange.com/bLX.VfsFdvGUlJ0IYhWFdGilYBWR5zukZ/XfIe/Hermr9VubZpU/l/kLPjTCUKxXOWTyMy2pMGj_Ilt/NOT_Em5mMWzjYIykMJwn";
+              s.async = true;
+              l.parentNode.insertBefore(s, l);
+            })({});
+          `}} />
     </div>
   )
 }

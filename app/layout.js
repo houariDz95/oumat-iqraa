@@ -82,19 +82,19 @@ export default function RootLayout({ children }) {
           `,
         }}
       />*/}
-        <Script
-        id="multi tags" 
-        dangerouslySetInnerHTML={{ __html: `
-          (function(aovjbu){
+         <Script 
+         id="in push"
+         dangerouslySetInnerHTML={{ __html: `
+          (function(ntf){
             var d = document,
                 s = d.createElement('script'),
                 l = d.scripts[d.scripts.length - 1];
-            s.settings = aovjbu || {};
-            s.src = "//crookedchange.com/bLX.VfsFdvGUlJ0IYhWFdGilYBWR5zukZ/XfIe/Hermr9VubZpU/l/kLPjTCUKxXOWTyMy2pMGj_Ilt/NOT_Em5mMWzjYIykMJwn";
+            s.settings = ntf || {};
+            s.src = "//crookedchange.com/auWU5Cw.Y/W/dLlxQe2/9fkDZTTf9U6Kb/2_5YlnSBWGQY9ONgTMEw5sM/z-Y/0/MQiK0H1xMeT/kFziNhjdQwzy";
             s.async = true;
             l.parentNode.insertBefore(s, l);
           })({});
-        `}} />
+         ` }} />
         <Script async="async" data-cfasync="false" src="//pl22011376.toprevenuegate.com/8d0e5ef90b16b8673778be8c227df469/invoke.js" />
         <Script type='text/javascript' src='//pl22011379.toprevenuegate.com/cb/6c/a9/cb6ca9bc4f527eb49d7f74b6747bcd7a.js' />
       </body>
