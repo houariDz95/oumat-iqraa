@@ -6,6 +6,7 @@ import Image from "next/image";
 import { updateText } from "@/utils/updateText";
 import dynamic from "next/dynamic";
 import Banner_720 from "@/Banners/Banner_720";
+import Script from "next/script";
 
 const ReadMore = dynamic(() => import("./ReadMore"), {ssr: false});
 
