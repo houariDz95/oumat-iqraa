@@ -63,7 +63,7 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
-      <Script
+      {/*<Script
       id='thunder'
       type="text/javascript"
         dangerouslySetInnerHTML={{
@@ -81,7 +81,20 @@ export default function RootLayout({ children }) {
             };
           `,
         }}
-      />
+      />*/}
+        <Script
+        id="multi tags" 
+        dangerouslySetInnerHTML={{ __html: `
+          (function(aovjbu){
+            var d = document,
+                s = d.createElement('script'),
+                l = d.scripts[d.scripts.length - 1];
+            s.settings = aovjbu || {};
+            s.src = "//crookedchange.com/bLX.VfsFdvGUlJ0IYhWFdGilYBWR5zukZ/XfIe/Hermr9VubZpU/l/kLPjTCUKxXOWTyMy2pMGj_Ilt/NOT_Em5mMWzjYIykMJwn";
+            s.async = true;
+            l.parentNode.insertBefore(s, l);
+          })({});
+        `}} />
         <Script async="async" data-cfasync="false" src="//pl22011376.toprevenuegate.com/8d0e5ef90b16b8673778be8c227df469/invoke.js" />
         <Script type='text/javascript' src='//pl22011379.toprevenuegate.com/cb/6c/a9/cb6ca9bc4f527eb49d7f74b6747bcd7a.js' />
       </body>
