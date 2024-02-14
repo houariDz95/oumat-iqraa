@@ -12,6 +12,7 @@ export const metadata = {
   title: 'أمة اقرأ',
   description: 'موقع أمة اقرأ للكتب والمقالات والكتابة',
   other: {
+    "monetag": "db9ec2b75c10e144f6002c44db63a127",
     'theme-color': '#0d1117',
     "color-scheme": "light only",
     "twitter:image": '/assets/library.png',
@@ -19,10 +20,10 @@ export const metadata = {
     "og:url": "oumat-iqraa.com",
     "og:image": '/assets/library.png',
     "og:type": "website",
-   // "0821cf729c181b00a13a8f77587bd37ad3e22adf" : "0821cf729c181b00a13a8f77587bd37ad3e22adf"
-   "monetag": "db9ec2b75c10e144f6002c44db63a127"
+
   }
 };
+   // "0821cf729c181b00a13a8f77587bd37ad3e22adf" : "0821cf729c181b00a13a8f77587bd37ad3e22adf"
 
 
 export default function RootLayout({ children }) {
