@@ -40,10 +40,11 @@ const Story = async ({params: {id}}) => {
   const readMorePost = await readMoreSt(randomCat, post.id)
   return (
     <>
+      <script type='text/javascript' src='//pl22333284.profitablegatecpm.com/f1/35/b6/f135b6c7596d2e6a99fcbc6d0399e175.js'></script>
       <Navbar />
       <PageTitle title={post.title} desc="استمتع بقراءة قصة شيقة ومثيرة تغطي موضوعًا مهمًا" />
       <div className="max-w-[720px] mx-auto my-2">
-        <Banner_720 />
+        <Banner_350 />
       </div>
       <div className="max-w-6xl mx-auto  min-h-[calc(100vh-73px)] flex mt-10">
         <div className="flex-1 lg:flex-[0.75]">
