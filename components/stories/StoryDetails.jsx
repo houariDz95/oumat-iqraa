@@ -5,7 +5,6 @@ import 'moment/locale/ar';
 import Image from "next/image";
 import { updateText, updateTextAndSlice } from "@/utils/updateText";
 import Link from "next/link";
-import Script from "next/script";
 
 
 
