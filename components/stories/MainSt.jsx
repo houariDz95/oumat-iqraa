@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Pagination } from '@mui/material';
 import { updateTextAndSlice } from '@/utils/updateText';
 import Banner_720 from '@/Banners/Banner_720';
+import Banner_480 from '@/Banners/Banner_480';
 
 const StoryCard = ({ imageUrl, title, articleText, id, isFromEditor }) => {
   return (
@@ -55,7 +56,7 @@ const MainSt = ({ cat, allStories}) => {
     return (
         <main className='flex relative flex-col mb-10'>
             <div className="max-w-6xl flex items-center justify-center mt-5 mx-auto">
-              <Banner_720 />
+              <Banner_480 />
             </div>
             <div  className=' px-4 space-y-6  columns-1 md:columns-2 '>
                 {othersArticles.map(story => (
