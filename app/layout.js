@@ -99,7 +99,7 @@ const scriptContentThree = `
       <Script id="in zone" dangerouslySetInnerHTML={{ __html: scriptContent }} />
       <Script id="in push" dangerouslySetInnerHTML={{ __html: scriptContentTwo }} />
       <Script id="multi" dangerouslySetInnerHTML={{ __html: scriptContentThree }} />
-      <Script
+      {/* <Script
       id='thunder'
       type="text/javascript"
         dangerouslySetInnerHTML={{
@@ -117,7 +117,7 @@ const scriptContentThree = `
             };
           `,
         }}
-      />
+      /> */}
         <Script async="async" data-cfasync="false" src="//pl22011376.toprevenuegate.com/8d0e5ef90b16b8673778be8c227df469/invoke.js" />
         <Script type='text/javascript' src='//pl22011379.toprevenuegate.com/cb/6c/a9/cb6ca9bc4f527eb49d7f74b6747bcd7a.js' />
       </body>
