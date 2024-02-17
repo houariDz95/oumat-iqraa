@@ -78,7 +78,7 @@ const scriptContentThree = `
               }}
           />
         </div>
-        <Script
+        {/* <Script
           id='popcach_ads'
           type="text/javascript"
           dangerouslySetInnerHTML={{
@@ -95,8 +95,8 @@ const scriptContentThree = `
               };
             `,
           }}
-        />
-      <Script id="in zone" dangerouslySetInnerHTML={{ __html: scriptContent }} />
+        /> */}
+      {/* <Script id="in zone" dangerouslySetInnerHTML={{ __html: scriptContent }} /> */}
       <Script id="in push" dangerouslySetInnerHTML={{ __html: scriptContentTwo }} />
       <Script id="multi" dangerouslySetInnerHTML={{ __html: scriptContentThree }} />
       {/* <Script

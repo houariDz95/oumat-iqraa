@@ -7,6 +7,7 @@ import { updateText } from "@/utils/updateText";
 import dynamic from "next/dynamic";
 import Banner_720 from "@/Banners/Banner_720";
 import Script from "next/script";
+import Banner_480 from "@/Banners/Banner_480";
 
 const ReadMore = dynamic(() => import("./ReadMore"), {ssr: false});
 
@@ -17,7 +18,7 @@ const ArticleDetailsOther = ({imageUrl, title, date, articleText, isFromEditor, 
       className="max-w-2xl flex-1 p-4 md:p-0 mx-auto"
     >
       <div className="max-w-[350px] w-full mx-auto">
-        <Banner_720 />
+        <Banner_480 />
       </div>
       <div className="flex items-center gap-2 mb-4">
         <p className="text-gray-500 flex items-center gap-2 text-sm">
