@@ -21,6 +21,9 @@ export const metadata = {
     "og:type": "website",
     "monetag" : "db9ec2b75c10e144f6002c44db63a127",
   },
+  other: {
+    "monetag" : "db9ec2b75c10e144f6002c44db63a127",
+  }
 }; 
 
 //"0821cf729c181b00a13a8f77587bd37ad3e22adf" : "0821cf729c181b00a13a8f77587bd37ad3e22adf"

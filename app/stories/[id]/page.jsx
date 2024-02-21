@@ -7,6 +7,7 @@ import StoryDetails from '@/components/stories/StoryDetails';
 import Banner_720 from '@/Banners/Banner_720';
 import Banner_350 from '@/Banners/Banner_350';
 import Banner_480 from '@/Banners/Banner_480';
+import Script from 'next/script';
 
 export async function generateMetadata({params: {id}}){
 
