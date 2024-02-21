@@ -22,7 +22,6 @@ const Stories = async (paramKey) => {
   return (
     <>  
       <Script type='text/javascript' src='//pl20843361.highcpmrevenuegate.com/6c/da/e8/6cdae8d47f9935aba066a9d2db08e9db.js' />
-      {/*<Script type='text/javascript' src='//pl22333284.toprevenuegate.com/f1/35/b6/f135b6c7596d2e6a99fcbc6d0399e175.js' />*/}
       <Navbar />
       <PageTitle title="مقالات" desc="مقالات رائعة في موضوعات متنوعة" />
       <div className="max-w-6xl flex items-center justify-center  mx-auto">
