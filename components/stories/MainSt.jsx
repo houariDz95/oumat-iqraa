@@ -24,9 +24,9 @@ const StoryCard = ({ imageUrl, title, articleText, id, isFromEditor }) => {
       </Link>
       <div className="p-2 w-full">
         <h2 className="text-xl font-semibold mb-2 h-12">{title}</h2>
-        <p className="text-gray-600 text-md h-24">
+        {/*<p className="text-gray-600 text-md h-24">
           {updateTextAndSlice(articleText, isFromEditor)} 
-        </p>
+  </p>*/}
         <Link href={`/stories/${id}`} className='flex justify-end'>
             <span className="border-b-2 border-[#ff7887] text-black font-semibold"> إقــرأ الـمــزيـد » </span>
         </Link>
@@ -56,7 +56,7 @@ const MainSt = ({ cat, allStories}) => {
     return (
         <main className='flex relative flex-col mb-10'>
             <div className="max-w-6xl flex items-center justify-center mt-5 mx-auto">
-              <Banner_480 />
+              <Banner_720 />
             </div>
             <div  className=' px-4 space-y-6  columns-1 md:columns-2 '>
                 {othersArticles.map(story => (
