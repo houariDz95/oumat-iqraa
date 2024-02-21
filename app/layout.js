@@ -20,6 +20,9 @@ export const metadata = {
     "og:image": '/assets/library.png',
     "og:type": "website",
     "monetag": "db9ec2b75c10e144f6002c44db63a127"
+  },
+  other: {
+    "monetag" : "db9ec2b75c10e144f6002c44db63a127"
   }
 }; 
 
