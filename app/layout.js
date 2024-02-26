@@ -20,9 +20,6 @@ export const metadata = {
     "og:image": '/assets/library.png',
     "og:type": "website",
     "monetag" : "db9ec2b75c10e144f6002c44db63a127",
-  },
-  other: {
-    "monetag" : "db9ec2b75c10e144f6002c44db63a127",
   }
 }; 
 
@@ -33,8 +30,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ar">
       <head>
-        <Script async src="https://ss.mndsrv.com/native.js" />
-        <Script async src="https://ss.mndsrv.com/native.js" />
+        <script async src="https://ss.mndsrv.com/banner.js"></script>
+        <script async src="https://ss.mndsrv.com/native.js"></script>
       </head>
       <body className={kufi.className}>
         <div className='w-full bg-gray-100 overflow-clip' style={{direction: "rtl"}}>            
