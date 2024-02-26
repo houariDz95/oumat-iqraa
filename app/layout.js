@@ -35,7 +35,7 @@ export default function RootLayout({ children }) {
       <head>
         <Script async src="https://ss.mndsrv.com/native.js" />
         <Script async src="https://ss.mndsrv.com/native.js" />
-      </head/>
+      </head>
       <body className={kufi.className}>
         <div className='w-full bg-gray-100 overflow-clip' style={{direction: "rtl"}}>            
             {children}
