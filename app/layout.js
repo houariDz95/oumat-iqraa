@@ -33,12 +33,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ar">
       <head>
-        <script async src="https://ss.mndsrv.com/native.js"></script>
-        <script async src="https://ss.mndsrv.com/native.js"></script>
+        <Script async src="https://ss.mndsrv.com/native.js" />
+        <Script async src="https://ss.mndsrv.com/native.js" />
       </head/>
       <body className={kufi.className}>
         <div className='w-full bg-gray-100 overflow-clip' style={{direction: "rtl"}}>            
             {children}
+            <div data-mndbanid="5240b4f1-05f7-474e-a980-fd3540e08d78"></div>
             <Footer />
             <Script  async src="https://www.googletagmanager.com/gtag/js?id=G-09CG0KK3TY" ></Script>
             <Script
