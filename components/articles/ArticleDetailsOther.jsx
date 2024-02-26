@@ -39,7 +39,8 @@ const ArticleDetailsOther = ({imageUrl, title, date, articleText, isFromEditor, 
           <span>*</span>
           <span>*</span>
       </div>
-      <div className="max-w-6xl mx-auto flex items-center justify-center">
+      <div className="max-w-6xl mx-auto flex items-center justify-center flex-col space-y-4">
+        <div data-mndazid="55d05ccb-f058-4d74-beda-17fdbdc35fdd"></div>
         <div id="container-8d0e5ef90b16b8673778be8c227df469"></div>
       </div>
         <ReadMore posts={readMore} />
