@@ -32,6 +32,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ar">
+      <head>
+        <script async src="https://ss.mndsrv.com/native.js"></script>
+        <script async src="https://ss.mndsrv.com/native.js"></script>
+      </head/>
       <body className={kufi.className}>
         <div className='w-full bg-gray-100 overflow-clip' style={{direction: "rtl"}}>            
             {children}
