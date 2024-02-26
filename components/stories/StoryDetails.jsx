@@ -38,7 +38,8 @@ const StoryDetails = ({imageUrl, title, date, storyText, isFromEditor, readMore}
             <span>*</span>
             <span>*</span>
         </div>
-        <div className="w-full flex items-center justify-center">
+        <div className="w-full flex items-center justify-center flex-col space-y-4">
+          <div data-mndazid="55d05ccb-f058-4d74-beda-17fdbdc35fdd"></div>
             <div id="container-8d0e5ef90b16b8673778be8c227df469"></div>
         </div>
         <div className="mb-24">
