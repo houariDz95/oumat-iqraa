@@ -29,6 +29,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ar">
+      <head>
+        <script async="async" data-cfasync="false" src="//thubanoa.com/1?z=7167704"></script>
+      </head>
       <body className={kufi.className}>
         <div className='w-full bg-gray-100 overflow-clip' style={{direction: "rtl"}}>            
             {children}
