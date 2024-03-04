@@ -64,43 +64,43 @@ export default function RootLayout({ children }) {
               }}
           />
         </div>
-        <Script
-          id='popcach_ads'
-          type="text/javascript"
-          dangerouslySetInnerHTML={{
-            __html: `
-              var uid = '467853';
-              var wid = '707751';
-              var pop_tag = document.createElement('script');
-              pop_tag.src = '//cdn.popcash.net/show.js';
-              document.body.appendChild(pop_tag);
-              pop_tag.onerror = function() {
-                pop_tag = document.createElement('script');
-                pop_tag.src = '//cdn2.popcash.net/show.js';
-                document.body.appendChild(pop_tag);
-              };
-            `,
-          }}
-        /> 
-        <Script
-        id='thunder'
-        type="text/javascript"
-          dangerouslySetInnerHTML={{
-            __html: `
-              var uid = '467853';
-              var wid = '707751';
-              var pop_fback = 'up';
-              var pop_tag = document.createElement('script');
-              pop_tag.src = '//cdn.popcash.net/show.js';
-              document.body.appendChild(pop_tag);
-              pop_tag.onerror = function () {
-                pop_tag = document.createElement('script');
-                pop_tag.src = '//cdn2.popcash.net/show.js';
-                document.body.appendChild(pop_tag);
-              };
-            `,
-          }}
-        />
+        // <Script
+        //   id='popcach_ads'
+        //   type="text/javascript"
+        //   dangerouslySetInnerHTML={{
+        //     __html: `
+        //       var uid = '467853';
+        //       var wid = '707751';
+        //       var pop_tag = document.createElement('script');
+        //       pop_tag.src = '//cdn.popcash.net/show.js';
+        //       document.body.appendChild(pop_tag);
+        //       pop_tag.onerror = function() {
+        //         pop_tag = document.createElement('script');
+        //         pop_tag.src = '//cdn2.popcash.net/show.js';
+        //         document.body.appendChild(pop_tag);
+        //       };
+        //     `,
+        //   }}
+        // /> 
+        // <Script
+        // id='thunder'
+        // type="text/javascript"
+        //   dangerouslySetInnerHTML={{
+        //     __html: `
+        //       var uid = '467853';
+        //       var wid = '707751';
+        //       var pop_fback = 'up';
+        //       var pop_tag = document.createElement('script');
+        //       pop_tag.src = '//cdn.popcash.net/show.js';
+        //       document.body.appendChild(pop_tag);
+        //       pop_tag.onerror = function () {
+        //         pop_tag = document.createElement('script');
+        //         pop_tag.src = '//cdn2.popcash.net/show.js';
+        //         document.body.appendChild(pop_tag);
+        //       };
+        //     `,
+        //   }}
+        // />
         <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4378697867992790" crossorigin="anonymous" />
         <Script async="async" data-cfasync="false" src="//pl22011376.toprevenuegate.com/8d0e5ef90b16b8673778be8c227df469/invoke.js" />
         <Script type='text/javascript' src='//pl22011379.toprevenuegate.com/cb/6c/a9/cb6ca9bc4f527eb49d7f74b6747bcd7a.js' />
