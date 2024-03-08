@@ -41,6 +41,7 @@ const page = async ({params: {id}}) => {
   const readMorePost = await readMore(randomCat, post.id)
   return (
     <>
+      <Script type='text/javascript' src='//pl22333284.toprevenuegate.com/f1/35/b6/f135b6c7596d2e6a99fcbc6d0399e175.js' />
       <Navbar />
       <PageTitle title={post.title} desc="استمتع بقراءة مقالة شيقة ومثيرة تغطي موضوعًا مهمًا" />
       <div className="max-w-[720px] mx-auto my-2">
