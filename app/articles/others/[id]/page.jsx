@@ -1,4 +1,5 @@
 import Navbar from '@/components/Nav';
+import Script from 'next/script';
 import PageTitle from '@/components/PageTitle';
 import Sidebar from '@/components/Sidebar'
 import ArticleDetailsOther from '@/components/articles/ArticleDetailsOther';
