@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
       <head>
       {/*<script src="https://phicmune.net/pfe/current/tag.min.js?z=7176797" data-cfasync="false" async></script>*/}
         <script async="async" data-cfasync="false" src="//thubanoa.com/1?z=7176804"></script>
-        <script
+  {/* <script
         dangerouslySetInnerHTML={{
           __html: `
             (function(d,z,s){
@@ -43,7 +43,7 @@ export default function RootLayout({ children }) {
             })('dicouksa.com', 7192757, document.createElement('script'));
           `,
         }}
-        />
+        /> */}
 
       {/*<Script
             id="monetag-vignette"
