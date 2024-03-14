@@ -19,7 +19,7 @@ const Navbar = ({primary}) => {
   };
 
   return (
-    <nav className={cn("py-4", pathname === "/" ? "bg-primary" : 'bg-dark' )}>
+    <nav className={"py-4 bg-gradient-to-b from-primary to-indigo-500"}>
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         <div
         >
