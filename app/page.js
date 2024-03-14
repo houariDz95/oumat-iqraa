@@ -1,10 +1,8 @@
 import Categories from '@/components/Categories'
 import Header from '@/components/Header'
 import PopularCard from '@/components/PopularCard';
-import OthersArticleCard from '@/components/articles/OthersArticleCard';
 import Contact from '@/components/Contact';
 import { getPoular, getRecent, getRecentSt } from '@/actions';
-import StoryCard from '@/components/stories/StoryCard';
 import { CradItem } from '@/components/CradItem';
 
 

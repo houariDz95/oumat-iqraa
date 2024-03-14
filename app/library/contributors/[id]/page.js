@@ -48,7 +48,7 @@ const Author = async ({params: {id}}) => {
             </h3>
             <div className="lg:grid grid-cols-2 gap-4">
               {authors.map(item => (
-                <BookCard id={item.authorId} title={item.title} img={item.img} forContributor/>
+                <BookCard key={item._id} id={item.authorId} title={item.title} img={item.img} forContributor/>
               ))}
             </div>
           </div>

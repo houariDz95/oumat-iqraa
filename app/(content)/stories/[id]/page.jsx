@@ -4,6 +4,7 @@ import ContentDetails from '@/components/ContentDetails';
 import { calculateReadingTime } from '@/lib/utils';
 import ArticleDetailsOther from '@/components/articles/ArticleDetailsOther';
 import Image from 'next/image';
+import Script from 'next/script';
  
 export async function generateMetadata({params: {id}}){
 
@@ -40,7 +41,7 @@ const Story = async ({params: {id}}) => {
 
   return (
     <article>
-    <script type='text/javascript' src='//pl22333284.profitablegatecpm.com/f1/35/b6/f135b6c7596d2e6a99fcbc6d0399e175.js'></script>
+      <Script type='text/javascript' src='//pl22333284.profitablegatecpm.com/f1/35/b6/f135b6c7596d2e6a99fcbc6d0399e175.js' />
     <div className="mb-8 text-center relative w-full h-[70vh] bg-dark">
       <div className="w-full z-10 flex flex-col items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
         <Tag

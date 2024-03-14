@@ -7,12 +7,12 @@ import Link from 'next/link';
 
 const PopularCard = ({imageUrl, title, articleText, id, isFromEditor, date, category }) => {
   return (
-    <div className="flex flex-col w-full md:w-[48%] xl:w-[32%] ">
+    <div className="flex  flex-col w-full md:w-[48%] xl:w-[32%] ">
         <div className='flex flex-between'>
             <span className='text-sm text-gray-500 text-ellipsis'>
             {moment(date, 'ar').format('DD MMMM YYYY')}
             </span>
-            <span className='text-sm font-semibold blue_gradient'>{category[0]}</span>
+            <span className='text-sm font-semibold text-accentSoft'>{category[0]}</span>
         </div>
         <Link href={`/articles/others/${id}`}>
             <h1 className='text-lg text-black font-semibold hover:text-primary my-2'>{title}</h1>

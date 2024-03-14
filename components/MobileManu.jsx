@@ -4,7 +4,7 @@ import { navLinks } from '@/constants';
 const MobileManu = ({primary, isOpen}) => {
   return (
       <div 
-      className="bg-black/40 lg:hidden w-full py-2 mt-4">
+      className="bg-black/40 lg:hidden w-full py-2 mt-4 transition-all ease-linear duration-500">
         <ul className="flex flex-col gap-4 w-full">
           {navLinks.map((link) => (
             <li
