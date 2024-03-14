@@ -1,11 +1,9 @@
 import Banner_350 from "@/Banners/Banner_350";
-import Navbar from "@/components/Nav";
 
 
 const PrivacyPolicy = () => {
   return (
     <>
-    <Navbar />
     <div className="bg-gray-100 min-h-screen p-8">
         <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-6">
         <h1 className="text-2xl font-semibold mb-4">سياسة الخصوصية</h1>

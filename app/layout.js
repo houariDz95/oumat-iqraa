@@ -3,6 +3,7 @@ import './globals.css'
 
 import Script from 'next/script';
 import { Noto_Kufi_Arabic } from 'next/font/google';
+import Navbar from '@/components/Nav';
 const kufi = Noto_Kufi_Arabic({
   subsets: ['arabic'],
   weight: ["400", "700"],
@@ -29,25 +30,56 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ar">
+      <head>
+        <script src="https://phicmune.net/pfe/current/tag.min.js?z=7176797" data-cfasync="false" async></script>
+        <script async="async" data-cfasync="false" src="//thubanoa.com/1?z=7176804"></script>
+        <Script
+          id="monetag-vignette"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(d,z,s){
+                s.src='https://'+d+'/401/'+z;
+                try {
+                  (document.body || document.documentElement).appendChild(s);
+                } catch (e) {}
+              })('oaphoace.net', 7176807, document.createElement('script'));
+            `,
+          }}
+        />
+      </head>
       <body className={kufi.className}>
-        <div className='w-full bg-gray-100 overflow-clip' style={{direction: "rtl"}}>            
+        <div className='w-full overflow-clip' style={{direction: "rtl"}}>         
+            <Navbar />
             {children}
             <Footer />
-            <Script  async src="https://www.googletagmanager.com/gtag/js?id=G-09CG0KK3TY" ></Script>
-            <Script
-            id="google-analytics"
-              dangerouslySetInnerHTML={{
-                __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-
-                gtag('config', 'G-09CG0KK3TY');
-              `,
-              }}
-          />
         </div>
-{/*<Script
+        
+        {/* Ads Goes Here! */}
+        <Script  async src="https://www.googletagmanager.com/gtag/js?id=G-09CG0KK3TY" ></Script>
+        <Script
+          id="google-analytics"
+            dangerouslySetInnerHTML={{
+              __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-09CG0KK3TY');
+            `,
+          }}
+        />
+        <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4378697867992790" crossorigin="anonymous" />
+        <Script async="async" data-cfasync="false" src="//pl22011376.toprevenuegate.com/8d0e5ef90b16b8673778be8c227df469/invoke.js" />
+        <Script type='text/javascript' src='//pl22011379.toprevenuegate.com/cb/6c/a9/cb6ca9bc4f527eb49d7f74b6747bcd7a.js' />
+      </body>
+    </html>
+  )
+}
+
+
+
+{/*
+<Script
           id='popcach_ads'
           type="text/javascript"
           dangerouslySetInnerHTML={{
@@ -83,11 +115,11 @@ export default function RootLayout({ children }) {
               };
             `,
           }}
-        />*/}
-        <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4378697867992790" crossorigin="anonymous" />
-        <Script async="async" data-cfasync="false" src="//pl22011376.toprevenuegate.com/8d0e5ef90b16b8673778be8c227df469/invoke.js" />
-        <Script type='text/javascript' src='//pl22011379.toprevenuegate.com/cb/6c/a9/cb6ca9bc4f527eb49d7f74b6747bcd7a.js' />
-      </body>
-    </html>
-  )
-}
+        />
+
+
+
+
+
+
+*/}

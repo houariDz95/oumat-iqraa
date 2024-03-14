@@ -1,15 +1,13 @@
 "use client"
-import { useRouter } from "next/navigation"
-import SearchButton from "./SearchButton"
-
+import { Button } from "./ui/button"
+import Link from "next/link"
+import { ArrowRightIcon } from "@radix-ui/react-icons"
 
 const Header = () => {
-  const router = useRouter()
-
   return (
     <>
-      <section className="relative lg:h-[calc(100vh-72px)] xs:h-[92vh] h-[100vh] bg-primary">
-        <div className="max-w-6xl mx-auto flex-col-center h-[70%] gap-4 p-4">
+      <section className="relative lg:h-[calc(100vh-72px)] sm:h-[92vh] h-[100vh] bg-primary">
+        <div className="max-w-6xl mx-auto flex flex-col items-center justify-center h-[70%] gap-4 p-4">
           <h2 className="text-[36px] font-bold leading-snug text-white mt-10 text-center">
             مرحبًا بكم في موقع أمة اقرأ 
           </h2>
@@ -17,26 +15,15 @@ const Header = () => {
             نحن نقدم لك مجموعة متنوعة من القصص والمقالات والاقتباسات التي تلهم وتثري معرفتك.
             انضم إلينا اليوم واستمتع بمحتوى فريد يلبي اهتماماتك ويوسع آفاقك الثقافية.
           </p>
-          <form 
-            action={(formData) => {
-              const searchTerm = formData.get("search")
-              if(!formData.get("search")) return 
-              router.push(`/search/${searchTerm}`)
-            }}
-            className="mt-4 flex items-center w-full bg-white p-3"
-          >
-            <input
-              type="text"
-              name="search"
-              placeholder="ابحث هنا..."
-              dir='rtl'
-              className="flex-1 py-2 text-right outline-none text-primary font-bold placeholder:text-gray-500"
-            />
-            <SearchButton styles="py-2 px-4 bg-main-bg font-bold text-white"/>
-          </form>
+          <Button asChild size="lg" className="bg-light hover:bg-light/90 text-dark flex items-center gap-2"> 
+            <Link href="/articles">
+              <ArrowRightIcon className="w-5 h-5"/>
+              استكشف الآن
+            </Link>
+          </Button>
         </div>
         <div className="absolute inset-x-0 lg:bottom-32 bottom-0">
-          <div className="h-16 bg-primary">
+          <div className="h-16 bg-gradientto-b from-primary to-blue-700">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
               <path
                 fill="#f3f4f6"

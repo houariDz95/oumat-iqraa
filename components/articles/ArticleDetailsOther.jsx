@@ -1,48 +1,38 @@
 'use client';
-import { AiOutlineCalendar } from "react-icons/ai";
-import moment from "moment";
-import 'moment/locale/ar';
-import Image from "next/image";
-import { updateText } from "@/utils/updateText";
-import dynamic from "next/dynamic";
+
 import Banner_720 from "@/Banners/Banner_720";
-import Script from "next/script";
-import Banner_480 from "@/Banners/Banner_480";
-
-const ReadMore = dynamic(() => import("./ReadMore"), {ssr: false});
+import { updateText } from "@/utils/updateText";
 
 
-const ArticleDetailsOther = ({imageUrl, title, date, articleText, isFromEditor, readMore}) => {
+
+const ArticleDetailsOther = ({articleText, isFromEditor}) => {
   return (
     <div
-      className="max-w-2xl flex-1 p-4 md:p-0 mx-auto"
+      className="col-span-12  lg:col-span-8 font-in prose sm:prose-base md:prose-lg max-w-max"
     >
-      <div className="flex items-center gap-2 mb-4">
-        <p className="text-gray-500 flex items-center gap-2 text-sm">
-        <AiOutlineCalendar size={18} color='#6449ff' />
-        {moment(date, 'ar').format('DD MMMM YYYY')}
-        </p>
-      </div>
-      <h2 className="text-3xl font-semibold mb-4 blue_gradient">{title}</h2>
-      <Image 
-        src={imageUrl} 
-        alt={title} 
-        className="w-full max-h-[350px] object-cover rounded-lg shadow-md my-12" 
-        width={600} 
-        height={350}
-      />
-      <div>
+      <Banner_720 />
+      <div className="mb-5 col-span-12  lg:col-span-8 font-in prose sm:prose-base md:prose-lg max-w-max
+          prose-blockquote:bg-accent/20 
+          prose-blockquote:p-2
+          prose-blockquote:px-6
+          prose-blockquote:border-accent
+          prose-blockquote:not-italic
+          prose-blockquote:rounded-r-lg
+
+          prose-li:marker:text-accent
+
+          dark:prose-invert
+          dark:prose-blockquote:border-accentDark
+          dark:prose-blockquote:bg-accentDark/20
+          dark:prose-li:marker:text-accentDark
+
+          first-letter:text-3xl
+          sm:first-letter:text-5xl
+          ">
         {updateText(articleText, isFromEditor)}
       </div>
-      <div className="flex flex-center gap-6 text-lg font-bold text-gray-900 my-10">
-          <span>*</span>
-          <span>*</span>
-          <span>*</span>
-      </div>
-      <div className="max-w-6xl mx-auto flex items-center justify-center flex-col space-y-4">
+        <script async="async" data-cfasync="false" src="//pl22011376.profitablegatecpm.com/8d0e5ef90b16b8673778be8c227df469/invoke.js"></script>
         <div id="container-8d0e5ef90b16b8673778be8c227df469"></div>
-      </div>
-        <ReadMore posts={readMore} />
     </div>
   )
 }

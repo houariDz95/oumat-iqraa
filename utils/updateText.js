@@ -2,53 +2,34 @@ import { EditorState, ContentState, convertFromRaw, Editor, CompositeDecorator }
 import { findEntityLiksRanges } from './ranges';
 import { LinkSpan } from './spans';
 
-const styleMap = {
-  'color-rgb(0,0,0)': {
-    color: '#333',
-  },
-  'fontsize-24': {
-    fontSize: '28px',
-  },
-  'fontsize-18': {
-   fontSize: '18px',
-  },
-  'bgcolor-rgb(247,247,248)': {
-    color: "#6449ff"
-  }, 
-  "color-rgb(41,105,176)": {
-    color: "#6449ff"
-  }
-};
-
 
 export const updateTextAndSlice = (text, isContentFromEditor) => {
-    const contentState = isContentFromEditor
-      ? convertFromRaw(text)
-      : ContentState.createFromText(text);
-  
-    const editorState = EditorState.createWithContent(contentState);
-  
-    const truncateText = (text, limit) => {
-      if (text.length <= limit) {
-        return text;
-      }
-      return text.slice(0, limit) + '...';
-    };
-  
-    const contentBlocks = editorState
-      .getCurrentContent()
-      .getBlockMap()
-      .toArray();
-  
-    const slicedBlocks = contentBlocks.slice(0, 120);
-    const joinedText = slicedBlocks.map(block => block.getText()).join('');
-    const truncatedDescription = truncateText(joinedText, 150);
-    return (
-        <>{truncatedDescription}</>
-    )
+  const contentState = isContentFromEditor
+    ? convertFromRaw(text)
+    : ContentState.createFromText(text);
+
+  const editorState = EditorState.createWithContent(contentState);
+
+  const truncateText = (text, limit) => {
+    if (text.length <= limit) {
+      return text;
+    }
+    return text.slice(0, limit) + '...';
+  };
+
+  const contentBlocks = editorState
+    .getCurrentContent()
+    .getBlockMap()
+    .toArray();
+
+  const slicedBlocks = contentBlocks.slice(0, 120);
+  const joinedText = slicedBlocks.map(block => block.getText()).join('');
+  const truncatedDescription = truncateText(joinedText, 150);
+  return (
+      <>{truncatedDescription}</>
+  )
 
 }
-
 
 export const updateText = (text, isContentFromEditor) => {
   if (text) {
@@ -75,7 +56,6 @@ export const updateText = (text, isContentFromEditor) => {
         {isContentFromEditor ? (
           <Editor
             editorState={editorState}
-            customStyleMap={styleMap}
             readOnly={true}
           />
         ) : (

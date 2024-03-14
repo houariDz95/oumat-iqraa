@@ -1,5 +1,4 @@
 import Banner_720 from "@/Banners/Banner_720";
-import Navbar from "@/components/Nav";
 
 export const metadata = {
   title: 'معلومات عنا - أمة اقرأ',
@@ -12,7 +11,6 @@ const AboutPage = () => {
     return (
       <>
         <div className="min-h-screen">
-          <Navbar />
           <div className="max-w-[720px] mx-auto">
             <Banner_720 />
           </div>

@@ -4,13 +4,14 @@ import { navLinks } from '@/constants';
 const MobileManu = ({primary, isOpen}) => {
   return (
       <div 
-      className={`${primary ? "bg-gray-900 md:bg-primary" : "bg-gray-900"} bg-gray-900 md:hidden p-4`}>
-        <ul className="flex flex-col gap-4 py-2">
+      className="bg-black/40 lg:hidden w-full py-2 mt-4">
+        <ul className="flex flex-col gap-4 w-full">
           {navLinks.map((link) => (
             <li
               key={link.path}
+              className="text-white text-lg font-normal px-4 py-2 w-full "
             >
-              <Link href={link.path} className="text-white hover:text-gray-200">
+              <Link href={link.path} >
                 {link.label}
               </Link>
             </li>

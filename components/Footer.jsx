@@ -1,7 +1,7 @@
 
 const Footer = () => {
     return (
-    <footer className="bg-gray-900 text-white py-4 w-screen px-2">
+    <footer className="bg-dark text-white py-4 w-screen px-2">
       <div className="flex justify-between max-w-6xl mx-auto flex-col md:flex-row items-center gap-1">
         <div className="text-sm">
         Copyright &copy; 2023 oumat iqraa | All Rights Reserved

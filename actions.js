@@ -143,3 +143,27 @@ export const getAllArticles = async () => {
     console.log(error)
   }
 }
+
+export const getArticlesByQuery = async (queryText) => {
+  try {
+    const articlesRef = collection(db, 'otherArticles');
+
+    // Get all documents from the collection
+    const querySnapshot = await getDocs(articlesRef);
+
+    // Extract data from the snapshot and filter on the client side
+    const articles = [];
+    querySnapshot.forEach((doc) => {
+      const title = doc.data().title;
+      if (title.includes(queryText)) {
+        articles.push({ id: doc.id, ...doc.data() });
+      }
+    });
+
+    return articles;
+
+    return articles
+  } catch (error) {
+    console.log(error)
+  }
+}

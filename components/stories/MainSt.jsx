@@ -1,88 +1,30 @@
 "use client"
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { Pagination } from '@mui/material';
-import { updateTextAndSlice } from '@/utils/updateText';
 import Banner_720 from '@/Banners/Banner_720';
-import Banner_480 from '@/Banners/Banner_480';
-
-const StoryCard = ({ imageUrl, title, articleText, id, isFromEditor }) => {
-  return (
-    <div className="bg-white shadow-md rounded-md overflow-hidden">
-      <Link href={`/stories/${id}`}>
-        <div className="relative h-48">
-          <Image
-            src={imageUrl}
-            alt={title}
-            layout="fill"
-            objectFit="cover"
-            className="object-cover"
-            loading="eager"
-          />
-        </div>
-      </Link>
-      <div className="p-2 w-full">
-        <h2 className="text-xl font-semibold mb-2 h-12">{title}</h2>
-        {/*<p className="text-gray-600 text-md h-24">
-          {updateTextAndSlice(articleText, isFromEditor)} 
-  </p>*/}
-        <Link href={`/stories/${id}`} className='flex justify-end'>
-            <span className="border-b-2 border-[#ff7887] text-black font-semibold"> إقــرأ الـمــزيـد » </span>
-        </Link>
-      </div>
-    </div>
-  );
-};
+import { CradItem } from '../CradItem';
 
  
-const MainSt = ({ cat, allStories}) => {
-
-    const [othersArticles, setOthersArticles] = useState([]);
-    const [currentPage, setCurrentPage] = useState(1);
-    const itemsPerPage = 20; 
-
-    const handlePageChange = (event, newPage) => {
-        setCurrentPage(newPage);
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
-    
-    useEffect(() => {    
-        const startIndex = (currentPage - 1) * itemsPerPage;
-        const displayedArticles = allStories.slice(startIndex, startIndex + itemsPerPage);
-        setOthersArticles(displayedArticles);
-    }, [cat, currentPage]);
-
+const MainSt = ({ allStories}) => {
     return (
-        <main className='flex relative flex-col mb-10'>
-            <div className="max-w-6xl flex items-center justify-center mt-5 mx-auto">
-              <Banner_720 />
-            </div>
-            <div  className=' px-4 space-y-6  columns-1 md:columns-2 '>
-                {othersArticles.map(story => (
-                    <StoryCard 
-                        key={story.id} 
-                        imageUrl={story.imageUrl} 
-                        title={story.title} 
-                        articleText={story.storyText}  
-                        id={story.id} 
-                        isFromEditor={story.isFromEditor} 
-                    />
-                ))}
-            </div>
-            <div className="max-w-6xl mx-auto flex items-center justify-center">
-              <div id="container-8d0e5ef90b16b8673778be8c227df469"></div>
-            </div>
-            <Pagination
-                variant='outlined'
-                count={Math.ceil(allStories.length / itemsPerPage)}
-                page={currentPage}
-                onChange={handlePageChange}
-                dir='ltr'
-                color="secondary"
-                className="mt-4"
+      <article className='flex relative flex-col mb-10'>
+        <div className='my-2 max-w-[720px] mx-auto flex items-center justify-center'>
+            <Banner_720 />
+        </div>
+        <div  className='grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 grid-rows-2 gap-16  px-5 sm:px-10 md:px-24 xl:px-32 pt-10 mt-10'>
+            {allStories.map(story => (
+                <CradItem 
+                category={story.category}
+                key={story.id} 
+                imageUrl={story.imageUrl}
+                title={story.title}
+                url={`/stories/${story.id}`}
             />
-        </main>
+            ))}
+        </div>
+        <div className="max-w-6xl mx-auto flex items-center justify-center mt-5">
+          <script async="async" data-cfasync="false" src="//pl22011376.profitablegatecpm.com/8d0e5ef90b16b8673778be8c227df469/invoke.js"></script>
+          <div id="container-8d0e5ef90b16b8673778be8c227df469"></div>
+        </div>
+      </article>
     );
 };
 
