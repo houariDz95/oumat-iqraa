@@ -1,6 +1,6 @@
 import Footer from '@/components/Footer'
 import './globals.css'
-
+import { Analytics } from '@vercel/analytics/react';
 import Script from 'next/script';
 import { Noto_Kufi_Arabic } from 'next/font/google';
 import Navbar from '@/components/Nav';
@@ -68,6 +68,7 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
+        <Analytics />
         <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4378697867992790" crossorigin="anonymous" />
         <Script async="async" data-cfasync="false" src="//pl22011376.toprevenuegate.com/8d0e5ef90b16b8673778be8c227df469/invoke.js" />
         {/*<Script type='text/javascript' src='//pl22011379.toprevenuegate.com/cb/6c/a9/cb6ca9bc4f527eb49d7f74b6747bcd7a.js' />*/}
