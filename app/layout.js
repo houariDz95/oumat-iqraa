@@ -30,7 +30,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ar">
-      <head>
+      {/*<head>
         <script src="https://phicmune.net/pfe/current/tag.min.js?z=7176797" data-cfasync="false" async></script>
         <script async="async" data-cfasync="false" src="//thubanoa.com/1?z=7176804"></script>
         <Script
@@ -46,7 +46,7 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
-        </head>
+        </head>*/}
       <body className={kufi.className}>
         <div className='w-full overflow-clip' style={{direction: "rtl"}}>         
             <Navbar />
