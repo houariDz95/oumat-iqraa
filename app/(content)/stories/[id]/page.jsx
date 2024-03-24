@@ -1,10 +1,11 @@
-import { getPostSt, readMoreSt } from '@/actions';
+import { getPostSt, getPoular, readMoreSt } from '@/actions';
 import Tag from '@/components/Tag';
 import ContentDetails from '@/components/ContentDetails';
 import { calculateReadingTime } from '@/lib/utils';
 import ArticleDetailsOther from '@/components/articles/ArticleDetailsOther';
 import Image from 'next/image';
 import Script from 'next/script';
+import PopularCard from '@/components/PopularCard';
  
 export async function generateMetadata({params: {id}}){
 
@@ -38,7 +39,7 @@ const Story = async ({params: {id}}) => {
   const randomCat = post.category?.[Math.floor(Math.random() * post.category.length)];
   const readMorePost = await readMoreSt(randomCat, post.id);
   const readingTime = calculateReadingTime(post.storyText);
-
+  const popular = await getPoular()
   return (
     <article>
       <Script type='text/javascript' src='//pl22333284.profitablegatecpm.com/f1/35/b6/f135b6c7596d2e6a99fcbc6d0399e175.js' />
@@ -81,12 +82,12 @@ const Story = async ({params: {id}}) => {
           open
         >
           <summary className="text-lg font-semibold capitalize cursor-pointer">
-            مقالات ذات صلة
+          قصص ذات صلة
           </summary>
           <ul className="mt-4 font-in text-base">
             {readMorePost.map(article => (
               <li key={article.id} className='py-1'>
-                <a href={`/artilces/others/${article.id}`} className='flex items-center justify-star'>
+                <a href={`/stories/${article.id}`} className='flex items-center justify-star'>
                   <span className="hover:underline">{article.title}</span>
                 </a>
               </li>
@@ -100,6 +101,20 @@ const Story = async ({params: {id}}) => {
         isFromEditor={post.isFromEditor}
       />
     </div>
+    <div className="flex flex-wrap gap-6 max-w-7xl mx-auto my-8 p-4 lg:p-10">
+            {popular?.map(article => (
+              <PopularCard 
+                key={article.id}
+                imageUrl={article.imageUrl}
+                title={article.title}
+                articleText={article.articleText}
+                id={article.id}
+                isFromEditor={article.isFromEditor}
+                category={article.category}
+                date={article.timestamp?.toDate()}
+              />
+            ))}
+          </div>
   </article>
   )
 }
