@@ -20,7 +20,7 @@ const LibraryPage = async (paramKey) => {
   return (
     <>
     <TitleHeader title={title}/>
-    <div className="grid grid-cols-12  gap-y-8 lg:gap-8 xl:gap-16 mt-8 min-h-[calc(100ch-100px)] max-w-7xl mx-auto mb-12">
+    <div className="grid grid-cols-12  gap-y-8 lg:gap-8 xl:gap-16 mt-8 min-h-[calc(100ch-100px)] max-w-7xl mx-auto mb-12 p-5">
     <div className="col-span-12 lg:col-span-4">
       <details
         className="border-[1px] border-solid border-boder dark:border-light text-dark dark:text-light rounded-lg p-4 sticky top-6 overflow-hidden overflow-y-auto"
@@ -47,7 +47,7 @@ const LibraryPage = async (paramKey) => {
     </div>
     <div className='flex flex-col col-span-12  lg:col-span-8 space-y-8'>
       <Banner_720 />
-      <div className='flex items-center justify-between'>
+      <div className='flex flex-col lg:flex-row items-center justify-between'>
           <p className='flex-1 text-md'>عرض من {startRange} - {endRange} من أصل {totalBooksCount} كتاب</p>
           <CustomPagination  pageCount={pageCount}  currentPage={page} cat={cat}/>
       </div>

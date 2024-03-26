@@ -13,7 +13,18 @@ const YouTubePlayer = ({ videoId }) => {
     },
   };
 
-  return <YouTube videoId={videoId} opts={opts} />;
+  const onPlayerReady = event => {
+    // Prevent default click event on the YouTube player
+    event.target.getIframe().setAttribute('allowfullscreen', '0');
+    event.target.getIframe().setAttribute('frameborder', '0');
+    event.target.getIframe().setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+    event.target.getIframe().setAttribute('title', 'YouTube video player');
+    event.target.getIframe().setAttribute('allowfullscreen', '');
+    event.target.getIframe().setAttribute('sandbox', 'allow-forms allow-scripts allow-pointer-lock allow-same-origin allow-top-navigation');
+  };
+
+  return <YouTube videoId={videoId} opts={opts} onReady={onPlayerReady} />;
 };
 
 export default YouTubePlayer;
+

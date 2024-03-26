@@ -4,8 +4,9 @@ import ContentCat from "./components/ContentCat";
 export default function Layout({ children }){
     return(
         <div className="min-h-[80vh]">
-            {/*<ContentCat />*/}
-            <div className="max-w-[720px] mx-auto">
+            <ContentCat />
+            {children}
+            {/* <div className="max-w-[720px] mx-auto">
                 <Banner_720 />
             </div>
             <div class=" my-10 bg-gray-100 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
@@ -26,7 +27,7 @@ export default function Layout({ children }){
             <div className="max-w-7xl mx-auto">
             <script async="async" data-cfasync="false" src="//pl22011376.profitablegatecpm.com/8d0e5ef90b16b8673778be8c227df469/invoke.js"></script>
             <div id="container-8d0e5ef90b16b8673778be8c227df469"></div>
-            </div>
+            </div>*/}
         </div>
     )
 }
