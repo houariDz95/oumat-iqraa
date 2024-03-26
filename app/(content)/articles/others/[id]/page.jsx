@@ -5,6 +5,7 @@ import Image from 'next/image';
 import ContentDetails from '@/components/ContentDetails';
 import { calculateReadingTime } from '@/lib/utils';
 import Script from 'next/script';
+import Banner_720 from '@/Banners/Banner_720';
 
 export async function generateMetadata({params: {id}}){
 
@@ -38,7 +39,7 @@ const page = async ({params: {id}}) => {
   const randomCat = post.category?.[Math.floor(Math.random() * post.category.length)];
   const readingTime = calculateReadingTime(post.articleText)
   const readMorePost = await readMore(randomCat, post.id)
-  
+
   if(!post) return (
     <>
       <div className="max-w-[720px] mx-auto">

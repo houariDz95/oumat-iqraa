@@ -6,6 +6,7 @@ import ArticleDetailsOther from '@/components/articles/ArticleDetailsOther';
 import Image from 'next/image';
 import Script from 'next/script';
 import PopularCard from '@/components/PopularCard';
+import Banner_720 from '@/Banners/Banner_720';
  
 export async function generateMetadata({params: {id}}){
 
@@ -43,7 +44,7 @@ const Story = async ({params: {id}}) => {
   if(!post) return (
     <>
       <div className="max-w-[720px] mx-auto">
-      <Banner_720 />
+      <Banner_720/>
       </div>
       <div class=" my-10 bg-gray-100 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
           <div class="sm:mx-auto sm:w-full sm:max-w-md">
