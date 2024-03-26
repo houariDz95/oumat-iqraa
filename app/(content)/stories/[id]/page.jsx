@@ -1,3 +1,4 @@
+import Banner_720 from "@/Banners/Banner_720"
 
 export const StoryDetails = () => {
   return(

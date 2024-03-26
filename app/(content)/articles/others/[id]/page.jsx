@@ -6,6 +6,8 @@
 // import { calculateReadingTime } from '@/lib/utils';
 // import Script from 'next/script';
 
+import Banner_720 from "@/Banners/Banner_720"
+
 export const ArticleDetails = () => {
   return(
       <>
