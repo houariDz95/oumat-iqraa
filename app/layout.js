@@ -30,10 +30,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ar">
-      {/*<head>
-        <script src="https://phicmune.net/pfe/current/tag.min.js?z=7176797" data-cfasync="false" async></script>
-        <script async="async" data-cfasync="false" src="//thubanoa.com/1?z=7176804"></script>
-        <Script
+      <head>
+        <script async="async" data-cfasync="false" src="//thubanoa.com/1?z=7317777"></script>
+        {/* <Script
           id="monetag-vignette"
           dangerouslySetInnerHTML={{
             __html: `
@@ -45,8 +44,8 @@ export default function RootLayout({ children }) {
               })('oaphoace.net', 7176807, document.createElement('script'));
             `,
           }}
-        />
-        </head>*/}
+        /> */}
+        </head>
       <body className={kufi.className}>
         <div className='w-full overflow-clip' style={{direction: "rtl"}}>         
             <Navbar />
