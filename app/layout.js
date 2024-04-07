@@ -31,7 +31,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ar">
       <head>
-      <script src="https://rauvoaty.net/pfe/current/tag.min.js?z=7321853" data-cfasync="false" async></script>
         {/* <Script
           id="monetag-vignette"
           dangerouslySetInnerHTML={{
