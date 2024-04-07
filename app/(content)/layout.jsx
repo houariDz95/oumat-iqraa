@@ -1,5 +1,6 @@
 import Banner_720 from "@/Banners/Banner_720";
 import ContentCat from "./components/ContentCat";
+import Script from 'next/script';
 
 export default function Layout({ children }){
     return(
@@ -26,9 +27,9 @@ export default function Layout({ children }){
                  </div>
              </div>
              <div className="max-w-7xl mx-auto">
-             <script async="async" data-cfasync="false" src="//pl22011376.profitablegatecpm.com/8d0e5ef90b16b8673778be8c227df469/invoke.js"></script>
+             <Script async="async" data-cfasync="false" src="//pl22011376.profitablegatecpm.com/8d0e5ef90b16b8673778be8c227df469/invoke.js" />
              <div id="container-8d0e5ef90b16b8673778be8c227df469"></div>
-             <script type='text/javascript' src='//pl22333284.profitablegatecpm.com/f1/35/b6/f135b6c7596d2e6a99fcbc6d0399e175.js'></script>
+             <Script type='text/javascript' src='//pl22333284.profitablegatecpm.com/f1/35/b6/f135b6c7596d2e6a99fcbc6d0399e175.js' />
             </div>
         </div>
     )
