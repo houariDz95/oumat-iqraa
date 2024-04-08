@@ -20,7 +20,7 @@ export default function Layout({ children }){
                          <p class="mt-2 text-center text-sm text-gray-600">
                              سنقوم بإصلاح المشكلة خلال ٢٤ ساعة. يمكنك زيارة مكتبتنا لرؤية الكتب المذهلة!
                          </p>
-                         <a href="https://www.oumat-iqraa.com/library" class="mt-6 inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+                         <a href="https://www.profitablegatecpm.com/j75ssn35?key=55f12044e7cbff305d4db14598c53a3a" class="mt-6 inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
                              زيارة المكتبة
                          </a>
                      </div>
@@ -29,7 +29,6 @@ export default function Layout({ children }){
              <div className="max-w-7xl mx-auto">
              <Script async="async" data-cfasync="false" src="//pl22011376.profitablegatecpm.com/8d0e5ef90b16b8673778be8c227df469/invoke.js" />
              <div id="container-8d0e5ef90b16b8673778be8c227df469"></div>
-             <Script type='text/javascript' src='//pl22333284.profitablegatecpm.com/f1/35/b6/f135b6c7596d2e6a99fcbc6d0399e175.js' />
             </div>
         </div>
     )
