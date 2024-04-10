@@ -31,7 +31,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ar">
       <head>
-        {/* <Script
+        <script src="https://d3u598arehftfk.cloudfront.net/prebid_hb_6524_15277.js" async> </script>
+        <script src="https://yonhelioliskor.com/pfe/current/tag.min.js?z=7332669" data-cfasync="false" async></script>
+        <script async="async" data-cfasync="false" src="//thubanoa.com/1?z=7332684"></script>
+        <Script
           id="monetag-vignette"
           dangerouslySetInnerHTML={{
             __html: `
@@ -43,7 +46,7 @@ export default function RootLayout({ children }) {
               })('oaphoace.net', 7176807, document.createElement('script'));
             `,
           }}
-        /> */}
+        /> 
         </head>
       <body className={kufi.className}>
         <div className='w-full overflow-clip' style={{direction: "rtl"}}>         
