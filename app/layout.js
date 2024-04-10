@@ -42,20 +42,7 @@ export default function RootLayout({ children }) {
         `
           }} 
         /> */}
-
-        <Script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js" />
-        <Script 
-          type="text/javascript"
-          id="interstitial"
-          dangerouslySetInnerHTML={{
-            __html: `
-              aclib.runAutoTag({
-                zoneId: 'zobiepocen',
-            });
-            `
-          }}
-        />
-
+        <script src="https://alwingulla.com/88/tag.min.js" data-zone="57586" async data-cfasync="false"></script>
         </head>
         <body className={kufi.className}>
           <div className='w-full overflow-clip' style={{direction: "rtl"}}>         
