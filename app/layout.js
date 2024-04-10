@@ -49,26 +49,13 @@ export default function RootLayout({ children }) {
           id="interstitial"
           dangerouslySetInnerHTML={{
             __html: `
-            aclib.runInterstitial({
-              zoneId: '8273618',
+              aclib.runAutoTag({
+                zoneId: 'zobiepocen',
             });
             `
           }}
         />
 
-        <Script 
-          type="text/javascript"
-          id="in-page-push"
-          dangerouslySetInnerHTML={{
-            __html: `
-            aclib.runInPagePush({
-              zoneId: '8273622',
-              refreshRate: 30,
-              maxAds: 2,
-            });
-            `
-          }}
-        />
         </head>
         <body className={kufi.className}>
           <div className='w-full overflow-clip' style={{direction: "rtl"}}>         
