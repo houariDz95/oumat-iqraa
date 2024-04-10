@@ -42,26 +42,40 @@ export default function RootLayout({ children }) {
         `
           }} 
         /> */}
-        <Script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js" />
-        <Script
-        id="ad-cash-form"
-        type="text/javascript"
-        dangerouslySetInnerHTML={{
-          __html: `
-            aclib.runAutoTag({
-              zoneId: 'wgzyhifpgg',
+
+        <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+        <Script 
+          type="text/javascript"
+          id="interstitial"
+          dangerouslySetInnerHTML={{
+            __html: `
+            aclib.runInterstitial({
+              zoneId: '8273618',
             });
-          `,
-        }}
+            `
+          }}
         />
 
+        <Script 
+          type="text/javascript"
+          id="in-page-push"
+          dangerouslySetInnerHTML={{
+            __html: `
+            aclib.runInPagePush({
+              zoneId: '8273622',
+              refreshRate: 30,
+              maxAds: 2,
+            });
+            `
+          }}
+        />
         </head>
-      <body className={kufi.className}>
-        <div className='w-full overflow-clip' style={{direction: "rtl"}}>         
-            <Navbar />
-            {children}
-            <Footer />
-        </div>
+        <body className={kufi.className}>
+          <div className='w-full overflow-clip' style={{direction: "rtl"}}>         
+              <Navbar />
+              {children}
+              <Footer />
+          </div>
         
         {/* Ads Goes Here! */}
         <Script  async src="https://www.googletagmanager.com/gtag/js?id=G-09CG0KK3TY" ></Script>
@@ -78,6 +92,7 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
+        
         <Analytics />
         <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4378697867992790" crossorigin="anonymous" />
         <Script async="async" data-cfasync="false" src="//pl22011376.toprevenuegate.com/8d0e5ef90b16b8673778be8c227df469/invoke.js" />
