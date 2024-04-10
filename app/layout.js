@@ -31,22 +31,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ar">
       <head>
-        <script src="https://d3u598arehftfk.cloudfront.net/prebid_hb_6524_15277.js" async> </script>
-        <script src="https://yonhelioliskor.com/pfe/current/tag.min.js?z=7332669" data-cfasync="false" async></script>
-        <script async="async" data-cfasync="false" src="//thubanoa.com/1?z=7332684"></script>
-        <Script
-          id="monetag-vignette"
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(d,z,s){
-                s.src='https://'+d+'/401/'+z;
-                try {
-                  (document.body || document.documentElement).appendChild(s);
-                } catch (e) {}
-              })('oaphoace.net', 7176807, document.createElement('script'));
-            `,
-          }}
-        /> 
+      <script async="async" data-cfasync="false" src="//thubanoa.com/1?z=7176804"></script>
+      <script dangerouslySetInnerHTML={{
+          __html: `
+              (function(s,u,z,p){
+                s.src = u;
+                s.setAttribute('data-zone', z);
+                p.appendChild(s);
+              })(document.createElement('script'), 'https://zovidree.com/tag.min.js', 7333580, document.body || document.documentElement);
+        `
+          }} 
+        />
         </head>
       <body className={kufi.className}>
         <div className='w-full overflow-clip' style={{direction: "rtl"}}>         
@@ -57,6 +52,7 @@ export default function RootLayout({ children }) {
         
         {/* Ads Goes Here! */}
         <Script  async src="https://www.googletagmanager.com/gtag/js?id=G-09CG0KK3TY" ></Script>
+        
         <Script
           id="google-analytics"
             dangerouslySetInnerHTML={{
