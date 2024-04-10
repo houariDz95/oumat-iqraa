@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
         `
           }} 
         /> */}
-        <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+        <Script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js" />
         <Script
         id="ad-cash-form"
         type="text/javascript"
