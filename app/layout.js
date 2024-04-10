@@ -44,7 +44,6 @@ export default function RootLayout({ children }) {
             `,
           }}
         /> */}
-        <script src="https://pertawee.net/pfe/current/tag.min.js?z=7321853" data-cfasync="false" async></script>
         </head>
       <body className={kufi.className}>
         <div className='w-full overflow-clip' style={{direction: "rtl"}}>         
