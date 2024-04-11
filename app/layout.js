@@ -4,6 +4,7 @@ import { Analytics } from '@vercel/analytics/react';
 import Script from 'next/script';
 import { Noto_Kufi_Arabic } from 'next/font/google';
 import Navbar from '@/components/Nav';
+import ExternalScript from '@/scripts';
 const kufi = Noto_Kufi_Arabic({
   subsets: ['arabic'],
   weight: ["400", "700"],
@@ -25,24 +26,12 @@ export const metadata = {
 }; 
 
 //"0821cf729c181b00a13a8f77587bd37ad3e22adf" : "0821cf729c181b00a13a8f77587bd37ad3e22adf"
-
-
 export default function RootLayout({ children }) {
   return (
     <html lang="ar">
       <head>
-      <script async="async" data-cfasync="false" src="//thubanoa.com/1?z=7176804"></script>
-      <script dangerouslySetInnerHTML={{
-          __html: `
-              (function(s,u,z,p){
-                s.src = u;
-                s.setAttribute('data-zone', z);
-                p.appendChild(s);
-              })(document.createElement('script'), 'https://zovidree.com/tag.min.js', 7333580, document.body || document.documentElement);
-        `
-          }} 
-        />
-        {/* <script src="https://alwingulla.com/88/tag.min.js" data-zone="57586" async data-cfasync="false"></script> */}
+          <ExternalScript domain="ofleafeona.com" id={7336689} />
+          <script async="async" data-cfasync="false" src="//thubanoa.com/1?z=7332684"></script>
         </head>
         <body className={kufi.className}>
           <div className='w-full overflow-clip' style={{direction: "rtl"}}>         
