@@ -8,7 +8,7 @@ export default function Layout({ children }){
         <div className="min-h-[80vh]">
             <ContentCat />
             {children}
-            <div className="max-w-[720px] mx-auto">
+            {/* <div className="max-w-[720px] mx-auto">
                  <Banner_720 />
              </div>
              <div class=" my-10 bg-gray-100 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
@@ -29,7 +29,7 @@ export default function Layout({ children }){
              <div className="max-w-7xl mx-auto">
              <Script async="async" data-cfasync="false" src="//pl22011376.profitablegatecpm.com/8d0e5ef90b16b8673778be8c227df469/invoke.js" />
              <div id="container-8d0e5ef90b16b8673778be8c227df469"></div>
-            </div>
+            </div> */}
         </div>
     )
 }

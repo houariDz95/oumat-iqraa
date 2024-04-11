@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ar">
       <head>
-      {/* <script async="async" data-cfasync="false" src="//thubanoa.com/1?z=7176804"></script>
+      <script async="async" data-cfasync="false" src="//thubanoa.com/1?z=7176804"></script>
       <script dangerouslySetInnerHTML={{
           __html: `
               (function(s,u,z,p){
@@ -41,8 +41,8 @@ export default function RootLayout({ children }) {
               })(document.createElement('script'), 'https://zovidree.com/tag.min.js', 7333580, document.body || document.documentElement);
         `
           }} 
-        /> */}
-        <script src="https://alwingulla.com/88/tag.min.js" data-zone="57586" async data-cfasync="false"></script>
+        />
+        {/* <script src="https://alwingulla.com/88/tag.min.js" data-zone="57586" async data-cfasync="false"></script> */}
         </head>
         <body className={kufi.className}>
           <div className='w-full overflow-clip' style={{direction: "rtl"}}>         
