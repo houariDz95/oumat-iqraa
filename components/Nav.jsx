@@ -55,7 +55,7 @@ const Navbar = ({primary}) => {
           </Button>
         </div>
       </div>
-      {isMenuOpen && <MobileManu  primary={primary}  isOpen={isMenuOpen} />}
+      {isMenuOpen && <MobileManu  steIsOpen={setIsMenuOpen} isOpen={isMenuOpen} />}
     </nav>
   );
 };

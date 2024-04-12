@@ -29,11 +29,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ar">
-      <head>
-          <ExternalScript domain="ofleafeona.com" id={7336689} />
-          <script src="https://boltepse.com/pfe/current/tag.min.js?z=7336778" data-cfasync="false" async></script>
-          <script async="async" data-cfasync="false" src="//thubanoa.com/1?z=7332684"></script>
-        </head>
         <body className={kufi.className}>
           <div className='w-full overflow-clip' style={{direction: "rtl"}}>         
               <Navbar />
