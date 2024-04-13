@@ -36,8 +36,8 @@ export default function RootLayout({ children }) {
               <Footer />
           </div>
         
-        {/* Ads Goes Here! */}
-        <Script  async src="https://www.googletagmanager.com/gtag/js?id=G-09CG0KK3TY" ></Script>
+        {/* Ads Goes Here!
+        <Script  async src="https://www.googletagmanager.com/gtag/js?id=G-09CG0KK3TY" ></Script>  */}
         
         <Script
           id="google-analytics"
