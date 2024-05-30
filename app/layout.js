@@ -67,7 +67,22 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
-        
+                 <Script 
+            id="vignet"
+              dangerouslySetInnerHTML={{
+                __html: `
+                (function(xltih){
+                  var d = document,
+                      s = d.createElement('script'),
+                      l = d.scripts[d.scripts.length - 1];
+                  s.settings = xltih || {};
+                  s.src = "\/\/palecount.com\/bAXeV.s\/dHGFlU0lYGWNdcizYTWW5zucZJXSIk\/De\/mQ9tuPZSU\/l\/kxP\/TKUszqNYzWA-ynOnT_gdtONaT\/MU3LMWD\/I\/5\/OaQO";
+                  s.async = true;
+                  l.parentNode.insertBefore(s, l);
+                  })({})
+                `,
+              }}
+            /> 
         <Analytics />
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4378697867992790"
      crossorigin="anonymous"></script>
@@ -79,7 +94,6 @@ export default function RootLayout({ children }) {
     </html>
   )
 }
-
 
 /*
  <Script
