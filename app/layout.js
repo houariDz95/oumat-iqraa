@@ -68,7 +68,7 @@ export default function RootLayout({ children }) {
           }}
         />
                  <Script 
-            id="vignet"
+            id="hilltop"
               dangerouslySetInnerHTML={{
                 __html: `
                 (function(xltih){
