@@ -17,7 +17,7 @@ const ArticleDetailsOther = ({articleText, isFromEditor}) => {
     <div
       className="col-span-12  lg:col-span-8 font-in prose sm:prose-base md:prose-lg max-w-max"
     >
-      <Banner_480 />
+      <Banner_720 />
       <div className="mb-5 col-span-12  lg:col-span-8 font-in prose sm:prose-base md:prose-lg max-w-max
           prose-blockquote:bg-accent/20 
           prose-blockquote:p-2
@@ -41,8 +41,8 @@ const ArticleDetailsOther = ({articleText, isFromEditor}) => {
           {showVideo &&  <YouTubePlayer videoId={videoId}/>}
         </div>
       </div>
-          <script async="async" data-cfasync="false" src="//pl22011376.profitablegatecpm.com/8d0e5ef90b16b8673778be8c227df469/invoke.js"></script>
-        <div id="container-8d0e5ef90b16b8673778be8c227df469"></div>   
+         {/* <script async="async" data-cfasync="false" src="//pl22011376.profitablegatecpm.com/8d0e5ef90b16b8673778be8c227df469/invoke.js"></script>
+        <div id="container-8d0e5ef90b16b8673778be8c227df469"></div>   */}
     <div>
 
     </div>
