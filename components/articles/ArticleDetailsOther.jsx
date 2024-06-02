@@ -41,8 +41,8 @@ const ArticleDetailsOther = ({articleText, isFromEditor}) => {
           {showVideo &&  <YouTubePlayer videoId={videoId}/>}
         </div>
       </div>
-         {/* <script async="async" data-cfasync="false" src="//pl22011376.profitablegatecpm.com/8d0e5ef90b16b8673778be8c227df469/invoke.js"></script>
-        <div id="container-8d0e5ef90b16b8673778be8c227df469"></div>   */}
+        <script async="async" data-cfasync="false" src="//pl22011376.profitablegatecpm.com/8d0e5ef90b16b8673778be8c227df469/invoke.js"></script>
+        <div id="container-8d0e5ef90b16b8673778be8c227df469"></div> 
     <div>
 
     </div>
