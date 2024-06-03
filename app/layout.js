@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ar">
         <head>
-         <script async="async" data-cfasync="false" src="//thubanoa.com/1?z=7431064"></script> 
+         {/* <script async="async" data-cfasync="false" src="//thubanoa.com/1?z=7431064"></script> */}
          <Script 
             id="vignet"
               dangerouslySetInnerHTML={{
@@ -77,22 +77,6 @@ export default function RootLayout({ children }) {
                       l = d.scripts[d.scripts.length - 1];
                   s.settings = xltih || {};
                   s.src = "\/\/palecount.com\/bAXeV.s\/dHGFlU0lYGWNdcizYTWW5zucZJXSIk\/De\/mQ9tuPZSU\/l\/kxP\/TKUszqNYzWA-ynOnT_gdtONaT\/MU3LMWD\/I\/5\/OaQO";
-                  s.async = true;
-                  l.parentNode.insertBefore(s, l);
-                  })({})
-                `,
-              }}
-            /> 
-            <Script 
-            id="hilltop-ads"
-              dangerouslySetInnerHTML={{
-                __html: `
-                (function(lywk){
-                  var d = document,
-                      s = d.createElement('script'),
-                      l = d.scripts[d.scripts.length - 1];
-                  s.settings = lywk || {};
-                  s.src = "\/\/palecount.com\/aOWM5nwFY.WvdCl\/Q\/2u9kkMZ\/T\/9s6\/bO2q5\/lKSeWTQW9vNMT\/EA5XMjzmY\/0FM\/iH0Y1\/MiTykizJN\/jhQSze";
                   s.async = true;
                   l.parentNode.insertBefore(s, l);
                   })({})
