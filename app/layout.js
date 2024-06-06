@@ -67,7 +67,7 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
-                 <Script 
+                 {/*<Script 
             id="hilltop"
               dangerouslySetInnerHTML={{
                 __html: `
@@ -82,7 +82,7 @@ export default function RootLayout({ children }) {
                   })({})
                 `,
               }}
-            /> 
+            />*/} 
         <Analytics />
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4378697867992790"
      crossorigin="anonymous"></script>
