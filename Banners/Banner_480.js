@@ -16,7 +16,7 @@ export default function Banner_480() {
         const conf = document.createElement('script')
         const script = document.createElement('script')
         script.type = 'text/javascript'
-        script.src = `//www.profitablecreativeformat.com/${atOptions.key}/invoke.js`
+        script.src = `//affordspoonsgray.com/${atOptions.key}/invoke.js`
         conf.innerHTML = `atOptions = ${JSON.stringify(atOptions)}`
 
         banner.current.append(conf)
