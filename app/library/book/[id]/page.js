@@ -50,8 +50,8 @@ const Book = async ({params: {id}}) => {
               ))}
             </div>
           </div> 
+          <Banner_720 />
           <div className='flex-1 lg:flex-[0.75] p-4'>
-            <Banner_720 />
             <div className="flex gap-x-10 flex-col lg:flex-row items-center lg:items-start">
               <img src={book.img} className="object-contain  w-[264px] h-[350px] " alt={book.title} />
               <div className="flex flex-col gap-y-4 mt-5 lg:mt-0">

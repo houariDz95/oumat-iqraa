@@ -4,7 +4,6 @@ import { Analytics } from '@vercel/analytics/react';
 import Script from 'next/script';
 import { Noto_Kufi_Arabic } from 'next/font/google';
 import Navbar from '@/components/Nav';
-import ExternalScript from '@/scripts';
 const kufi = Noto_Kufi_Arabic({
   subsets: ['arabic'],
   weight: ["400", "700"],
