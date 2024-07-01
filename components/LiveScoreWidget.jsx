@@ -6,7 +6,7 @@ const LiveScoreWidget = () => {
   return (
     <div style={{ position: 'relative', paddingTop: '56.25%' }}>
         <iframe
-            src="https://www.youtube.com/embed/bwrXPTcTNGM"
+            src="https://www.youtube.com/embed/qnEbhZlePxE"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen

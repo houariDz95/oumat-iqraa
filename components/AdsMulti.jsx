@@ -2,11 +2,18 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-const AdsMulti = () => {
+const AdsMulti = ({src}) => {
   return (
     <>
-        <div id="container-8d0e5ef90b16b8673778be8c227df469"></div>
-        <script async="async" data-cfasync="false" src="//affordspoonsgray.com/8d0e5ef90b16b8673778be8c227df469/invoke.js"></script>
+      <Link href="https://affordspoonsgray.com/j75ssn35?key=55f12044e7cbff305d4db14598c53a3a" className='border-2 border-yellow-500 '>
+        <Image 
+        src={src}
+        width={350} 
+        height={350} 
+        alt=""  
+        className='object-cover w-full h-full'
+        />
+      </Link>
     </>
   )
 }
