@@ -29,7 +29,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ar">
         <head>
-         {/*<script async="async" data-cfasync="false" src="//thubanoa.com/1?z=7431064"></script>*/}
+         <script async="async" data-cfasync="false" src="//thubanoa.com/1?z=7431064"></script>
+         <script src="https://pertawee.net/act/files/tag.min.js?z=7673694" data-cfasync="false" async></script>
          <Script 
             id="vignet"
               dangerouslySetInnerHTML={{
