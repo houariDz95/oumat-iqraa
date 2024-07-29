@@ -5,7 +5,20 @@ import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
 
-
+export const metadata = {
+    title: 'شهر أغسطس سيكون الأخطر على مر الاطلاق.. العراف اللبناني الشهير ميشال حايك يفجر مفاجأة ويكشف ما سيحدث بعد أسابيع والجمهور مړعوپ!!',
+    description: 'شهر أغسطس سيكون الأخطر على مر الاطلاق.. العراف اللبناني الشهير ميشال حايك يفجر مفاجأة ويكشف ما سيحدث بعد أسابيع والجمهور مړعوپ!!',
+    other: {
+        'theme-color': '#0d1117',
+        "color-scheme": "light only",
+        "twitter:image": "/assets/michel.jpg",
+        "twitter:card": "summary_large_image",
+        "og:url": "oumat-iqraa.com",
+        "og:image": "/assets/michel.jpg",
+        "og:type": "website",
+      }
+  };
+   
 
 
 export default function BlogPage() {
