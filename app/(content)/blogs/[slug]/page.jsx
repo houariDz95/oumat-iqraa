@@ -12,6 +12,7 @@ import BlogLayoutThree from "../../components/BlogLayout";
 import siteMetadata from "@/lib/siteMetaData";
 import PopularCard from "@/components/PopularCard";
 import { getPoular } from "@/actions";
+import Script from "next/script";
 
 const slugger = new GithubSlugger();
 
@@ -67,8 +68,8 @@ const BlogPage = async ({params}) => {
       }
   return (
     <>  
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}/>
-        <script type='text/javascript' src='//affordspoonsgray.com/f1/35/b6/f135b6c7596d2e6a99fcbc6d0399e175.js'></script>
+        <Script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}/>
+        <Script type='text/javascript' src='//affordspoonsgray.com/f1/35/b6/f135b6c7596d2e6a99fcbc6d0399e175.js' />
         <article className="relative mb-10 flex flex-col md:flex-row-reverse gap-y-8 lg:gap-8 xl:gap-16 mt-8 px-5 md:px-10 lg:px-14 xl:px-32 min-h-screen">
             <div className="flex-[0.6] flex flex-col">
 
@@ -115,9 +116,6 @@ const BlogPage = async ({params}) => {
                 <div className='mb-10 overflow-hidden'>
 
             </div>
-                <div className="mb-4 flex items-center justify-center">
-                    <div id="container-8d0e5ef90b16b8673778be8c227df469"></div>
-                </div>
                 <Link 
                 href="https://affordspoonsgray.com/j75ssn35?key=55f12044e7cbff305d4db14598c53a3a"
                 className='px-8 

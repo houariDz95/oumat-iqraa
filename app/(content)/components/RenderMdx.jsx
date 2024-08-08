@@ -25,6 +25,9 @@ const RenderMdx = ({blog}) => {
     sm:first-letter:text-5xl 
     '>  
        <MDXContent components={mdxComponents}/>
+       <div className="mb-4 flex items-center justify-center">
+          <div id="container-8d0e5ef90b16b8673778be8c227df469"></div>
+        </div>
     </div>
   )
 }
