@@ -1,11 +1,13 @@
 import Banner_720 from "@/Banners/Banner_720";
 import ContentCat from "./components/ContentCat";
 import Script from 'next/script';
+import HeaderDate from "./components/HeaderDate";
 
 export default function Layout({ children }){
     return(
         
         <div className="min-h-[80vh]">
+            <HeaderDate />
             <ContentCat />
             {children}
             {/* <div className="max-w-[720px] mx-auto">

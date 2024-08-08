@@ -1,13 +1,14 @@
 "use client"
+import { cn } from '@/lib/utils';
 import { updateTextAndSlice } from '@/utils/updateText'
 import moment from "moment";
 import 'moment/locale/ar';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const PopularCard = ({imageUrl, title, articleText, id, isFromEditor, date, category }) => {
+const PopularCard = ({imageUrl, title, articleText, id, isFromEditor, date, category, fromBlogs }) => {
   return (
-    <div className="flex  flex-col w-full md:w-[48%] xl:w-[32%] ">
+    <div className={cn(!fromBlogs ? "flex  flex-col w-full md:w-[48%] xl:w-[32%]" : "w-full")}>
         <div className='flex flex-between'>
             <span className='text-sm text-gray-500 text-ellipsis'>
             {moment(date, 'ar').format('DD MMMM YYYY')}

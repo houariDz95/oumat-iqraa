@@ -2,6 +2,7 @@
 
 // next.config.js
 const withServiceWorker = require('next-offline');
+const {withContentlayer} = require("next-contentlayer")
 
 module.exports = withServiceWorker({
   // your other configurations
@@ -49,4 +50,4 @@ const nextConfig = {
     }
 }
 
-module.exports = nextConfig
+module.exports = withContentlayer({ ...nextConfig });

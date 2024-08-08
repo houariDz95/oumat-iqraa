@@ -11,7 +11,7 @@ import { Button } from './ui/button';
 import { cn } from '@/lib/utils';
 const MobileManu = dynamic(() => import('./MobileManu'))
 
-const Navbar = ({primary}) => {
+const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname()
   const toggleMenu = () => {

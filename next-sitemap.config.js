@@ -7,9 +7,10 @@ module.exports = {
     '/about',
     '/articles',
     '/stories',
-    '/quotes',
-    '/profile',
-    '/search'
+    '/blogs',
+    '/categories',
+    '/library',
+    '/onec'
   ],
   // ...other configuration options
 };

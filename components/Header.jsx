@@ -15,8 +15,8 @@ const Header = () => {
             نحن نقدم لك مجموعة متنوعة من القصص والمقالات والاقتباسات التي تلهم وتثري معرفتك.
             انضم إلينا اليوم واستمتع بمحتوى فريد يلبي اهتماماتك ويوسع آفاقك الثقافية.
           </p>
-          <Button asChild size="lg" className="bg-light hover:bg-light/90 text-dark flex items-center gap-2"> 
-            <Link href="/articles">
+          <Button asChild size="lg" className=" items-center gap-2 font-semibold text-lg text-primary " variant="secondary"> 
+            <Link href="/categories/all">
               <ArrowRightIcon className="w-5 h-5"/>
               استكشف الآن
             </Link>
