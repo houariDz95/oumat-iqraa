@@ -68,7 +68,7 @@ const BlogPage = async ({params}) => {
       }
   return (
     <>  
-        <Script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}/>
+        <Script type="application/ld+json" id="json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}/>
         <Script type='text/javascript' src='//affordspoonsgray.com/f1/35/b6/f135b6c7596d2e6a99fcbc6d0399e175.js' />
         <article className="relative mb-10 flex flex-col md:flex-row-reverse gap-y-8 lg:gap-8 xl:gap-16 mt-8 px-5 md:px-10 lg:px-14 xl:px-32 min-h-screen">
             <div className="flex-[0.6] flex flex-col">
