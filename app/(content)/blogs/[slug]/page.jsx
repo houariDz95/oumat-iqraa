@@ -93,6 +93,7 @@ const BlogPage = async ({params}) => {
                     <div className="flex items-center gap-2">
                         {blog.tags.map((tag, i) => (
                             <Link 
+                            key={i}
                             href={`/categories/${tag.replace(" ", "-").trim()}`} 
                             className={cn('text-white text-sm gap-2 font-light px-1.5 py-1 rounded-md border border-black  hover:scale-105 transition-all ease duration-200')} 
                             style={{backgroundColor: colors[i]}}>

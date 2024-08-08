@@ -8,6 +8,7 @@ const Categories = ({categories, currentSlug}) => {
         {categories.map(category => (
           <Link 
           href={`/categories/${category}`}
+          key={category}
           className={cn(
             "inline-block py-1.5 md:py-2 px-6  md:px-10   rounded-full border-2 border-solid border-dark  hover:scale-105 transition-all ease duration-200 m-2",
              category === currentSlug && "bg-dark text-light" 

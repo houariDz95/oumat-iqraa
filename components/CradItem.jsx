@@ -15,7 +15,7 @@ export function CradItem({title, url, imageUrl, category}) {
     <Link href={url}>
     <Card className="group bg-secondary">
       <CardContent className="relative h-56 shadow-sm">
-        <Image src={imageUrl} fill className="object-cover rounded-t-md"/>
+        <Image src={imageUrl} fill className="object-cover rounded-t-md" alt={title} />
       </CardContent>
       <CardHeader className="space-y-2 mt-4">
         <span className="uppercase text-primary font-semibold text-xs sm:text-sm">
