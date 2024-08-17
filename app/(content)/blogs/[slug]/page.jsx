@@ -108,7 +108,7 @@ const BlogPage = async ({params}) => {
                     alt={blog.title}
                     width={780}
                     height={380}
-                    className="w-full max-h-[380px] mt-6 object-contain rounded-md "
+                    className="w-full max-h-[380px] mt-6 object-cover rounded-md "
                 />
 
                 <RenderMdx blog={blog} />

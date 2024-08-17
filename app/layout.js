@@ -66,34 +66,7 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
-                 {/*<Script 
-            id="hilltop"
-              dangerouslySetInnerHTML={{
-                __html: `
-                (function(xltih){
-                  var d = document,
-                      s = d.createElement('script'),
-                      l = d.scripts[d.scripts.length - 1];
-                  s.settings = xltih || {};
-                  s.src = "\/\/palecount.com\/bAXeV.s\/dHGFlU0lYGWNdcizYTWW5zucZJXSIk\/De\/mQ9tuPZSU\/l\/kxP\/TKUszqNYzWA-ynOnT_gdtONaT\/MU3LMWD\/I\/5\/OaQO";
-                  s.async = true;
-                  l.parentNode.insertBefore(s, l);
-                  })({})
-                `,
-              }}
-            />*/} 
-        <Analytics />
-        <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4378697867992790" crossorigin="anonymous" />
-        <script async="async" data-cfasync="false" src="//affordspoonsgray.com/8d0e5ef90b16b8673778be8c227df469/invoke.js"></script>
-        <Script type='text/javascript' src='//affordspoonsgray.com/cb/6c/a9/cb6ca9bc4f527eb49d7f74b6747bcd7a.js' />
-      </body>
-    </html>
-  )
-}
-
-
-/*
- <Script
+         <Script
           id='popcach_ads'
           type="text/javascript"
           dangerouslySetInnerHTML={{
@@ -131,4 +104,14 @@ export default function RootLayout({ children }) {
           }}
         />
 
-*/
+ 
+        <Analytics />
+        <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4378697867992790" crossorigin="anonymous" />
+        <script async="async" data-cfasync="false" src="//affordspoonsgray.com/8d0e5ef90b16b8673778be8c227df469/invoke.js"></script>
+        <Script type='text/javascript' src='//affordspoonsgray.com/cb/6c/a9/cb6ca9bc4f527eb49d7f74b6747bcd7a.js' />
+      </body>
+    </html>
+  )
+}
+
+
