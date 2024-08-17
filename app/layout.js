@@ -29,21 +29,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ar">
         <head>
-         {/* <script async="async" data-cfasync="false" src="//thubanoa.com/1?z=7431064"></script> */}
+         <script async="async" data-cfasync="false" src="//thubanoa.com/1?z=7431064"></script> 
          {/* <script src="https://pertawee.net/act/files/tag.min.js?z=7673694" data-cfasync="false" async></script> */}
-         <Script 
-            id="vignet"
-              dangerouslySetInnerHTML={{
-                __html: `
-                  (function(d,z,s){
-                    s.src='https://'+d+'/401/'+z;
-                    try{
-                      (document.body || document.documentElement).appendChild(s);
-                    } catch(e) {}
-                  })('oaphoace.net', 7336689, document.createElement('script'));
-                `,
-              }}
-            />  
         </head> 
         <body className={kufi.className}>
           <div className='w-full overflow-clip' style={{direction: "rtl"}}>         
@@ -108,7 +95,7 @@ export default function RootLayout({ children }) {
         <Analytics />
         <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4378697867992790" crossorigin="anonymous" />
         <script async="async" data-cfasync="false" src="//affordspoonsgray.com/8d0e5ef90b16b8673778be8c227df469/invoke.js"></script>
-        <Script type='text/javascript' src='//affordspoonsgray.com/cb/6c/a9/cb6ca9bc4f527eb49d7f74b6747bcd7a.js' />
+        {/* <Script type='text/javascript' src='//affordspoonsgray.com/cb/6c/a9/cb6ca9bc4f527eb49d7f74b6747bcd7a.js' /> */}
       </body>
     </html>
   )
