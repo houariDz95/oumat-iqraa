@@ -3,9 +3,9 @@
 import abdelLatif__indexMdx from './abdel-latif__index.mdx.json' assert { type: 'json' }
 import benkana__indexMdx from './benkana__index.mdx.json' assert { type: 'json' }
 import controversy__indexMdx from './controversy__index.mdx.json' assert { type: 'json' }
-import omarDiab__indexMdx from './omar-diab__index.mdx.json' assert { type: 'json' }
-import mosamih__indexMdx from './mosamih__index.mdx.json' assert { type: 'json' }
 import cynthiaKhalifaRisingStar__indexMdx from './cynthia-khalifa-rising-star__index.mdx.json' assert { type: 'json' }
+import mosamih__indexMdx from './mosamih__index.mdx.json' assert { type: 'json' }
+import omarDiab__indexMdx from './omar-diab__index.mdx.json' assert { type: 'json' }
 import theBeautyMessage__indexMdx from './the-beauty-message__index.mdx.json' assert { type: 'json' }
 
-export const allBlogs = [abdelLatif__indexMdx, benkana__indexMdx, controversy__indexMdx, omarDiab__indexMdx, mosamih__indexMdx, cynthiaKhalifaRisingStar__indexMdx, theBeautyMessage__indexMdx]
+export const allBlogs = [abdelLatif__indexMdx, benkana__indexMdx, controversy__indexMdx, cynthiaKhalifaRisingStar__indexMdx, mosamih__indexMdx, omarDiab__indexMdx, theBeautyMessage__indexMdx]
