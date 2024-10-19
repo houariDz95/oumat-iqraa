@@ -4,13 +4,19 @@ import { useState, useEffect } from 'react';
 
 import Banner_720 from "@/Banners/Banner_720";
 import { updateText } from "@/utils/updateText";
+import { useRouter } from 'next/navigation';
 
  
 const ArticleDetailsOther = ({ articleText, isFromEditor }) => {
 
+  const router = useRouter()
   // State for controlling the modal
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const handleClick = () => {
+    router.push("https://affordspoonsgray.com/br2tqwh1b?key=6e18e772fe82e44d0f60f85385178228")
+    setIsModalOpen(false);
+  }
   // Open modal every 10 seconds
   useEffect(() => {
     const timer = setInterval(() => {
@@ -43,15 +49,13 @@ const ArticleDetailsOther = ({ articleText, isFromEditor }) => {
             <div className="flex justify-center space-x-4">
               <button
                 className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
-                onClick={() => setIsModalOpen(false)}
+                onClick={handleClick}
               >
-                <a href="https://affordspoonsgray.com/br2tqwh1b?key=6e18e772fe82e44d0f60f85385178228">
                   احصل عليه الآن
-                </a>
               </button>
               <button
-                className="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-700"
-                onClick={() => setIsModalOpen(false)}
+                className="bg-zinc-500 text-white px-4 py-2 rounded hover:bg-gray-700"
+                onClick={handleClick}
               >
                 قم بذلك لاحقًا
               </button>
