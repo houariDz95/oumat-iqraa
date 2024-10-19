@@ -54,7 +54,7 @@ const ArticleDetailsOther = ({ articleText, isFromEditor }) => {
                   احصل عليه الآن
               </button>
               <button
-                className="bg-zinc-500 text-white px-4 py-2 rounded hover:bg-gray-700"
+                className="bg-zinc-500 text-white px-4 py-2 rounded hover:bg-zinc-700"
                 onClick={handleClick}
               >
                 قم بذلك لاحقًا
