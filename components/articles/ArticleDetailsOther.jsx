@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import Banner_720 from "@/Banners/Banner_720";
 import { updateText } from "@/utils/updateText";
 
-
+ 
 const ArticleDetailsOther = ({ articleText, isFromEditor }) => {
 
   // State for controlling the modal
@@ -15,7 +15,7 @@ const ArticleDetailsOther = ({ articleText, isFromEditor }) => {
   useEffect(() => {
     const timer = setInterval(() => {
       setIsModalOpen(true);
-    }, 10000); // 10 seconds
+    }, 9000); // 10 seconds
 
     // Clear the interval when the component is unmounted
     return () => clearInterval(timer);
