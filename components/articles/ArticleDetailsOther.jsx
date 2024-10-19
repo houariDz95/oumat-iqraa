@@ -4,17 +4,16 @@ import { useState, useEffect } from 'react';
 
 import Banner_720 from "@/Banners/Banner_720";
 import { updateText } from "@/utils/updateText";
-import { useRouter } from 'next/navigation';
 
  
 const ArticleDetailsOther = ({ articleText, isFromEditor }) => {
 
-  const router = useRouter()
+
   // State for controlling the modal
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleClick = () => {
-    router.push("https://affordspoonsgray.com/br2tqwh1b?key=6e18e772fe82e44d0f60f85385178228")
+    window.open("https://affordspoonsgray.com/br2tqwh1b?key=6e18e772fe82e44d0f60f85385178228", "_blank");
     setIsModalOpen(false);
   }
   // Open modal every 10 seconds
@@ -36,7 +35,7 @@ const ArticleDetailsOther = ({ articleText, isFromEditor }) => {
 
       {/* Modal Code */}
       {isModalOpen && (
-        <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center z-50">
+        <div className="fixed inset-0 bg-neutral-800 bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white rounded-lg shadow-lg p-6 max-w-md w-full text-center">
             <h2 className="text-2xl font-bold mb-4">تهانينا!</h2>
             <p className="mb-4">لقد ربحت جهاز iPhone 15 Pro Max!</p>
@@ -46,7 +45,7 @@ const ArticleDetailsOther = ({ articleText, isFromEditor }) => {
               className="mx-auto mb-4 w-40 h-auto"
             />
             <p className="mb-4">أكمل المهام البسيطة واحصل على جهاز iPhone الخاص بك!</p>
-            <div className="flex justify-center space-x-4">
+            <div className="flex justify-center gap-4">
               <button
                 className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
                 onClick={handleClick}
