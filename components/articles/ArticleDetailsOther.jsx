@@ -21,7 +21,7 @@ const ArticleDetailsOther = ({ articleText, isFromEditor }) => {
   useEffect(() => {
     const timer = setInterval(() => {
       setIsModalOpen(true);
-    }, 10000); // 10 seconds
+    }, 9000); // 10 seconds
 
     // Clear the interval when the component is unmounted
     return () => clearInterval(timer);
