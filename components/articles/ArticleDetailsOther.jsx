@@ -13,14 +13,14 @@ const ArticleDetailsOther = ({ articleText, isFromEditor }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleClick = () => {
-    window.open("https://affordspoonsgray.com/br2tqwh1b?key=6e18e772fe82e44d0f60f85385178228", "_blank");
+    window.open("https://affordspoonsgray.com/exczp3epj?key=84843890de497d381778a7c0dcd69354", "_blank");
     setIsModalOpen(false);
   }
   // Open modal every 10 seconds
   useEffect(() => {
     const timer = setInterval(() => {
       setIsModalOpen(true);
-    }, 9000); // 10 seconds
+    }, 15000); // 10 seconds
 
     // Clear the interval when the component is unmounted
     return () => clearInterval(timer);
