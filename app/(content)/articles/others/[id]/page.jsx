@@ -4,7 +4,6 @@ import Tag from '@/components/Tag';
 import Image from 'next/image';
 import ContentDetails from '@/components/ContentDetails';
 import { calculateReadingTime } from '@/lib/utils';
-import Script from 'next/script';
 
 
 export async function generateMetadata({params: {id}}){

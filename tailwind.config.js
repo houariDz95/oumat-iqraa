@@ -22,7 +22,6 @@ module.exports = {
         light: "#fff",
         accentSoft: "#7B00D3",
         accentDark: "#ffdb4d",
-        gray: "#747474",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
