@@ -1,5 +1,5 @@
 import Banner_720 from "@/Banners/Banner_720";
-
+import Image from "next/image"
 export const metadata = {
   title: "TokMate Review: Unleash Your TikTok Potential",
   description:
@@ -9,7 +9,13 @@ export const metadata = {
 export default function TokMateReview() {
   return (
     <div style={{ direction: "ltr" }}>
+        <div className="flex items-center justify-center">
+        <Banner_720 />
+        </div>
       <div className="min-h-screen bg-gray-50 text-gray-900">
+        <div className="flex justify-center mb-4">
+            <Image src="/tok.jpg" alt="TokMate" width={720} height={400} className="rounded-lg shadow-md" />
+        </div>
         <header className="bg-blue-600 text-white py-4 shadow-lg">
           <div className="container mx-auto px-4">
             <h1 className="text-2xl font-bold">
@@ -17,9 +23,6 @@ export default function TokMateReview() {
             </h1>
           </div>
         </header>
-        <div className="flex items-center justify-center">
-          <Banner_720 />
-        </div>
         <main className="container mx-auto px-4 py-8">
           <article className="bg-white p-6 rounded-lg shadow-lg">
             <h2 className="text-xl font-semibold mb-4">
