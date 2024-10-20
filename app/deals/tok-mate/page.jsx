@@ -12,11 +12,11 @@ export default function TokMateReview() {
         <div className="flex items-center justify-center">
         <Banner_720 />
         </div>
-      <div className="min-h-screen bg-gray-50 text-gray-900">
+      <div className="min-h-screen bg-gray-50 text-gray-900 px-4 sm:px-8 md:px-16 lg:px-32 xl:px-64">
         <div className="flex justify-center mb-4">
             <Image src="/tok.jpg" alt="TokMate" width={720} height={400} className="rounded-lg shadow-md" />
         </div>
-        <header className="bg-blue-600 text-white py-4 shadow-lg">
+        <header className="bg-blue-600 text-white py-4 shadow-lg text-center">
           <div className="container mx-auto px-4">
             <h1 className="text-2xl font-bold">
               TokMate Review ⚠️Warning👈 Don&apos;t Buy Without Seeing This!
