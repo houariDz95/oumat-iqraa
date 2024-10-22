@@ -9,7 +9,7 @@ import { updateText } from "@/utils/updateText";
 const ArticleDetailsOther = ({ articleText, isFromEditor }) => {
 
   // State for controlling the modal
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(true);
 
   const handleClick = () => {
     window.open("https://affordspoonsgray.com/exczp3epj?key=84843890de497d381778a7c0dcd69354", "_blank");
@@ -24,7 +24,7 @@ const ArticleDetailsOther = ({ articleText, isFromEditor }) => {
   useEffect(() => {
     const timer = setInterval(() => {
       setIsModalOpen(true);
-    }, 15000); // 15 seconds
+    }, 10000); // 15 seconds
 
     // Clear the interval when the component is unmounted
     return () => clearInterval(timer);
@@ -44,7 +44,7 @@ const ArticleDetailsOther = ({ articleText, isFromEditor }) => {
             {/* Close Button */}
             <button
               onClick={handleCloseModal}
-              className="absolute top-0 right-0 m-2 bg-red-500 text-white rounded-full w-8 h-8 flex items-center justify-center"
+              className="absolute top-0 right-0 m-2 bg-red-500 text-white  z-50 rounded-full w-8 h-8 flex items-center justify-center"
             >
               &times;
             </button>
