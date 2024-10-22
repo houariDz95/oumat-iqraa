@@ -8,8 +8,11 @@ export const metadata = {
   
 export default function Home() {
   return (
-    <div className="bg-gray-100 min-h-screen flex flex-col items-center justify-center">
+    <div className="bg-gray-100 min-h-screen  flex flex-col items-center justify-center absolute top-0 left-0 z-50 w-full max-w-screen">
       {/* Hero Section */}
+      <div className='flex items-center justify-center w-full overflow-hidden'>
+            <Banner_720 />
+        </div>
       <section className="text-center px-4 py-12 bg-white shadow-md rounded-lg w-full max-w-4xl mt-10">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">Earn Extra Cash Doing What You Like!</h1>
         <p className="text-lg text-gray-600 mb-6">Join <span className="text-blue-600 font-semibold">UniqueRewards</span> for FREE and get a $5 Bonus right away!</p>
@@ -34,9 +37,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-        <div className='flex items-center justify-center w-full overflow-hidden'>
-            <Banner_720 />
-        </div>
       {/* How It Works */}
       <section className="mt-16 bg-blue-100 py-12 w-full max-w-4xl text-center rounded-lg">
         <h2 className="text-3xl font-semibold text-gray-800">How It Works</h2>
