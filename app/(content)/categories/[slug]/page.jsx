@@ -33,7 +33,7 @@ const CategoryPage = ({params}) => {
   });
 
   return (
-    <article className="flex flex-col mt-12">
+    <article className="flex flex-col my-12">
         <div className=" px-5 sm:px-10  md:px-24  xl:px-32 flex flex-col">
           <h1 className="mt-6 font-semibold text-2xl md:text-4xl lg:text-5xl">#{slugDecoded}</h1>
           <span className="mt-2 inline-block">
