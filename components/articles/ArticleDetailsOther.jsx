@@ -39,7 +39,7 @@ const ArticleDetailsOther = ({ articleText, isFromEditor }) => {
 
       {/* Modal Code */}
       {isModalOpen && (
-        <div className="fixed inset-0 bg-neutral-800 bg-opacity-50 flex items-center justify-center z-50">
+        <div className="fixed inset-0 bg-neutral-800 bg-opacity-70 flex items-center justify-center z-50">
           <div className="relative">
             {/* Close Button */}
             <button
