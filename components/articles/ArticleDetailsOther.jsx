@@ -12,7 +12,7 @@ const ArticleDetailsOther = ({ articleText, isFromEditor }) => {
   const [isModalOpen, setIsModalOpen] = useState(true);
 
   const handleClick = () => {
-    window.open("https://affordspoonsgray.com/exczp3epj?key=84843890de497d381778a7c0dcd69354", "_blank");
+    window.open("https://affordspoonsgray.com/br2tqwh1b?key=6e18e772fe82e44d0f60f85385178228", "_blank");
     setIsModalOpen(false);
   };
 
