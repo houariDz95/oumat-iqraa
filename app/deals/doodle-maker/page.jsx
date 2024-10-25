@@ -48,7 +48,7 @@ export default function DoodleArticle() {
 
             <h3 className="text-lg font-semibold mb-2">What are Doodles?</h3>
             <p className="mb-4">
-              Doodles are simple, spontaneous drawings made while a person's attention is otherwise occupied. They can be abstract shapes, little characters, or even patterns. The beauty of doodling lies in its freedom—there are no rules or restrictions.
+              Doodles are simple, spontaneous drawings made while a person's attention is otherwise occupied. They can be abstract shapes, little characters, or even patterns. The beauty of doodling lies in its freedom&mdash;there are no rules or restrictions.
             </p>
 
             <h3 className="text-lg font-semibold mb-2">Benefits of Doodling</h3>
