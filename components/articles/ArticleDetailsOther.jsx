@@ -9,7 +9,7 @@ import { updateText } from "@/utils/updateText";
 const ArticleDetailsOther = ({ articleText, isFromEditor }) => {
 
   // State for controlling the modal
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleClick = () => {
     window.open("https://affordspoonsgray.com/br2tqwh1b?key=6e18e772fe82e44d0f60f85385178228", "_blank");
@@ -40,42 +40,30 @@ const ArticleDetailsOther = ({ articleText, isFromEditor }) => {
       {/* Modal Code */}
       {isModalOpen && (
         <div className="fixed inset-0 bg-neutral-800 bg-opacity-70 flex items-center justify-center z-50">
-          <div className="relative">
-            {/* Close Button */}
-            <button
-              onClick={handleCloseModal}
-              className="absolute top-0 right-0 m-2 bg-red-500 text-white  z-50 rounded-full w-8 h-8 flex items-center justify-center"
-            >
-              &times;
-            </button>
-
-            {/* Image with Play Button */}
-            <div className="relative">
+          <div className="fixed inset-0 bg-neutral-800 bg-opacity-50 flex items-center justify-center z-50">
+            <div className="bg-white rounded-lg shadow-lg p-6 max-w-md w-full text-center">
+              <h2 className="text-2xl font-bold mb-4">تهانينا!</h2>
+              <p className="mb-4">لقد ربحت جهاز iPhone 15 Pro Max!</p>
               <img
-                src="/watch-1.jpg"
-                alt="Watch now"
-                className="w-full h-auto max-w-md rounded-lg shadow-lg"
+                src="/iphone.jpg"
+                alt="iPhone 15 Pro Max"
+                className="mx-auto mb-4 w-40 h-auto"
               />
-              {/* Play Button */}
-              <button
-                onClick={handleClick}
-                className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-lg"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-16 w-16 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
+              <p className="mb-4">أكمل المهام البسيطة واحصل على جهاز iPhone الخاص بك!</p>
+              <div className="flex justify-center gap-4">
+                <button
+                  className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
+                  onClick={handleClick}
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M14.752 11.168l-5.197-3.074A1 1 0 008 9.027v5.946a1 1 0 001.555.832l5.197-3.073a1 1 0 000-1.664z"
-                  />
-                </svg>
-              </button>
+                    احصل عليه الآن
+                </button>
+                <button
+                  className="bg-zinc-500 text-white px-4 py-2 rounded hover:bg-zinc-700"
+                  onClick={handleClick}
+                >
+                  قم بذلك لاحقًا
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -89,31 +77,31 @@ export default ArticleDetailsOther;
 
 
 
-// {isModalOpen && (
-//   <div className="fixed inset-0 bg-neutral-800 bg-opacity-50 flex items-center justify-center z-50">
-//     <div className="bg-white rounded-lg shadow-lg p-6 max-w-md w-full text-center">
-//       <h2 className="text-2xl font-bold mb-4">تهانينا!</h2>
-//       <p className="mb-4">لقد ربحت جهاز iPhone 15 Pro Max!</p>
-//       <img
-//         src="/iphone.jpg"
-//         alt="iPhone 15 Pro Max"
-//         className="mx-auto mb-4 w-40 h-auto"
-//       />
-//       <p className="mb-4">أكمل المهام البسيطة واحصل على جهاز iPhone الخاص بك!</p>
-//       <div className="flex justify-center gap-4">
-//         <button
-//           className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
-//           onClick={handleClick}
-//         >
-//             احصل عليه الآن
-//         </button>
-//         <button
-//           className="bg-zinc-500 text-white px-4 py-2 rounded hover:bg-zinc-700"
-//           onClick={handleClick}
-//         >
-//           قم بذلك لاحقًا
-//         </button>
-//       </div>
-//     </div>
-//   </div>
-// )}
+{isModalOpen && (
+  <div className="fixed inset-0 bg-neutral-800 bg-opacity-50 flex items-center justify-center z-50">
+    <div className="bg-white rounded-lg shadow-lg p-6 max-w-md w-full text-center">
+      <h2 className="text-2xl font-bold mb-4">تهانينا!</h2>
+      <p className="mb-4">لقد ربحت جهاز iPhone 15 Pro Max!</p>
+      <img
+        src="/iphone.jpg"
+        alt="iPhone 15 Pro Max"
+        className="mx-auto mb-4 w-40 h-auto"
+      />
+      <p className="mb-4">أكمل المهام البسيطة واحصل على جهاز iPhone الخاص بك!</p>
+      <div className="flex justify-center gap-4">
+        <button
+          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
+          onClick={handleClick}
+        >
+            احصل عليه الآن
+        </button>
+        <button
+          className="bg-zinc-500 text-white px-4 py-2 rounded hover:bg-zinc-700"
+          onClick={handleClick}
+        >
+          قم بذلك لاحقًا
+        </button>
+      </div>
+    </div>
+  </div>
+)}

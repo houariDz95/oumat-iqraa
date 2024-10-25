@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function TokMateReview() {
   return (
-    <div style={{ direction: "ltr" }}>
+    <div style={{ direction: "ltr" }} className="absolute max-w-screen w-full top-0 left-0 z-50 bg-white">
         <div className="flex items-center justify-center">
         <Banner_720 />
         </div>
