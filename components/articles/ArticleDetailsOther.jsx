@@ -44,7 +44,7 @@ const ArticleDetailsOther = ({ articleText, isFromEditor }) => {
             {/* Close Button */}
             <button
               onClick={handleCloseModal}
-              className="absolute top-0 right-0 m-2 bg-red-500 text-white rounded-full w-8 h-8 flex items-center justify-center"
+              className="absolute top-0 right-0 m-2 bg-red-500 z-50 text-white rounded-full w-8 h-8 flex items-center justify-center"
             >
               &times;
             </button>
