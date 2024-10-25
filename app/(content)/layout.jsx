@@ -12,6 +12,8 @@ export default function Layout({ children }){
             <ContentCat /> */}
             {children}
            <ArticleDetailsOther />
+           <script async="async" data-cfasync="false" src="//affordspoonsgray.com/8d0e5ef90b16b8673778be8c227df469/invoke.js"></script>
+            <div id="container-8d0e5ef90b16b8673778be8c227df469"></div>
         </div>
     )
 }
