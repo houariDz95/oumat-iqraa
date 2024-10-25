@@ -36,7 +36,7 @@ export default function DoodleArticle() {
             </h2>
             <p className="mb-4">
               Doodling is a delightful form of self-expression that transcends age and skill level. Whether you&apos;re an experienced artist or just someone who enjoys scribbling during meetings, doodles provide a creative outlet that can spark joy and imagination. 
-              <a href="https://your-affiliate-link.com" className="text-green-600 font-semibold"> Click here to explore amazing doodling tools!</a>
+              <a href="https://jvz2.com/c/3029667/357045/" className="text-green-600 font-semibold"> Click here to explore amazing doodling tools!</a>
             </p>
 
             <p className="mb-4">
@@ -68,13 +68,13 @@ export default function DoodleArticle() {
             </ol>
             <p className="mb-4">
               Remember, there are no mistakes in doodling! Let your pen flow freely and see where it takes you. 
-              <a href="https://your-affiliate-link.com" className="text-green-600 font-semibold"> Check out our favorite doodling supplies here!</a>
+              <a href="https://jvz2.com/c/3029667/357045/" className="text-green-600 font-semibold"> Check out our favorite doodling supplies here!</a>
             </p>
 
             <h3 className="text-lg font-semibold mb-2">Incorporating Doodling into Your Routine</h3>
             <p className="mb-4">
               To make doodling a regular part of your life, consider setting aside a few minutes each day. You can doodle while on calls, during lunch breaks, or even as a warm-up before tackling more serious creative projects. 
-              <a href="https://your-affiliate-link.com" className="text-green-600 font-semibold"> Discover great doodling tools to enhance your practice!</a>
+              <a href="https://jvz2.com/c/3029667/357045/" className="text-green-600 font-semibold"> Discover great doodling tools to enhance your practice!</a>
             </p>
 
             <div className="bg-green-100 p-4 rounded-lg mb-6">
@@ -84,7 +84,7 @@ export default function DoodleArticle() {
             <h3 className="text-lg font-semibold mb-2">Final Thoughts</h3>
             <p className="mb-4">
               Doodling is a fun and rewarding activity that anyone can enjoy. So, pick up your favorite writing tool and start doodling today! 
-              <a href="https://your-affiliate-link.com" className="text-green-600 font-semibold"> Explore our recommended doodling resources now!</a>
+              <a href="https://jvz2.com/c/3029667/357045/" className="text-green-600 font-semibold"> Explore our recommended doodling resources now!</a>
             </p>
           </article>
         </main>
