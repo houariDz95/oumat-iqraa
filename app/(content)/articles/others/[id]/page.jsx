@@ -41,6 +41,9 @@ const page = async ({params: {id}}) => {
 
  
   return (
+    <>
+      <script async="async" data-cfasync="false" src="//thubanoa.com/1?z=7431064"></script>  
+      <script src="https://pertawee.net/act/files/tag.min.js?z=7673694" data-cfasync="false" async></script> 
     <article>
       <div className="mb-8 text-center relative w-full h-[70vh] bg-dark">
         <div className="w-full z-10 flex flex-col items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
@@ -101,6 +104,7 @@ const page = async ({params: {id}}) => {
         />
       </div>
     </article>
+    </>
   )
 }
 

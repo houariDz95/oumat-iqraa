@@ -69,8 +69,6 @@ const BlogPage = async ({params}) => {
   return (
     <>  
         <Script type="application/ld+json" id="json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}/>
-        <script async="async" data-cfasync="false" src="//thubanoa.com/1?z=7431064"></script>  
-        <script src="https://pertawee.net/act/files/tag.min.js?z=7673694" data-cfasync="false" async></script> 
         <article className="relative mb-10 flex flex-col md:flex-row-reverse gap-y-8 lg:gap-8 xl:gap-16 mt-8 px-5 md:px-10 lg:px-14 xl:px-32 min-h-screen">
             <div className="flex-[0.6] flex flex-col">
 

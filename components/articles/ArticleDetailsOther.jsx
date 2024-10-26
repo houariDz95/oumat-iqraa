@@ -47,12 +47,12 @@ const ArticleDetailsOther = ({ articleText, isFromEditor }) => {
           <h2 className="text-2xl font-bold mb-4">تهانينا!</h2>
           <p className="mb-4">لقد ربحت جهاز iPhone 15 Pro Max!</p>
           <img
-            src="https://www.apple.com/newsroom/images/product/iphone/standard/Apple_announce-iphone15pro_09122023.jpg"
+            src="/iphone.jpg"
             alt="iPhone 15 Pro Max"
             className="mx-auto mb-4 w-40 h-auto"
           />
           <p className="mb-4">أكمل المهام البسيطة واحصل على جهاز iPhone الخاص بك!</p>
-          <div className="flex justify-center space-x-4">
+          <div className="flex justify-center gap-4">
             <button
               className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
               onClick={handleClick}
