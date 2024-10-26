@@ -1,8 +1,7 @@
 "use client"
-import React, { useEffect } from 'react'
+import React, {useState, useEffect } from 'react'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 import Image from 'next/image'
-import { useState, useEffect } from 'react'
 
 const mdxComponents = {
     Image
