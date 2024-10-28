@@ -43,7 +43,7 @@ export default function AiPixelPerfect() {
             className="rounded-lg shadow-md mx-auto"
           />
           <p className="mt-4 text-gray-700">
-            In the fast-paced world of digital content, visuals are essential. Whether you're a brand, a business, or an individual, captivating designs can be the key to success. Enter <strong>Ai Pixel Perfect Enterprise Commercial</strong> – a powerful tool designed to supercharge your visual content creation and take your profits to the next level.
+            In the fast-paced world of digital content, visuals are essential. Whether you&apos;re a brand, a business, or an individual, captivating designs can be the key to success. Enter <strong> =<a href='https://jvz5.com/c/3029667/409903/'>Ai Pixel Perfect Enterprise Commercial</a></strong> – a powerful tool designed to supercharge your visual content creation and take your profits to the next level.
           </p>
         </div>
 
@@ -118,7 +118,7 @@ export default function AiPixelPerfect() {
         <div className="mt-8 text-center">
           <h2 className="text-2xl font-semibold text-gray-900">Is Ai Pixel Perfect Right for You?</h2>
           <p className="mt-3 text-gray-700">
-            If you're ready to elevate your brand and profits, Ai Pixel Perfect is the tool to make it happen. Whether you're a solo entrepreneur or part of a larger team, its intuitive design and advanced features provide everything you need for success.
+            If you&apos;re ready to elevate your brand and profits, Ai Pixel Perfect is the tool to make it happen. Whether you&apos;re a solo entrepreneur or part of a larger team, its intuitive design and advanced features provide everything you need for success.
           </p>
           <a
             href="https://jvz5.com/c/3029667/409903/"
