@@ -12,7 +12,7 @@ const ArticleDetailsOther = ({ articleText, isFromEditor }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleClick = () => {
-    window.open("https://affordspoonsgray.com/br2tqwh1b?key=6e18e772fe82e44d0f60f85385178228", "_blank");
+    window.open("https://affordspoonsgray.com/gghz8pqy1?key=6c2faeabf825ae2cfaffc07e51469628", "_blank");
     setIsModalOpen(false);
   };
 
@@ -61,7 +61,7 @@ const ArticleDetailsOther = ({ articleText, isFromEditor }) => {
             </button>
             <button
               className="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-700"
-              onClick={handleClick}
+              onClick={handleCloseModal}
             >
               قم بذلك لاحقًا
             </button>
