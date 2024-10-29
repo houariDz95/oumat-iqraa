@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- saved from url=(0186)https://li.protechts.net/index.html?ts=1730197151832&r_id=AAYlmuoXbmUOudcjy7S69w%3D%3D&app_id=PXdOjV695v&uc=scraping&d_id=466a5144b1aff7b69d014947ba9cac646aba1749ba913a5d8168eb1a648d8f0d -->
+<html lang="en"><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/extend-native-history-api.js"></script><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/requests.js"></script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <script>
+        function getDecodedQueryParams(queryString) {
+            var params = {};
+            var query = queryString.substring(1);
+            var vars = query.split('&');
+            for (var i = 0; i < vars.length; i++) {
+                try {
+                    var pair = vars[i].split('=');
+                    params[pair[0]] = decodeURIComponent(pair[1]);
+                } catch(e) {
+                    // ignore
+                }
+            }
+            return params;
+        }
+        var params = getDecodedQueryParams(window.location.search);
+        var appId = params['app_id'];
+        window._pxParam2 = params['d_id'];
+        window._pxParam3 = params['r_id'];
+        window._pxParam4 = params['uc'];
+        window._pxParam5 = params['pt'];
+
+        // Local sensor injection
+        var s = document.createElement('script');
+        s.src = 'https://client.protechts.net/' + appId + '/main.min.js';
+        document.head.appendChild(s);
+    </script><script src="./main.min.js.téléchargement"></script>
+</head>
+<body __processed_d19929de-8faf-4b23-9fdb-506bca9d787e__="true">
+
+</body></html>
