@@ -39,6 +39,9 @@ const Book = async ({params: {id}}) => {
     <>
       <TitleHeader title={book.title} />
       <div data-mndbanid="b7e7b88b-a711-4c9a-8d54-6a61b6269b0a"></div>
+      <div className="flex items-center justify-center overflow-hidden">
+            <Banner_720 />
+        </div> 
       <div className='w-full flex min-h-screen max-w-7xl mx-auto p-4'>
           <div className='flex-[0.25] hidden lg:block border-l border-primary p-4 h-fit'>
             <h3 className="text-lg font-semibold capitalize cursor-pointer py-2">
@@ -49,11 +52,8 @@ const Book = async ({params: {id}}) => {
                 <BookCard key={item._id} id={item.bookId} title={item.title} img={item.img} />
               ))}
             </div>
-          </div> 
-          <div className='flex-1 lg:flex-[0.75] p-4'>
-          <div className="flex max-w-screen-md items-center justify-center overflow-hidden">
-            <Banner_720 />
           </div>
+          <div className='flex-1 lg:flex-[0.75] p-4'>
             <div className="flex gap-x-10 flex-col lg:flex-row items-center lg:items-start">
               <img src={book.img} className="object-contain  w-[264px] h-[350px] " alt={book.title} />
               <div className="flex flex-col gap-y-4 mt-5 lg:mt-0">
