@@ -51,7 +51,7 @@ const Book = async ({params: {id}}) => {
             </div>
           </div> 
           <div className='flex-1 lg:flex-[0.75] p-4'>
-          <div className="flex items-center justify-center overflow-hidden">
+          <div className="flex max-w-screen-md items-center justify-center overflow-hidden">
             <Banner_720 />
           </div>
             <div className="flex gap-x-10 flex-col lg:flex-row items-center lg:items-start">
