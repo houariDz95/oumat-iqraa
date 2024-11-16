@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 
 import Banner_720 from "@/Banners/Banner_720";
 import { updateText } from "@/utils/updateText";
@@ -9,26 +9,26 @@ import { updateText } from "@/utils/updateText";
 const ArticleDetailsOther = ({ articleText, isFromEditor }) => {
 
   // State for controlling the modal
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleClick = () => {
-    window.open("https://affordspoonsgray.com/gghz8pqy1?key=6c2faeabf825ae2cfaffc07e51469628", "_blank");
-    setIsModalOpen(false);
-  };
+  // const handleClick = () => {
+  //   window.open("https://affordspoonsgray.com/gghz8pqy1?key=6c2faeabf825ae2cfaffc07e51469628", "_blank");
+  //   setIsModalOpen(false);
+  // };
 
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-  };
+  // const handleCloseModal = () => {
+  //   setIsModalOpen(false);
+  // };
 
-  // Open modal every 10 seconds
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setIsModalOpen(true);
-    }, 20000); // 15 seconds
+  // // Open modal every 10 seconds
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     setIsModalOpen(true);
+  //   }, 20000); // 15 seconds
 
-    // Clear the interval when the component is unmounted
-    return () => clearInterval(timer);
-  }, []);
+  //   // Clear the interval when the component is unmounted
+  //   return () => clearInterval(timer);
+  // }, []);
 
   return (
     <div className="col-span-12 lg:col-span-8 font-in prose sm:prose-base md:prose-lg max-w-max">
@@ -41,7 +41,7 @@ const ArticleDetailsOther = ({ articleText, isFromEditor }) => {
           <div id="container-8d0e5ef90b16b8673778be8c227df469"></div>
       </div>
       {/* Modal Code */}
-      {isModalOpen && (
+      {/* {isModalOpen && (
         <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center z-50">
         <div className="bg-white rounded-lg shadow-lg p-6 max-w-md w-full text-center">
           <h2 className="text-2xl font-bold mb-4">تهانينا!</h2>
@@ -67,7 +67,7 @@ const ArticleDetailsOther = ({ articleText, isFromEditor }) => {
             </button>
           </div>
         </div>
-      </div>)}
+      </div>)} */}
     </div>
   );
 };
