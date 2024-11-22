@@ -28,6 +28,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ar">
+
+        <header>
+        <script async="async" data-cfasync="false" src="//thubanoa.com/1?z=7431064"></script>
+        <script src="https://tobaltoyon.com/act/files/tag.min.js?z=7673694" data-cfasync="false" async></script>
+        </header>
         <body className={kufi.className}>
           <div className='w-full overflow-clip' style={{direction: "rtl"}}>         
               <Navbar />
