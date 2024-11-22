@@ -23,7 +23,7 @@ export default function AiPixelPerfect() {
           </ul>
         </div>
       </nav>
-    <div className="max-w-4xl mt-16 mx-auto px-6 py-10">
+    <div className="max-w-4xl mt-28 mx-auto px-6 py-10">
     <div className="flex items-center justify-center overflow-hidden">
         <Banner_720 />
       </div>

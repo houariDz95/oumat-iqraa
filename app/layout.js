@@ -28,10 +28,37 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ar">
-
         <head>
-          <script async="async" data-cfasync="false" src="//thubanoa.com/1?z=7431064"></script>
-          <script src="https://tobaltoyon.com/act/files/tag.min.js?z=7673694" data-cfasync="false" async></script>
+        <head>
+      <script async="async" data-cfasync="false" src="//thubanoa.com/1?z=7645796"></script>
+      <Script 
+        id="in-push"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(d,z,s){
+              s.src='https://'+d+'/400/'+z;
+              try{
+              (document.body||document.documentElement).appendChild(s)
+              }catch(e){}
+              })('whouseem.com',7325933,document.createElement('script'))
+            `,
+          }}
+        /> 
+        <Script 
+        id="vignet"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(d,z,s){
+                s.src='https://'+d+'/401/'+z;
+                try{
+                  (document.body || document.documentElement).appendChild(s);
+                } catch(e) {}
+              })('glizauvo.net', 7344616, document.createElement('script'));
+            `,
+          }}
+        />  
+      {/* <script async="async" data-cfasync="false" src="//thubanoa.com/1?z=7344634"></script>    */}
+      </head> 
         </head>
         <body className={kufi.className}>
           <div className='w-full overflow-clip' style={{direction: "rtl"}}>         
