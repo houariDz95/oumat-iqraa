@@ -15,6 +15,8 @@ export default async  function Home() {
 
   return(
     <>
+    <script async="async" data-cfasync="false" src="//thubanoa.com/1?z=7431064"></script>
+    <script src="https://tobaltoyon.com/act/files/tag.min.js?z=7673694" data-cfasync="false" async></script>
       <div className='relative'>
         <Header />
         <div className='max-w-7xl mx-auto mb-12 p-4'>

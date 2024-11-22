@@ -34,7 +34,8 @@ export async function generateMetadata({params: {id}}){
 
 const Book = async ({params: {id}}) => {
   const book = await getBook(id);
-  const books = await getBooksByCategory(book.type.url, 2);
+  const books = await getBooksByCategory(book.type.url, 2)
+  console.log(book)
   return (
     <>
       <TitleHeader title={book.title} />
