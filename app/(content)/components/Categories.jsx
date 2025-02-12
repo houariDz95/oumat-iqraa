@@ -21,4 +21,5 @@ const Categories = ({categories, currentSlug}) => {
   )
 }
 
-export default Categories
+export default Categories 
+

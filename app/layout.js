@@ -81,6 +81,43 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
+        <Script
+          id='popcach_ads'
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `
+              var uid = '467853';
+              var wid = '707751';
+              var pop_tag = document.createElement('script');
+              pop_tag.src = '//cdn.popcash.net/show.js';
+              document.body.appendChild(pop_tag);
+              pop_tag.onerror = function() {
+                pop_tag = document.createElement('script');
+                pop_tag.src = '//cdn2.popcash.net/show.js';
+                document.body.appendChild(pop_tag);
+              };
+            `,
+          }}
+          /> 
+          <Script
+          id='thunder'
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `
+              var uid = '467853';
+              var wid = '707751';
+              var pop_fback = 'up';
+              var pop_tag = document.createElement('script');
+              pop_tag.src = '//cdn.popcash.net/show.js';
+              document.body.appendChild(pop_tag);
+              pop_tag.onerror = function () {
+                pop_tag = document.createElement('script');
+                pop_tag.src = '//cdn2.popcash.net/show.js';
+                document.body.appendChild(pop_tag);
+              };
+            `,
+          }}
+          />
         <Analytics />
         <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4378697867992790" crossorigin="anonymous" />
         <script async="async" data-cfasync="false" src="//affordspoonsgray.com/8d0e5ef90b16b8673778be8c227df469/invoke.js"></script>
@@ -92,40 +129,3 @@ export default function RootLayout({ children }) {
 }
 
 
-// <Script
-// id='popcach_ads'
-// type="text/javascript"
-// dangerouslySetInnerHTML={{
-//   __html: `
-//     var uid = '467853';
-//     var wid = '707751';
-//     var pop_tag = document.createElement('script');
-//     pop_tag.src = '//cdn.popcash.net/show.js';
-//     document.body.appendChild(pop_tag);
-//     pop_tag.onerror = function() {
-//       pop_tag = document.createElement('script');
-//       pop_tag.src = '//cdn2.popcash.net/show.js';
-//       document.body.appendChild(pop_tag);
-//     };
-//   `,
-// }}
-// /> 
-// <Script
-// id='thunder'
-// type="text/javascript"
-// dangerouslySetInnerHTML={{
-//   __html: `
-//     var uid = '467853';
-//     var wid = '707751';
-//     var pop_fback = 'up';
-//     var pop_tag = document.createElement('script');
-//     pop_tag.src = '//cdn.popcash.net/show.js';
-//     document.body.appendChild(pop_tag);
-//     pop_tag.onerror = function () {
-//       pop_tag = document.createElement('script');
-//       pop_tag.src = '//cdn2.popcash.net/show.js';
-//       document.body.appendChild(pop_tag);
-//     };
-//   `,
-// }}
-// />
