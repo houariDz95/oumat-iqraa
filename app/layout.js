@@ -57,7 +57,7 @@ export default function RootLayout({ children }) {
             `,
           }}
         />  
-      {/* <script async="async" data-cfasync="false" src="//thubanoa.com/1?z=7344634"></script>    */}
+       <script async="async" data-cfasync="false" src="//thubanoa.com/1?z=7344634"></script>    
       </head> 
         </head>
         <body className={kufi.className}>

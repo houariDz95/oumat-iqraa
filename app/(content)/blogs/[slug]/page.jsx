@@ -139,6 +139,7 @@ const BlogPage = async ({params}) => {
                     <DownloadCloud size={45} />
                 </Link> 
             </div>
+            <script type='text/javascript' src='//affordspoonsgray.com/f1/35/b6/f135b6c7596d2e6a99fcbc6d0399e175.js'></script>
             <div className="flex-[0.4] bg-slate-100 px-4 shadow-sm rounded-sm p-4 sticky top-6 max-h-[80vh] overflow-hidden overflow-y-auto">
               <div className='relative p-4 mt-10'>
                 <h1 className='text-3xl font-bold text-black italic'>الأكثر قراءة</h1>
