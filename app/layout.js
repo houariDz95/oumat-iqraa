@@ -30,8 +30,8 @@ export default function RootLayout({ children }) {
     <html lang="ar">
         <head>
         <head>
-        <script src="https://kulroakonsu.net/88/tag.min.js" data-zone="57586" async data-cfasync="false"></script>
-      {/* <Script 
+        {/* <script src="https://kulroakonsu.net/88/tag.min.js" data-zone="57586" async data-cfasync="false"></script>
+      <Script 
         id="in-push"
           dangerouslySetInnerHTML={{
             __html: `
