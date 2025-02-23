@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
         <head>
         <head>
         <script src="https://kulroakonsu.net/88/tag.min.js" data-zone="57586" async data-cfasync="false"></script>
-      <Script 
+      {/* <Script 
         id="in-push"
           dangerouslySetInnerHTML={{
             __html: `
@@ -58,7 +58,7 @@ export default function RootLayout({ children }) {
             `,
           }}
         />  
-       <script async="async" data-cfasync="false" src="//thubanoa.com/1?z=7344634"></script>    
+       <script async="async" data-cfasync="false" src="//thubanoa.com/1?z=7344634"></script>     */}
       </head> 
         </head>
         <body className={kufi.className}>
