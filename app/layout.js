@@ -82,24 +82,7 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
-        <Script
-          id='popcach_ads'
-          type="text/javascript"
-          dangerouslySetInnerHTML={{
-            __html: `
-              var uid = '467853';
-              var wid = '707751';
-              var pop_tag = document.createElement('script');
-              pop_tag.src = '//cdn.popcash.net/show.js';
-              document.body.appendChild(pop_tag);
-              pop_tag.onerror = function() {
-                pop_tag = document.createElement('script');
-                pop_tag.src = '//cdn2.popcash.net/show.js';
-                document.body.appendChild(pop_tag);
-              };
-            `,
-          }}
-          /> 
+        
           <Script
           id='thunder'
           type="text/javascript"
@@ -130,3 +113,26 @@ export default function RootLayout({ children }) {
 
 
 // https://try.elevenlabs.io/dnjr89e5oq0l
+
+{/*
+  
+  <Script
+          id='popcach_ads'
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `
+              var uid = '467853';
+              var wid = '707751';
+              var pop_tag = document.createElement('script');
+              pop_tag.src = '//cdn.popcash.net/show.js';
+              document.body.appendChild(pop_tag);
+              pop_tag.onerror = function() {
+                pop_tag = document.createElement('script');
+                pop_tag.src = '//cdn2.popcash.net/show.js';
+                document.body.appendChild(pop_tag);
+              };
+            `,
+          }}
+          /> 
+  
+  */}
