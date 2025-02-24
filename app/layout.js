@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
     <html lang="ar">
         <head>
         <head>
-        {/* <script src="https://kulroakonsu.net/88/tag.min.js" data-zone="57586" async data-cfasync="false"></script>
+        <script src="https://kulroakonsu.net/88/tag.min.js" data-zone="57586" async data-cfasync="false"></script>
       <Script 
         id="in-push"
           dangerouslySetInnerHTML={{
@@ -58,7 +58,7 @@ export default function RootLayout({ children }) {
             `,
           }}
         />  
-       <script async="async" data-cfasync="false" src="//thubanoa.com/1?z=7344634"></script>     */}
+       <script async="async" data-cfasync="false" src="//thubanoa.com/1?z=7344634"></script>    
       </head> 
         </head>
         <body className={kufi.className}>
@@ -82,7 +82,24 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
-        
+        <Script
+          id='popcach_ads'
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `
+              var uid = '467853';
+              var wid = '707751';
+              var pop_tag = document.createElement('script');
+              pop_tag.src = '//cdn.popcash.net/show.js';
+              document.body.appendChild(pop_tag);
+              pop_tag.onerror = function() {
+                pop_tag = document.createElement('script');
+                pop_tag.src = '//cdn2.popcash.net/show.js';
+                document.body.appendChild(pop_tag);
+              };
+            `,
+          }}
+          /> 
           <Script
           id='thunder'
           type="text/javascript"
@@ -113,26 +130,3 @@ export default function RootLayout({ children }) {
 
 
 // https://try.elevenlabs.io/dnjr89e5oq0l
-
-{/*
-  
-  <Script
-          id='popcach_ads'
-          type="text/javascript"
-          dangerouslySetInnerHTML={{
-            __html: `
-              var uid = '467853';
-              var wid = '707751';
-              var pop_tag = document.createElement('script');
-              pop_tag.src = '//cdn.popcash.net/show.js';
-              document.body.appendChild(pop_tag);
-              pop_tag.onerror = function() {
-                pop_tag = document.createElement('script');
-                pop_tag.src = '//cdn2.popcash.net/show.js';
-                document.body.appendChild(pop_tag);
-              };
-            `,
-          }}
-          /> 
-  
-  */}
