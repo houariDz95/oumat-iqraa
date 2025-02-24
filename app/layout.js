@@ -29,8 +29,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ar">
         <head>
-        <head>
-        <script src="https://kulroakonsu.net/88/tag.min.js" data-zone="57586" async data-cfasync="false"></script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4378697867992790"
+     crossorigin="anonymous"></script>
+        {/* <script src="https://kulroakonsu.net/88/tag.min.js" data-zone="57586" async data-cfasync="false"></script>
       <Script 
         id="in-push"
           dangerouslySetInnerHTML={{
@@ -58,9 +59,9 @@ export default function RootLayout({ children }) {
             `,
           }}
         />  
-       <script async="async" data-cfasync="false" src="//thubanoa.com/1?z=7344634"></script>    
+       <script async="async" data-cfasync="false" src="//thubanoa.com/1?z=7344634"></script>     */}
       </head> 
-        </head>
+        
         <body className={kufi.className}>
           <div className='w-full overflow-clip' style={{direction: "rtl"}}>         
               <Navbar />
@@ -82,7 +83,7 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
-        <Script
+        {/* <Script
           id='popcach_ads'
           type="text/javascript"
           dangerouslySetInnerHTML={{
@@ -118,11 +119,9 @@ export default function RootLayout({ children }) {
               };
             `,
           }}
-          />
+          /> */}
         <Analytics />
         <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4378697867992790" crossorigin="anonymous" />
-        <script async="async" data-cfasync="false" src="//affordspoonsgray.com/8d0e5ef90b16b8673778be8c227df469/invoke.js"></script>
-        <Script type='text/javascript' src='//affordspoonsgray.com/f1/35/b6/f135b6c7596d2e6a99fcbc6d0399e175.js' />
       </body>
     </html>
   )
