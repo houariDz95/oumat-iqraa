@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
         <head>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4378697867992790"
      crossorigin="anonymous"></script>
-        {/* <script src="https://kulroakonsu.net/88/tag.min.js" data-zone="57586" async data-cfasync="false"></script>
+       <script src="https://kulroakonsu.net/88/tag.min.js" data-zone="57586" async data-cfasync="false"></script>
       <Script 
         id="in-push"
           dangerouslySetInnerHTML={{
@@ -46,7 +46,7 @@ export default function RootLayout({ children }) {
           }}
         /> 
         
-        <Script 
+       {/*  <Script 
         id="vignet"
           dangerouslySetInnerHTML={{
             __html: `
